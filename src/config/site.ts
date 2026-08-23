@@ -1,12 +1,10 @@
-const fallbackUrl = "https://www.sngroup.com";
-
 export const siteConfig = {
   name: "S.N Group",
   shortName: "S.N Group",
   tagline: "Building trust. Shaping progress.",
   description:
     "S.N Group connects construction delivery, project procurement and long-term asset development across Bangladesh.",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? fallbackUrl,
+  url: "https://www.sngroup.com",
   locale: "en_BD",
   address: {
     lines: [

@@ -6,6 +6,5 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export function absoluteUrl(path = "") {
-  const base = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.sngroup.com";
-  return new URL(path, base).toString();
+  return new URL(path, "https://www.sngroup.com").toString();
 }
