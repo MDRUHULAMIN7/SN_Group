@@ -38,7 +38,7 @@ export function BrandLockup({
           size === "sm" && "size-10",
           size === "md" && "size-12",
           size === "lg" && "size-14",
-          markPlate && "rounded-lg bg-white p-1 shadow-sm",
+          markPlate && "rounded-full bg-white p-1 shadow-sm",
         )}
       >
         <Image
