@@ -2,16 +2,19 @@ import type { Metadata } from "next";
 import { HeroSection } from "@/components/sections/home/hero-section";
 import { GroupStorySection } from "@/components/sections/home/group-story-section";
 import { SisterConcernShowcase } from "@/components/sections/home/sister-concern-showcase";
-import { ProjectShowcase } from "@/components/sections/home/project-showcase";
-import { GalleryPreview } from "@/components/sections/home/gallery-preview";
-import { ContactCta } from "@/components/sections/home/contact-cta";
+import { ServicesOverview } from "@/components/sections/home/services-overview";
+import { CoreValuesSection } from "@/components/sections/home/mission-values";
+import { WhyChooseUs } from "@/components/sections/home/why-choose-us";
+import { LeadershipMessages } from "@/components/sections/home/leadership-messages";
+import { TestimonialsSection } from "@/components/sections/home/testimonials";
 import { createMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createMetadata({
-  title: "S.N Group | Construction, Procurement & Holdings",
-  description: "One coordinated group for construction delivery, project procurement, import and export, and long-term asset development across Bangladesh.",
+  title: "S.N Group | Construction, Procurement & Real Estate Development",
+  description:
+    "A diversified Bangladeshi business group with more than 20 years of experience in government and institutional construction, international import & export, and premium real estate development.",
   path: "/",
-  image: "/images/hero-video-poster.webp",
+  image: "/images/team.webp",
 });
 
 export default function HomePage() {
@@ -19,10 +22,12 @@ export default function HomePage() {
     <>
       <HeroSection />
       <GroupStorySection />
+      <ServicesOverview />
       <SisterConcernShowcase />
-      <ProjectShowcase />
-      <GalleryPreview />
-      <ContactCta />
+      <CoreValuesSection />
+      <WhyChooseUs />
+      <TestimonialsSection />
+      <LeadershipMessages />
     </>
   );
 }

@@ -1,66 +1,203 @@
 "use client";
 
-import Link from "next/link";
-import { useEffect, useState } from "react";
-import { ArrowUpRight } from "lucide-react";
-import { AnimatePresence, m } from "motion/react";
-import { sisterConcerns } from "@/data/sister-concerns";
+import Image from "next/image";
+import { useCallback, useEffect, useState } from "react";
+import { ArrowUpRight, Building2, Globe, ShieldCheck, Sparkles } from "lucide-react";
+import { m } from "motion/react";
 import { Container } from "@/components/ui/container";
-import { HeroVideo } from "./hero-video";
+import { cn } from "@/lib/utils";
 
-const slides = sisterConcerns.map((concern) => ({
-  eyebrow: concern.discipline,
-  title: concern.headline,
-  description: concern.description,
-  href: `/sister-concerns/${concern.slug}`,
-  linkLabel: `Explore ${concern.name}`,
-}));
+export interface HeroSlide {
+  id: string;
+  badge: string;
+  badgeIcon: typeof Building2;
+  title: string;
+  headline: string;
+  description: string;
+  image: string;
+  href: string;
+  linkLabel: string;
+}
+
+export const heroSlides: HeroSlide[] = [
+  {
+    id: "sn-group",
+    badge: "20+ Years of Experience",
+    badgeIcon: ShieldCheck,
+    title: "S.N Group",
+    headline: "Building Trust. Delivering Excellence.",
+    description:
+      "A diversified Bangladeshi business group with more than 20 years of experience in construction and business operations, built on a foundation of integrity, quality, reliability, and long-term relationships.",
+    image: "/images/team.webp",
+    href: "#about-group",
+    linkLabel: "Discover S.N Group",
+  },
+  {
+    id: "sn-construction",
+    badge: "Sister Concern · Construction",
+    badgeIcon: Building2,
+    title: "S.N Engineering & Construction",
+    headline: "Building with Experience. Delivering with Responsibility.",
+    description:
+      "Specializing in government, defense, institutional, and infrastructure projects with extensive experience working with Bangladesh Army, Bangladesh Navy, and premier institutions.",
+    image: "/images/hero-construction.webp",
+    href: "#group-companies",
+    linkLabel: "Explore Construction",
+  },
+  {
+    id: "sn-import-export",
+    badge: "Sister Concern · Global Trade",
+    badgeIcon: Globe,
+    title: "S.N Import & Export",
+    headline: "Connecting Bangladesh with Global Markets.",
+    description:
+      "International trading arm sourcing agricultural commodities, food products, industrial chemicals, machinery, and equipment, while advancing export of Bangladeshi resources worldwide.",
+    image: "/images/project-infrastructure.webp",
+    href: "#group-companies",
+    linkLabel: "Explore Global Trade",
+  },
+  {
+    id: "mehrish-holdings",
+    badge: "Sister Concern · Real Estate",
+    badgeIcon: Sparkles,
+    title: "Mehrish Holdings",
+    headline: "Creating Value Through Real Estate.",
+    description:
+      "Developing high-quality residential and commercial properties in prime and strategically selected locations across Dhaka including Dhanmondi, Gulshan, Banani, and Uttara.",
+    image: "/images/project-commercial.webp",
+    href: "#group-companies",
+    linkLabel: "Explore Real Estate",
+  },
+];
+
+const AUTOPLAY_INTERVAL = 6500;
 
 export function HeroSection() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
 
-  useEffect(() => {
-    const interval = window.setInterval(() => {
-      setActiveIndex((index) => (index + 1) % slides.length);
-    }, 6_500);
-    return () => window.clearInterval(interval);
+  const nextSlide = useCallback(() => {
+    setActiveIndex((current) => (current + 1) % heroSlides.length);
   }, []);
 
-  const slide = slides[activeIndex];
+  useEffect(() => {
+    if (isPaused) return;
+
+    const timer = window.setInterval(nextSlide, AUTOPLAY_INTERVAL);
+    return () => window.clearInterval(timer);
+  }, [isPaused, nextSlide]);
 
   return (
     <section
+      aria-label="S.N Group Hero Slider"
       aria-roledescription="carousel"
-      aria-label="S.N Group sister concerns"
-      className="image-noise relative flex h-[82svh] min-h-[36rem] max-h-[46rem] overflow-hidden bg-navy text-white md:h-auto md:min-h-[100svh] md:max-h-none"
+      className="relative flex min-h-[100svh] items-center overflow-hidden bg-black pb-16 pt-24 text-white sm:pb-20 sm:pt-28"
+      onBlurCapture={(event) => {
+        if (!event.currentTarget.contains(event.relatedTarget)) setIsPaused(false);
+      }}
+      onFocusCapture={() => setIsPaused(true)}
     >
-      <HeroVideo />
-      <div className="pointer-events-none absolute inset-y-0 left-0 w-full bg-gradient-to-r from-black/85 via-black/60 to-transparent sm:w-4/5 md:w-[62%] md:from-black/90 md:via-black/70 md:to-transparent" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_72%_38%,rgba(22,94,239,.12),transparent_38%)]" />
-      <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-black/65 to-transparent" />
-      <div aria-hidden="true" className="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-black/50 to-transparent" />
-      <Container className="relative z-10 flex h-full min-h-0 flex-col justify-center pb-8 pt-20 sm:pb-12 sm:pt-24 md:min-h-[100svh] md:pb-16 md:pt-24 lg:pb-20">
-        <div>
-          <div aria-live="polite" className="relative h-[23rem] max-w-5xl border-l border-white/20 pl-5 sm:pl-7 md:h-[25rem] md:pl-9">
-            <AnimatePresence initial={false} mode="sync">
+      <div aria-hidden="true" className="absolute inset-0 z-0 overflow-hidden">
+        {heroSlides.map((slide, index) => (
+          <m.div
+            animate={{ opacity: activeIndex === index ? 1 : 0 }}
+            className="absolute inset-0 will-change-[opacity]"
+            initial={false}
+            key={slide.id}
+            transition={{ duration: 1.15, ease: [0.4, 0, 0.2, 1] }}
+          >
+            <Image
+              alt=""
+              className="size-full object-cover object-center"
+              fill
+              sizes="100vw"
+              src={slide.image}
+              {...(index === 0 ? { preload: true } : { loading: "eager" as const })}
+            />
+          </m.div>
+        ))}
+
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-black/95 via-black/75 via-45% to-transparent" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-black/50" />
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_20%_40%,rgba(21,94,239,0.15),transparent_60%)]" />
+      </div>
+
+      <Container className="relative z-10 flex flex-col justify-center py-6 sm:py-10">
+        <div className="grid max-w-3xl grid-cols-1 grid-rows-1">
+          {heroSlides.map((slide, index) => {
+            const Icon = slide.badgeIcon;
+            const isActive = activeIndex === index;
+
+            return (
               <m.div
-                animate={{ opacity: 1, y: 0 }}
-                className="absolute inset-x-0 top-0 pl-5 sm:pl-7 md:pl-9"
-                exit={{ opacity: 0, y: -14 }}
-                initial={{ opacity: 0, y: 18 }}
-                key={activeIndex}
-                transition={{ duration: 0.72, ease: [0.16, 1, 0.3, 1] }}
+                animate={{ opacity: isActive ? 1 : 0 }}
+                aria-hidden={!isActive}
+                aria-label={`${index + 1} of ${heroSlides.length}`}
+                aria-roledescription="slide"
+                className={cn(
+                  "col-start-1 row-start-1 flex flex-col justify-start will-change-[opacity]",
+                  isActive ? "pointer-events-auto" : "pointer-events-none",
+                )}
+                inert={!isActive}
+                initial={false}
+                key={slide.id}
+                role="group"
+                transition={{ duration: 0.7, ease: [0.4, 0, 0.2, 1] }}
               >
-                <p className="eyebrow mb-2.5 text-blue-200 drop-shadow-lg md:mb-3.5">{slide.eyebrow}</p>
-                <h1 className="display-type max-w-[17ch] text-[clamp(2.5rem,10.5vw,3.75rem)] leading-[0.92] text-balance drop-shadow-[0_12px_34px_rgba(0,0,0,0.38)] md:text-[clamp(3.25rem,5.3vw,5.7rem)]">{slide.title}</h1>
-                <p className="mt-3.5 max-w-2xl text-sm leading-6 text-white/72 sm:text-base sm:leading-7 md:mt-4.5 md:text-lg md:leading-8">{slide.description}</p>
-                <Link className="group mt-5 inline-flex min-h-11 items-center gap-2 rounded-full border border-white/30 bg-white/8 px-5 py-3 text-sm font-bold backdrop-blur transition-colors hover:bg-white hover:text-navy md:mt-6" href={slide.href}>
-                  {slide.linkLabel}
-                  <ArrowUpRight aria-hidden="true" className="size-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
-                </Link>
+                <div className="mb-4 inline-flex w-fit items-center gap-2 rounded-full border border-white/20 bg-black/40 px-4 py-1.5 backdrop-blur-md">
+                  <Icon aria-hidden="true" className="size-4 text-blue-400" />
+                  <span className="text-xs font-bold uppercase tracking-wider text-blue-300">
+                    {slide.badge}
+                  </span>
+                </div>
+
+                <h1 className="display-type text-4xl font-extrabold tracking-tight text-white drop-shadow-[0_12px_32px_rgba(0,0,0,0.6)] sm:text-6xl lg:text-7xl xl:text-[5.25rem] xl:leading-[0.95]">
+                  {slide.title}
+                </h1>
+
+                <p className="mt-4 text-lg font-bold text-blue-400 drop-shadow-md sm:text-2xl lg:text-3xl">
+                  {slide.headline}
+                </p>
+
+                <p className="mt-4 max-w-2xl text-base leading-7 text-white/80 drop-shadow sm:text-lg sm:leading-8">
+                  {slide.description}
+                </p>
+
+                <div className="mt-8 flex flex-wrap items-center gap-3.5 sm:gap-4">
+                  <a
+                    className="inline-flex min-h-12 items-center gap-2 rounded-full bg-cobalt px-7 py-3.5 text-sm font-bold text-white shadow-[0_4px_24px_rgba(21,94,239,0.45)] transition-all duration-300 hover:bg-blue-600 hover:shadow-[0_6px_32px_rgba(21,94,239,0.65)] active:scale-[0.98]"
+                    href="/contact#quotation-form"
+                  >
+                    Request a Quotation
+                    <ArrowUpRight aria-hidden="true" className="size-4" />
+                  </a>
+
+                  <a
+                    className="inline-flex min-h-12 items-center gap-2 rounded-full border border-white/30 bg-black/40 px-7 py-3.5 text-sm font-bold text-white backdrop-blur-md transition-all duration-300 hover:border-white/60 hover:bg-white/20 active:scale-[0.98]"
+                    href={slide.href}
+                  >
+                    {slide.linkLabel}
+                  </a>
+                </div>
               </m.div>
-            </AnimatePresence>
-          </div>
+            );
+          })}
+        </div>
+
+        <div aria-label="Choose a hero slide" className="mt-8 flex items-center gap-2" role="group">
+          {heroSlides.map((slide, index) => (
+            <button
+              aria-label={`Show slide ${index + 1}: ${slide.title}`}
+              aria-pressed={activeIndex === index}
+              className={cn(
+                "h-1.5 rounded-full transition-[width,background-color] duration-500",
+                activeIndex === index ? "w-10 bg-blue-400" : "w-5 bg-white/35 hover:bg-white/65",
+              )}
+              key={slide.id}
+              onClick={() => setActiveIndex(index)}
+              type="button"
+            />
+          ))}
         </div>
       </Container>
     </section>

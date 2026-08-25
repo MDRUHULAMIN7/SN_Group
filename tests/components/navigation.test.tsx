@@ -4,19 +4,19 @@ import { beforeEach, describe, expect, it, vi } from "vitest";
 import { DesktopNavigation } from "@/components/layout/header/desktop-navigation";
 import { MotionProvider } from "@/components/motion/motion-provider";
 
-const usePathname = vi.fn(() => "/projects");
+const usePathname = vi.fn(() => "/");
 
 vi.mock("next/navigation", () => ({
   usePathname: () => usePathname(),
 }));
 
 describe("desktop navigation", () => {
-  beforeEach(() => usePathname.mockReturnValue("/projects"));
+  beforeEach(() => usePathname.mockReturnValue("/"));
 
-  it("marks the current route and exposes the restrained sister-concern menu", async () => {
+  it("marks the home route and exposes the restrained sister-concern menu", async () => {
     const user = userEvent.setup();
     render(<MotionProvider><DesktopNavigation /></MotionProvider>);
-    expect(screen.getByRole("link", { name: "Projects" })).toHaveAttribute("aria-current", "page");
+    expect(screen.getByRole("link", { name: "Home" })).toHaveAttribute("aria-current", "page");
 
     const trigger = screen.getByRole("button", { name: "Sister concerns" });
     await user.hover(trigger);

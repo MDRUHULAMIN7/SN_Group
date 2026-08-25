@@ -97,33 +97,50 @@ export function MobileNavigationDrawer({ open, onClose, triggerRef }: MobileNavi
             transition={{ duration: 0.48, ease: [0.16, 1, 0.3, 1] }}
           >
             <div className="flex items-center justify-between gap-4 border-b border-white/10 pb-5">
-              <BrandLockup inverse markPlate size="sm" />
+              <BrandLockup inverse size="sm" />
               <button aria-label="Close navigation menu" className="grid size-11 shrink-0 place-items-center rounded-full border border-white/20 bg-white/5 transition-all duration-200 hover:bg-white/15 active:scale-95" onClick={closeAndRestore} type="button">
                 <X aria-hidden="true" className="size-6" />
               </button>
             </div>
             <nav aria-label="Mobile primary navigation" className="mt-8">
               <ul className="space-y-1">
-                {primaryNavigation.map((item, index) => (
-                  <m.li
-                    animate={{ opacity: 1, x: 0 }}
-                    initial={{ opacity: 0, x: 20 }}
-                    key={item.href}
-                    transition={{ delay: 0.06 + index * 0.04, duration: 0.38, ease: [0.16, 1, 0.3, 1] }}
-                  >
-                    <Link className="group flex min-h-14 items-center justify-between border-b border-white/10 text-xl font-semibold transition-colors hover:text-blue-300" href={item.href} onClick={closeAndRestore}>
-                      {item.label}
-                      <ArrowUpRight aria-hidden="true" className="size-5 text-blue-300 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
-                    </Link>
-                  </m.li>
-                ))}
+                {primaryNavigation.map((item, index) => {
+                  const isHome = item.href === "/";
+                  return (
+                    <m.li
+                      animate={{ opacity: 1, x: 0 }}
+                      initial={{ opacity: 0, x: 20 }}
+                      key={item.href}
+                      transition={{ delay: 0.06 + index * 0.04, duration: 0.38, ease: [0.16, 1, 0.3, 1] }}
+                    >
+                      <Link
+                        className="group flex min-h-14 items-center justify-between border-b border-white/10 text-xl font-semibold transition-colors hover:text-cobalt"
+                        href={isHome ? "/" : "#"}
+                        onClick={(e) => {
+                          if (!isHome) e.preventDefault();
+                          closeAndRestore();
+                        }}
+                      >
+                        {item.label}
+                        <ArrowUpRight aria-hidden="true" className="size-5 text-cobalt transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+                      </Link>
+                    </m.li>
+                  );
+                })}
               </ul>
               <div className="mt-9">
-                <p className="mb-4 text-[0.65rem] font-bold uppercase tracking-[0.18em] text-blue-300">Sister concerns</p>
+                <p className="mb-4 text-[0.65rem] font-bold uppercase tracking-[0.18em] text-cobalt">Sister concerns</p>
                 <ul className="space-y-1">
                   {sisterConcerns.map((concern, index) => (
                     <m.li animate={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x: 20 }} key={concern.slug} transition={{ delay: 0.22 + index * 0.04, duration: 0.38, ease: [0.16, 1, 0.3, 1] }}>
-                      <Link className="flex min-h-12 items-center gap-4 rounded-xl px-2 transition-colors hover:bg-white/8 hover:text-blue-300" href={`/sister-concerns/${concern.slug}`} onClick={closeAndRestore}>
+                      <Link
+                        className="flex min-h-12 items-center gap-4 rounded-xl px-2 transition-colors hover:bg-white/8 hover:text-cobalt"
+                        href="#"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          closeAndRestore();
+                        }}
+                      >
                         <span className="text-xs tabular-nums text-white/40">0{index + 1}</span>
                         <span className="font-semibold">{concern.name}</span>
                       </Link>

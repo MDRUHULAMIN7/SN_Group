@@ -38,7 +38,7 @@ export function BrandLockup({
           size === "sm" && "size-10",
           size === "md" && "size-12",
           size === "lg" && "size-14",
-          markPlate && "rounded-full bg-white p-1 shadow-sm",
+          markPlate && "rounded-full p-1",
         )}
       >
         <Image
@@ -50,27 +50,15 @@ export function BrandLockup({
           width={64}
         />
       </span>
-      <span className="flex flex-col justify-center select-none">
-        <span
-          className={cn(
-            "display-type block font-bold leading-[0.82] tracking-[0.04em]",
-            size === "sm" && "text-[1.55rem]",
-            size === "md" && "text-[1.65rem]",
-            size === "lg" && "text-[2.2rem]",
-          )}
-        >
-          S.N GROUP
-        </span>
-        <span
-          className={cn(
-            "block font-semibold uppercase leading-none opacity-85",
-            size === "sm" && "-mt-1 text-[0.6rem] tracking-[0.24em]",
-            size === "md" && "-mt-1 text-[0.68rem] tracking-[0.24em]",
-            size === "lg" && "-mt-1.5 text-[0.8rem] tracking-[0.25em]",
-          )}
-        >
-          Building trust.
-        </span>
+      <span
+        className={cn(
+          "display-type block font-extrabold leading-none tracking-[0.03em] select-none",
+          size === "sm" && "text-[1.65rem] sm:text-[1.85rem]",
+          size === "md" && "text-[2rem] sm:text-[2.25rem]",
+          size === "lg" && "text-[2.6rem] sm:text-[3rem]",
+        )}
+      >
+        S.N GROUP
       </span>
     </span>
   );
