@@ -6,7 +6,16 @@
   --color-ink: #071a2e;
   --color-navy: #06162a;
   --color-cobalt: #155eef;
-  --color-sky: #e8f0ff;
+  --color-sky: #155eef;
+  --color-blue-100: #155eef;
+  --color-blue-200: #155eef;
+  --color-blue-300: #155eef;
+  --color-blue-400: #155eef;
+  --color-blue-500: #155eef;
+  --color-blue-600: #155eef;
+  --color-blue-700: #155eef;
+  --color-blue-800: #155eef;
+  --color-blue-900: #155eef;
   --color-paper: #f4f2ed;
   --color-warm-white: #fbfaf6;
   --color-line: #d9d9d2;
@@ -67,7 +76,7 @@ a {
 }
 
 :focus-visible {
-  outline: 2px solid #4f8cff;
+  outline: 2px solid #155eef;
   outline-offset: 4px;
 }
 

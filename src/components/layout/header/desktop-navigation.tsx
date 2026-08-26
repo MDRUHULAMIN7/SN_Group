@@ -25,7 +25,7 @@ export function DesktopNavigation({ compact = false }: DesktopNavigationProps) {
         className={cn(
           "group relative flex min-h-10 items-center px-3 text-sm font-semibold transition-colors xl:px-3.5",
           compact ? "text-black hover:text-cobalt" : "text-white hover:text-cobalt",
-          active && (compact ? "text-cobalt font-bold" : "text-blue-300 font-bold"),
+          active && "text-cobalt font-bold",
           !isHome && "cursor-default",
         )}
         href={isHome ? "/" : "#"}

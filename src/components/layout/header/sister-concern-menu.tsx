@@ -53,7 +53,7 @@ export function SisterConcernMenu({ active, compact = false }: SisterConcernMenu
         className={cn(
           "group relative flex min-h-10 items-center gap-1.5 px-3 text-sm font-semibold transition-colors xl:px-3.5",
           compact ? "text-black hover:text-cobalt" : "text-white hover:text-cobalt",
-          active && (compact ? "text-cobalt font-bold" : "text-blue-300 font-bold"),
+          active && "text-cobalt font-bold",
         )}
         onClick={() => setOpen((prev) => !prev)}
         onKeyDown={(event) => {
