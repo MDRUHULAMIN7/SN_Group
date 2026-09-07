@@ -50,7 +50,7 @@ export function SisterConcernMenu({ active }: SisterConcernMenuProps) {
         aria-expanded={open}
         aria-haspopup="menu"
         className={cn(
-          "group relative flex min-h-10 items-center gap-1.5 px-3 text-sm font-semibold transition-colors xl:px-3.5",
+          "group relative flex min-h-10 cursor-pointer items-center gap-1.5 px-3.5 text-[0.95rem] font-semibold transition-colors xl:px-4 xl:text-base",
           "text-ink hover:text-cobalt",
           active && "text-cobalt font-bold",
         )}
@@ -89,7 +89,7 @@ export function SisterConcernMenu({ active }: SisterConcernMenuProps) {
             {sisterConcerns.map((concern, index) => (
               <Link
                 ref={index === 0 ? firstItemRef : undefined}
-                className="group/item flex min-h-12 cursor-default items-center gap-3 rounded-lg border-b border-slate-100 px-3 py-2.5 transition-colors last:border-b-0 hover:bg-slate-50 hover:text-cobalt focus:text-cobalt"
+                className="group/item flex min-h-12 cursor-pointer items-center gap-3 rounded-lg border-b border-slate-100 px-3 py-2.5 transition-colors last:border-b-0 hover:bg-slate-50 hover:text-cobalt focus:text-cobalt"
                 href="#"
                 key={concern.slug}
                 onClick={(e) => {

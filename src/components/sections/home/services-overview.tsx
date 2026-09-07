@@ -4,7 +4,7 @@ import { Reveal } from "@/components/motion/reveal";
 
 const serviceCategories = [
   {
-    company: "S.N Engineering & Construction",
+    company: "S.N Engineering & Construction Ltd.",
     discipline: "Civil & Defense Infrastructure",
     icon: Building2,
     tag: "20+ Years Experience",
@@ -20,7 +20,7 @@ const serviceCategories = [
     ],
   },
   {
-    company: "S.N Import & Export",
+    company: "S.N Import & Export Ltd.",
     discipline: "Global Sourcing & Distribution",
     icon: Globe,
     tag: "Global Trade Network",
@@ -36,7 +36,7 @@ const serviceCategories = [
     ],
   },
   {
-    company: "Mehrish Holdings",
+    company: "Mehrish Holdings Ltd.",
     discipline: "Prime Real Estate Development",
     icon: Sparkles,
     tag: "Prime Dhaka Locations",

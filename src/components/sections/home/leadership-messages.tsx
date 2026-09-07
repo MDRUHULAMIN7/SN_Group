@@ -49,7 +49,7 @@ export function LeadershipMessages() {
                     For more than 20 years, our organization has grown through hard work, responsible business practices, and the trust of our clients and partners.
                   </p>
                   <p>
-                    Today, S.N Group brings together three complementary businesses: S.N Engineering & Construction, S.N Import & Export, and Mehrish Holdings.
+                    Today, S.N Group brings together three complementary businesses: S.N Engineering & Construction Ltd., S.N Import & Export Ltd., and Mehrish Holdings Ltd.
                   </p>
                   <p>
                     Our construction business has built its experience through government, institutional, infrastructure, and defense-related projects, including work associated with the Bangladesh Army and Bangladesh Navy.
@@ -98,7 +98,7 @@ export function LeadershipMessages() {
                     What began with a strong foundation in construction has evolved into a diversified business group with interests in government and institutional construction, international import and export, and real estate development.
                   </p>
                   <p>
-                    Through S.N Engineering & Construction, S.N Import & Export, and Mehrish Holdings, we continue to expand capabilities while creating sustainable value for customers, partners, and communities.
+                    Through S.N Engineering & Construction Ltd., S.N Import & Export Ltd., and Mehrish Holdings Ltd., we continue to expand capabilities while creating sustainable value for customers, partners, and communities.
                   </p>
                   <p className="font-semibold text-cobalt">
                     &ldquo;Our success is ultimately measured by the trust of our clients, partners, employees, and stakeholders. We look forward to building a stronger future together.&rdquo;

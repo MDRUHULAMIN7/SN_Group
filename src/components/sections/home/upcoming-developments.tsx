@@ -29,7 +29,7 @@ export function UpcomingDevelopments() {
               <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-cobalt/30 bg-cobalt/10 px-3.5 py-1.5 backdrop-blur-md">
                 <Sparkles aria-hidden="true" className="size-4 text-blue-400" />
                 <span className="text-xs font-bold uppercase tracking-wider text-blue-300">
-                  Mehrish Holdings
+                  Mehrish Holdings Ltd.
                 </span>
               </div>
 
@@ -38,7 +38,7 @@ export function UpcomingDevelopments() {
               </h2>
 
               <p className="mt-5 text-base leading-7 text-ink/70 sm:text-lg sm:leading-8">
-                Mehrish Holdings is preparing to launch a curated portfolio of residential and commercial developments across some of Dhaka&apos;s most desirable neighborhoods.
+                Mehrish Holdings Ltd. is preparing to launch a curated portfolio of residential and commercial developments across some of Dhaka&apos;s most desirable neighborhoods.
               </p>
 
               <p className="mt-3.5 text-sm leading-6 text-ink/60">
@@ -77,7 +77,7 @@ export function UpcomingDevelopments() {
               <div className="relative overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 shadow-[0_18px_50px_rgba(15,23,42,0.08)] sm:p-8">
                 <div className="relative mb-6 aspect-[16/9] w-full overflow-hidden rounded-xl bg-white">
                   <Image
-                    alt="Mehrish Holdings premium architectural concepts in Dhaka"
+                    alt="Mehrish Holdings Ltd. premium architectural concepts in Dhaka"
                     className="size-full object-cover"
                     fill
                     sizes="(min-width: 1024px) 40vw, 90vw"
@@ -89,7 +89,7 @@ export function UpcomingDevelopments() {
                       Targeted Expansion
                     </p>
                     <p className="display-type text-2xl font-bold text-ink">
-                      Mehrish Holdings — Developing the Future of Dhaka
+                      Mehrish Holdings Ltd. — Developing the Future of Dhaka
                     </p>
                   </div>
                 </div>

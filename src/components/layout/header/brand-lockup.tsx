@@ -35,7 +35,7 @@ export function BrandLockup({
       <span
         className={cn(
           "grid shrink-0 place-items-center",
-          size === "sm" && "size-10",
+          size === "sm" && "size-11",
           size === "md" && "size-12",
           size === "lg" && "size-14",
           markPlate && "rounded-full p-1",
@@ -53,7 +53,7 @@ export function BrandLockup({
       <span
         className={cn(
           "display-type block font-extrabold leading-none tracking-[0.03em] select-none",
-          size === "sm" && "text-[1.65rem] sm:text-[1.85rem]",
+          size === "sm" && "text-[1.85rem] sm:text-[2.1rem]",
           size === "md" && "text-[2rem] sm:text-[2.25rem]",
           size === "lg" && "text-[2.6rem] sm:text-[3rem]",
         )}

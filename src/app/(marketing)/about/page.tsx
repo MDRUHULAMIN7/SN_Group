@@ -47,7 +47,7 @@ export default function AboutPage() {
                 S.N Group is a diversified Bangladeshi business group with more than 20 years of experience in construction and business operations, built on a foundation of integrity, quality, reliability, and long-term relationships.
               </p>
               <p>
-                Over the years, the Group has developed a diversified portfolio through three core businesses: <strong className="text-ink">S.N Engineering &amp; Construction</strong>, <strong className="text-ink">S.N Import &amp; Export</strong>, and <strong className="text-ink">Mehrish Holdings</strong>.
+                Over the years, the Group has developed a diversified portfolio through three core businesses: <strong className="text-ink">S.N Engineering &amp; Construction Ltd.</strong>, <strong className="text-ink">S.N Import &amp; Export Ltd.</strong>, and <strong className="text-ink">Mehrish Holdings Ltd.</strong>.
               </p>
               <p>
                 Our businesses operate across government and institutional construction, infrastructure development, international import and export, agricultural and food commodities, industrial chemicals and equipment, and premium real estate development.

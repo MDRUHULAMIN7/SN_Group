@@ -37,17 +37,10 @@ export function Header() {
         <div
           data-navbar-state={compact ? "compact" : "full"}
           className={cn(
-            "relative isolate mx-auto flex h-[4.25rem] w-full max-w-[100vw] items-center justify-between rounded-none border border-transparent bg-white/88 px-3 shadow-[0_10px_35px_rgba(15,23,42,0.06)] backdrop-blur-xl transition-[height,max-width,border-radius,border-color,box-shadow,background-color,backdrop-filter] duration-800 ease-[cubic-bezier(0.16,1,0.3,1)] sm:px-5 lg:px-6",
-            compact && "h-17 max-w-[86rem] rounded-full border-slate-200/80 bg-white/95 backdrop-blur-2xl shadow-[0_16px_45px_rgba(0,0,0,0.12)]",
+            "relative isolate mx-auto flex h-20 w-full max-w-[100vw] items-center justify-between rounded-none border border-transparent bg-white/5 px-3 shadow-none backdrop-blur-sm transition-[height,max-width,border-radius,border-color,box-shadow,background-color,backdrop-filter] duration-800 ease-[cubic-bezier(0.16,1,0.3,1)] sm:px-6 lg:px-8",
+            compact && "h-17 max-w-[86rem] rounded-full border-slate-200/85 bg-white shadow-[0_8px_24px_rgba(15,23,42,0.08)] backdrop-blur-2xl",
           )}
         >
-          <span
-            aria-hidden="true"
-            className={cn(
-              "absolute inset-0 -z-10 rounded-[inherit] bg-white/95 backdrop-blur-2xl opacity-0 transition-opacity duration-800",
-              compact && "opacity-100",
-            )}
-          />
           <Link
             aria-label="S.N Group home"
             className={cn(
@@ -63,7 +56,7 @@ export function Header() {
           </div>
           <div className="relative z-10 flex items-center gap-2">
             <ButtonLink
-              className="hidden rounded-full lg:inline-flex"
+              className="hidden rounded-full text-sm xl:text-[0.95rem] lg:inline-flex"
               href="/contact#quotation-form"
               size="sm"
               variant="primary"

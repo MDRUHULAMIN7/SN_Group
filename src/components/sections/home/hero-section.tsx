@@ -36,7 +36,7 @@ export const heroSlides: HeroSlide[] = [
     id: "sn-construction",
     badge: "Sister Concern · Construction",
     badgeIcon: Building2,
-    title: "S.N Engineering & Construction",
+    title: "S.N Engineering & Construction Ltd.",
     headline: "Building with Experience. Delivering with Responsibility.",
     description:
       "Specializing in government, defense, institutional, and infrastructure projects with extensive experience working with Bangladesh Army, Bangladesh Navy, and premier institutions.",
@@ -48,7 +48,7 @@ export const heroSlides: HeroSlide[] = [
     id: "sn-import-export",
     badge: "Sister Concern · Global Trade",
     badgeIcon: Globe,
-    title: "S.N Import & Export",
+    title: "S.N Import & Export Ltd.",
     headline: "Connecting Bangladesh with Global Markets.",
     description:
       "International trading arm sourcing agricultural commodities, food products, industrial chemicals, machinery, and equipment, while advancing export of Bangladeshi resources worldwide.",
@@ -60,7 +60,7 @@ export const heroSlides: HeroSlide[] = [
     id: "mehrish-holdings",
     badge: "Sister Concern · Real Estate",
     badgeIcon: Sparkles,
-    title: "Mehrish Holdings",
+    title: "Mehrish Holdings Ltd.",
     headline: "Creating Value Through Real Estate.",
     description:
       "Developing high-quality residential and commercial properties in prime and strategically selected locations across Dhaka including Dhanmondi, Gulshan, Banani, and Uttara.",
@@ -117,8 +117,8 @@ export function HeroSection() {
           </m.div>
         ))}
 
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-white via-white/94 via-52% to-white/15" />
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-white/90 via-white/5 to-white/70" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-white/92 via-white/70 via-68% to-white/22 sm:from-white/86 sm:via-white/58 sm:via-54% sm:to-white/5 lg:from-white/82 lg:via-white/46 lg:via-48% lg:to-transparent" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-white/38 via-transparent to-white/24" />
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_18%_42%,rgba(21,94,239,0.12),transparent_58%)]" />
       </div>
 

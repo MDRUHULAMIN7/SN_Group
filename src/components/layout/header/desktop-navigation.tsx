@@ -19,10 +19,9 @@ export function DesktopNavigation() {
       <Link
         aria-current={active ? "page" : undefined}
         className={cn(
-          "group relative flex min-h-10 items-center px-3 text-sm font-semibold transition-colors xl:px-3.5",
+          "group relative flex min-h-10 cursor-pointer items-center px-3.5 text-[0.95rem] font-semibold transition-colors xl:px-4 xl:text-base",
           "text-ink hover:text-cobalt",
           active && "text-cobalt font-bold",
-          !isHome && "cursor-default",
         )}
         href={isHome ? "/" : "#"}
         key={item.label}
