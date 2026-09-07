@@ -7,6 +7,7 @@ import { ArrowUpRight, X } from "lucide-react";
 import { AnimatePresence, m } from "motion/react";
 import { primaryNavigation } from "@/config/navigation";
 import { sisterConcerns } from "@/data/sister-concerns";
+import { cn } from "@/lib/utils";
 import { BrandLockup } from "./brand-lockup";
 import { SocialLinks } from "../footer/social-links";
 
@@ -106,6 +107,10 @@ export function MobileNavigationDrawer({ open, onClose, triggerRef }: MobileNavi
               <ul className="space-y-1">
                 {primaryNavigation.map((item, index) => {
                   const isHome = item.href === "/";
+                  const active = isHome
+                    ? pathname === "/"
+                    : pathname === item.href || pathname?.startsWith(`${item.href}/`);
+
                   return (
                     <m.li
                       animate={{ opacity: 1, x: 0 }}
@@ -114,15 +119,21 @@ export function MobileNavigationDrawer({ open, onClose, triggerRef }: MobileNavi
                       transition={{ delay: 0.06 + index * 0.04, duration: 0.38, ease: [0.16, 1, 0.3, 1] }}
                     >
                       <Link
-                        className="group flex min-h-14 items-center justify-between border-b border-slate-200 text-xl font-semibold transition-colors hover:text-cobalt"
-                        href={isHome ? "/" : "#"}
-                        onClick={(e) => {
-                          if (!isHome) e.preventDefault();
-                          closeAndRestore();
-                        }}
+                        className={cn(
+                          "group flex min-h-14 items-center justify-between border-b border-slate-200 text-xl font-semibold transition-colors hover:text-cobalt",
+                          active ? "text-cobalt font-bold" : "text-ink",
+                        )}
+                        href={item.href}
+                        onClick={closeAndRestore}
                       >
                         {item.label}
-                        <ArrowUpRight aria-hidden="true" className="size-5 text-cobalt transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+                        <ArrowUpRight
+                          aria-hidden="true"
+                          className={cn(
+                            "size-5 text-cobalt transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5",
+                            active && "opacity-100",
+                          )}
+                        />
                       </Link>
                     </m.li>
                   );
@@ -131,21 +142,24 @@ export function MobileNavigationDrawer({ open, onClose, triggerRef }: MobileNavi
               <div className="mt-9">
                 <p className="mb-4 text-[0.65rem] font-bold uppercase tracking-[0.18em] text-cobalt">Sister concerns</p>
                 <ul className="space-y-1">
-                  {sisterConcerns.map((concern, index) => (
-                    <m.li animate={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x: 20 }} key={concern.slug} transition={{ delay: 0.22 + index * 0.04, duration: 0.38, ease: [0.16, 1, 0.3, 1] }}>
-                      <Link
-                        className="flex min-h-12 items-center gap-4 rounded-xl px-2 transition-colors hover:bg-blue-50 hover:text-cobalt"
-                        href="#"
-                        onClick={(e) => {
-                          e.preventDefault();
-                          closeAndRestore();
-                        }}
-                      >
-                        <span className="text-xs tabular-nums text-ink/40">0{index + 1}</span>
-                        <span className="font-semibold">{concern.name}</span>
-                      </Link>
-                    </m.li>
-                  ))}
+                  {sisterConcerns.map((concern, index) => {
+                    const active = pathname === `/sister-concerns/${concern.slug}`;
+                    return (
+                      <m.li animate={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x: 20 }} key={concern.slug} transition={{ delay: 0.22 + index * 0.04, duration: 0.38, ease: [0.16, 1, 0.3, 1] }}>
+                        <Link
+                          className={cn(
+                            "flex min-h-12 items-center gap-4 rounded-xl px-2 transition-colors hover:bg-blue-50 hover:text-cobalt",
+                            active ? "bg-blue-50 text-cobalt font-bold" : "text-ink",
+                          )}
+                          href={`/sister-concerns/${concern.slug}`}
+                          onClick={closeAndRestore}
+                        >
+                          <span className="text-xs tabular-nums text-ink/40">0{index + 1}</span>
+                          <span className="font-semibold">{concern.name}</span>
+                        </Link>
+                      </m.li>
+                    );
+                  })}
                 </ul>
               </div>
             </nav>

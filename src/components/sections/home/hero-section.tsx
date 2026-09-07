@@ -163,9 +163,9 @@ export function HeroSection() {
                   {slide.description}
                 </p>
 
-                <div className="mt-5 sm:mt-8 flex flex-col xs:flex-row flex-wrap items-stretch xs:items-center gap-2.5 sm:gap-4">
+                <div className="mt-5 sm:mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 sm:flex-nowrap">
                   <a
-                    className="inline-flex min-h-11 sm:min-h-12 items-center justify-center gap-2 rounded-full bg-cobalt px-6 py-2.5 sm:px-7 sm:py-3.5 text-xs sm:text-sm font-bold text-white shadow-[0_4px_24px_rgba(21,94,239,0.45)] transition-all duration-300 hover:bg-blue-600 hover:shadow-[0_6px_32px_rgba(21,94,239,0.65)] active:scale-[0.98]"
+                    className="inline-flex min-h-11 sm:min-h-12 w-full sm:w-auto shrink-0 items-center justify-center gap-2 rounded-full bg-cobalt px-6 py-2.5 sm:px-7 sm:py-3.5 text-xs sm:text-sm font-bold text-white shadow-[0_4px_24px_rgba(21,94,239,0.45)] transition-all duration-300 hover:bg-blue-600 hover:shadow-[0_6px_32px_rgba(21,94,239,0.65)] active:scale-[0.98]"
                     href="/contact#quotation-form"
                   >
                     Request a Quotation
@@ -173,7 +173,7 @@ export function HeroSection() {
                   </a>
 
                   <a
-                    className="inline-flex min-h-11 sm:min-h-12 items-center justify-center gap-2 rounded-full border border-cobalt/25 bg-white/88 px-6 py-2.5 sm:px-7 sm:py-3.5 text-xs sm:text-sm font-bold text-ink shadow-sm backdrop-blur-md transition-all duration-300 hover:border-cobalt hover:text-cobalt active:scale-[0.98]"
+                    className="inline-flex min-h-11 sm:min-h-12 w-full sm:w-auto shrink-0 items-center justify-center gap-2 rounded-full border border-cobalt/25 bg-white/88 px-6 py-2.5 sm:px-7 sm:py-3.5 text-xs sm:text-sm font-bold text-ink shadow-sm backdrop-blur-md transition-all duration-300 hover:border-cobalt hover:text-cobalt active:scale-[0.98]"
                     href={slide.href}
                   >
                     {slide.linkLabel}

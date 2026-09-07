@@ -10,10 +10,13 @@ export function DesktopNavigation() {
   const pathname = usePathname();
   const leading = primaryNavigation.slice(0, 2);
   const trailing = primaryNavigation.slice(2);
+  const isSisterConcernActive = pathname?.startsWith("/sister-concerns");
 
   const link = (item: (typeof primaryNavigation)[number]) => {
     const isHome = item.href === "/";
-    const active = isHome ? pathname === "/" : false;
+    const active = isHome
+      ? pathname === "/"
+      : pathname === item.href || pathname?.startsWith(`${item.href}/`);
 
     return (
       <Link
@@ -23,13 +26,8 @@ export function DesktopNavigation() {
           "text-ink hover:text-cobalt",
           active && "text-cobalt font-bold",
         )}
-        href={isHome ? "/" : "#"}
+        href={item.href}
         key={item.label}
-        onClick={(e) => {
-          if (!isHome) {
-            e.preventDefault();
-          }
-        }}
       >
         {item.label}
         <span
@@ -45,7 +43,7 @@ export function DesktopNavigation() {
   return (
     <nav aria-label="Primary navigation" className="hidden items-center lg:flex">
       {leading.map(link)}
-      <SisterConcernMenu active={false} />
+      <SisterConcernMenu active={Boolean(isSisterConcernActive)} />
       {trailing.map(link)}
     </nav>
   );

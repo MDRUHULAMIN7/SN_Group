@@ -193,17 +193,17 @@ export default function AboutPage() {
           </Reveal>
 
           <Reveal className="relative lg:col-span-6" delay={0.1}>
-            <div className="relative aspect-4/3 sm:aspect-5/4 overflow-hidden rounded-2xl sm:rounded-3xl border border-slate-200 bg-white shadow-[0_20px_60px_rgba(15,23,42,0.11)]">
+            <div className="group relative aspect-4/3 sm:aspect-5/4 overflow-hidden rounded-2xl sm:rounded-3xl border border-slate-200 bg-white shadow-[0_20px_60px_rgba(15,23,42,0.11)] transition-all duration-500 hover:border-cobalt/40 hover:shadow-[0_28px_70px_rgba(21,94,239,0.18)]">
               <Image
                 alt="S.N Group project and engineering team"
-                className="object-cover"
+                className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                 fill
                 sizes="(min-width: 1024px) 50vw, 100vw"
                 src="/images/team.webp"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-white/85 via-transparent to-transparent" />
             </div>
-            <span className="absolute -bottom-4 -left-4 hidden sm:block border border-cobalt/25 bg-white p-5 text-xs font-bold uppercase tracking-[0.14em] text-cobalt shadow-lg">
+            <span className="absolute -bottom-4 -left-4 hidden sm:block rounded-xl border border-cobalt/25 bg-white p-5 text-xs font-bold uppercase tracking-[0.14em] text-cobalt shadow-lg backdrop-blur-md transition-all duration-300 hover:bg-cobalt hover:text-white">
               Dhaka · Bangladesh
             </span>
           </Reveal>
@@ -231,16 +231,28 @@ export default function AboutPage() {
 
           <div className="mt-10 sm:mt-16 grid gap-6 sm:gap-8 lg:grid-cols-2">
             {/* 2. Mission */}
-            <Reveal delay={0.05}>
-              <div className="relative flex h-full flex-col justify-between rounded-2xl sm:rounded-3xl border border-slate-200 bg-gradient-to-br from-white via-white to-blue-50/70 p-6 sm:p-10 shadow-[0_16px_48px_rgba(15,23,42,0.06)]">
-                <div>
-                  <span className="grid size-12 sm:size-14 place-items-center rounded-xl sm:rounded-2xl bg-cobalt/15 text-cobalt">
-                    <Compass aria-hidden="true" className="size-6 sm:size-7" />
-                  </span>
+            <Reveal className="h-full" delay={0.05}>
+              <div className="group relative flex h-full flex-col justify-between overflow-hidden rounded-2xl sm:rounded-3xl border border-slate-200/90 bg-white p-6 sm:p-10 shadow-[0_14px_40px_rgba(15,23,42,0.06)] transition-all duration-400 ease-out hover:-translate-y-2 hover:border-cobalt/40 hover:shadow-[0_24px_60px_rgba(21,94,239,0.16)]">
+                {/* Ambient glowing backdrop on hover */}
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-blue-50/70 via-transparent to-cobalt/[0.04] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                {/* Animated expanding top accent line */}
+                <span className="pointer-events-none absolute inset-x-0 top-0 h-1.5 origin-left scale-x-0 bg-gradient-to-r from-cobalt via-blue-500 to-sky-400 transition-transform duration-500 ease-out group-hover:scale-x-100" />
+                {/* Decorative corner glow */}
+                <span className="pointer-events-none absolute -right-10 -bottom-10 size-36 rounded-full bg-cobalt/[0.06] blur-2xl transition-transform duration-700 group-hover:scale-150" />
+
+                <div className="relative z-10">
+                  <div className="flex items-center justify-between">
+                    <span className="grid size-12 sm:size-14 place-items-center rounded-xl sm:rounded-2xl border border-cobalt/20 bg-blue-50 text-cobalt transition-all duration-400 ease-out group-hover:scale-110 group-hover:bg-cobalt group-hover:text-white group-hover:shadow-[0_8px_24px_rgba(21,94,239,0.35)]">
+                      <Compass aria-hidden="true" className="size-6 sm:size-7" />
+                    </span>
+                    <span className="rounded-full border border-cobalt/20 bg-blue-50/80 px-3 py-1 text-[0.68rem] sm:text-xs font-bold uppercase tracking-wider text-cobalt transition-colors duration-300 group-hover:bg-cobalt group-hover:text-white">
+                      Core Purpose
+                    </span>
+                  </div>
                   <p className="mt-6 text-xs font-bold uppercase tracking-widest text-cobalt">
                     Our Purpose
                   </p>
-                  <h3 className="display-type mt-1 text-2xl xs:text-3xl sm:text-4xl font-bold">
+                  <h3 className="display-type mt-1 text-2xl xs:text-3xl sm:text-4xl font-bold transition-colors duration-300 group-hover:text-cobalt">
                     Our Mission
                   </h3>
                   <p className="mt-4 text-sm sm:text-base leading-7 sm:leading-8 text-ink/72">
@@ -251,16 +263,28 @@ export default function AboutPage() {
             </Reveal>
 
             {/* 3. Vision */}
-            <Reveal delay={0.1}>
-              <div className="relative flex h-full flex-col justify-between rounded-2xl sm:rounded-3xl border border-slate-200 bg-gradient-to-br from-white via-white to-blue-50/70 p-6 sm:p-10 shadow-[0_16px_48px_rgba(15,23,42,0.06)]">
-                <div>
-                  <span className="grid size-12 sm:size-14 place-items-center rounded-xl sm:rounded-2xl bg-cobalt/15 text-cobalt">
-                    <Eye aria-hidden="true" className="size-6 sm:size-7" />
-                  </span>
+            <Reveal className="h-full" delay={0.1}>
+              <div className="group relative flex h-full flex-col justify-between overflow-hidden rounded-2xl sm:rounded-3xl border border-slate-200/90 bg-white p-6 sm:p-10 shadow-[0_14px_40px_rgba(15,23,42,0.06)] transition-all duration-400 ease-out hover:-translate-y-2 hover:border-cobalt/40 hover:shadow-[0_24px_60px_rgba(21,94,239,0.16)]">
+                {/* Ambient glowing backdrop on hover */}
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-blue-50/70 via-transparent to-cobalt/[0.04] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                {/* Animated expanding top accent line */}
+                <span className="pointer-events-none absolute inset-x-0 top-0 h-1.5 origin-left scale-x-0 bg-gradient-to-r from-cobalt via-blue-500 to-sky-400 transition-transform duration-500 ease-out group-hover:scale-x-100" />
+                {/* Decorative corner glow */}
+                <span className="pointer-events-none absolute -right-10 -bottom-10 size-36 rounded-full bg-cobalt/[0.06] blur-2xl transition-transform duration-700 group-hover:scale-150" />
+
+                <div className="relative z-10">
+                  <div className="flex items-center justify-between">
+                    <span className="grid size-12 sm:size-14 place-items-center rounded-xl sm:rounded-2xl border border-cobalt/20 bg-blue-50 text-cobalt transition-all duration-400 ease-out group-hover:scale-110 group-hover:bg-cobalt group-hover:text-white group-hover:shadow-[0_8px_24px_rgba(21,94,239,0.35)]">
+                      <Eye aria-hidden="true" className="size-6 sm:size-7" />
+                    </span>
+                    <span className="rounded-full border border-cobalt/20 bg-blue-50/80 px-3 py-1 text-[0.68rem] sm:text-xs font-bold uppercase tracking-wider text-cobalt transition-colors duration-300 group-hover:bg-cobalt group-hover:text-white">
+                      Future Horizon
+                    </span>
+                  </div>
                   <p className="mt-6 text-xs font-bold uppercase tracking-widest text-cobalt">
                     Future Horizon
                   </p>
-                  <h3 className="display-type mt-1 text-2xl xs:text-3xl sm:text-4xl font-bold">
+                  <h3 className="display-type mt-1 text-2xl xs:text-3xl sm:text-4xl font-bold transition-colors duration-300 group-hover:text-cobalt">
                     Our Vision
                   </h3>
                   <p className="mt-4 text-sm sm:text-base leading-7 sm:leading-8 text-ink/72">
@@ -296,27 +320,39 @@ export default function AboutPage() {
             <div className="grid gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {milestones.map((item, index) => (
                 <Reveal
-                  className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 sm:p-8 shadow-[0_10px_32px_rgba(15,23,42,0.05)] transition-all duration-300 hover:-translate-y-1 hover:border-cobalt/30 hover:shadow-[0_18px_44px_rgba(21,94,239,0.11)]"
+                  className="h-full"
                   delay={index * 0.07}
                   key={item.year}
                 >
-                  <span aria-hidden="true" className="absolute left-0 top-7 h-10 w-1 rounded-r-full bg-cobalt/35 transition-all duration-300 group-hover:h-16 group-hover:bg-cobalt" />
-                  <div>
-                    <div className="flex items-center justify-between gap-4">
-                      <span className="inline-flex items-center gap-1.5 rounded-full border border-cobalt/20 bg-blue-50 px-3 py-1 text-xs font-bold text-cobalt">
-                        <Calendar aria-hidden="true" className="size-3.5" />
-                        {item.year}
-                      </span>
-                      <span className="text-xs font-extrabold tracking-widest text-cobalt/30">
-                        0{index + 1}
-                      </span>
+                  <div className="group relative flex h-full flex-col justify-between overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 sm:p-8 shadow-[0_10px_32px_rgba(15,23,42,0.05)] transition-all duration-400 ease-out hover:-translate-y-2 hover:border-cobalt/40 hover:shadow-[0_22px_54px_rgba(21,94,239,0.15)]">
+                    {/* Active vertical left accent line */}
+                    <span
+                      aria-hidden="true"
+                      className="absolute left-0 top-0 bottom-0 w-1 bg-cobalt/25 transition-all duration-400 group-hover:w-1.5 group-hover:bg-cobalt"
+                    />
+                    {/* Corner ambient glow */}
+                    <span
+                      aria-hidden="true"
+                      className="pointer-events-none absolute -right-8 -top-8 size-24 rounded-full bg-cobalt/[0.04] transition-transform duration-500 group-hover:scale-150"
+                    />
+
+                    <div className="relative z-10">
+                      <div className="flex items-center justify-between gap-4">
+                        <span className="inline-flex items-center gap-1.5 rounded-full border border-cobalt/20 bg-blue-50 px-3 py-1 text-xs font-bold text-cobalt transition-all duration-300 group-hover:bg-cobalt group-hover:text-white group-hover:shadow-[0_4px_14px_rgba(21,94,239,0.3)]">
+                          <Calendar aria-hidden="true" className="size-3.5" />
+                          {item.year}
+                        </span>
+                        <span className="text-xs font-extrabold tracking-widest text-cobalt/35 transition-colors duration-300 group-hover:text-cobalt">
+                          0{index + 1}
+                        </span>
+                      </div>
+                      <h3 className="display-type mt-5 text-xl sm:text-2xl font-bold text-ink transition-colors duration-300 group-hover:text-cobalt">
+                        {item.title}
+                      </h3>
+                      <p className="mt-2.5 text-xs sm:text-sm leading-6 text-ink/65">
+                        {item.description}
+                      </p>
                     </div>
-                    <h3 className="display-type mt-5 text-xl sm:text-2xl font-bold text-ink">
-                      {item.title}
-                    </h3>
-                    <p className="mt-2.5 text-xs sm:text-sm leading-6 text-ink/64">
-                      {item.description}
-                    </p>
                   </div>
                 </Reveal>
               ))}
@@ -334,10 +370,15 @@ export default function AboutPage() {
         <Container>
           <div className="mx-auto max-w-4xl">
             <Reveal>
-              <div className="group relative overflow-hidden rounded-2xl sm:rounded-3xl border border-slate-200 bg-gradient-to-br from-white via-white to-blue-50/50 p-6 sm:p-12 shadow-[0_18px_50px_rgba(15,23,42,0.08)]">
+              <div className="group relative overflow-hidden rounded-2xl sm:rounded-3xl border border-slate-200 bg-white p-6 sm:p-12 shadow-[0_18px_50px_rgba(15,23,42,0.08)] transition-all duration-500 hover:border-cobalt/40 hover:shadow-[0_28px_70px_rgba(21,94,239,0.16)]">
+                {/* Top sweeping line */}
+                <span
+                  aria-hidden="true"
+                  className="pointer-events-none absolute inset-x-0 top-0 h-1.5 origin-left scale-x-0 bg-gradient-to-r from-cobalt via-blue-500 to-sky-400 transition-transform duration-700 ease-out group-hover:scale-x-100"
+                />
                 <Quote
                   aria-hidden="true"
-                  className="pointer-events-none absolute -bottom-10 -right-8 size-48 text-cobalt/[0.04] transition-transform duration-700 group-hover:scale-110"
+                  className="pointer-events-none absolute -bottom-10 -right-8 size-56 text-cobalt/[0.04] transition-all duration-700 ease-out group-hover:scale-115 group-hover:rotate-6 group-hover:text-cobalt/[0.08]"
                   strokeWidth={1.2}
                 />
 
@@ -346,11 +387,11 @@ export default function AboutPage() {
                     <span className="text-xs font-bold uppercase tracking-widest text-blue-400">
                       Executive Perspective
                     </span>
-                    <h2 className="display-type mt-1 text-2xl xs:text-3xl sm:text-4xl font-bold">
+                    <h2 className="display-type mt-1 text-2xl xs:text-3xl sm:text-4xl font-bold transition-colors duration-300 group-hover:text-cobalt">
                       Message from the Managing Director
                     </h2>
                   </div>
-                  <span className="grid size-12 sm:size-14 place-items-center rounded-2xl border border-cobalt/20 bg-white text-cobalt shadow-[0_8px_24px_rgba(21,94,239,0.12)] shrink-0">
+                  <span className="grid size-12 sm:size-14 place-items-center rounded-2xl border border-cobalt/20 bg-blue-50 text-cobalt shadow-[0_8px_24px_rgba(21,94,239,0.12)] shrink-0 transition-all duration-400 group-hover:scale-110 group-hover:bg-cobalt group-hover:text-white group-hover:shadow-[0_8px_24px_rgba(21,94,239,0.35)]">
                     <Quote aria-hidden="true" className="size-6 sm:size-7" strokeWidth={1.8} />
                   </span>
                 </div>
@@ -365,7 +406,7 @@ export default function AboutPage() {
                   <p>
                     Through <strong className="text-ink">S.N Eng Construction BD Ltd.</strong>, <strong className="text-ink">S.N Import &amp; Export BD Ltd.</strong>, and <strong className="text-ink">Mehrish Holdings Ltd.</strong>, we continue to expand capabilities while creating sustainable value for customers, partners, and communities.
                   </p>
-                  <p className="rounded-xl border-l-2 border-cobalt bg-blue-50/70 p-4 sm:p-5 font-semibold text-cobalt">
+                  <p className="rounded-xl border-l-2 border-cobalt bg-blue-50/70 p-4 sm:p-5 font-semibold text-cobalt transition-colors duration-300 group-hover:border-blue-600 group-hover:bg-blue-50">
                     &ldquo;Our success is ultimately measured by the trust of our clients, partners, employees, and stakeholders. We look forward to building a stronger future together.&rdquo;
                   </p>
                 </div>
@@ -406,34 +447,45 @@ export default function AboutPage() {
           <div className="mt-10 sm:mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {leadershipTeam.map((member, index) => (
               <Reveal
-                className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 sm:p-7 shadow-[0_12px_36px_rgba(15,23,42,0.055)] transition-all duration-300 hover:-translate-y-1 hover:border-cobalt/35 hover:shadow-[0_20px_48px_rgba(21,94,239,0.12)]"
+                className="h-full"
                 delay={index * 0.06}
                 key={member.name}
               >
-                <span aria-hidden="true" className="absolute left-0 top-7 h-10 w-1 rounded-r-full bg-cobalt/35 transition-all duration-300 group-hover:h-16 group-hover:bg-cobalt" />
+                <div className="group relative flex h-full flex-col justify-between overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 sm:p-7 shadow-[0_12px_36px_rgba(15,23,42,0.055)] transition-all duration-400 ease-out hover:-translate-y-2 hover:border-cobalt/40 hover:shadow-[0_24px_56px_rgba(21,94,239,0.16)]">
+                  {/* Top expanding accent line */}
+                  <span
+                    aria-hidden="true"
+                    className="pointer-events-none absolute inset-x-0 top-0 h-1 origin-left scale-x-0 bg-gradient-to-r from-cobalt to-blue-400 transition-transform duration-500 group-hover:scale-x-100"
+                  />
+                  {/* Left indicator line */}
+                  <span
+                    aria-hidden="true"
+                    className="absolute left-0 top-7 h-10 w-1 rounded-r-full bg-cobalt/35 transition-all duration-300 group-hover:h-16 group-hover:bg-cobalt"
+                  />
 
-                <div>
-                  <div className="flex items-center justify-between gap-4">
-                    <span className="grid size-12 place-items-center rounded-xl border border-cobalt/20 bg-blue-50 text-cobalt font-extrabold text-sm transition-colors duration-300 group-hover:bg-cobalt group-hover:text-white">
-                      {member.name.split(" ").map((n) => n[0]).slice(0, 2).join("")}
-                    </span>
-                    <span className="text-[0.68rem] font-bold uppercase tracking-wider text-cobalt/70">
-                      0{index + 1}
-                    </span>
+                  <div className="relative z-10">
+                    <div className="flex items-center justify-between gap-4">
+                      <span className="grid size-12 place-items-center rounded-xl border border-cobalt/20 bg-blue-50 text-cobalt font-extrabold text-sm transition-all duration-400 group-hover:scale-110 group-hover:bg-cobalt group-hover:text-white group-hover:shadow-[0_6px_20px_rgba(21,94,239,0.35)]">
+                        {member.name.split(" ").map((n) => n[0]).slice(0, 2).join("")}
+                      </span>
+                      <span className="text-[0.68rem] font-bold uppercase tracking-wider text-cobalt/50 transition-colors duration-300 group-hover:text-cobalt">
+                        0{index + 1}
+                      </span>
+                    </div>
+
+                    <h3 className="display-type mt-5 text-xl font-bold text-ink transition-colors duration-300 group-hover:text-cobalt">
+                      {member.name}
+                    </h3>
+                    <p className="mt-1 text-xs font-bold uppercase tracking-wider text-cobalt transition-colors duration-300 group-hover:text-blue-600">
+                      {member.designation}
+                    </p>
+                    <p className="mt-1 text-xs font-semibold text-ink/50">
+                      {member.department}
+                    </p>
+                    <p className="mt-3 text-xs sm:text-sm leading-6 text-ink/68">
+                      {member.bio}
+                    </p>
                   </div>
-
-                  <h3 className="display-type mt-5 text-xl font-bold text-ink">
-                    {member.name}
-                  </h3>
-                  <p className="mt-1 text-xs font-bold uppercase tracking-wider text-cobalt">
-                    {member.designation}
-                  </p>
-                  <p className="mt-1 text-xs font-semibold text-ink/50">
-                    {member.department}
-                  </p>
-                  <p className="mt-3 text-xs sm:text-sm leading-6 text-ink/68">
-                    {member.bio}
-                  </p>
                 </div>
               </Reveal>
             ))}
@@ -465,23 +517,35 @@ export default function AboutPage() {
               const Icon = client.icon;
               return (
                 <Reveal
-                  className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-slate-200 bg-white p-5 sm:p-6 shadow-[0_10px_30px_rgba(15,23,42,0.05)] transition-all duration-300 hover:-translate-y-1 hover:border-cobalt/35 hover:shadow-[0_18px_44px_rgba(21,94,239,0.11)]"
+                  className="h-full"
                   delay={index * 0.05}
                   key={client.name}
                 >
-                  <div>
-                    <span className="grid size-11 place-items-center rounded-xl border border-cobalt/15 bg-blue-50 text-cobalt transition-colors duration-300 group-hover:bg-cobalt group-hover:text-white">
-                      <Icon aria-hidden="true" className="size-5" strokeWidth={1.8} />
-                    </span>
-                    <h3 className="display-type mt-4 text-base sm:text-lg font-bold text-ink">
-                      {client.name}
-                    </h3>
-                    <p className="mt-1 text-[0.72rem] font-bold uppercase tracking-wider text-cobalt">
-                      {client.category}
-                    </p>
-                    <p className="mt-2 text-xs leading-5 text-ink/62">
-                      {client.detail}
-                    </p>
+                  <div className="group relative flex h-full flex-col justify-between overflow-hidden rounded-2xl border border-slate-200 bg-white p-5 sm:p-6 shadow-[0_10px_30px_rgba(15,23,42,0.05)] transition-all duration-400 ease-out hover:-translate-y-2 hover:border-cobalt/40 hover:shadow-[0_22px_50px_rgba(21,94,239,0.15)]">
+                    {/* Ambient corner glow */}
+                    <span
+                      aria-hidden="true"
+                      className="pointer-events-none absolute -right-8 -bottom-8 size-24 rounded-full bg-cobalt/[0.04] transition-transform duration-500 group-hover:scale-150"
+                    />
+                    <span
+                      aria-hidden="true"
+                      className="pointer-events-none absolute inset-x-0 top-0 h-1 origin-left scale-x-0 bg-gradient-to-r from-cobalt to-sky-400 transition-transform duration-500 group-hover:scale-x-100"
+                    />
+
+                    <div className="relative z-10">
+                      <span className="grid size-11 place-items-center rounded-xl border border-cobalt/15 bg-blue-50 text-cobalt transition-all duration-400 group-hover:scale-110 group-hover:bg-cobalt group-hover:text-white group-hover:shadow-[0_6px_18px_rgba(21,94,239,0.3)]">
+                        <Icon aria-hidden="true" className="size-5" strokeWidth={1.8} />
+                      </span>
+                      <h3 className="display-type mt-4 text-base sm:text-lg font-bold text-ink transition-colors duration-300 group-hover:text-cobalt">
+                        {client.name}
+                      </h3>
+                      <p className="mt-1 text-[0.72rem] font-bold uppercase tracking-wider text-cobalt">
+                        {client.category}
+                      </p>
+                      <p className="mt-2 text-xs leading-5 text-ink/62">
+                        {client.detail}
+                      </p>
+                    </div>
                   </div>
                 </Reveal>
               );

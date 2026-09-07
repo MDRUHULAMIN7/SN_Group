@@ -90,10 +90,9 @@ export function SisterConcernMenu({ active }: SisterConcernMenuProps) {
               <Link
                 ref={index === 0 ? firstItemRef : undefined}
                 className="group/item flex min-h-12 cursor-pointer items-center gap-3 rounded-lg border-b border-slate-100 px-3 py-2.5 transition-colors last:border-b-0 hover:bg-slate-50 hover:text-cobalt focus:text-cobalt"
-                href="#"
+                href={`/sister-concerns/${concern.slug}`}
                 key={concern.slug}
-                onClick={(e) => {
-                  e.preventDefault();
+                onClick={() => {
                   setOpen(false);
                 }}
                 role="menuitem"
