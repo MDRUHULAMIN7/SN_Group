@@ -1,8 +1,8 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { ArrowLeft, ArrowRight, Quote, Star } from "lucide-react";
-import { AnimatePresence, m, useReducedMotion } from "motion/react";
+import { useEffect, useRef, useState, type TransitionEvent } from "react";
+import { Quote, Star } from "lucide-react";
+import { useReducedMotion } from "motion/react";
 import { Container } from "@/components/ui/container";
 import { Reveal } from "@/components/motion/reveal";
 
@@ -45,28 +45,64 @@ const testimonials = [
   },
 ] as const;
 
-export function TestimonialsSection() {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [paused, setPaused] = useState(false);
-  const reduceMotion = useReducedMotion();
+const carouselItems = [...testimonials, ...testimonials.slice(0, 3)];
 
-  const changeSlide = (direction: 1 | -1) => {
-    setActiveIndex((current) => (current + direction + testimonials.length) % testimonials.length);
-  };
+export function TestimonialsSection() {
+  const [position, setPosition] = useState(0);
+  const [step, setStep] = useState(0);
+  const [paused, setPaused] = useState(false);
+  const [transitionEnabled, setTransitionEnabled] = useState(true);
+  const viewportRef = useRef<HTMLDivElement>(null);
+  const slideRefs = useRef<Array<HTMLElement | null>>([]);
+  const reduceMotion = useReducedMotion();
+  const activeIndex = position % testimonials.length;
+
+  useEffect(() => {
+    const measure = () => {
+      const firstSlide = slideRefs.current[0];
+      const secondSlide = slideRefs.current[1];
+      if (firstSlide && secondSlide) {
+        setStep(secondSlide.offsetLeft - firstSlide.offsetLeft);
+      }
+    };
+
+    measure();
+    window.addEventListener("resize", measure);
+
+    const observer = typeof ResizeObserver === "undefined" ? null : new ResizeObserver(measure);
+    if (viewportRef.current) observer?.observe(viewportRef.current);
+
+    return () => {
+      window.removeEventListener("resize", measure);
+      observer?.disconnect();
+    };
+  }, []);
 
   useEffect(() => {
     if (paused || reduceMotion) return;
 
     const timer = window.setInterval(() => {
-      setActiveIndex((current) => (current + 1) % testimonials.length);
-    }, 5500);
+      setTransitionEnabled(true);
+      setPosition((current) => current + 1);
+    }, 5000);
 
     return () => window.clearInterval(timer);
   }, [paused, reduceMotion]);
 
-  const visibleTestimonials = [0, 1, 2].map(
-    (offset) => testimonials[(activeIndex + offset) % testimonials.length],
-  );
+  const handleTransitionEnd = (event: TransitionEvent<HTMLDivElement>) => {
+    if (event.target !== event.currentTarget || position !== testimonials.length) return;
+
+    setTransitionEnabled(false);
+    setPosition(0);
+    window.requestAnimationFrame(() => {
+      window.requestAnimationFrame(() => setTransitionEnabled(true));
+    });
+  };
+
+  const selectSlide = (index: number) => {
+    setTransitionEnabled(true);
+    setPosition(index);
+  };
 
   return (
     <section
@@ -74,12 +110,6 @@ export function TestimonialsSection() {
       aria-roledescription="carousel"
       className="relative overflow-hidden border-t border-slate-200 bg-white py-20 text-ink sm:py-24"
       id="testimonials"
-      onBlur={(event) => {
-        if (!event.currentTarget.contains(event.relatedTarget)) setPaused(false);
-      }}
-      onFocus={() => setPaused(true)}
-      onMouseEnter={() => setPaused(true)}
-      onMouseLeave={() => setPaused(false)}
     >
       <div aria-hidden="true" className="pointer-events-none absolute -left-40 top-1/3 size-96 rounded-full bg-cobalt/5 blur-[130px]" />
 
@@ -96,21 +126,30 @@ export function TestimonialsSection() {
           </Reveal>
         </div>
 
-        <div className="relative mt-14 overflow-hidden pb-2">
-          <AnimatePresence initial={false} mode="wait">
-            <m.div
-              animate={{ opacity: 1, x: 0 }}
-              className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
-              exit={{ opacity: 0, x: -28 }}
-              initial={{ opacity: 0, x: 28 }}
-              key={activeIndex}
-              transition={{ duration: reduceMotion ? 0 : 0.58, ease: [0.22, 1, 0.36, 1] }}
-            >
-              {visibleTestimonials.map((item, index) => (
+        <div className="relative mt-14 overflow-hidden pb-2" ref={viewportRef}>
+          <div
+            className="flex gap-6 transition-transform ease-[cubic-bezier(0.22,1,0.36,1)] will-change-transform"
+            onTransitionEnd={handleTransitionEnd}
+            style={{
+              transform: `translate3d(-${position * step}px, 0, 0)`,
+              transitionDuration: reduceMotion || !transitionEnabled ? "0ms" : "1100ms",
+            }}
+          >
+            {carouselItems.map((item, itemIndex) => {
+              const testimonialIndex = itemIndex % testimonials.length;
+              const isClone = itemIndex >= testimonials.length;
+
+              return (
                 <article
-                  aria-label={`Testimonial ${((activeIndex + index) % testimonials.length) + 1} of ${testimonials.length}`}
-                  className={`group relative min-h-80 flex-col justify-between overflow-hidden rounded-2xl border border-slate-200 bg-linear-to-br from-white via-white to-blue-50/50 p-7 shadow-[0_14px_42px_rgba(15,23,42,0.06)] transition-[border-color,box-shadow,background-color] duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] hover:border-cobalt/40 hover:shadow-[0_24px_56px_rgba(21,94,239,0.13)] sm:p-8 ${index === 0 ? "flex" : index === 1 ? "hidden sm:flex" : "hidden lg:flex"}`}
-                  key={`${activeIndex}-${item.author}`}
+                  aria-hidden={isClone || undefined}
+                  aria-label={isClone ? undefined : `Testimonial ${testimonialIndex + 1} of ${testimonials.length}`}
+                  className="group relative flex min-h-80 w-full shrink-0 flex-col justify-between overflow-hidden rounded-2xl border border-slate-200 bg-linear-to-br from-white via-white to-blue-50/50 p-7 shadow-[0_14px_42px_rgba(15,23,42,0.06)] transition-[border-color,box-shadow,background-color] duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] hover:border-cobalt/40 hover:shadow-[0_24px_56px_rgba(21,94,239,0.13)] sm:w-[calc(50%-0.75rem)] sm:p-8 lg:w-[calc(33.333333%-1rem)]"
+                  key={`${item.author}-${itemIndex}`}
+                  onMouseEnter={() => setPaused(true)}
+                  onMouseLeave={() => setPaused(false)}
+                  ref={(element) => {
+                    slideRefs.current[itemIndex] = element;
+                  }}
                 >
                   <Quote aria-hidden="true" className="absolute -right-3 -top-4 size-28 text-cobalt/5.5 transition-[transform,color] duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:-rotate-6 group-hover:scale-110 group-hover:text-cobalt/9" strokeWidth={1.2} />
 
@@ -122,7 +161,7 @@ export function TestimonialsSection() {
                         ))}
                       </div>
                       <span className="text-xs font-extrabold tracking-[0.16em] text-cobalt/35">
-                        0{((activeIndex + index) % testimonials.length) + 1}
+                        0{testimonialIndex + 1}
                       </span>
                     </div>
                     <p className="mt-7 text-base font-medium leading-8 text-ink/78">
@@ -140,46 +179,22 @@ export function TestimonialsSection() {
                     </div>
                   </div>
                 </article>
-              ))}
-            </m.div>
-          </AnimatePresence>
+              );
+            })}
+          </div>
         </div>
 
-        <div className="mt-7 flex flex-col items-center justify-between gap-5 sm:flex-row">
-          <div aria-label="Choose testimonial" className="flex items-center gap-2" role="group">
-            {testimonials.map((item, index) => (
-              <button
-                aria-label={`Show testimonial ${index + 1}`}
-                aria-pressed={activeIndex === index}
-                className={`h-2.5 rounded-full transition-[width,background-color] duration-500 ${activeIndex === index ? "w-8 bg-cobalt" : "w-2.5 bg-slate-300 hover:bg-slate-400"}`}
-                key={item.author}
-                onClick={() => setActiveIndex(index)}
-                type="button"
-              />
-            ))}
-          </div>
-
-          <div className="flex items-center gap-3">
-            <span className="mr-1 text-xs font-semibold text-ink/50">
-              {paused ? "Auto-play paused" : "Auto-playing"}
-            </span>
+        <div aria-label="Choose testimonial" className="mt-7 flex items-center justify-center gap-2" role="group">
+          {testimonials.map((item, index) => (
             <button
-              aria-label="Previous testimonials"
-              className="grid size-11 place-items-center rounded-full border border-slate-200 bg-white text-ink shadow-sm transition-[border-color,color,box-shadow] duration-500 hover:border-cobalt hover:text-cobalt hover:shadow-[0_8px_22px_rgba(21,94,239,0.12)]"
-              onClick={() => changeSlide(-1)}
+              aria-label={`Show testimonial ${index + 1}`}
+              aria-pressed={activeIndex === index}
+              className={`h-2.5 rounded-full transition-[width,background-color] duration-500 ${activeIndex === index ? "w-8 bg-cobalt" : "w-2.5 bg-slate-300 hover:bg-slate-400"}`}
+              key={item.author}
+              onClick={() => selectSlide(index)}
               type="button"
-            >
-              <ArrowLeft aria-hidden="true" className="size-5" />
-            </button>
-            <button
-              aria-label="Next testimonials"
-              className="grid size-11 place-items-center rounded-full border border-slate-200 bg-white text-ink shadow-sm transition-[border-color,color,box-shadow] duration-500 hover:border-cobalt hover:text-cobalt hover:shadow-[0_8px_22px_rgba(21,94,239,0.12)]"
-              onClick={() => changeSlide(1)}
-              type="button"
-            >
-              <ArrowRight aria-hidden="true" className="size-5" />
-            </button>
-          </div>
+            />
+          ))}
         </div>
       </Container>
     </section>
