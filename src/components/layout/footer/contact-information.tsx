@@ -35,8 +35,8 @@ export function ContactInformation() {
         <div className="flex gap-3" key={label}>
           <span className="mt-0.5 grid size-9 shrink-0 place-items-center rounded-full bg-blue-50 text-cobalt"><Icon aria-hidden="true" className="size-4" /></span>
           <div>
-            <p className="mb-2 text-[0.65rem] font-bold uppercase tracking-[0.16em] text-ink/45">{label}</p>
-            <div className="text-sm leading-6 text-ink/65">{content}</div>
+            <p className="mb-2 text-[0.65rem] font-bold uppercase tracking-[0.16em] text-ink/65">{label}</p>
+            <div className="text-sm leading-6 text-ink/78">{content}</div>
           </div>
         </div>
       ))}

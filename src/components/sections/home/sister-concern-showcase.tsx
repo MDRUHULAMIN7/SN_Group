@@ -8,7 +8,7 @@ export function SisterConcernShowcase() {
   return (
     <section
       aria-label="Our Group Companies"
-      className="blueprint-grid border-t border-slate-200 bg-white text-ink section-space"
+      className="blueprint-grid border-t border-slate-200 bg-white py-20 text-ink sm:py-24"
       id="group-companies"
     >
       <Container>

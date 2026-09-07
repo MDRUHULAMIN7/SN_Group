@@ -45,7 +45,7 @@ export function WhyChooseUs() {
   return (
     <section
       aria-label="Why Choose S.N Group"
-      className="blueprint-grid relative overflow-hidden border-t border-slate-200 bg-white py-20 text-ink sm:py-28"
+      className="blueprint-grid relative overflow-hidden border-t border-slate-200 bg-white py-20 text-ink sm:py-24"
       id="why-choose-us"
     >
       {/* Background ambient lighting */}

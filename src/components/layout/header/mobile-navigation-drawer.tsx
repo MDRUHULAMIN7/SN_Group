@@ -77,7 +77,7 @@ export function MobileNavigationDrawer({ open, onClose, triggerRef }: MobileNavi
           <m.button
             animate={{ opacity: 1 }}
             aria-label="Close navigation menu"
-            className="absolute inset-0 bg-white/72 backdrop-blur-md"
+            className="absolute inset-0 bg-white/64 backdrop-blur-[2px]"
             exit={{ opacity: 0 }}
             initial={{ opacity: 0 }}
             onClick={closeAndRestore}
@@ -98,7 +98,7 @@ export function MobileNavigationDrawer({ open, onClose, triggerRef }: MobileNavi
           >
             <div className="flex items-center justify-between gap-4 border-b border-slate-200 pb-5">
               <BrandLockup size="sm" />
-              <button aria-label="Close navigation menu" className="grid size-11 shrink-0 place-items-center rounded-full border border-slate-200 bg-white transition-all duration-200 hover:border-cobalt hover:text-cobalt active:scale-95" onClick={closeAndRestore} type="button">
+              <button aria-label="Close navigation menu" className="grid size-11 shrink-0 place-items-center rounded-full border border-slate-200 bg-white text-ink transition-[background-color,border-color] duration-300 hover:border-slate-400 hover:bg-slate-50 active:scale-95" onClick={closeAndRestore} type="button">
                 <X aria-hidden="true" className="size-6" />
               </button>
             </div>

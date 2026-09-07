@@ -51,7 +51,7 @@ export function ServicesOverview() {
   return (
     <section
       aria-label="Service Overview"
-      className="blueprint-grid relative overflow-hidden border-t border-slate-200 bg-white pb-12 pt-20 text-ink sm:pb-14 sm:pt-28"
+      className="blueprint-grid relative overflow-hidden border-t border-slate-200 bg-white pb-12 pt-20 text-ink sm:pb-14 sm:pt-24"
       id="services-overview"
     >
       {/* Ambient glow */}

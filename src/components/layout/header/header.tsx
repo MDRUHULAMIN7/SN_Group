@@ -66,7 +66,7 @@ export function Header() {
             <AnimatedMenuButton
               buttonRef={menuButtonRef}
               className={cn(
-                "border-slate-300 bg-white text-ink hover:border-cobalt hover:text-cobalt",
+                "border-slate-300 bg-white text-ink transition-colors duration-300 hover:border-slate-400 hover:bg-slate-50",
                 compact && "bg-slate-50",
               )}
               onClick={() => setMobileOpen((value) => !value)}

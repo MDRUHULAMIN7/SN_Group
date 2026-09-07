@@ -44,7 +44,7 @@ export function CoreValuesSection() {
   return (
     <section
       aria-label="Our Core Values"
-      className="blueprint-grid relative overflow-hidden border-t border-slate-200 bg-white py-20 text-ink sm:py-28"
+      className="blueprint-grid relative overflow-hidden border-t border-slate-200 bg-white py-20 text-ink sm:py-24"
       id="core-values"
     >
       <Container className="relative z-10">

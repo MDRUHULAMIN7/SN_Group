@@ -81,7 +81,7 @@ export function TestimonialsSection() {
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
-      <div aria-hidden="true" className="pointer-events-none absolute -left-40 top-1/3 size-96 rounded-full bg-cobalt/[0.05] blur-[130px]" />
+      <div aria-hidden="true" className="pointer-events-none absolute -left-40 top-1/3 size-96 rounded-full bg-cobalt/5 blur-[130px]" />
 
       <Container className="relative z-10">
         <div className="mx-auto max-w-3xl text-center">
@@ -109,10 +109,10 @@ export function TestimonialsSection() {
               {visibleTestimonials.map((item, index) => (
                 <article
                   aria-label={`Testimonial ${((activeIndex + index) % testimonials.length) + 1} of ${testimonials.length}`}
-                  className={`group relative min-h-[20rem] flex-col justify-between overflow-hidden rounded-2xl border border-slate-200 bg-gradient-to-br from-white via-white to-blue-50/50 p-7 shadow-[0_14px_42px_rgba(15,23,42,0.06)] transition-[border-color,box-shadow,background-color] duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] hover:border-cobalt/40 hover:shadow-[0_24px_56px_rgba(21,94,239,0.13)] sm:p-8 ${index === 0 ? "flex" : index === 1 ? "hidden sm:flex" : "hidden lg:flex"}`}
+                  className={`group relative min-h-80 flex-col justify-between overflow-hidden rounded-2xl border border-slate-200 bg-linear-to-br from-white via-white to-blue-50/50 p-7 shadow-[0_14px_42px_rgba(15,23,42,0.06)] transition-[border-color,box-shadow,background-color] duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] hover:border-cobalt/40 hover:shadow-[0_24px_56px_rgba(21,94,239,0.13)] sm:p-8 ${index === 0 ? "flex" : index === 1 ? "hidden sm:flex" : "hidden lg:flex"}`}
                   key={`${activeIndex}-${item.author}`}
                 >
-                  <Quote aria-hidden="true" className="absolute -right-3 -top-4 size-28 text-cobalt/[0.055] transition-[transform,color] duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:-rotate-6 group-hover:scale-110 group-hover:text-cobalt/[0.09]" strokeWidth={1.2} />
+                  <Quote aria-hidden="true" className="absolute -right-3 -top-4 size-28 text-cobalt/5.5 transition-[transform,color] duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:-rotate-6 group-hover:scale-110 group-hover:text-cobalt/9" strokeWidth={1.2} />
 
                   <div className="relative z-10">
                     <div className="flex items-center justify-between gap-4">

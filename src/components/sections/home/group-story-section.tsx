@@ -13,7 +13,7 @@ export function GroupStorySection() {
   return (
     <section
       aria-label="About S.N Group"
-      className="relative overflow-hidden border-t border-slate-200 bg-white pb-16 pt-(--section-space) text-ink lg:pb-20"
+      className="relative overflow-hidden border-t border-slate-200 bg-white pb-16 pt-20 text-ink sm:pt-24 lg:pb-20 lg:pt-28"
       id="about-group"
     >
       <div
