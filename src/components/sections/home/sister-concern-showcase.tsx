@@ -29,44 +29,46 @@ export function SisterConcernShowcase() {
         <div className="mt-16 grid gap-px overflow-hidden rounded-2xl border border-slate-200 bg-slate-200 shadow-[0_22px_65px_rgba(15,23,42,0.09)] lg:grid-cols-3">
           {sisterConcerns.map((concern, index) => (
             <Reveal
-              className="group relative min-h-136 overflow-hidden bg-white"
+              className="h-full"
               delay={index * 0.08}
               key={concern.slug}
             >
-              <Image
-                alt={concern.imageAlt}
-                className="transform-gpu object-cover opacity-85 transition-transform duration-700 ease-out will-change-transform backface-hidden group-hover:scale-[1.025]"
-                fill
-                sizes="(min-width: 1024px) 33vw, 100vw"
-                src={concern.image}
-              />
-              <div className="absolute inset-0 bg-linear-to-t from-white/92 via-white/48 to-transparent transition-opacity duration-700 ease-out group-hover:opacity-75" />
-              <div className="absolute inset-0 flex flex-col justify-between p-7 text-ink sm:p-9">
-                <div className="flex items-start justify-between">
-                  <span className="text-xs font-bold tabular-nums text-cobalt">
-                    0{index + 1}
-                  </span>
-                  <a
-                    aria-label={`Inquire about ${concern.name}`}
-                    className="grid size-11 place-items-center rounded-full border border-cobalt/25 bg-white/92 shadow-sm backdrop-blur-sm transition-[background-color,color,border-color,box-shadow] duration-500 hover:border-cobalt hover:bg-cobalt hover:text-white hover:shadow-[0_10px_24px_rgba(21,94,239,0.24)]"
-                    href="/contact#quotation-form"
-                  >
-                    <ArrowUpRight aria-hidden="true" className="size-5 transition-transform duration-500 group-hover:rotate-45" />
-                  </a>
-                </div>
-                <div>
-                  <p className="mb-3 text-xs font-bold uppercase tracking-[0.16em] text-cobalt">
-                    {concern.discipline}
-                  </p>
-                  <h3 className="display-type text-3xl font-bold leading-tight sm:text-4xl">
-                    {concern.name}
-                  </h3>
-                  <p className="mt-2 text-xs font-semibold text-cobalt/80">
-                    {concern.headline}
-                  </p>
-                  <p className="mt-4 line-clamp-3 text-sm leading-6 text-ink/68">
-                    {concern.description}
-                  </p>
+              <div className="group relative h-full min-h-136 overflow-hidden bg-white">
+                <Image
+                  alt={concern.imageAlt}
+                  className="transform-gpu object-cover opacity-85 transition-transform duration-500 ease-out will-change-transform backface-hidden group-hover:scale-105"
+                  fill
+                  sizes="(min-width: 1024px) 33vw, 100vw"
+                  src={concern.image}
+                />
+                <div className="absolute inset-0 bg-linear-to-t from-white/92 via-white/48 to-transparent transition-opacity duration-500 ease-out group-hover:opacity-75" />
+                <div className="absolute inset-0 flex flex-col justify-between p-7 text-ink sm:p-9">
+                  <div className="flex items-start justify-between">
+                    <span className="text-xs font-bold tabular-nums text-cobalt">
+                      0{index + 1}
+                    </span>
+                    <a
+                      aria-label={`Inquire about ${concern.name}`}
+                      className="grid size-11 place-items-center rounded-full border border-cobalt/25 bg-white/92 shadow-sm backdrop-blur-sm transition-[background-color,color,border-color,box-shadow] duration-300 hover:border-cobalt hover:bg-cobalt hover:text-white hover:shadow-[0_10px_24px_rgba(21,94,239,0.24)]"
+                      href="/contact#quotation-form"
+                    >
+                      <ArrowUpRight aria-hidden="true" className="size-5 transition-transform duration-300 group-hover:rotate-45" />
+                    </a>
+                  </div>
+                  <div>
+                    <p className="mb-3 text-xs font-bold uppercase tracking-[0.16em] text-cobalt">
+                      {concern.discipline}
+                    </p>
+                    <h3 className="display-type text-3xl font-bold leading-tight sm:text-4xl">
+                      {concern.name}
+                    </h3>
+                    <p className="mt-2 text-xs font-semibold text-cobalt/80">
+                      {concern.headline}
+                    </p>
+                    <p className="mt-4 line-clamp-3 text-sm leading-6 text-ink/68">
+                      {concern.description}
+                    </p>
+                  </div>
                 </div>
               </div>
             </Reveal>

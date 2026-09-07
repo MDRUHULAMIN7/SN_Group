@@ -84,7 +84,7 @@ export function TestimonialsSection() {
     const timer = window.setInterval(() => {
       setTransitionEnabled(true);
       setPosition((current) => current + 1);
-    }, 3800);
+    }, 2400);
 
     return () => window.clearInterval(timer);
   }, [paused, reduceMotion]);
@@ -128,11 +128,11 @@ export function TestimonialsSection() {
 
         <div className="relative mt-14 overflow-hidden pb-2" ref={viewportRef}>
           <div
-            className="flex gap-6 transition-transform ease-in-out will-change-transform"
+            className="flex gap-6 transition-transform ease-[cubic-bezier(0.22,1,0.36,1)] will-change-transform"
             onTransitionEnd={handleTransitionEnd}
             style={{
               transform: `translate3d(-${position * step}px, 0, 0)`,
-              transitionDuration: reduceMotion || !transitionEnabled ? "0ms" : "800ms",
+              transitionDuration: reduceMotion || !transitionEnabled ? "0ms" : "450ms",
             }}
           >
             {carouselItems.map((item, itemIndex) => {
@@ -143,7 +143,7 @@ export function TestimonialsSection() {
                 <article
                   aria-hidden={isClone || undefined}
                   aria-label={isClone ? undefined : `Testimonial ${testimonialIndex + 1} of ${testimonials.length}`}
-                  className="group relative flex min-h-80 w-full shrink-0 flex-col justify-between overflow-hidden rounded-2xl border border-slate-200 bg-linear-to-br from-white via-white to-blue-50/50 p-7 shadow-[0_14px_42px_rgba(15,23,42,0.06)] transition-[border-color,box-shadow,background-color] duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] hover:border-cobalt/40 hover:shadow-[0_24px_56px_rgba(21,94,239,0.13)] sm:w-[calc(50%-0.75rem)] sm:p-8 lg:w-[calc(33.333333%-1rem)]"
+                  className="group relative flex min-h-80 w-full shrink-0 flex-col justify-between overflow-hidden rounded-2xl border border-slate-200 bg-linear-to-br from-white via-white to-blue-50/50 p-7 shadow-[0_14px_42px_rgba(15,23,42,0.06)] transition-[border-color,box-shadow,background-color] duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:border-cobalt/40 hover:shadow-[0_24px_56px_rgba(21,94,239,0.13)] sm:w-[calc(50%-0.75rem)] sm:p-8 lg:w-[calc(33.333333%-1rem)]"
                   key={`${item.author}-${itemIndex}`}
                   onMouseEnter={() => setPaused(true)}
                   onMouseLeave={() => setPaused(false)}
@@ -151,7 +151,7 @@ export function TestimonialsSection() {
                     slideRefs.current[itemIndex] = element;
                   }}
                 >
-                  <Quote aria-hidden="true" className="absolute -right-3 -top-4 size-28 text-cobalt/5.5 transition-[transform,color] duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:-rotate-6 group-hover:scale-110 group-hover:text-cobalt/9" strokeWidth={1.2} />
+                  <Quote aria-hidden="true" className="absolute -right-3 -top-4 size-28 text-cobalt/5.5 transition-[transform,color] duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:-rotate-6 group-hover:scale-110 group-hover:text-cobalt/9" strokeWidth={1.2} />
 
                   <div className="relative z-10">
                     <div className="flex items-center justify-between gap-4">
@@ -189,7 +189,7 @@ export function TestimonialsSection() {
             <button
               aria-label={`Show testimonial ${index + 1}`}
               aria-pressed={activeIndex === index}
-              className={`h-2.5 rounded-full transition-[width,background-color] duration-500 ${activeIndex === index ? "w-8 bg-cobalt" : "w-2.5 bg-slate-300 hover:bg-slate-400"}`}
+              className={`h-2.5 rounded-full transition-[width,background-color] duration-300 ${activeIndex === index ? "w-8 bg-cobalt" : "w-2.5 bg-slate-300 hover:bg-slate-400"}`}
               key={item.author}
               onClick={() => selectSlide(index)}
               type="button"
