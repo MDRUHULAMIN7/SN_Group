@@ -16,7 +16,7 @@ export const metadata: Metadata = createMetadata({
 export default function ContactPage() {
   return (
     <>
-      <PageHero description="Share the scope, location and constraints. Our team will connect your brief with the right discipline." eyebrow="Contact S.N Group" image="/images/team.webp" imageAlt="S.N Group engineers discussing project drawings" title="Let’s define the next move." />
+      <PageHero breadcrumbs={[{ label: "Contact Us" }]} image="/images/team.webp" imageAlt="S.N Group engineers and headquarters" title="Contact S.N Group" />
       <section className="border-t border-slate-200 bg-white text-ink section-space">
         <Container className="grid gap-14 lg:grid-cols-12">
           <Reveal className="lg:col-span-4">

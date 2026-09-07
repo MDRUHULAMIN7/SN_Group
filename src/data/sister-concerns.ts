@@ -2,15 +2,15 @@ import type { SisterConcern } from "@/types/content";
 
 export const sisterConcerns = [
   {
-    name: "S.N Engineering & Construction Ltd.",
-    shortName: "S.N Construction Ltd.",
+    name: "S.N Eng Construction BD Ltd.",
+    shortName: "S.N Eng Construction BD Ltd.",
     slug: "sn-engineering-construction",
     discipline: "Engineering & Construction",
     headline: "Building with Experience. Delivering with Responsibility.",
     description:
-      "With more than two decades of experience in the construction industry, S.N Engineering & Construction Ltd. has established itself as a trusted construction and engineering company in Bangladesh, specializing in government, defense, institutional, and civil infrastructure projects.",
+      "With more than two decades of experience in the construction industry, S.N Eng Construction BD Ltd. has established itself as a trusted construction and engineering company in Bangladesh, specializing in government, defense, institutional, and civil infrastructure projects.",
     image: "/images/hero-construction.webp",
-    imageAlt: "S.N Engineering & Construction Ltd. infrastructure and building site in Bangladesh",
+    imageAlt: "S.N Eng Construction BD Ltd. infrastructure and building site in Bangladesh",
     services: [
       "Government construction projects",
       "Bangladesh Army & defense-related construction",
@@ -26,21 +26,21 @@ export const sisterConcerns = [
       phone: "+88 01305-771144",
     },
     seo: {
-      title: "S.N Engineering & Construction Ltd. | S.N Group",
+      title: "S.N Eng Construction BD Ltd. | S.N Group",
       description:
         "Specializing in government, defense, institutional, and infrastructure projects associated with Bangladesh Army, Navy, and key institutions.",
     },
   },
   {
-    name: "S.N Import & Export Ltd.",
-    shortName: "S.N Import & Export Ltd.",
+    name: "S.N Import & Export BD Ltd.",
+    shortName: "S.N Import & Export BD Ltd.",
     slug: "sn-import-export",
     discipline: "Global Sourcing & Trade",
     headline: "Connecting Bangladesh with Global Markets.",
     description:
       "The international trading arm of S.N Group engaged in the sourcing, import, export, and distribution of agricultural commodities, food products, industrial chemicals, machinery, and equipment, as well as export of Bangladeshi products.",
     image: "/images/project-infrastructure.webp",
-    imageAlt: "S.N Import & Export Ltd. global trade and logistics operations",
+    imageAlt: "S.N Import & Export BD Ltd. global trade and logistics operations",
     services: [
       "Agricultural commodities & pulses import",
       "Food ingredients, dairy & edible oils",
@@ -54,7 +54,7 @@ export const sisterConcerns = [
       phone: "+88 01783-216428",
     },
     seo: {
-      title: "S.N Import & Export Ltd. | S.N Group",
+      title: "S.N Import & Export BD Ltd. | S.N Group",
       description:
         "Connecting Bangladesh with international markets through agricultural commodities, food products, industrial chemicals, and equipment trading.",
     },

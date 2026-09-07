@@ -36,7 +36,7 @@ export const heroSlides: HeroSlide[] = [
     id: "sn-construction",
     badge: "Sister Concern · Construction",
     badgeIcon: Building2,
-    title: "S.N Engineering & Construction Ltd.",
+    title: "S.N Eng Construction BD Ltd.",
     headline: "Building with Experience. Delivering with Responsibility.",
     description:
       "Specializing in government, defense, institutional, and infrastructure projects with extensive experience working with Bangladesh Army, Bangladesh Navy, and premier institutions.",
@@ -48,7 +48,7 @@ export const heroSlides: HeroSlide[] = [
     id: "sn-import-export",
     badge: "Sister Concern · Global Trade",
     badgeIcon: Globe,
-    title: "S.N Import & Export Ltd.",
+    title: "S.N Import & Export BD Ltd.",
     headline: "Connecting Bangladesh with Global Markets.",
     description:
       "International trading arm sourcing agricultural commodities, food products, industrial chemicals, machinery, and equipment, while advancing export of Bangladeshi resources worldwide.",
@@ -91,7 +91,7 @@ export function HeroSection() {
     <section
       aria-label="S.N Group Hero Slider"
       aria-roledescription="carousel"
-      className="relative flex min-h-[100svh] items-center overflow-hidden bg-white pb-16 pt-24 text-ink sm:pb-20 sm:pt-28"
+      className="relative flex min-h-[85svh] sm:min-h-[90svh] lg:min-h-[100svh] items-center overflow-hidden bg-white pb-12 pt-20 text-ink sm:pb-20 sm:pt-28"
       onBlurCapture={(event) => {
         if (!event.currentTarget.contains(event.relatedTarget)) setIsPaused(false);
       }}
@@ -117,12 +117,12 @@ export function HeroSection() {
           </m.div>
         ))}
 
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-white/92 via-white/70 via-68% to-white/22 sm:from-white/86 sm:via-white/58 sm:via-54% sm:to-white/5 lg:from-white/82 lg:via-white/46 lg:via-48% lg:to-transparent" />
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-white/38 via-transparent to-white/24" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-white/96 via-white/82 via-68% to-white/35 sm:from-white/86 sm:via-white/58 sm:via-54% sm:to-white/5 lg:from-white/82 lg:via-white/46 lg:via-48% lg:to-transparent" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-white/50 via-transparent to-white/30" />
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_18%_42%,rgba(21,94,239,0.12),transparent_58%)]" />
       </div>
 
-      <Container className="relative z-10 flex flex-col justify-center py-6 sm:py-10">
+      <Container className="relative z-10 flex flex-col justify-center py-4 sm:py-10">
         <div className="grid max-w-3xl grid-cols-1 grid-rows-1">
           {heroSlides.map((slide, index) => {
             const Icon = slide.badgeIcon;
@@ -144,28 +144,28 @@ export function HeroSection() {
                 role="group"
                 transition={{ duration: 0.7, ease: [0.4, 0, 0.2, 1] }}
               >
-                <div className="mb-4 inline-flex w-fit items-center gap-2 rounded-full border border-cobalt/20 bg-white/84 px-4 py-1.5 shadow-sm backdrop-blur-md">
-                  <Icon aria-hidden="true" className="size-4 text-cobalt" />
-                  <span className="text-xs font-bold uppercase tracking-wider text-cobalt">
+                <div className="mb-3 sm:mb-4 inline-flex w-fit items-center gap-1.5 sm:gap-2 rounded-full border border-cobalt/20 bg-white/88 px-3 py-1 sm:px-4 sm:py-1.5 shadow-sm backdrop-blur-md">
+                  <Icon aria-hidden="true" className="size-3.5 sm:size-4 text-cobalt" />
+                  <span className="text-[0.68rem] sm:text-xs font-bold uppercase tracking-wider text-cobalt">
                     {slide.badge}
                   </span>
                 </div>
 
-                <h1 className="display-type text-4xl font-extrabold tracking-tight text-ink sm:text-6xl lg:text-7xl xl:text-[5.25rem] xl:leading-[0.95]">
+                <h1 className="display-type text-2xl xs:text-3xl sm:text-5xl lg:text-6xl xl:text-[5rem] font-extrabold tracking-tight text-ink leading-[1.15] sm:leading-[1]">
                   {slide.title}
                 </h1>
 
-                <p className="mt-4 text-lg font-bold text-cobalt sm:text-2xl lg:text-3xl">
+                <p className="mt-2.5 sm:mt-4 text-sm xs:text-base sm:text-xl lg:text-2xl font-bold text-cobalt">
                   {slide.headline}
                 </p>
 
-                <p className="mt-4 max-w-2xl text-base leading-7 text-ink/72 sm:text-lg sm:leading-8">
+                <p className="mt-2.5 sm:mt-4 max-w-2xl text-xs sm:text-base leading-relaxed text-ink/72 line-clamp-3 sm:line-clamp-none sm:leading-8">
                   {slide.description}
                 </p>
 
-                <div className="mt-8 flex flex-wrap items-center gap-3.5 sm:gap-4">
+                <div className="mt-5 sm:mt-8 flex flex-col xs:flex-row flex-wrap items-stretch xs:items-center gap-2.5 sm:gap-4">
                   <a
-                    className="inline-flex min-h-12 items-center gap-2 rounded-full bg-cobalt px-7 py-3.5 text-sm font-bold text-white shadow-[0_4px_24px_rgba(21,94,239,0.45)] transition-all duration-300 hover:bg-blue-600 hover:shadow-[0_6px_32px_rgba(21,94,239,0.65)] active:scale-[0.98]"
+                    className="inline-flex min-h-11 sm:min-h-12 items-center justify-center gap-2 rounded-full bg-cobalt px-6 py-2.5 sm:px-7 sm:py-3.5 text-xs sm:text-sm font-bold text-white shadow-[0_4px_24px_rgba(21,94,239,0.45)] transition-all duration-300 hover:bg-blue-600 hover:shadow-[0_6px_32px_rgba(21,94,239,0.65)] active:scale-[0.98]"
                     href="/contact#quotation-form"
                   >
                     Request a Quotation
@@ -173,7 +173,7 @@ export function HeroSection() {
                   </a>
 
                   <a
-                    className="inline-flex min-h-12 items-center gap-2 rounded-full border border-cobalt/25 bg-white/84 px-7 py-3.5 text-sm font-bold text-ink shadow-sm backdrop-blur-md transition-all duration-300 hover:border-cobalt hover:text-cobalt active:scale-[0.98]"
+                    className="inline-flex min-h-11 sm:min-h-12 items-center justify-center gap-2 rounded-full border border-cobalt/25 bg-white/88 px-6 py-2.5 sm:px-7 sm:py-3.5 text-xs sm:text-sm font-bold text-ink shadow-sm backdrop-blur-md transition-all duration-300 hover:border-cobalt hover:text-cobalt active:scale-[0.98]"
                     href={slide.href}
                   >
                     {slide.linkLabel}
@@ -184,14 +184,14 @@ export function HeroSection() {
           })}
         </div>
 
-        <div aria-label="Choose a hero slide" className="mt-8 flex items-center gap-2" role="group">
+        <div aria-label="Choose a hero slide" className="mt-6 sm:mt-8 flex items-center gap-2" role="group">
           {heroSlides.map((slide, index) => (
             <button
               aria-label={`Show slide ${index + 1}: ${slide.title}`}
               aria-pressed={activeIndex === index}
               className={cn(
                 "h-1.5 rounded-full transition-[width,background-color] duration-500",
-                activeIndex === index ? "w-10 bg-cobalt" : "w-5 bg-cobalt/20 hover:bg-cobalt/45",
+                activeIndex === index ? "w-8 sm:w-10 bg-cobalt" : "w-4 sm:w-5 bg-cobalt/20 hover:bg-cobalt/45",
               )}
               key={slide.id}
               onClick={() => setActiveIndex(index)}

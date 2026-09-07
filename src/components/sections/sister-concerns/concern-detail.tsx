@@ -1,6 +1,6 @@
-import Image from "next/image";
 import { Check, Mail, Phone } from "lucide-react";
 import type { SisterConcern } from "@/types/content";
+import { PageHero } from "@/components/ui/page-hero";
 import { Container } from "@/components/ui/container";
 import { ButtonLink } from "@/components/ui/button";
 import { Reveal } from "@/components/motion/reveal";
@@ -8,15 +8,15 @@ import { Reveal } from "@/components/motion/reveal";
 export function ConcernDetail({ concern }: { concern: SisterConcern }) {
   return (
     <>
-      <section className="blueprint-grid relative flex min-h-[82svh] items-end overflow-hidden border-b border-slate-200 bg-white pb-16 pt-40 text-ink sm:pb-20">
-        <Image alt={concern.imageAlt} className="object-cover opacity-58 saturate-[0.88]" fill preload sizes="100vw" src={concern.image} />
-        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/92 to-white/25" />
-        <Container className="relative z-10">
-          <p className="eyebrow mb-7 text-cobalt">{concern.discipline}</p>
-          <h1 className="display-type max-w-[12ch] text-[clamp(4.5rem,10vw,10rem)] leading-[0.84]">{concern.name}</h1>
-          <p className="mt-8 max-w-2xl text-lg leading-8 text-ink/68">{concern.headline}</p>
-        </Container>
-      </section>
+      <PageHero
+        breadcrumbs={[
+          { label: "Sister Concerns", href: "/sister-concerns" },
+          { label: concern.name },
+        ]}
+        image={concern.image}
+        imageAlt={concern.imageAlt}
+        title={concern.name}
+      />
       <section className="border-t border-slate-200 bg-white text-ink section-space">
         <Container className="grid gap-14 lg:grid-cols-12">
           <Reveal className="lg:col-span-5">

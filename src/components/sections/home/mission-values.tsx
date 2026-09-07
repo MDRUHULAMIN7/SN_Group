@@ -44,23 +44,23 @@ export function CoreValuesSection() {
   return (
     <section
       aria-label="Our Core Values"
-      className="blueprint-grid relative overflow-hidden border-t border-slate-200 bg-white py-20 text-ink sm:py-24"
+      className="blueprint-grid relative overflow-hidden border-t border-slate-200 bg-white py-14 sm:py-20 lg:py-24 text-ink"
       id="core-values"
     >
       <Container className="relative z-10">
         <div className="mx-auto max-w-3xl text-center">
           <Reveal>
-            <p className="eyebrow mb-4 justify-center text-blue-400">Principles in Action</p>
-            <h2 className="display-type text-4xl font-extrabold tracking-tight sm:text-5xl">
+            <p className="eyebrow mb-3 sm:mb-4 justify-center text-blue-400">Principles in Action</p>
+            <h2 className="display-type text-2.5xl xs:text-3xl sm:text-5xl font-extrabold tracking-tight">
               Our Core Values
             </h2>
-            <p className="mt-3 text-base text-ink/62">
+            <p className="mt-2.5 sm:mt-3 text-sm sm:text-base text-ink/62">
               The principles that guide how we operate, build partnerships, and deliver on our promises.
             </p>
           </Reveal>
         </div>
 
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 sm:mt-12 grid gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {values.map((value, index) => {
             const Icon = value.icon;
             return (

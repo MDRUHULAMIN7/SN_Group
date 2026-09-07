@@ -15,7 +15,7 @@ export const metadata: Metadata = createMetadata({
 export default function ProjectsPage() {
   return (
     <>
-      <PageHero description="A selected view of commercial, infrastructure, high-rise and industrial work shaped by disciplined coordination." eyebrow="Selected work" image="/images/project-infrastructure.webp" imageAlt="Major concrete infrastructure construction across a river corridor" title="Built to keep performing." />
+      <PageHero breadcrumbs={[{ label: "Projects" }]} image="/images/project-infrastructure.webp" imageAlt="Major infrastructure and building construction in Bangladesh" title="Our Projects" />
       <section className="border-t border-slate-200 bg-white text-ink section-space">
         <Container><ProjectGrid projects={projects} /></Container>
       </section>

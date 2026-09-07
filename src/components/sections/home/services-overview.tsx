@@ -4,7 +4,7 @@ import { Reveal } from "@/components/motion/reveal";
 
 const serviceCategories = [
   {
-    company: "S.N Engineering & Construction Ltd.",
+    company: "S.N Eng Construction BD Ltd.",
     discipline: "Civil & Defense Infrastructure",
     icon: DraftingCompass,
     tag: "20+ Years Experience",
@@ -18,7 +18,7 @@ const serviceCategories = [
     ],
   },
   {
-    company: "S.N Import & Export Ltd.",
+    company: "S.N Import & Export BD Ltd.",
     discipline: "Global Sourcing & Distribution",
     icon: ShipWheel,
     tag: "Global Trade Network",
@@ -51,7 +51,7 @@ export function ServicesOverview() {
   return (
     <section
       aria-label="Service Overview"
-      className="blueprint-grid relative overflow-hidden border-t border-slate-200 bg-white pb-12 pt-20 text-ink sm:pb-14 sm:pt-24"
+      className="blueprint-grid relative overflow-hidden border-t border-slate-200 bg-white pb-12 pt-14 text-ink sm:pb-14 sm:pt-24"
       id="services-overview"
     >
       {/* Ambient glow */}
@@ -60,22 +60,22 @@ export function ServicesOverview() {
       <Container className="relative z-10">
         <div className="mx-auto max-w-3xl text-center">
           <Reveal>
-            <p className="eyebrow mb-4 justify-center text-blue-400">Service Overview</p>
-            <h2 className="display-type text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
+            <p className="eyebrow mb-3 sm:mb-4 justify-center text-blue-400">Service Overview</p>
+            <h2 className="display-type text-2.5xl xs:text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight">
               What We Do
             </h2>
-            <p className="mt-4 text-base leading-7 text-ink/65 sm:text-lg">
+            <p className="mt-3 sm:mt-4 text-sm sm:text-lg leading-6 sm:leading-7 text-ink/65">
               Three specialized disciplines working under one uncompromising standard of accountability, delivering integrated solutions from concept to execution.
             </p>
           </Reveal>
         </div>
 
-        <div className="mt-16 grid gap-8 lg:grid-cols-3">
+        <div className="mt-10 sm:mt-16 grid gap-6 lg:grid-cols-3">
           {serviceCategories.map((service, index) => {
             const Icon = service.icon;
             return (
               <Reveal
-                className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-slate-200 bg-linear-to-br from-white via-white to-blue-50/45 p-7 shadow-[0_16px_48px_rgba(15,23,42,0.07)] transition-[border-color,box-shadow] duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] hover:border-cobalt/40 hover:shadow-[0_26px_64px_rgba(21,94,239,0.13)] sm:p-9"
+                className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-slate-200 bg-linear-to-br from-white via-white to-blue-50/45 p-6 sm:p-9 shadow-[0_16px_48px_rgba(15,23,42,0.07)] transition-[border-color,box-shadow] duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] hover:border-cobalt/40 hover:shadow-[0_26px_64px_rgba(21,94,239,0.13)]"
                 delay={index * 0.1}
                 key={service.company}
               >
@@ -91,32 +91,32 @@ export function ServicesOverview() {
                 <div className="relative z-10">
                   {/* Top bar */}
                   <div className="flex items-center justify-between gap-4">
-                    <span className="grid size-14 place-items-center rounded-2xl border border-cobalt/15 bg-white text-cobalt shadow-[0_10px_24px_rgba(21,94,239,0.10)] transition-[background-color,color,box-shadow] duration-700 group-hover:bg-cobalt group-hover:text-white group-hover:shadow-[0_14px_30px_rgba(21,94,239,0.24)]">
-                      <Icon aria-hidden="true" className="size-7" strokeWidth={1.7} />
+                    <span className="grid size-12 sm:size-14 place-items-center rounded-xl sm:rounded-2xl border border-cobalt/15 bg-white text-cobalt shadow-[0_10px_24px_rgba(21,94,239,0.10)] transition-[background-color,color,box-shadow] duration-700 group-hover:bg-cobalt group-hover:text-white group-hover:shadow-[0_14px_30px_rgba(21,94,239,0.24)]">
+                      <Icon aria-hidden="true" className="size-6 sm:size-7" strokeWidth={1.7} />
                     </span>
-                    <span className="rounded-full border border-cobalt/15 bg-blue-50 px-3 py-1 text-[0.65rem] font-bold uppercase tracking-wider text-cobalt">
+                    <span className="rounded-full border border-cobalt/15 bg-blue-50 px-2.5 sm:px-3 py-0.5 sm:py-1 text-[0.62rem] sm:text-[0.65rem] font-bold uppercase tracking-wider text-cobalt">
                       {service.tag}
                     </span>
                   </div>
 
-                  <p className="mt-6 text-xs font-bold uppercase tracking-widest text-blue-400">
+                  <p className="mt-5 sm:mt-6 text-[0.68rem] sm:text-xs font-bold uppercase tracking-widest text-blue-400">
                     {service.discipline}
                   </p>
-                  <h3 className="display-type mt-1 text-2xl font-bold sm:text-3xl">
+                  <h3 className="display-type mt-1 text-xl sm:text-2xl font-bold sm:text-3xl">
                     {service.company}
                   </h3>
 
-                  <p className="mt-4 text-[0.95rem] leading-7 text-ink/66">
+                  <p className="mt-3 sm:mt-4 text-xs sm:text-[0.95rem] leading-6 sm:leading-7 text-ink/66">
                     {service.description}
                   </p>
 
-                  <div className="mt-6 border-t border-slate-200 pt-6">
-                    <p className="mb-3.5 text-xs font-bold uppercase tracking-wider text-ink/50">
+                  <div className="mt-5 sm:mt-6 border-t border-slate-200 pt-5 sm:pt-6">
+                    <p className="mb-3 text-[0.68rem] sm:text-xs font-bold uppercase tracking-wider text-ink/50">
                       Key Capabilities:
                     </p>
-                    <ul className="space-y-3">
+                    <ul className="space-y-2.5 sm:space-y-3">
                       {service.highlights.map((highlight) => (
-                        <li className="flex items-start gap-2.5 text-sm font-semibold leading-5 text-ink/78" key={highlight}>
+                        <li className="flex items-start gap-2.5 text-xs sm:text-sm font-semibold leading-5 text-ink/78" key={highlight}>
                           <CheckCircle2 aria-hidden="true" className="mt-0.5 size-4 shrink-0 text-cobalt" />
                           <span>{highlight}</span>
                         </li>
@@ -125,9 +125,9 @@ export function ServicesOverview() {
                   </div>
                 </div>
 
-                <div className="relative z-10 mt-8 border-t border-slate-200 pt-5">
+                <div className="relative z-10 mt-6 sm:mt-8 border-t border-slate-200 pt-4 sm:pt-5">
                   <a
-                    className="group/link inline-flex items-center gap-2 rounded-full border border-cobalt/20 bg-blue-50 px-4 py-2.5 text-sm font-bold text-cobalt shadow-[0_6px_18px_rgba(21,94,239,0.08)] transition-[background-color,color,border-color,box-shadow] duration-500 hover:border-cobalt hover:bg-cobalt hover:text-white hover:shadow-[0_10px_24px_rgba(21,94,239,0.20)]"
+                    className="group/link inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full border border-cobalt/20 bg-blue-50 px-4 py-2.5 text-xs sm:text-sm font-bold text-cobalt shadow-[0_6px_18px_rgba(21,94,239,0.08)] transition-[background-color,color,border-color,box-shadow] duration-500 hover:border-cobalt hover:bg-cobalt hover:text-white hover:shadow-[0_10px_24px_rgba(21,94,239,0.20)]"
                     href="/contact#quotation-form"
                   >
                     Inquire about this company

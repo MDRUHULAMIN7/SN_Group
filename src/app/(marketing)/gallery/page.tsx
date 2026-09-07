@@ -15,7 +15,7 @@ export const metadata: Metadata = createMetadata({
 export default function GalleryPage() {
   return (
     <>
-      <PageHero description="Structure, craft and coordination—details from active sites, completed places and the people behind the work." eyebrow="Gallery" image="/images/project-commercial.webp" imageAlt="Completed contemporary commercial architecture in Dhaka" title="The work, up close." />
+      <PageHero breadcrumbs={[{ label: "Gallery" }]} image="/images/project-commercial.webp" imageAlt="Completed contemporary architecture in Dhaka" title="Project Gallery" />
       <section className="border-t border-slate-200 bg-white text-ink section-space">
         <Container><GalleryGrid items={galleryItems} /></Container>
       </section>

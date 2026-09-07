@@ -108,7 +108,7 @@ export function TestimonialsSection() {
     <section
       aria-label="Partner Testimonials"
       aria-roledescription="carousel"
-      className="relative overflow-hidden border-t border-slate-200 bg-white py-20 text-ink sm:py-24"
+      className="relative overflow-hidden border-t border-slate-200 bg-white py-14 sm:py-20 lg:py-24 text-ink"
       id="testimonials"
     >
       <div aria-hidden="true" className="pointer-events-none absolute -left-40 top-1/3 size-96 rounded-full bg-cobalt/5 blur-[130px]" />
@@ -116,17 +116,17 @@ export function TestimonialsSection() {
       <Container className="relative z-10">
         <div className="mx-auto max-w-3xl text-center">
           <Reveal>
-            <p className="eyebrow mb-4 justify-center text-blue-400">Testimonials</p>
-            <h2 className="display-type text-4xl font-extrabold tracking-tight sm:text-5xl">
+            <p className="eyebrow mb-3 sm:mb-4 justify-center text-blue-400">Testimonials</p>
+            <h2 className="display-type text-2.5xl xs:text-3xl sm:text-5xl font-extrabold tracking-tight">
               What Our Partners Say
             </h2>
-            <p className="mt-3 text-base text-ink/62">
+            <p className="mt-2.5 sm:mt-3 text-sm sm:text-base text-ink/62">
               Reflections of trust, execution excellence, and enduring relationships built over two decades.
             </p>
           </Reveal>
         </div>
 
-        <div className="relative mt-14 overflow-hidden pb-2" ref={viewportRef}>
+        <div className="relative mt-10 sm:mt-14 overflow-hidden pb-2" ref={viewportRef}>
           <div
             className="flex gap-6 transition-transform ease-[cubic-bezier(0.22,1,0.36,1)] will-change-transform"
             onTransitionEnd={handleTransitionEnd}

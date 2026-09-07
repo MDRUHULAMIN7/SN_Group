@@ -45,7 +45,7 @@ export function WhyChooseUs() {
   return (
     <section
       aria-label="Why Choose S.N Group"
-      className="blueprint-grid relative overflow-hidden border-t border-slate-200 bg-white py-20 text-ink sm:py-24"
+      className="blueprint-grid relative overflow-hidden border-t border-slate-200 bg-white py-14 sm:py-20 lg:py-24 text-ink"
       id="why-choose-us"
     >
       {/* Background ambient lighting */}
@@ -54,17 +54,17 @@ export function WhyChooseUs() {
       <Container className="relative z-10">
         <div className="mx-auto max-w-3xl text-center">
           <Reveal>
-            <p className="eyebrow mb-4 justify-center text-blue-400">Why Choose S.N Group?</p>
-            <h2 className="display-type text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
+            <p className="eyebrow mb-3 sm:mb-4 justify-center text-blue-400">Why Choose S.N Group?</p>
+            <h2 className="display-type text-2.5xl xs:text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight">
               Experience That Builds Trust
             </h2>
-            <p className="mt-4 text-base leading-7 text-ink/65 sm:text-lg">
+            <p className="mt-3 sm:mt-4 text-sm sm:text-lg leading-6 sm:leading-7 text-ink/65">
               With more than two decades of experience, S.N Group brings together engineering excellence, global trade partnerships, and premium real estate development.
             </p>
           </Reveal>
         </div>
 
-        <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 sm:mt-16 grid gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {pillars.map((pillar, index) => {
             const Icon = pillar.icon;
             return (
