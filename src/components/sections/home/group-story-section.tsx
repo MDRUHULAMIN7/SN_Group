@@ -13,12 +13,12 @@ export function GroupStorySection() {
   return (
     <section
       aria-label="About S.N Group"
-      className="relative overflow-hidden border-t border-slate-200 bg-white pb-16 pt-[var(--section-space)] text-ink lg:pb-20"
+      className="relative overflow-hidden border-t border-slate-200 bg-white pb-16 pt-(--section-space) text-ink lg:pb-20"
       id="about-group"
     >
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -right-40 top-10 size-[34rem] rounded-full bg-cobalt/[0.055] blur-[120px]"
+        className="pointer-events-none absolute -right-40 top-10 size-136 rounded-full bg-cobalt/5.5 blur-[120px]"
       />
       <Container className="relative z-10">
         <div className="grid gap-12 lg:grid-cols-[minmax(0,0.94fr)_minmax(0,1.06fr)] lg:items-stretch lg:gap-16">
@@ -45,7 +45,7 @@ export function GroupStorySection() {
           </Reveal>
 
           <Reveal className="relative h-full" delay={0.12}>
-            <div className="relative aspect-[4/3] h-full overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-[0_20px_60px_rgba(15,23,42,0.11)] sm:aspect-[16/11] lg:aspect-auto lg:min-h-[32rem]">
+            <div className="relative aspect-4/3 h-full overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-[0_20px_60px_rgba(15,23,42,0.11)] sm:aspect-16/11 lg:aspect-auto lg:min-h-128">
               <Image
                 alt="S.N Group team and engineering operations"
                 className="object-cover"
@@ -53,8 +53,8 @@ export function GroupStorySection() {
                 sizes="(min-width: 1024px) 47vw, 100vw"
                 src="/images/team.webp"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-white/98 via-white/28 to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-r from-white/96 to-white/86 p-6 text-ink backdrop-blur-md sm:p-8">
+              <div className="absolute inset-0 bg-linear-to-t from-white/98 via-white/28 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 bg-linear-to-r from-white/96 to-white/86 p-6 text-ink backdrop-blur-md sm:p-8">
                 <ArrowDownRight aria-hidden="true" className="mb-3 size-6 text-cobalt" />
                 <p className="display-type text-2xl font-bold leading-tight sm:text-3xl">
                   Built on integrity, quality, reliability, and long-term relationships.
@@ -68,17 +68,17 @@ export function GroupStorySection() {
         <div className="mt-16 grid gap-5 sm:grid-cols-3 lg:mt-20">
           {facts.map((fact, index) => (
             <Reveal
-              className="group relative min-h-40 overflow-hidden rounded-2xl border border-slate-200 bg-gradient-to-br from-white via-white to-blue-50/70 p-6 shadow-[0_12px_34px_rgba(15,23,42,0.06)] transition-[border-color,box-shadow] duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:border-cobalt/35 hover:shadow-[0_20px_44px_rgba(21,94,239,0.12)] sm:p-7"
+              className="group relative min-h-40 overflow-hidden rounded-2xl border border-slate-200 bg-linear-to-br from-white via-white to-blue-50/70 p-6 shadow-[0_12px_34px_rgba(15,23,42,0.06)] transition-[border-color,box-shadow] duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:border-cobalt/35 hover:shadow-[0_20px_44px_rgba(21,94,239,0.12)] sm:p-7"
               delay={index * 0.08}
               key={fact.label}
             >
               <span
                 aria-hidden="true"
-                className="absolute inset-x-0 top-0 h-1 origin-left scale-x-[0.22] bg-gradient-to-r from-cobalt via-blue-400 to-blue-200 transition-transform duration-[1200ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-x-100"
+                className="absolute inset-x-0 top-0 h-1 origin-left scale-x-[0.22] bg-linear-to-r from-cobalt via-blue-400 to-blue-200 transition-transform duration-1200 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-x-100"
               />
               <span
                 aria-hidden="true"
-                className="absolute -right-10 -top-12 size-32 rounded-full bg-cobalt/[0.055] transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-150"
+                className="absolute -right-10 -top-12 size-32 rounded-full bg-cobalt/5.5 transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-150"
               />
               <span
                 aria-hidden="true"

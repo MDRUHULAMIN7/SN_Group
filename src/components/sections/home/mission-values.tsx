@@ -65,7 +65,7 @@ export function CoreValuesSection() {
             const Icon = value.icon;
             return (
               <Reveal
-                className={`group relative min-h-[13rem] overflow-hidden rounded-2xl border border-slate-200 bg-white p-7 shadow-[0_12px_36px_rgba(15,23,42,0.055)] transition-[background-color,border-color,box-shadow] duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] hover:border-cobalt/35 hover:bg-blue-50/35 hover:shadow-[0_20px_48px_rgba(21,94,239,0.11)] ${index === values.length - 1 ? "lg:col-start-2" : ""}`}
+                className={`group relative min-h-52 overflow-hidden rounded-2xl border border-slate-200 bg-white p-7 shadow-[0_12px_36px_rgba(15,23,42,0.055)] transition-[background-color,border-color,box-shadow] duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] hover:border-cobalt/35 hover:bg-blue-50/35 hover:shadow-[0_20px_48px_rgba(21,94,239,0.11)] ${index === values.length - 1 ? "lg:col-start-2" : ""}`}
                 delay={index * 0.05}
                 key={value.title}
               >
@@ -100,7 +100,7 @@ export function MissionValues() {
         <div className="grid gap-8 lg:grid-cols-2">
           {/* Mission */}
           <Reveal>
-            <div className="relative flex h-full flex-col justify-between rounded-3xl border border-slate-200 bg-gradient-to-br from-white to-blue-50/70 p-8 shadow-[0_18px_50px_rgba(15,23,42,0.07)] sm:p-10">
+            <div className="relative flex h-full flex-col justify-between rounded-3xl border border-slate-200 bg-linear-to-br from-white to-blue-50/70 p-8 shadow-[0_18px_50px_rgba(15,23,42,0.07)] sm:p-10">
               <div>
                 <span className="grid size-12 place-items-center rounded-2xl bg-cobalt/20 text-blue-400">
                   <Compass aria-hidden="true" className="size-6" />
@@ -118,7 +118,7 @@ export function MissionValues() {
 
           {/* Vision */}
           <Reveal delay={0.1}>
-            <div className="relative flex h-full flex-col justify-between rounded-3xl border border-slate-200 bg-gradient-to-br from-white to-blue-50/70 p-8 shadow-[0_18px_50px_rgba(15,23,42,0.07)] sm:p-10">
+            <div className="relative flex h-full flex-col justify-between rounded-3xl border border-slate-200 bg-linear-to-br from-white to-blue-50/70 p-8 shadow-[0_18px_50px_rgba(15,23,42,0.07)] sm:p-10">
               <div>
                 <span className="grid size-12 place-items-center rounded-2xl bg-cobalt/20 text-blue-400">
                   <Eye aria-hidden="true" className="size-6" />
@@ -154,7 +154,7 @@ export function MissionValues() {
               const Icon = val.icon;
               return (
                 <Reveal
-                  className={`group relative min-h-[13rem] overflow-hidden rounded-2xl border border-slate-200 bg-white p-7 shadow-[0_12px_36px_rgba(15,23,42,0.055)] transition-[background-color,border-color,box-shadow] duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] hover:border-cobalt/35 hover:bg-blue-50/35 hover:shadow-[0_20px_48px_rgba(21,94,239,0.11)] ${idx === values.length - 1 ? "lg:col-start-2" : ""}`}
+                  className={`group relative min-h-52 overflow-hidden rounded-2xl border border-slate-200 bg-white p-7 shadow-[0_12px_36px_rgba(15,23,42,0.055)] transition-[background-color,border-color,box-shadow] duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] hover:border-cobalt/35 hover:bg-blue-50/35 hover:shadow-[0_20px_48px_rgba(21,94,239,0.11)] ${idx === values.length - 1 ? "lg:col-start-2" : ""}`}
                   delay={idx * 0.05}
                   key={val.title}
                 >

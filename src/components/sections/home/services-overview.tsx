@@ -75,17 +75,17 @@ export function ServicesOverview() {
             const Icon = service.icon;
             return (
               <Reveal
-                className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-slate-200 bg-gradient-to-br from-white via-white to-blue-50/45 p-7 shadow-[0_16px_48px_rgba(15,23,42,0.07)] transition-[border-color,box-shadow] duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] hover:border-cobalt/40 hover:shadow-[0_26px_64px_rgba(21,94,239,0.13)] sm:p-9"
+                className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-slate-200 bg-linear-to-br from-white via-white to-blue-50/45 p-7 shadow-[0_16px_48px_rgba(15,23,42,0.07)] transition-[border-color,box-shadow] duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] hover:border-cobalt/40 hover:shadow-[0_26px_64px_rgba(21,94,239,0.13)] sm:p-9"
                 delay={index * 0.1}
                 key={service.company}
               >
                 <span
                   aria-hidden="true"
-                  className="absolute inset-x-0 top-0 h-1 origin-left scale-x-0 bg-gradient-to-r from-cobalt via-blue-400 to-blue-200 transition-transform duration-[1000ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-x-100"
+                  className="absolute inset-x-0 top-0 h-1 origin-left scale-x-0 bg-linear-to-r from-cobalt via-blue-400 to-blue-200 transition-transform duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-x-100"
                 />
                 <span
                   aria-hidden="true"
-                  className="absolute -right-24 -top-24 size-56 rounded-full bg-cobalt/[0.045] transition-transform duration-[1200ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-125"
+                  className="absolute -right-24 -top-24 size-56 rounded-full bg-cobalt/4.5 transition-transform duration-1200 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-125"
                 />
 
                 <div className="relative z-10">

@@ -49,7 +49,7 @@ export function WhyChooseUs() {
       id="why-choose-us"
     >
       {/* Background ambient lighting */}
-      <div className="pointer-events-none absolute -right-40 top-1/4 size-[500px] rounded-full bg-cobalt/12 blur-[140px]" />
+      <div className="pointer-events-none absolute -right-40 top-1/4 size-125 rounded-full bg-cobalt/12 blur-[140px]" />
 
       <Container className="relative z-10">
         <div className="mx-auto max-w-3xl text-center">
@@ -69,7 +69,7 @@ export function WhyChooseUs() {
             const Icon = pillar.icon;
             return (
               <Reveal
-                className="group relative min-h-[16rem] overflow-hidden rounded-2xl border border-slate-200 bg-white p-7 shadow-[0_14px_42px_rgba(15,23,42,0.055)] transition-[background-color,border-color,box-shadow] duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] hover:border-cobalt/40 hover:bg-blue-50/35 hover:shadow-[0_22px_52px_rgba(21,94,239,0.12)] sm:p-8"
+                className="group relative min-h-64 overflow-hidden rounded-2xl border border-slate-200 bg-white p-7 shadow-[0_14px_42px_rgba(15,23,42,0.055)] transition-[background-color,border-color,box-shadow] duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] hover:border-cobalt/40 hover:bg-blue-50/35 hover:shadow-[0_22px_52px_rgba(21,94,239,0.12)] sm:p-8"
                 delay={index * 0.08}
                 key={pillar.title}
               >
