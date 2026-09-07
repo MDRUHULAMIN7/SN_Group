@@ -1,4 +1,4 @@
-import { Compass, Eye, HeartHandshake, Lightbulb, Leaf, Shield, Sparkles, Star, Target } from "lucide-react";
+import { BadgeCheck, Compass, Eye, HeartHandshake, Lightbulb, Leaf, Shield, Star, Target } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { Reveal } from "@/components/motion/reveal";
 
@@ -20,7 +20,7 @@ const values = [
   },
   {
     title: "Quality",
-    icon: Sparkles,
+    icon: BadgeCheck,
     description: "We believe quality is the foundation of lasting relationships and sustainable growth.",
   },
   {
@@ -60,20 +60,25 @@ export function CoreValuesSection() {
           </Reveal>
         </div>
 
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {values.map((value, index) => {
             const Icon = value.icon;
             return (
               <Reveal
-                className="rounded-2xl border border-slate-200 bg-white p-6 shadow-[0_12px_36px_rgba(15,23,42,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-cobalt/40 hover:shadow-[0_18px_42px_rgba(21,94,239,0.1)]"
+                className={`group relative min-h-[13rem] overflow-hidden rounded-2xl border border-slate-200 bg-white p-7 shadow-[0_12px_36px_rgba(15,23,42,0.055)] transition-[background-color,border-color,box-shadow] duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] hover:border-cobalt/35 hover:bg-blue-50/35 hover:shadow-[0_20px_48px_rgba(21,94,239,0.11)] ${index === values.length - 1 ? "lg:col-start-2" : ""}`}
                 delay={index * 0.05}
                 key={value.title}
               >
-                <span className="mb-4 grid size-10 place-items-center rounded-xl bg-cobalt/15 text-cobalt">
-                  <Icon aria-hidden="true" className="size-5" />
-                </span>
-                <h3 className="display-type text-xl font-bold text-ink">{value.title}</h3>
-                <p className="mt-2 text-xs leading-5 text-ink/62">{value.description}</p>
+                <div className="flex items-start justify-between gap-4">
+                  <span className="grid size-12 place-items-center rounded-full border border-cobalt/20 bg-white text-cobalt shadow-[0_8px_22px_rgba(21,94,239,0.08)] transition-[background-color,color,border-color,box-shadow] duration-700 group-hover:border-cobalt group-hover:bg-cobalt group-hover:text-white group-hover:shadow-[0_12px_28px_rgba(21,94,239,0.20)]">
+                    <Icon aria-hidden="true" className="size-5" strokeWidth={1.8} />
+                  </span>
+                  <span className="text-xs font-extrabold tracking-[0.16em] text-cobalt/35 transition-colors duration-700 group-hover:text-cobalt/70">
+                    0{index + 1}
+                  </span>
+                </div>
+                <h3 className="display-type mt-7 text-2xl font-bold text-ink">{value.title}</h3>
+                <p className="mt-3 text-sm leading-6 text-ink/64">{value.description}</p>
               </Reveal>
             );
           })}

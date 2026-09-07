@@ -1,4 +1,4 @@
-import { ArrowUpRight, Building2, CheckCircle2, Globe, Sparkles } from "lucide-react";
+import { ArrowUpRight, CheckCircle2, DraftingCompass, Landmark, ShipWheel } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { Reveal } from "@/components/motion/reveal";
 
@@ -6,49 +6,43 @@ const serviceCategories = [
   {
     company: "S.N Engineering & Construction Ltd.",
     discipline: "Civil & Defense Infrastructure",
-    icon: Building2,
+    icon: DraftingCompass,
     tag: "20+ Years Experience",
     description:
-      "Specializing in government, defense, institutional, and infrastructure projects. The company undertakes civil, structural, building, road, site development, rehabilitation, and renovation works with a strong focus on safety, specifications, and on-time completion.",
+      "Delivering government, defense, institutional, and infrastructure projects with disciplined control of safety, quality, specifications, and schedules.",
     highlights: [
       "Government & institutional construction projects",
-      "Bangladesh Army & defense infrastructure works",
-      "Bangladesh Navy & naval infrastructure projects",
+      "Army, Navy & defense infrastructure works",
       "Civil, structural & architectural development",
-      "Roads, site development & rehabilitation",
       "Project management & construction supervision",
     ],
   },
   {
     company: "S.N Import & Export Ltd.",
     discipline: "Global Sourcing & Distribution",
-    icon: Globe,
+    icon: ShipWheel,
     tag: "Global Trade Network",
     description:
-      "Connecting Bangladesh with international producers, manufacturers, and suppliers. Sourcing a diverse portfolio of agricultural commodities, food products, industrial chemicals, machinery, and equipment, while exporting Bangladeshi-origin natural resources.",
+      "Connecting Bangladesh with trusted global suppliers and buyers across food commodities, industrial inputs, machinery, and export materials.",
     highlights: [
-      "Agricultural commodities: lentils, pulses, chickpeas, grains & wheat",
-      "Food ingredients, dairy powder & edible oils",
+      "Agricultural commodities & food ingredients",
       "Industrial & commercial chemicals and raw materials",
       "Construction & engineering equipment and machinery",
       "Export of soil, stone, aggregates & construction materials",
-      "Agro-based export connecting local producers with overseas buyers",
     ],
   },
   {
     company: "Mehrish Holdings Ltd.",
     discipline: "Prime Real Estate Development",
-    icon: Sparkles,
+    icon: Landmark,
     tag: "Prime Dhaka Locations",
     description:
-      "Developing thoughtfully planned residential and commercial properties in some of Dhaka's most sought-after and strategically important locations, combining contemporary architecture, quality construction, and enduring investment value.",
+      "Creating residential and commercial properties in prime Dhaka locations through thoughtful planning, quality engineering, and enduring investment value.",
     highlights: [
       "Residential property development & premium apartments",
       "Commercial & multi-storey building development",
       "Prime locations: Dhanmondi, Gulshan, Banani & Uttara",
-      "Thoughtful architectural planning & space efficiency",
-      "Modern amenities & high-specification engineering",
-      "Strategic real estate investment & long-term asset value",
+      "Modern amenities, space efficiency & long-term asset value",
     ],
   },
 ];
@@ -57,7 +51,7 @@ export function ServicesOverview() {
   return (
     <section
       aria-label="Service Overview"
-      className="blueprint-grid relative overflow-hidden border-t border-slate-200 bg-white py-20 text-ink sm:py-28"
+      className="blueprint-grid relative overflow-hidden border-t border-slate-200 bg-white pb-12 pt-20 text-ink sm:pb-14 sm:pt-28"
       id="services-overview"
     >
       {/* Ambient glow */}
@@ -81,15 +75,24 @@ export function ServicesOverview() {
             const Icon = service.icon;
             return (
               <Reveal
-                className="group relative flex flex-col justify-between rounded-2xl border border-slate-200 bg-white p-7 shadow-[0_16px_48px_rgba(15,23,42,0.07)] transition-all duration-300 hover:-translate-y-1 hover:border-cobalt/45 hover:shadow-[0_22px_55px_rgba(21,94,239,0.12)] sm:p-9"
+                className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-slate-200 bg-gradient-to-br from-white via-white to-blue-50/45 p-7 shadow-[0_16px_48px_rgba(15,23,42,0.07)] transition-[border-color,box-shadow] duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] hover:border-cobalt/40 hover:shadow-[0_26px_64px_rgba(21,94,239,0.13)] sm:p-9"
                 delay={index * 0.1}
                 key={service.company}
               >
-                <div>
+                <span
+                  aria-hidden="true"
+                  className="absolute inset-x-0 top-0 h-1 origin-left scale-x-0 bg-gradient-to-r from-cobalt via-blue-400 to-blue-200 transition-transform duration-[1000ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-x-100"
+                />
+                <span
+                  aria-hidden="true"
+                  className="absolute -right-24 -top-24 size-56 rounded-full bg-cobalt/[0.045] transition-transform duration-[1200ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-125"
+                />
+
+                <div className="relative z-10">
                   {/* Top bar */}
                   <div className="flex items-center justify-between gap-4">
-                    <span className="grid size-12 place-items-center rounded-xl bg-cobalt/15 text-cobalt transition-colors group-hover:bg-cobalt group-hover:text-white">
-                      <Icon aria-hidden="true" className="size-6" />
+                    <span className="grid size-14 place-items-center rounded-2xl border border-cobalt/15 bg-white text-cobalt shadow-[0_10px_24px_rgba(21,94,239,0.10)] transition-[background-color,color,box-shadow] duration-700 group-hover:bg-cobalt group-hover:text-white group-hover:shadow-[0_14px_30px_rgba(21,94,239,0.24)]">
+                      <Icon aria-hidden="true" className="size-7" strokeWidth={1.7} />
                     </span>
                     <span className="rounded-full border border-cobalt/15 bg-blue-50 px-3 py-1 text-[0.65rem] font-bold uppercase tracking-wider text-cobalt">
                       {service.tag}
@@ -103,7 +106,7 @@ export function ServicesOverview() {
                     {service.company}
                   </h3>
 
-                  <p className="mt-4 text-sm leading-6 text-ink/65">
+                  <p className="mt-4 text-[0.95rem] leading-7 text-ink/66">
                     {service.description}
                   </p>
 
@@ -111,9 +114,9 @@ export function ServicesOverview() {
                     <p className="mb-3.5 text-xs font-bold uppercase tracking-wider text-ink/50">
                       Key Capabilities:
                     </p>
-                    <ul className="space-y-2.5">
+                    <ul className="space-y-3">
                       {service.highlights.map((highlight) => (
-                        <li className="flex items-start gap-2.5 text-xs font-semibold leading-5 text-ink/80" key={highlight}>
+                        <li className="flex items-start gap-2.5 text-sm font-semibold leading-5 text-ink/78" key={highlight}>
                           <CheckCircle2 aria-hidden="true" className="mt-0.5 size-4 shrink-0 text-cobalt" />
                           <span>{highlight}</span>
                         </li>
@@ -122,13 +125,13 @@ export function ServicesOverview() {
                   </div>
                 </div>
 
-                <div className="mt-8 border-t border-slate-200 pt-5">
+                <div className="relative z-10 mt-8 border-t border-slate-200 pt-5">
                   <a
-                    className="inline-flex items-center gap-2 text-xs font-bold text-blue-400 transition-colors hover:text-blue-300"
+                    className="group/link inline-flex items-center gap-2 rounded-full border border-cobalt/20 bg-blue-50 px-4 py-2.5 text-sm font-bold text-cobalt shadow-[0_6px_18px_rgba(21,94,239,0.08)] transition-[background-color,color,border-color,box-shadow] duration-500 hover:border-cobalt hover:bg-cobalt hover:text-white hover:shadow-[0_10px_24px_rgba(21,94,239,0.20)]"
                     href="/contact#quotation-form"
                   >
-                    Inquire about {service.company}
-                    <ArrowUpRight aria-hidden="true" className="size-3.5 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+                    Inquire about this company
+                    <ArrowUpRight aria-hidden="true" className="size-4 transition-transform duration-500 group-hover/link:rotate-45" />
                   </a>
                 </div>
               </Reveal>

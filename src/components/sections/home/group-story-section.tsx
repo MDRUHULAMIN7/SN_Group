@@ -2,7 +2,6 @@ import Image from "next/image";
 import { ArrowDownRight } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { Reveal } from "@/components/motion/reveal";
-import { BlueprintParallax } from "@/components/motion/blueprint-parallax";
 
 const facts = [
   { value: "20+", label: "Years of construction & business experience" },
@@ -14,13 +13,16 @@ export function GroupStorySection() {
   return (
     <section
       aria-label="About S.N Group"
-      className="blueprint-grid relative overflow-hidden border-t border-slate-200 bg-white text-ink section-space"
+      className="relative overflow-hidden border-t border-slate-200 bg-white pb-16 pt-[var(--section-space)] text-ink lg:pb-20"
       id="about-group"
     >
-      <BlueprintParallax />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -right-40 top-10 size-[34rem] rounded-full bg-cobalt/[0.055] blur-[120px]"
+      />
       <Container className="relative z-10">
-        <div className="grid gap-14 lg:grid-cols-12 lg:items-center">
-          <Reveal className="lg:col-span-6">
+        <div className="grid gap-12 lg:grid-cols-[minmax(0,0.94fr)_minmax(0,1.06fr)] lg:items-stretch lg:gap-16">
+          <Reveal className="flex h-full flex-col justify-center lg:py-4">
             <p className="eyebrow mb-4 text-blue-400">Company Introduction</p>
             <h2 className="display-type text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
               About S.N Group
@@ -42,8 +44,8 @@ export function GroupStorySection() {
             </div>
           </Reveal>
 
-          <Reveal className="relative lg:col-span-6" delay={0.12}>
-            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_24px_70px_rgba(15,23,42,0.14)] sm:aspect-[16/11]">
+          <Reveal className="relative h-full" delay={0.12}>
+            <div className="relative aspect-[4/3] h-full overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-[0_20px_60px_rgba(15,23,42,0.11)] sm:aspect-[16/11] lg:aspect-auto lg:min-h-[32rem]">
               <Image
                 alt="S.N Group team and engineering operations"
                 className="object-cover"
@@ -59,23 +61,40 @@ export function GroupStorySection() {
                 </p>
               </div>
             </div>
-            <span
-              aria-hidden="true"
-              className="absolute -right-5 -top-5 -z-10 size-32 border-r border-t border-cobalt/40"
-            />
           </Reveal>
         </div>
 
         {/* Stats Row */}
-        <div className="mt-16 grid border-y border-slate-200 sm:grid-cols-3 lg:mt-24">
+        <div className="mt-16 grid gap-5 sm:grid-cols-3 lg:mt-20">
           {facts.map((fact, index) => (
             <Reveal
-              className="border-b border-slate-200 px-0 py-7 last:border-b-0 sm:border-b-0 sm:border-r sm:px-7 sm:last:border-r-0 lg:px-10"
+              className="group relative min-h-40 overflow-hidden rounded-2xl border border-slate-200 bg-gradient-to-br from-white via-white to-blue-50/70 p-6 shadow-[0_12px_34px_rgba(15,23,42,0.06)] transition-[border-color,box-shadow] duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:border-cobalt/35 hover:shadow-[0_20px_44px_rgba(21,94,239,0.12)] sm:p-7"
               delay={index * 0.08}
               key={fact.label}
             >
-              <p className="display-type text-5xl font-bold text-cobalt">{fact.value}</p>
-              <p className="mt-2 text-sm font-semibold text-ink/60">{fact.label}</p>
+              <span
+                aria-hidden="true"
+                className="absolute inset-x-0 top-0 h-1 origin-left scale-x-[0.22] bg-gradient-to-r from-cobalt via-blue-400 to-blue-200 transition-transform duration-[1200ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-x-100"
+              />
+              <span
+                aria-hidden="true"
+                className="absolute -right-10 -top-12 size-32 rounded-full bg-cobalt/[0.055] transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-150"
+              />
+              <span
+                aria-hidden="true"
+                className="absolute right-6 top-6 text-xs font-extrabold tracking-[0.18em] text-cobalt/30 transition-colors duration-500 group-hover:text-cobalt/65 sm:right-7 sm:top-7"
+              >
+                0{index + 1}
+              </span>
+
+              <div className="relative z-10 flex h-full flex-col justify-end">
+                <p className="display-type text-5xl font-bold text-cobalt sm:text-[3.35rem]">
+                  {fact.value}
+                </p>
+                <p className="mt-2 max-w-xs text-sm font-semibold leading-6 text-ink/62 transition-colors duration-500 group-hover:text-ink/78">
+                  {fact.label}
+                </p>
+              </div>
             </Reveal>
           ))}
         </div>
