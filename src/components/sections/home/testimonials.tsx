@@ -128,7 +128,7 @@ export function TestimonialsSection() {
 
         <div className="relative mt-14 overflow-hidden pb-2" ref={viewportRef}>
           <div
-            className="flex gap-6 transition-transform ease-[cubic-bezier(0.4,0,0.2,1)] will-change-transform"
+            className="flex gap-6 transition-transform ease-in-out will-change-transform"
             onTransitionEnd={handleTransitionEnd}
             style={{
               transform: `translate3d(-${position * step}px, 0, 0)`,

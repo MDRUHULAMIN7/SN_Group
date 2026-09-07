@@ -73,7 +73,7 @@ export function WhyChooseUs() {
                 delay={index * 0.08}
                 key={pillar.title}
               >
-                <span aria-hidden="true" className="absolute left-0 top-8 h-10 w-[3px] rounded-r-full bg-cobalt/35 transition-[height,background-color] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:h-16 group-hover:bg-cobalt" />
+                <span aria-hidden="true" className="absolute left-0 top-8 h-10 w-0.75 rounded-r-full bg-cobalt/35 transition-[height,background-color] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:h-16 group-hover:bg-cobalt" />
                 <div className="flex items-start justify-between gap-4">
                   <span className="grid size-12 place-items-center rounded-xl border border-cobalt/15 bg-cobalt/8 text-cobalt transition-[background-color,border-color] duration-500 group-hover:border-cobalt/30 group-hover:bg-cobalt/12">
                     <Icon aria-hidden="true" className="size-6" strokeWidth={1.8} />
