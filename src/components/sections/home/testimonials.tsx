@@ -84,7 +84,7 @@ export function TestimonialsSection() {
     const timer = window.setInterval(() => {
       setTransitionEnabled(true);
       setPosition((current) => current + 1);
-    }, 5000);
+    }, 3800);
 
     return () => window.clearInterval(timer);
   }, [paused, reduceMotion]);
@@ -128,11 +128,11 @@ export function TestimonialsSection() {
 
         <div className="relative mt-14 overflow-hidden pb-2" ref={viewportRef}>
           <div
-            className="flex gap-6 transition-transform ease-[cubic-bezier(0.22,1,0.36,1)] will-change-transform"
+            className="flex gap-6 transition-transform ease-[cubic-bezier(0.4,0,0.2,1)] will-change-transform"
             onTransitionEnd={handleTransitionEnd}
             style={{
               transform: `translate3d(-${position * step}px, 0, 0)`,
-              transitionDuration: reduceMotion || !transitionEnabled ? "0ms" : "1100ms",
+              transitionDuration: reduceMotion || !transitionEnabled ? "0ms" : "800ms",
             }}
           >
             {carouselItems.map((item, itemIndex) => {

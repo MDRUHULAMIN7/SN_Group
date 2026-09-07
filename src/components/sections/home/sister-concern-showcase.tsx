@@ -29,18 +29,18 @@ export function SisterConcernShowcase() {
         <div className="mt-16 grid gap-px overflow-hidden rounded-2xl border border-slate-200 bg-slate-200 shadow-[0_22px_65px_rgba(15,23,42,0.09)] lg:grid-cols-3">
           {sisterConcerns.map((concern, index) => (
             <Reveal
-              className="group relative min-h-136 overflow-hidden bg-white transition-shadow duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] hover:z-10 hover:shadow-[0_24px_60px_rgba(21,94,239,0.16)]"
+              className="group relative min-h-136 overflow-hidden bg-white"
               delay={index * 0.08}
               key={concern.slug}
             >
               <Image
                 alt={concern.imageAlt}
-                className="transform-gpu object-cover opacity-80 transition-[transform,opacity] duration-850 ease-[cubic-bezier(0.22,1,0.36,1)] will-change-transform group-hover:scale-[1.035] group-hover:opacity-95"
+                className="transform-gpu object-cover opacity-85 transition-transform duration-700 ease-out will-change-transform backface-hidden group-hover:scale-[1.025]"
                 fill
                 sizes="(min-width: 1024px) 33vw, 100vw"
                 src={concern.image}
               />
-              <div className="absolute inset-0 bg-linear-to-t from-white/92 via-white/48 to-transparent transition-opacity duration-850 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:opacity-80" />
+              <div className="absolute inset-0 bg-linear-to-t from-white/92 via-white/48 to-transparent transition-opacity duration-700 ease-out group-hover:opacity-75" />
               <div className="absolute inset-0 flex flex-col justify-between p-7 text-ink sm:p-9">
                 <div className="flex items-start justify-between">
                   <span className="text-xs font-bold tabular-nums text-cobalt">

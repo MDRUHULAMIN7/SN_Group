@@ -69,19 +69,20 @@ export function WhyChooseUs() {
             const Icon = pillar.icon;
             return (
               <Reveal
-                className="group relative min-h-64 overflow-hidden rounded-2xl border border-slate-200 bg-white p-7 shadow-[0_14px_42px_rgba(15,23,42,0.055)] transition-[background-color,border-color,box-shadow] duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] hover:border-cobalt/40 hover:bg-blue-50/35 hover:shadow-[0_22px_52px_rgba(21,94,239,0.12)] sm:p-8"
+                className="group relative min-h-64 transform-gpu overflow-hidden rounded-2xl border border-slate-200 bg-white p-7 shadow-[0_14px_42px_rgba(15,23,42,0.055)] transition-[transform,border-color,box-shadow] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1 hover:border-cobalt/30 hover:shadow-[0_20px_46px_rgba(15,23,42,0.10)] sm:p-8"
                 delay={index * 0.08}
                 key={pillar.title}
               >
+                <span aria-hidden="true" className="absolute left-0 top-8 h-10 w-[3px] rounded-r-full bg-cobalt/35 transition-[height,background-color] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:h-16 group-hover:bg-cobalt" />
                 <div className="flex items-start justify-between gap-4">
-                  <span className="grid size-12 place-items-center rounded-xl border border-cobalt/20 bg-white text-cobalt shadow-[0_8px_22px_rgba(21,94,239,0.08)] transition-[transform,background-color,color,border-color,box-shadow] duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:-translate-y-1 group-hover:scale-105 group-hover:border-cobalt group-hover:bg-cobalt group-hover:text-white group-hover:shadow-[0_12px_28px_rgba(21,94,239,0.20)]">
+                  <span className="grid size-12 place-items-center rounded-xl border border-cobalt/15 bg-cobalt/8 text-cobalt transition-[background-color,border-color] duration-500 group-hover:border-cobalt/30 group-hover:bg-cobalt/12">
                     <Icon aria-hidden="true" className="size-6" strokeWidth={1.8} />
                   </span>
                   <span className="text-xs font-extrabold tracking-[0.16em] text-cobalt/35 transition-colors duration-700 group-hover:text-cobalt/70">
                     0{index + 1}
                   </span>
                 </div>
-                <h3 className="display-type mt-7 text-2xl font-bold transition-colors duration-700 group-hover:text-cobalt">{pillar.title}</h3>
+                <h3 className="display-type mt-7 text-2xl font-bold">{pillar.title}</h3>
                 <p className="mt-3 text-[0.95rem] leading-7 text-ink/64">{pillar.description}</p>
               </Reveal>
             );
