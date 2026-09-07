@@ -16,7 +16,7 @@ export default function ProjectsPage() {
   return (
     <>
       <PageHero description="A selected view of commercial, infrastructure, high-rise and industrial work shaped by disciplined coordination." eyebrow="Selected work" image="/images/project-infrastructure.webp" imageAlt="Major concrete infrastructure construction across a river corridor" title="Built to keep performing." />
-      <section className="border-t border-white/10 bg-black text-white section-space">
+      <section className="border-t border-slate-200 bg-white text-ink section-space">
         <Container><ProjectGrid projects={projects} /></Container>
       </section>
     </>

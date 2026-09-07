@@ -57,7 +57,7 @@ export function ServicesOverview() {
   return (
     <section
       aria-label="Service Overview"
-      className="blueprint-grid-dark relative overflow-hidden border-t border-white/10 bg-[#050c18] py-20 text-white sm:py-28"
+      className="blueprint-grid relative overflow-hidden border-t border-slate-200 bg-white py-20 text-ink sm:py-28"
       id="services-overview"
     >
       {/* Ambient glow */}
@@ -70,7 +70,7 @@ export function ServicesOverview() {
             <h2 className="display-type text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
               What We Do
             </h2>
-            <p className="mt-4 text-base leading-7 text-white/70 sm:text-lg">
+            <p className="mt-4 text-base leading-7 text-ink/65 sm:text-lg">
               Three specialized disciplines working under one uncompromising standard of accountability, delivering integrated solutions from concept to execution.
             </p>
           </Reveal>
@@ -81,7 +81,7 @@ export function ServicesOverview() {
             const Icon = service.icon;
             return (
               <Reveal
-                className="group relative flex flex-col justify-between rounded-2xl border border-white/12 bg-black/50 p-7 backdrop-blur-xl transition-all duration-300 hover:border-cobalt/50 hover:bg-black/75 hover:shadow-[0_12px_40px_rgba(21,94,239,0.15)] sm:p-9"
+                className="group relative flex flex-col justify-between rounded-2xl border border-slate-200 bg-white p-7 shadow-[0_16px_48px_rgba(15,23,42,0.07)] transition-all duration-300 hover:-translate-y-1 hover:border-cobalt/45 hover:shadow-[0_22px_55px_rgba(21,94,239,0.12)] sm:p-9"
                 delay={index * 0.1}
                 key={service.company}
               >
@@ -91,7 +91,7 @@ export function ServicesOverview() {
                     <span className="grid size-12 place-items-center rounded-xl bg-cobalt/15 text-cobalt transition-colors group-hover:bg-cobalt group-hover:text-white">
                       <Icon aria-hidden="true" className="size-6" />
                     </span>
-                    <span className="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-[0.65rem] font-bold uppercase tracking-wider text-blue-300">
+                    <span className="rounded-full border border-cobalt/15 bg-blue-50 px-3 py-1 text-[0.65rem] font-bold uppercase tracking-wider text-cobalt">
                       {service.tag}
                     </span>
                   </div>
@@ -103,17 +103,17 @@ export function ServicesOverview() {
                     {service.company}
                   </h3>
 
-                  <p className="mt-4 text-sm leading-6 text-white/70">
+                  <p className="mt-4 text-sm leading-6 text-ink/65">
                     {service.description}
                   </p>
 
-                  <div className="mt-6 border-t border-white/10 pt-6">
-                    <p className="mb-3.5 text-xs font-bold uppercase tracking-wider text-white/50">
+                  <div className="mt-6 border-t border-slate-200 pt-6">
+                    <p className="mb-3.5 text-xs font-bold uppercase tracking-wider text-ink/50">
                       Key Capabilities:
                     </p>
                     <ul className="space-y-2.5">
                       {service.highlights.map((highlight) => (
-                        <li className="flex items-start gap-2.5 text-xs font-semibold leading-5 text-white/85" key={highlight}>
+                        <li className="flex items-start gap-2.5 text-xs font-semibold leading-5 text-ink/80" key={highlight}>
                           <CheckCircle2 aria-hidden="true" className="mt-0.5 size-4 shrink-0 text-cobalt" />
                           <span>{highlight}</span>
                         </li>
@@ -122,7 +122,7 @@ export function ServicesOverview() {
                   </div>
                 </div>
 
-                <div className="mt-8 border-t border-white/10 pt-5">
+                <div className="mt-8 border-t border-slate-200 pt-5">
                   <a
                     className="inline-flex items-center gap-2 text-xs font-bold text-blue-400 transition-colors hover:text-blue-300"
                     href="/contact#quotation-form"

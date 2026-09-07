@@ -16,9 +16,9 @@
   --color-blue-700: #155eef;
   --color-blue-800: #155eef;
   --color-blue-900: #155eef;
-  --color-paper: #f4f2ed;
-  --color-warm-white: #fbfaf6;
-  --color-line: #d9d9d2;
+  --color-paper: #f6f9ff;
+  --color-warm-white: #ffffff;
+  --color-line: #dbe4f0;
 }
 
 :root {
@@ -33,15 +33,15 @@
 }
 
 html {
-  background: #000000;
+  background: #ffffff;
   scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
   overflow-x: clip;
-  background: #000000;
-  color: #ffffff;
+  background: #ffffff;
+  color: #071a2e;
   font-family: var(--font-manrope), Arial, sans-serif;
   text-rendering: optimizeLegibility;
 }
@@ -113,8 +113,8 @@ a {
 
 .blueprint-grid-dark {
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.055) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.055) 1px, transparent 1px);
+    linear-gradient(rgba(21, 94, 239, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(21, 94, 239, 0.07) 1px, transparent 1px);
   background-size: 5rem 5rem;
 }
 

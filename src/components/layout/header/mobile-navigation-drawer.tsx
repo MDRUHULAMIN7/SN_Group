@@ -77,7 +77,7 @@ export function MobileNavigationDrawer({ open, onClose, triggerRef }: MobileNavi
           <m.button
             animate={{ opacity: 1 }}
             aria-label="Close navigation menu"
-            className="absolute inset-0 bg-black/65 backdrop-blur-md"
+            className="absolute inset-0 bg-white/72 backdrop-blur-md"
             exit={{ opacity: 0 }}
             initial={{ opacity: 0 }}
             onClick={closeAndRestore}
@@ -89,16 +89,16 @@ export function MobileNavigationDrawer({ open, onClose, triggerRef }: MobileNavi
             animate={{ x: 0 }}
             aria-label="Mobile navigation"
             aria-modal="true"
-            className="blueprint-grid-dark fixed inset-y-0 right-0 flex h-dvh w-[min(92vw,28rem)] flex-col overflow-y-auto border-l border-white/10 bg-black/95 px-6 pb-8 pt-5 text-white shadow-[-20px_0_60px_rgba(0,0,0,0.8)] backdrop-blur-2xl"
+            className="blueprint-grid fixed inset-y-0 right-0 flex h-dvh w-[min(92vw,28rem)] flex-col overflow-y-auto border-l border-slate-200 bg-white/96 px-6 pb-8 pt-5 text-ink shadow-[-20px_0_60px_rgba(15,23,42,0.14)] backdrop-blur-2xl"
             exit={{ x: "100%", transition: { duration: 0.36, ease: [0.32, 0, 0.67, 0] } }}
             id="mobile-navigation"
             initial={{ x: "100%" }}
             role="dialog"
             transition={{ duration: 0.48, ease: [0.16, 1, 0.3, 1] }}
           >
-            <div className="flex items-center justify-between gap-4 border-b border-white/10 pb-5">
-              <BrandLockup inverse size="sm" />
-              <button aria-label="Close navigation menu" className="grid size-11 shrink-0 place-items-center rounded-full border border-white/20 bg-white/5 transition-all duration-200 hover:bg-white/15 active:scale-95" onClick={closeAndRestore} type="button">
+            <div className="flex items-center justify-between gap-4 border-b border-slate-200 pb-5">
+              <BrandLockup size="sm" />
+              <button aria-label="Close navigation menu" className="grid size-11 shrink-0 place-items-center rounded-full border border-slate-200 bg-white transition-all duration-200 hover:border-cobalt hover:text-cobalt active:scale-95" onClick={closeAndRestore} type="button">
                 <X aria-hidden="true" className="size-6" />
               </button>
             </div>
@@ -114,7 +114,7 @@ export function MobileNavigationDrawer({ open, onClose, triggerRef }: MobileNavi
                       transition={{ delay: 0.06 + index * 0.04, duration: 0.38, ease: [0.16, 1, 0.3, 1] }}
                     >
                       <Link
-                        className="group flex min-h-14 items-center justify-between border-b border-white/10 text-xl font-semibold transition-colors hover:text-cobalt"
+                        className="group flex min-h-14 items-center justify-between border-b border-slate-200 text-xl font-semibold transition-colors hover:text-cobalt"
                         href={isHome ? "/" : "#"}
                         onClick={(e) => {
                           if (!isHome) e.preventDefault();
@@ -134,14 +134,14 @@ export function MobileNavigationDrawer({ open, onClose, triggerRef }: MobileNavi
                   {sisterConcerns.map((concern, index) => (
                     <m.li animate={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x: 20 }} key={concern.slug} transition={{ delay: 0.22 + index * 0.04, duration: 0.38, ease: [0.16, 1, 0.3, 1] }}>
                       <Link
-                        className="flex min-h-12 items-center gap-4 rounded-xl px-2 transition-colors hover:bg-white/8 hover:text-cobalt"
+                        className="flex min-h-12 items-center gap-4 rounded-xl px-2 transition-colors hover:bg-blue-50 hover:text-cobalt"
                         href="#"
                         onClick={(e) => {
                           e.preventDefault();
                           closeAndRestore();
                         }}
                       >
-                        <span className="text-xs tabular-nums text-white/40">0{index + 1}</span>
+                        <span className="text-xs tabular-nums text-ink/40">0{index + 1}</span>
                         <span className="font-semibold">{concern.name}</span>
                       </Link>
                     </m.li>
@@ -149,9 +149,9 @@ export function MobileNavigationDrawer({ open, onClose, triggerRef }: MobileNavi
                 </ul>
               </div>
             </nav>
-            <div className="mt-auto pt-10 text-sm leading-6 text-white/50">
+            <div className="mt-auto pt-10 text-sm leading-6 text-ink/55">
               <div className="mb-4">
-                <p className="mb-2 text-[0.65rem] font-bold uppercase tracking-[0.18em] text-blue-300">Connect with us</p>
+                <p className="mb-2 text-[0.65rem] font-bold uppercase tracking-[0.18em] text-cobalt">Connect with us</p>
                 <SocialLinks />
               </div>
               Silver Tower, 52 Gulshan Avenue<br />Dhaka-1212, Bangladesh

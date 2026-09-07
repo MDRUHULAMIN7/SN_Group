@@ -26,12 +26,12 @@ export function ContactDetails() {
   ] as const;
 
   return (
-    <div className="grid gap-px overflow-hidden border border-white/12 bg-white/12 sm:grid-cols-2">
+    <div className="grid gap-px overflow-hidden rounded-2xl border border-slate-200 bg-slate-200 shadow-[0_18px_52px_rgba(15,23,42,0.07)] sm:grid-cols-2">
       {cards.map(({ title, icon: Icon, body }) => (
-        <div className="bg-[#090b10] p-6 sm:p-8" key={title}>
+        <div className="bg-white p-6 sm:p-8" key={title}>
           <span className="grid size-11 place-items-center rounded-full bg-cobalt text-white"><Icon aria-hidden="true" className="size-5" /></span>
           <h3 className="display-type mt-7 text-3xl">{title}</h3>
-          <div className="mt-3 text-sm leading-7 text-white/58 [&_a]:transition-colors [&_a]:hover:text-blue-300">{body}</div>
+          <div className="mt-3 text-sm leading-7 text-ink/60 [&_a]:transition-colors [&_a]:hover:text-cobalt">{body}</div>
         </div>
       ))}
     </div>

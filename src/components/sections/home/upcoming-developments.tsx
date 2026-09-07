@@ -15,7 +15,7 @@ export function UpcomingDevelopments() {
   return (
     <section
       aria-label="Upcoming Real Estate Developments"
-      className="relative overflow-hidden border-t border-white/10 bg-black py-20 text-white sm:py-28"
+      className="blueprint-grid relative overflow-hidden border-t border-slate-200 bg-white py-20 text-ink sm:py-28"
       id="upcoming-developments"
     >
       {/* Background glow */}
@@ -37,25 +37,25 @@ export function UpcomingDevelopments() {
                 Building Exceptional Spaces in Prime Locations
               </h2>
 
-              <p className="mt-5 text-base leading-7 text-white/75 sm:text-lg sm:leading-8">
+              <p className="mt-5 text-base leading-7 text-ink/70 sm:text-lg sm:leading-8">
                 Mehrish Holdings is preparing to launch a curated portfolio of residential and commercial developments across some of Dhaka&apos;s most desirable neighborhoods.
               </p>
 
-              <p className="mt-3.5 text-sm leading-6 text-white/60">
+              <p className="mt-3.5 text-sm leading-6 text-ink/60">
                 Each development is carefully planned to reflect its prime location and the needs of future residents and investors—focusing on modern architecture, efficient space planning, quality materials, contemporary amenities, and enduring property value.
               </p>
             </Reveal>
 
             {/* Coming Soon Notice Card */}
             <Reveal className="mt-8" delay={0.15}>
-              <div className="rounded-2xl border border-white/15 bg-gradient-to-br from-white/8 to-white/2 p-6 backdrop-blur-xl">
+              <div className="rounded-2xl border border-slate-200 bg-gradient-to-br from-white to-blue-50/70 p-6 shadow-[0_14px_40px_rgba(15,23,42,0.06)]">
                 <div className="flex items-center gap-3 text-blue-400">
                   <Clock aria-hidden="true" className="size-5" />
                   <span className="text-xs font-bold uppercase tracking-widest text-blue-300">
                     Coming Soon · Launching Soon
                   </span>
                 </div>
-                <p className="mt-2 text-sm leading-6 text-white/80">
+                <p className="mt-2 text-sm leading-6 text-ink/72">
                   Our first developments are currently in the planning and development stage. Details—including exact project locations, architectural renderings, unit sizes, amenities, and booking availability—will be announced officially.
                 </p>
                 <div className="mt-4 flex items-center gap-4">
@@ -74,8 +74,8 @@ export function UpcomingDevelopments() {
           {/* Right Column: Location Highlights */}
           <div className="lg:col-span-6 lg:pl-6">
             <Reveal delay={0.1}>
-              <div className="relative overflow-hidden rounded-2xl border border-white/12 bg-[#081220] p-6 sm:p-8">
-                <div className="relative mb-6 aspect-[16/9] w-full overflow-hidden rounded-xl bg-navy">
+              <div className="relative overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 shadow-[0_18px_50px_rgba(15,23,42,0.08)] sm:p-8">
+                <div className="relative mb-6 aspect-[16/9] w-full overflow-hidden rounded-xl bg-white">
                   <Image
                     alt="Mehrish Holdings premium architectural concepts in Dhaka"
                     className="size-full object-cover"
@@ -83,25 +83,25 @@ export function UpcomingDevelopments() {
                     sizes="(min-width: 1024px) 40vw, 90vw"
                     src="/images/project-commercial.webp"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-white/96 via-white/20 to-transparent" />
                   <div className="absolute bottom-4 left-4 right-4">
                     <p className="text-xs font-bold uppercase tracking-wider text-blue-400">
                       Targeted Expansion
                     </p>
-                    <p className="display-type text-2xl font-bold text-white">
+                    <p className="display-type text-2xl font-bold text-ink">
                       Mehrish Holdings — Developing the Future of Dhaka
                     </p>
                   </div>
                 </div>
 
-                <p className="mb-4 text-xs font-bold uppercase tracking-wider text-white/40">
+                <p className="mb-4 text-xs font-bold uppercase tracking-wider text-ink/45">
                   Prime Locations in Focus:
                 </p>
 
                 <div className="space-y-3">
                   {locations.map((loc) => (
                     <div
-                      className="flex items-center justify-between gap-4 rounded-xl border border-white/8 bg-white/4 px-4 py-3 transition-colors hover:border-white/20 hover:bg-white/8"
+                      className="flex items-center justify-between gap-4 rounded-xl border border-slate-200 bg-white px-4 py-3 transition-colors hover:border-cobalt/35 hover:bg-blue-50/50"
                       key={loc.name}
                     >
                       <div className="flex items-center gap-3">
@@ -109,8 +109,8 @@ export function UpcomingDevelopments() {
                           <MapPin aria-hidden="true" className="size-4" />
                         </span>
                         <div>
-                          <p className="text-sm font-bold text-white">{loc.name}</p>
-                          <p className="text-xs text-white/50">{loc.type}</p>
+                          <p className="text-sm font-bold text-ink">{loc.name}</p>
+                          <p className="text-xs text-ink/50">{loc.type}</p>
                         </div>
                       </div>
                       <span className="rounded-full bg-blue-500/10 px-2.5 py-1 text-[0.65rem] font-bold text-blue-300">

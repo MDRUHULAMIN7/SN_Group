@@ -42,7 +42,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   return (
     <>
       <ProjectDetail project={project} />
-      <section className="bg-black pb-[var(--section-space)] text-white">
+      <section className="bg-white pb-[var(--section-space)] text-ink">
         <Container>
           <p className="eyebrow mb-6 text-cobalt">Continue exploring</p>
           <h2 className="display-type mb-12 text-5xl sm:text-6xl">Related projects</h2>

@@ -44,7 +44,7 @@ export function CoreValuesSection() {
   return (
     <section
       aria-label="Our Core Values"
-      className="blueprint-grid-dark relative overflow-hidden border-t border-white/10 bg-black py-20 text-white sm:py-28"
+      className="blueprint-grid relative overflow-hidden border-t border-slate-200 bg-white py-20 text-ink sm:py-28"
       id="core-values"
     >
       <Container className="relative z-10">
@@ -54,7 +54,7 @@ export function CoreValuesSection() {
             <h2 className="display-type text-4xl font-extrabold tracking-tight sm:text-5xl">
               Our Core Values
             </h2>
-            <p className="mt-3 text-base text-white/65">
+            <p className="mt-3 text-base text-ink/62">
               The principles that guide how we operate, build partnerships, and deliver on our promises.
             </p>
           </Reveal>
@@ -65,15 +65,15 @@ export function CoreValuesSection() {
             const Icon = value.icon;
             return (
               <Reveal
-                className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-md transition-all duration-300 hover:border-cobalt/40 hover:bg-white/10"
+                className="rounded-2xl border border-slate-200 bg-white p-6 shadow-[0_12px_36px_rgba(15,23,42,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-cobalt/40 hover:shadow-[0_18px_42px_rgba(21,94,239,0.1)]"
                 delay={index * 0.05}
                 key={value.title}
               >
                 <span className="mb-4 grid size-10 place-items-center rounded-xl bg-cobalt/15 text-cobalt">
                   <Icon aria-hidden="true" className="size-5" />
                 </span>
-                <h3 className="display-type text-xl font-bold text-white">{value.title}</h3>
-                <p className="mt-2 text-xs leading-5 text-white/65">{value.description}</p>
+                <h3 className="display-type text-xl font-bold text-ink">{value.title}</h3>
+                <p className="mt-2 text-xs leading-5 text-ink/62">{value.description}</p>
               </Reveal>
             );
           })}
@@ -87,7 +87,7 @@ export function MissionValues() {
   return (
     <section
       aria-label="Mission, Vision and Values"
-      className="blueprint-grid-dark relative overflow-hidden border-t border-white/10 bg-black py-20 text-white sm:py-28"
+      className="blueprint-grid relative overflow-hidden border-t border-slate-200 bg-white py-20 text-ink sm:py-28"
       id="mission-values"
     >
       <Container className="relative z-10">
@@ -95,7 +95,7 @@ export function MissionValues() {
         <div className="grid gap-8 lg:grid-cols-2">
           {/* Mission */}
           <Reveal>
-            <div className="relative flex h-full flex-col justify-between rounded-3xl border border-white/12 bg-gradient-to-br from-[#08172c] to-black/80 p-8 backdrop-blur-xl sm:p-10">
+            <div className="relative flex h-full flex-col justify-between rounded-3xl border border-slate-200 bg-gradient-to-br from-white to-blue-50/70 p-8 shadow-[0_18px_50px_rgba(15,23,42,0.07)] sm:p-10">
               <div>
                 <span className="grid size-12 place-items-center rounded-2xl bg-cobalt/20 text-blue-400">
                   <Compass aria-hidden="true" className="size-6" />
@@ -104,7 +104,7 @@ export function MissionValues() {
                   Our Purpose
                 </p>
                 <h3 className="display-type mt-1 text-3xl font-bold sm:text-4xl">Our Mission</h3>
-                <p className="mt-4 text-base leading-8 text-white/75">
+                <p className="mt-4 text-base leading-8 text-ink/70">
                   To build and operate businesses that create lasting value through quality construction, responsible international trade, and thoughtfully developed real estate, while maintaining the highest standards of integrity, professionalism, and customer satisfaction.
                 </p>
               </div>
@@ -113,7 +113,7 @@ export function MissionValues() {
 
           {/* Vision */}
           <Reveal delay={0.1}>
-            <div className="relative flex h-full flex-col justify-between rounded-3xl border border-white/12 bg-gradient-to-br from-[#08172c] to-black/80 p-8 backdrop-blur-xl sm:p-10">
+            <div className="relative flex h-full flex-col justify-between rounded-3xl border border-slate-200 bg-gradient-to-br from-white to-blue-50/70 p-8 shadow-[0_18px_50px_rgba(15,23,42,0.07)] sm:p-10">
               <div>
                 <span className="grid size-12 place-items-center rounded-2xl bg-cobalt/20 text-blue-400">
                   <Eye aria-hidden="true" className="size-6" />
@@ -122,7 +122,7 @@ export function MissionValues() {
                   Future Horizon
                 </p>
                 <h3 className="display-type mt-1 text-3xl font-bold sm:text-4xl">Our Vision</h3>
-                <p className="mt-4 text-base leading-8 text-white/75">
+                <p className="mt-4 text-base leading-8 text-ink/70">
                   To become a trusted and respected Bangladeshi business group with a strong national presence and growing international reach, recognized for excellence in construction, global trade, and real estate development.
                 </p>
               </div>
@@ -138,7 +138,7 @@ export function MissionValues() {
               <h2 className="display-type text-4xl font-extrabold tracking-tight sm:text-5xl">
                 Our Core Values
               </h2>
-              <p className="mt-3 text-base text-white/65">
+              <p className="mt-3 text-base text-ink/62">
                 The fundamental principles that govern how we operate, build partnerships, and deliver on our promises.
               </p>
             </Reveal>
@@ -149,15 +149,15 @@ export function MissionValues() {
               const Icon = val.icon;
               return (
                 <Reveal
-                  className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-md transition-all duration-300 hover:border-cobalt/40 hover:bg-white/10"
+                  className="rounded-2xl border border-slate-200 bg-white p-6 shadow-[0_12px_36px_rgba(15,23,42,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-cobalt/40 hover:shadow-[0_18px_42px_rgba(21,94,239,0.1)]"
                   delay={idx * 0.05}
                   key={val.title}
                 >
                   <span className="mb-4 grid size-10 place-items-center rounded-xl bg-cobalt/15 text-cobalt">
                     <Icon aria-hidden="true" className="size-5" />
                   </span>
-                  <h4 className="display-type text-xl font-bold text-white">{val.title}</h4>
-                  <p className="mt-2 text-xs leading-5 text-white/65">{val.description}</p>
+                  <h4 className="display-type text-xl font-bold text-ink">{val.title}</h4>
+                  <p className="mt-2 text-xs leading-5 text-ink/62">{val.description}</p>
                 </Reveal>
               );
             })}

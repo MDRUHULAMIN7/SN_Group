@@ -27,7 +27,7 @@ export function TestimonialsSection() {
   return (
     <section
       aria-label="Partner Testimonials"
-      className="relative overflow-hidden border-t border-white/10 bg-[#030712] py-20 text-white sm:py-28"
+      className="relative overflow-hidden border-t border-slate-200 bg-white py-20 text-ink sm:py-28"
       id="testimonials"
     >
       <Container className="relative z-10">
@@ -37,7 +37,7 @@ export function TestimonialsSection() {
             <h2 className="display-type text-4xl font-extrabold tracking-tight sm:text-5xl">
               What Our Partners Say
             </h2>
-            <p className="mt-3 text-base text-white/65">
+            <p className="mt-3 text-base text-ink/62">
               Reflections of trust, execution excellence, and enduring relationships built over two decades.
             </p>
           </Reveal>
@@ -46,7 +46,7 @@ export function TestimonialsSection() {
         <div className="mt-16 grid gap-8 lg:grid-cols-3">
           {testimonials.map((item, index) => (
             <Reveal
-              className="relative flex flex-col justify-between rounded-2xl border border-white/10 bg-black/60 p-8 backdrop-blur-xl transition-all duration-300 hover:border-cobalt/40 hover:bg-black/80 sm:p-9"
+              className="relative flex flex-col justify-between rounded-2xl border border-slate-200 bg-white p-8 shadow-[0_14px_42px_rgba(15,23,42,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-cobalt/40 hover:shadow-[0_20px_48px_rgba(21,94,239,0.1)] sm:p-9"
               delay={index * 0.1}
               key={item.quote}
             >
@@ -59,14 +59,14 @@ export function TestimonialsSection() {
                   </div>
                   <Quote aria-hidden="true" className="size-6 text-cobalt/50" />
                 </div>
-                <p className="mt-6 text-base leading-7 text-white/85">
+                <p className="mt-6 text-base leading-7 text-ink/78">
                   &ldquo;{item.quote}&rdquo;
                 </p>
               </div>
 
-              <div className="mt-8 border-t border-white/10 pt-5">
-                <p className="text-sm font-bold text-white">{item.author}</p>
-                <p className="text-xs text-white/50">{item.role}</p>
+              <div className="mt-8 border-t border-slate-200 pt-5">
+                <p className="text-sm font-bold text-ink">{item.author}</p>
+                <p className="text-xs text-ink/50">{item.role}</p>
               </div>
             </Reveal>
           ))}

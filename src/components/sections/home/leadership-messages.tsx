@@ -6,7 +6,7 @@ export function LeadershipMessages() {
   return (
     <section
       aria-label="Leadership Messages"
-      className="relative overflow-hidden border-t border-white/10 bg-[#061020] py-20 text-white sm:py-28"
+      className="blueprint-grid relative overflow-hidden border-t border-slate-200 bg-white py-20 text-ink sm:py-28"
       id="leadership-messages"
     >
       {/* Ambient background glows */}
@@ -19,7 +19,7 @@ export function LeadershipMessages() {
             <h2 className="display-type text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
               Messages from Our Leadership
             </h2>
-            <p className="mt-4 text-base leading-7 text-white/70 sm:text-lg">
+            <p className="mt-4 text-base leading-7 text-ink/65 sm:text-lg">
               Guided by a commitment to integrity, national development, and responsible long-term growth.
             </p>
           </Reveal>
@@ -28,9 +28,9 @@ export function LeadershipMessages() {
         <div className="mt-16 grid gap-10 lg:grid-cols-2">
           {/* Chairman's Message */}
           <Reveal delay={0.08}>
-            <div className="relative flex h-full flex-col justify-between rounded-3xl border border-white/12 bg-black/60 p-8 backdrop-blur-xl sm:p-10">
+            <div className="relative flex h-full flex-col justify-between rounded-3xl border border-slate-200 bg-white p-8 shadow-[0_18px_50px_rgba(15,23,42,0.07)] sm:p-10">
               <div>
-                <div className="flex items-center justify-between border-b border-white/10 pb-6">
+                <div className="flex items-center justify-between border-b border-slate-200 pb-6">
                   <div>
                     <span className="text-xs font-bold uppercase tracking-widest text-blue-400">
                       Chairman&apos;s Speech
@@ -44,7 +44,7 @@ export function LeadershipMessages() {
                   </span>
                 </div>
 
-                <div className="mt-6 space-y-4 text-sm leading-7 text-white/75 sm:text-base sm:leading-8">
+                <div className="mt-6 space-y-4 text-sm leading-7 text-ink/70 sm:text-base sm:leading-8">
                   <p>
                     For more than 20 years, our organization has grown through hard work, responsible business practices, and the trust of our clients and partners.
                   </p>
@@ -57,14 +57,14 @@ export function LeadershipMessages() {
                   <p>
                     Our international trading business connects global markets with Bangladesh, and our real estate arm develops quality properties in prime Dhaka locations.
                   </p>
-                  <p className="font-semibold text-blue-200">
+                  <p className="font-semibold text-cobalt">
                     &ldquo;Our vision for S.N Group is not simply to become larger, but to become stronger, more professional, more innovative, and more trusted with every year.&rdquo;
                   </p>
                 </div>
               </div>
 
-              <div className="mt-8 border-t border-white/10 pt-6">
-                <p className="display-type text-xl font-bold text-white">Chairman</p>
+              <div className="mt-8 border-t border-slate-200 pt-6">
+                <p className="display-type text-xl font-bold text-ink">Chairman</p>
                 <p className="text-xs font-bold uppercase tracking-widest text-blue-400">
                   S.N Group
                 </p>
@@ -74,9 +74,9 @@ export function LeadershipMessages() {
 
           {/* Managing Director's Message */}
           <Reveal delay={0.16}>
-            <div className="relative flex h-full flex-col justify-between rounded-3xl border border-white/12 bg-black/60 p-8 backdrop-blur-xl sm:p-10">
+            <div className="relative flex h-full flex-col justify-between rounded-3xl border border-slate-200 bg-white p-8 shadow-[0_18px_50px_rgba(15,23,42,0.07)] sm:p-10">
               <div>
-                <div className="flex items-center justify-between border-b border-white/10 pb-6">
+                <div className="flex items-center justify-between border-b border-slate-200 pb-6">
                   <div>
                     <span className="text-xs font-bold uppercase tracking-widest text-blue-400">
                       MD&apos;s Speech
@@ -90,7 +90,7 @@ export function LeadershipMessages() {
                   </span>
                 </div>
 
-                <div className="mt-6 space-y-4 text-sm leading-7 text-white/75 sm:text-base sm:leading-8">
+                <div className="mt-6 space-y-4 text-sm leading-7 text-ink/70 sm:text-base sm:leading-8">
                   <p>
                     Welcome to S.N Group. For more than two decades, our journey has been guided by a simple principle: build with integrity, deliver with excellence, and grow through trust.
                   </p>
@@ -100,14 +100,14 @@ export function LeadershipMessages() {
                   <p>
                     Through S.N Engineering & Construction, S.N Import & Export, and Mehrish Holdings, we continue to expand capabilities while creating sustainable value for customers, partners, and communities.
                   </p>
-                  <p className="font-semibold text-blue-200">
+                  <p className="font-semibold text-cobalt">
                     &ldquo;Our success is ultimately measured by the trust of our clients, partners, employees, and stakeholders. We look forward to building a stronger future together.&rdquo;
                   </p>
                 </div>
               </div>
 
-              <div className="mt-8 border-t border-white/10 pt-6">
-                <p className="display-type text-xl font-bold text-white">Managing Director</p>
+              <div className="mt-8 border-t border-slate-200 pt-6">
+                <p className="display-type text-xl font-bold text-ink">Managing Director</p>
                 <p className="text-xs font-bold uppercase tracking-widest text-blue-400">
                   S.N Group
                 </p>

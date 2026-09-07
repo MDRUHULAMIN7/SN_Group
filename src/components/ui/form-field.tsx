@@ -13,7 +13,7 @@ interface FormFieldProps {
 export function FormField({ id, label, error, required, children, className }: FormFieldProps) {
   return (
     <div className={cn(className)}>
-      <label className="mb-2.5 block text-xs font-bold uppercase tracking-[0.11em] text-white/65" htmlFor={id}>
+      <label className="mb-2.5 block text-xs font-bold uppercase tracking-[0.11em] text-ink/70" htmlFor={id}>
         {label}{required ? <span className="ml-1 text-cobalt" aria-hidden="true">*</span> : null}
       </label>
       {children}
@@ -22,4 +22,4 @@ export function FormField({ id, label, error, required, children, className }: F
   );
 }
 
-export const fieldClassName = "min-h-12 w-full rounded-xl border border-white/16 bg-black px-4 py-3 text-sm text-white shadow-sm outline-none transition-[border-color,box-shadow] placeholder:text-white/32 focus:border-cobalt focus:ring-4 focus:ring-cobalt/20";
+export const fieldClassName = "min-h-12 w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-ink shadow-sm outline-none transition-[border-color,box-shadow] placeholder:text-ink/35 focus:border-cobalt focus:ring-4 focus:ring-cobalt/15";

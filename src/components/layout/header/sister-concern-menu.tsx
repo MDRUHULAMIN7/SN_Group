@@ -9,10 +9,9 @@ import { cn } from "@/lib/utils";
 
 interface SisterConcernMenuProps {
   active: boolean;
-  compact?: boolean;
 }
 
-export function SisterConcernMenu({ active, compact = false }: SisterConcernMenuProps) {
+export function SisterConcernMenu({ active }: SisterConcernMenuProps) {
   const [open, setOpen] = useState(false);
   const rootRef = useRef<HTMLDivElement>(null);
   const firstItemRef = useRef<HTMLAnchorElement>(null);
@@ -52,7 +51,7 @@ export function SisterConcernMenu({ active, compact = false }: SisterConcernMenu
         aria-haspopup="menu"
         className={cn(
           "group relative flex min-h-10 items-center gap-1.5 px-3 text-sm font-semibold transition-colors xl:px-3.5",
-          compact ? "text-black hover:text-cobalt" : "text-white hover:text-cobalt",
+          "text-ink hover:text-cobalt",
           active && "text-cobalt font-bold",
         )}
         onClick={() => setOpen((prev) => !prev)}

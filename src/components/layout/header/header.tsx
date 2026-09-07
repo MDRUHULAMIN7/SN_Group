@@ -30,14 +30,14 @@ export function Header() {
     <>
       <header
         className={cn(
-          "fixed inset-x-0 top-0 z-50 p-0 text-white transition-[padding] duration-800 ease-[cubic-bezier(0.16,1,0.3,1)]",
+          "fixed inset-x-0 top-0 z-50 p-0 text-ink transition-[padding] duration-800 ease-[cubic-bezier(0.16,1,0.3,1)]",
           compact && "px-2 pt-2 sm:px-6 sm:pt-3",
         )}
       >
         <div
           data-navbar-state={compact ? "compact" : "full"}
           className={cn(
-            "relative isolate mx-auto flex h-[4.25rem] w-full max-w-[100vw] items-center justify-between rounded-none border border-transparent bg-transparent px-3 shadow-none transition-[height,max-width,border-radius,border-color,box-shadow,background-color,backdrop-filter] duration-800 ease-[cubic-bezier(0.16,1,0.3,1)] sm:px-5 lg:px-6",
+            "relative isolate mx-auto flex h-[4.25rem] w-full max-w-[100vw] items-center justify-between rounded-none border border-transparent bg-white/88 px-3 shadow-[0_10px_35px_rgba(15,23,42,0.06)] backdrop-blur-xl transition-[height,max-width,border-radius,border-color,box-shadow,background-color,backdrop-filter] duration-800 ease-[cubic-bezier(0.16,1,0.3,1)] sm:px-5 lg:px-6",
             compact && "h-17 max-w-[86rem] rounded-full border-slate-200/80 bg-white/95 backdrop-blur-2xl shadow-[0_16px_45px_rgba(0,0,0,0.12)]",
           )}
         >
@@ -56,25 +56,25 @@ export function Header() {
             )}
             href="/"
           >
-            <BrandLockup inverse={!compact} size="sm" />
+            <BrandLockup size="sm" />
           </Link>
           <div className="relative z-10">
-            <DesktopNavigation compact={compact} />
+            <DesktopNavigation />
           </div>
           <div className="relative z-10 flex items-center gap-2">
             <ButtonLink
               className="hidden rounded-full lg:inline-flex"
               href="/contact#quotation-form"
               size="sm"
-              variant={compact ? "primary" : "light"}
+              variant="primary"
             >
               Request a quotation
             </ButtonLink>
             <AnimatedMenuButton
               buttonRef={menuButtonRef}
               className={cn(
-                "border-white/15 bg-white/5 text-white",
-                compact && "border-slate-300 bg-slate-100 text-slate-900 hover:bg-slate-200",
+                "border-slate-300 bg-white text-ink hover:border-cobalt hover:text-cobalt",
+                compact && "bg-slate-50",
               )}
               onClick={() => setMobileOpen((value) => !value)}
               open={mobileOpen}

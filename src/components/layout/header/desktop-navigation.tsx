@@ -6,11 +6,7 @@ import { primaryNavigation } from "@/config/navigation";
 import { cn } from "@/lib/utils";
 import { SisterConcernMenu } from "./sister-concern-menu";
 
-interface DesktopNavigationProps {
-  compact?: boolean;
-}
-
-export function DesktopNavigation({ compact = false }: DesktopNavigationProps) {
+export function DesktopNavigation() {
   const pathname = usePathname();
   const leading = primaryNavigation.slice(0, 2);
   const trailing = primaryNavigation.slice(2);
@@ -24,7 +20,7 @@ export function DesktopNavigation({ compact = false }: DesktopNavigationProps) {
         aria-current={active ? "page" : undefined}
         className={cn(
           "group relative flex min-h-10 items-center px-3 text-sm font-semibold transition-colors xl:px-3.5",
-          compact ? "text-black hover:text-cobalt" : "text-white hover:text-cobalt",
+          "text-ink hover:text-cobalt",
           active && "text-cobalt font-bold",
           !isHome && "cursor-default",
         )}
@@ -50,7 +46,7 @@ export function DesktopNavigation({ compact = false }: DesktopNavigationProps) {
   return (
     <nav aria-label="Primary navigation" className="hidden items-center lg:flex">
       {leading.map(link)}
-      <SisterConcernMenu active={false} compact={compact} />
+      <SisterConcernMenu active={false} />
       {trailing.map(link)}
     </nav>
   );

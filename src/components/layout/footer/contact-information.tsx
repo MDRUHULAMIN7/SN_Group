@@ -7,7 +7,7 @@ export function ContactInformation() {
       label: "Office",
       icon: MapPin,
       content: (
-        <a className="transition-colors hover:text-white" href={siteConfig.address.mapUrl} rel="noreferrer" target="_blank">
+        <a className="transition-colors hover:text-cobalt" href={siteConfig.address.mapUrl} rel="noreferrer" target="_blank">
           {siteConfig.address.lines.map((line) => <span className="block" key={line}>{line}</span>)}
         </a>
       ),
@@ -15,17 +15,17 @@ export function ContactInformation() {
     {
       label: "Telephone",
       icon: Phone,
-      content: siteConfig.phones.map((phone) => <a className="block transition-colors hover:text-white" href={phone.href} key={phone.href}>{phone.label}</a>),
+      content: siteConfig.phones.map((phone) => <a className="block transition-colors hover:text-cobalt" href={phone.href} key={phone.href}>{phone.label}</a>),
     },
     {
       label: "Mobile",
       icon: Smartphone,
-      content: siteConfig.mobiles.map((phone) => <a className="block transition-colors hover:text-white" href={phone.href} key={phone.href}>{phone.label}</a>),
+      content: siteConfig.mobiles.map((phone) => <a className="block transition-colors hover:text-cobalt" href={phone.href} key={phone.href}>{phone.label}</a>),
     },
     {
       label: "Email",
       icon: Mail,
-      content: siteConfig.emails.map((email) => <a className="block transition-colors hover:text-white" href={email.href} key={email.href}>{email.label}</a>),
+      content: siteConfig.emails.map((email) => <a className="block transition-colors hover:text-cobalt" href={email.href} key={email.href}>{email.label}</a>),
     },
   ];
 
@@ -33,10 +33,10 @@ export function ContactInformation() {
     <div className="grid gap-x-8 gap-y-8 sm:grid-cols-2">
       {groups.map(({ label, icon: Icon, content }) => (
         <div className="flex gap-3" key={label}>
-          <span className="mt-0.5 grid size-9 shrink-0 place-items-center rounded-full bg-white/8 text-blue-300"><Icon aria-hidden="true" className="size-4" /></span>
+          <span className="mt-0.5 grid size-9 shrink-0 place-items-center rounded-full bg-blue-50 text-cobalt"><Icon aria-hidden="true" className="size-4" /></span>
           <div>
-            <p className="mb-2 text-[0.65rem] font-bold uppercase tracking-[0.16em] text-white/40">{label}</p>
-            <div className="text-sm leading-6 text-white/65">{content}</div>
+            <p className="mb-2 text-[0.65rem] font-bold uppercase tracking-[0.16em] text-ink/45">{label}</p>
+            <div className="text-sm leading-6 text-ink/65">{content}</div>
           </div>
         </div>
       ))}

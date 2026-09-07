@@ -91,7 +91,7 @@ export function ContactForm() {
           {pending ? <LoaderCircle aria-hidden="true" className="size-5 animate-spin" /> : <Send aria-hidden="true" className="size-5" />}
           {pending ? "Sending…" : "Send project brief"}
         </Button>
-        <p className="mt-4 max-w-xl text-xs leading-5 text-white/42">By submitting this form, you consent to S.N Group using the information only to respond to your enquiry.</p>
+        <p className="mt-4 max-w-xl text-xs leading-5 text-ink/45">By submitting this form, you consent to S.N Group using the information only to respond to your enquiry.</p>
       </div>
     </form>
   );

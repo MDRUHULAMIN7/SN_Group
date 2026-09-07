@@ -10,7 +10,7 @@ export function ProjectDetail({ project }: { project: Project }) {
     <>
       <ProjectHero project={project} />
       <ProjectFacts project={project} />
-      <section className="border-t border-white/10 bg-black text-white section-space">
+      <section className="border-t border-slate-200 bg-white text-ink section-space">
         <Container className="grid gap-14 lg:grid-cols-12">
           <Reveal className="lg:col-span-4">
             <p className="eyebrow mb-6 text-cobalt">Project approach</p>
@@ -19,10 +19,10 @@ export function ProjectDetail({ project }: { project: Project }) {
           <div className="lg:col-span-6 lg:col-start-7">
             {project.description.map((paragraph, index) => (
               <Reveal delay={index * 0.08} key={paragraph}>
-                <p className="mb-7 text-base leading-8 text-white/62 sm:text-lg sm:leading-9">{paragraph}</p>
+                <p className="mb-7 text-base leading-8 text-ink/65 sm:text-lg sm:leading-9">{paragraph}</p>
               </Reveal>
             ))}
-            <Reveal className="mt-10 border-t border-white/14 pt-8" delay={0.16}>
+            <Reveal className="mt-10 border-t border-slate-200 pt-8" delay={0.16}>
               <p className="mb-5 text-xs font-bold uppercase tracking-[0.15em] text-cobalt">Services delivered</p>
               <ul className="grid gap-3 sm:grid-cols-2">
                 {project.services.map((service) => <li className="border-l-2 border-cobalt pl-4 text-sm font-semibold" key={service}>{service}</li>)}

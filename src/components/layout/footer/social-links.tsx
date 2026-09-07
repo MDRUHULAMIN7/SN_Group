@@ -38,7 +38,7 @@ export function SocialLinks({ className }: { className?: string }) {
       {siteConfig.socials.map((item) => (
         <a
           aria-label={`Follow ${siteConfig.name} on ${item.label}`}
-          className="grid size-10 place-items-center rounded-xl border border-white/12 bg-white/5 text-white/70 transition-all duration-300 hover:border-cobalt hover:bg-cobalt hover:text-white hover:shadow-[0_0_18px_rgba(21,94,239,0.45)] hover:-translate-y-0.5"
+          className="grid size-10 place-items-center rounded-xl border border-slate-200 bg-white text-ink/65 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-cobalt hover:bg-cobalt hover:text-white hover:shadow-[0_10px_24px_rgba(21,94,239,0.24)]"
           href={item.href}
           key={item.label}
           rel="noreferrer"

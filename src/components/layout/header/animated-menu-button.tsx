@@ -17,7 +17,7 @@ export function AnimatedMenuButton({ open, onClick, className, buttonRef }: Anim
       aria-controls="mobile-navigation"
       aria-expanded={open}
       aria-label={open ? "Close navigation menu" : "Open navigation menu"}
-      className={cn("relative grid size-11 place-items-center rounded-full border border-white/20 bg-white/5 text-white lg:hidden", className)}
+      className={cn("relative grid size-11 place-items-center rounded-full border border-slate-200 bg-white text-ink lg:hidden", className)}
       onClick={onClick}
       type="button"
     >

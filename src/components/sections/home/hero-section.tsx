@@ -91,7 +91,7 @@ export function HeroSection() {
     <section
       aria-label="S.N Group Hero Slider"
       aria-roledescription="carousel"
-      className="relative flex min-h-[100svh] items-center overflow-hidden bg-black pb-16 pt-24 text-white sm:pb-20 sm:pt-28"
+      className="relative flex min-h-[100svh] items-center overflow-hidden bg-white pb-16 pt-24 text-ink sm:pb-20 sm:pt-28"
       onBlurCapture={(event) => {
         if (!event.currentTarget.contains(event.relatedTarget)) setIsPaused(false);
       }}
@@ -108,7 +108,7 @@ export function HeroSection() {
           >
             <Image
               alt=""
-              className="size-full object-cover object-center"
+              className="size-full object-cover object-center saturate-[0.88]"
               fill
               sizes="100vw"
               src={slide.image}
@@ -117,9 +117,9 @@ export function HeroSection() {
           </m.div>
         ))}
 
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-black/95 via-black/75 via-45% to-transparent" />
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-black/50" />
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_20%_40%,rgba(21,94,239,0.15),transparent_60%)]" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-white via-white/94 via-52% to-white/15" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-white/90 via-white/5 to-white/70" />
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_18%_42%,rgba(21,94,239,0.12),transparent_58%)]" />
       </div>
 
       <Container className="relative z-10 flex flex-col justify-center py-6 sm:py-10">
@@ -144,22 +144,22 @@ export function HeroSection() {
                 role="group"
                 transition={{ duration: 0.7, ease: [0.4, 0, 0.2, 1] }}
               >
-                <div className="mb-4 inline-flex w-fit items-center gap-2 rounded-full border border-white/20 bg-black/40 px-4 py-1.5 backdrop-blur-md">
-                  <Icon aria-hidden="true" className="size-4 text-blue-400" />
-                  <span className="text-xs font-bold uppercase tracking-wider text-blue-300">
+                <div className="mb-4 inline-flex w-fit items-center gap-2 rounded-full border border-cobalt/20 bg-white/84 px-4 py-1.5 shadow-sm backdrop-blur-md">
+                  <Icon aria-hidden="true" className="size-4 text-cobalt" />
+                  <span className="text-xs font-bold uppercase tracking-wider text-cobalt">
                     {slide.badge}
                   </span>
                 </div>
 
-                <h1 className="display-type text-4xl font-extrabold tracking-tight text-white drop-shadow-[0_12px_32px_rgba(0,0,0,0.6)] sm:text-6xl lg:text-7xl xl:text-[5.25rem] xl:leading-[0.95]">
+                <h1 className="display-type text-4xl font-extrabold tracking-tight text-ink sm:text-6xl lg:text-7xl xl:text-[5.25rem] xl:leading-[0.95]">
                   {slide.title}
                 </h1>
 
-                <p className="mt-4 text-lg font-bold text-blue-400 drop-shadow-md sm:text-2xl lg:text-3xl">
+                <p className="mt-4 text-lg font-bold text-cobalt sm:text-2xl lg:text-3xl">
                   {slide.headline}
                 </p>
 
-                <p className="mt-4 max-w-2xl text-base leading-7 text-white/80 drop-shadow sm:text-lg sm:leading-8">
+                <p className="mt-4 max-w-2xl text-base leading-7 text-ink/72 sm:text-lg sm:leading-8">
                   {slide.description}
                 </p>
 
@@ -173,7 +173,7 @@ export function HeroSection() {
                   </a>
 
                   <a
-                    className="inline-flex min-h-12 items-center gap-2 rounded-full border border-white/30 bg-black/40 px-7 py-3.5 text-sm font-bold text-white backdrop-blur-md transition-all duration-300 hover:border-white/60 hover:bg-white/20 active:scale-[0.98]"
+                    className="inline-flex min-h-12 items-center gap-2 rounded-full border border-cobalt/25 bg-white/84 px-7 py-3.5 text-sm font-bold text-ink shadow-sm backdrop-blur-md transition-all duration-300 hover:border-cobalt hover:text-cobalt active:scale-[0.98]"
                     href={slide.href}
                   >
                     {slide.linkLabel}
@@ -191,7 +191,7 @@ export function HeroSection() {
               aria-pressed={activeIndex === index}
               className={cn(
                 "h-1.5 rounded-full transition-[width,background-color] duration-500",
-                activeIndex === index ? "w-10 bg-blue-400" : "w-5 bg-white/35 hover:bg-white/65",
+                activeIndex === index ? "w-10 bg-cobalt" : "w-5 bg-cobalt/20 hover:bg-cobalt/45",
               )}
               key={slide.id}
               onClick={() => setActiveIndex(index)}

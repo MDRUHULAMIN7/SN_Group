@@ -18,17 +18,17 @@ export default function SisterConcernsPage() {
   return (
     <>
       <PageHero description="Three focused disciplines connected by shared project controls, leadership standards and a commitment to useful outcomes." eyebrow="Our group" image="/images/hero-construction.webp" imageAlt="High-rise construction work across Dhaka" title="Three disciplines. One standard." />
-      <section className="border-t border-white/10 bg-black text-white section-space">
+      <section className="border-t border-slate-200 bg-white text-ink section-space">
         <Container className="space-y-8">
           {sisterConcerns.map((concern, index) => (
             <Reveal key={concern.slug}>
-              <Link className="group grid overflow-hidden border border-white/12 bg-[#090b10] lg:grid-cols-2" href={`/sister-concerns/${concern.slug}`}>
+              <Link className="group grid overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_18px_55px_rgba(15,23,42,0.07)] lg:grid-cols-2" href={`/sister-concerns/${concern.slug}`}>
                 <div className={`relative min-h-80 ${index % 2 === 1 ? "lg:order-2" : ""}`}>
                   <Image alt={concern.imageAlt} className="object-cover transition duration-700 group-hover:scale-105" fill sizes="(min-width: 1024px) 50vw, 100vw" src={concern.image} />
                 </div>
                 <div className="flex min-h-80 flex-col justify-between p-7 sm:p-10 lg:p-14">
-                  <div className="flex items-start justify-between"><span className="text-xs font-bold tabular-nums text-blue-300">0{index + 1}</span><span className="grid size-11 place-items-center rounded-full border border-white/18 transition-colors group-hover:bg-cobalt group-hover:text-white"><ArrowUpRight aria-hidden="true" className="size-5" /></span></div>
-                  <div><p className="mb-3 text-xs font-bold uppercase tracking-[0.15em] text-blue-300">{concern.discipline}</p><h2 className="display-type text-5xl sm:text-6xl">{concern.name}</h2><p className="mt-5 max-w-lg text-sm leading-7 text-white/58">{concern.description}</p></div>
+                  <div className="flex items-start justify-between"><span className="text-xs font-bold tabular-nums text-cobalt">0{index + 1}</span><span className="grid size-11 place-items-center rounded-full border border-cobalt/25 transition-colors group-hover:bg-cobalt group-hover:text-white"><ArrowUpRight aria-hidden="true" className="size-5" /></span></div>
+                  <div><p className="mb-3 text-xs font-bold uppercase tracking-[0.15em] text-cobalt">{concern.discipline}</p><h2 className="display-type text-5xl sm:text-6xl">{concern.name}</h2><p className="mt-5 max-w-lg text-sm leading-7 text-ink/60">{concern.description}</p></div>
                 </div>
               </Link>
             </Reveal>
