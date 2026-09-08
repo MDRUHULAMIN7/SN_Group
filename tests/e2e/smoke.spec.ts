@@ -18,9 +18,9 @@ test("core marketing, navigation, project and contact flows", async ({ page }) =
   await page.setViewportSize({ width: 390, height: 844 });
   await page.getByRole("button", { name: "Open navigation menu" }).click();
   await expect(page.getByRole("dialog", { name: "Mobile navigation" })).toBeVisible();
-  await page.getByRole("dialog", { name: "Mobile navigation" }).getByRole("link", { name: "S.N Int. Construction BD Ltd." }).click();
-  await expect(page).toHaveURL(/\/sister-concerns\/sn-int-construction-bd-ltd$/);
-  await expect(page.getByRole("heading", { level: 1, name: "S.N Int. Construction BD Ltd." })).toBeVisible();
+  await page.getByRole("dialog", { name: "Mobile navigation" }).getByRole("link", { name: "S.N Eng Construction BD Ltd." }).click();
+  await expect(page).toHaveURL(/\/sister-concerns\/sn-engineering-construction$/);
+  await expect(page.getByRole("heading", { level: 1, name: "S.N Eng Construction BD Ltd." })).toBeVisible();
 
   await page.goto("/projects/gulshan-commercial-annex");
   await expect(page.getByRole("heading", { level: 1, name: "Gulshan Commercial Annex" })).toBeVisible();
