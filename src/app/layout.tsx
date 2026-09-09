@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Barlow_Condensed, Manrope } from "next/font/google";
 import { Footer } from "@/components/layout/footer/footer";
 import { FloatingWhatsappButton } from "@/components/layout/floating-whatsapp-button";
+import { ScrollToTop } from "@/components/layout/scroll-to-top";
 import { Header } from "@/components/layout/header/header";
 import { Preloader } from "@/components/layout/preloader";
 import { MotionProvider } from "@/components/motion/motion-provider";
@@ -83,6 +84,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           <Header />
           <main id="main-content">{children}</main>
           <Footer />
+          <ScrollToTop />
           <FloatingWhatsappButton />
         </MotionProvider>
         <JsonLd data={organizationJsonLd} />

@@ -30,7 +30,7 @@ export function Header() {
     <>
       <header
         className={cn(
-          "relative md:fixed inset-x-0 top-0 z-50 p-0 text-ink transition-[padding] duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]",
+          "fixed inset-x-0 top-0 z-50 p-0 text-ink transition-[padding] duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]",
           compact && "md:px-6 md:pt-3",
         )}
       >
