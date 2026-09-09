@@ -30,15 +30,15 @@ export function Header() {
     <>
       <header
         className={cn(
-          "fixed inset-x-0 top-0 z-50 p-0 text-ink transition-[padding] duration-800 ease-[cubic-bezier(0.16,1,0.3,1)]",
-          compact && "px-2 pt-2 sm:px-6 sm:pt-3",
+          "relative md:fixed inset-x-0 top-0 z-50 p-0 text-ink transition-[padding] duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]",
+          compact && "md:px-6 md:pt-3",
         )}
       >
         <div
           data-navbar-state={compact ? "compact" : "full"}
           className={cn(
-            "relative isolate mx-auto flex h-20 w-full max-w-[100vw] items-center justify-between rounded-none border border-transparent bg-white/5 px-3 shadow-none backdrop-blur-sm transition-[height,max-width,border-radius,border-color,box-shadow,background-color,backdrop-filter] duration-800 ease-[cubic-bezier(0.16,1,0.3,1)] sm:px-6 lg:px-8",
-            compact && "h-17 max-w-[86rem] rounded-full border-slate-200/85 bg-white shadow-[0_8px_24px_rgba(15,23,42,0.08)] backdrop-blur-2xl",
+            "relative isolate mx-auto flex h-16 sm:h-18 md:h-20 w-full max-w-[100vw] items-center justify-between border-b md:border border-slate-200/80 md:border-transparent bg-white md:bg-white/10 px-3.5 sm:px-6 lg:px-8 shadow-xs md:shadow-none md:backdrop-blur-sm transition-[height,max-width,border-radius,border-color,box-shadow,background-color,backdrop-filter] duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]",
+            compact && "md:h-17 md:max-w-[86rem] md:rounded-full md:border-slate-200/85 md:bg-white md:shadow-[0_8px_24px_rgba(15,23,42,0.08)] md:backdrop-blur-2xl",
           )}
         >
           <Link

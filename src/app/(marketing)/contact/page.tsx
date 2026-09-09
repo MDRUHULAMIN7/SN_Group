@@ -93,13 +93,14 @@ export default function ContactPage() {
                       <Mail aria-hidden="true" className="size-4" />
                     </span>
                     <div className="flex flex-wrap items-center gap-x-2">
-                      <a className="transition-colors hover:text-cobalt" href={siteConfig.emails[0].href}>
-                        {siteConfig.emails[0].label}
-                      </a>
-                      <span className="text-ink/30">•</span>
-                      <a className="transition-colors hover:text-cobalt" href={siteConfig.emails[1].href}>
-                        {siteConfig.emails[1].label}
-                      </a>
+                      {siteConfig.emails.map((email, idx) => (
+                        <span className="inline-flex items-center gap-x-2" key={email.href}>
+                          {idx > 0 && <span className="text-ink/30">•</span>}
+                          <a className="transition-colors hover:text-cobalt" href={email.href}>
+                            {email.label}
+                          </a>
+                        </span>
+                      ))}
                     </div>
                   </div>
 

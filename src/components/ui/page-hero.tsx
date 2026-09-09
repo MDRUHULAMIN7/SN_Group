@@ -28,7 +28,7 @@ export function PageHero({
     breadcrumbs ?? (eyebrow ? [{ label: eyebrow }] : [{ label: title }]);
 
   return (
-    <section className="relative flex min-h-[36svh] sm:min-h-[44svh] lg:min-h-[48svh] items-center overflow-hidden border-b border-slate-200 bg-white pb-10 pt-28 sm:pb-14 sm:pt-36 text-ink">
+    <section className="relative flex min-h-[28svh] sm:min-h-[36svh] lg:min-h-[48svh] items-center overflow-hidden border-b border-slate-200 bg-white py-8 sm:py-12 md:pt-32 md:pb-14 lg:pt-36 lg:pb-16 text-ink">
       <div aria-hidden="true" className="absolute inset-0 z-0 overflow-hidden">
         <Image
           alt={imageAlt}

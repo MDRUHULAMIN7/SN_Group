@@ -23,8 +23,9 @@ export const siteConfig = {
     { label: "+88 01783-216428", href: "tel:+8801783216428" },
   ],
   emails: [
-    { label: "info@sngroup.com", href: "mailto:info@sngroup.com" },
-    { label: "query@sngroup.com", href: "mailto:query@sngroup.com" },
+    { label: "info@sngroupbd.com", href: "mailto:info@sngroupbd.com" },
+    { label: "trade@sngroupbd.com", href: "mailto:trade@sngroupbd.com" },
+    { label: "query@sngroupbd.com", href: "mailto:query@sngroupbd.com" },
   ],
   whatsapp: "https://wa.me/8801305771144",
   socials: [

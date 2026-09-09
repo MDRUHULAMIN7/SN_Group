@@ -22,7 +22,7 @@ export const sisterConcerns = [
       "Project management & construction supervision",
     ],
     contact: {
-      email: "info@sngroup.com",
+      email: "info@sngroupbd.com",
       phone: "+88 01305-771144",
     },
     seo: {
@@ -50,7 +50,7 @@ export const sisterConcerns = [
       "Agro-based export & international distribution",
     ],
     contact: {
-      email: "query@sngroup.com",
+      email: "trade@sngroupbd.com",
       phone: "+88 01783-216428",
     },
     seo: {
@@ -78,7 +78,7 @@ export const sisterConcerns = [
       "Strategic real estate investment",
     ],
     contact: {
-      email: "info@sngroup.com",
+      email: "query@sngroupbd.com",
       phone: "+88 01305-771144",
     },
     seo: {
