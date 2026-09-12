@@ -39,8 +39,8 @@ export const sisterConcerns = [
     headline: "Connecting Bangladesh with Global Markets.",
     description:
       "The international trading arm of S.N Group engaged in the sourcing, import, export, and distribution of agricultural commodities, food products, industrial chemicals, machinery, and equipment, as well as export of Bangladeshi products.",
-    image: "/images/project-infrastructure.webp",
-    imageAlt: "S.N Import & Export BD Ltd. global trade and logistics operations",
+    image: "/images/sn-import-export.webp",
+    imageAlt: "S.N Import & Export BD Ltd. international trade and container shipping operations",
     services: [
       "Agricultural commodities & pulses import",
       "Food ingredients, dairy & edible oils",

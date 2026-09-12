@@ -52,7 +52,7 @@ export const heroSlides: HeroSlide[] = [
     headline: "Connecting Bangladesh with Global Markets.",
     description:
       "International trading arm sourcing agricultural commodities, food products, industrial chemicals, machinery, and equipment, while advancing export of Bangladeshi resources worldwide.",
-    image: "/images/project-infrastructure.webp",
+    image: "/images/sn-import-export.webp",
     href: "#group-companies",
     linkLabel: "Explore Global Trade",
   },
