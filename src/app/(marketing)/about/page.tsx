@@ -1,22 +1,19 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import {
-  Anchor,
-  Award,
-  Building,
-  Building2,
+  ArrowUpRight,
   Calendar,
-  Compass,
-  Eye,
-  Globe2,
-  HardHat,
+  CheckCircle2,
+  Clock3,
   Quote,
-  Shield,
-  UserCheck,
+  TrendingUp,
 } from "lucide-react";
 import { PageHero } from "@/components/ui/page-hero";
 import { Container } from "@/components/ui/container";
 import { Reveal } from "@/components/motion/reveal";
+import { MissionVisionCards } from "@/components/sections/about/mission-vision-cards";
+import { ButtonLink } from "@/components/ui/button";
+import { projects } from "@/data/projects";
 import { createMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createMetadata({
@@ -24,78 +21,105 @@ export const metadata: Metadata = createMetadata({
   description:
     "Learn about S.N Group's 20+ years of excellence across S.N Eng Construction BD Ltd., S.N Import & Export BD Ltd., and Mehrish Holdings Ltd. Read our mission, vision, history, leadership team, and institutional clients.",
   path: "/about",
-  image: "/images/team.webp",
+  image: "/images/hero-engineers-team.webp",
 });
 
 const milestones = [
   {
-    year: "2004",
+    year: "2006",
     title: "Founding & Construction Roots",
     description:
-      "Establishment of our construction entity in Bangladesh, executing public civil works, administrative infrastructure, and institutional structures with engineering discipline.",
+      "S.N Eng Construction began operations as a proprietorship, establishing the construction and engineering foundation of today’s group.",
   },
   {
-    year: "2010",
-    title: "Defense & Key Institutional Projects",
+    year: "2011",
+    title: "Defense Project Portfolio",
     description:
-      "Proven qualification and continuous execution of high-security defense and institutional projects with the Bangladesh Army, Bangladesh Navy, and allied government agencies.",
+      "The documented project portfolio expanded through Bangladesh Army works at Qadirabad and Parbatipur Cantonments.",
   },
   {
-    year: "2016",
-    title: "International Trade Expansion",
+    year: "2015",
+    title: "Major Infrastructure Delivery",
     description:
-      "Incorporated S.N Import & Export BD Ltd., launching international sourcing and trade corridors for agricultural commodities, industrial chemicals, machinery, and export materials.",
+      "Delivery capabilities grew into major bridge, culvert, RCC road, drain, hardstanding, and multi-storey institutional works.",
   },
   {
-    year: "2020",
-    title: "Prime Real Estate Development",
+    year: "2019",
+    title: "Private Limited Incorporation",
     description:
-      "Founded Mehrish Holdings Ltd. to deliver premium residential apartment projects and contemporary commercial developments in prime Dhaka neighborhoods.",
+      "The construction business was incorporated as a private limited company under the Companies Act 1994 in Bangladesh.",
   },
   {
-    year: "Present",
-    title: "Unified Multi-Disciplinary Group",
+    year: "2021–24",
+    title: "Tri-Service Project Expansion",
     description:
-      "Operating as a cohesive corporate group connecting infrastructure construction, global procurement, and prime property development under a unified governance standard.",
+      "The portfolio expanded across Bangladesh Army, Navy, and Air Force projects, including aviation, operations, fuel, and drainage infrastructure.",
+  },
+  {
+    year: "Today",
+    title: "A Diversified Business Group",
+    description:
+      "S.N Group connects construction, international import and export, and real estate development through three specialist operating companies.",
   },
 ];
 
+const contractorProgress = [
+  {
+    className: "Class C",
+    period: "2006–2010",
+    title: "Foundation & First Capability",
+    description:
+      "The business began as a proprietorship in 2006, building its operational base through disciplined execution, trusted supplier relationships, and early civil and support works.",
+    proof: "Foundation phase",
+  },
+  {
+    className: "Class B",
+    period: "2011–2014",
+    title: "Structured Portfolio Expansion",
+    description:
+      "Documented Bangladesh Army orders began in 2011 and progressed to multi-storey academic buildings and a 68-bay garage-cum-multipurpose hall by 2013–14.",
+    proof: "Institutional scale-up",
+  },
+  {
+    className: "Class A",
+    period: "2015–Today",
+    title: "Major-Works Delivery Capacity",
+    description:
+      "From 2015, the portfolio moved into major infrastructure, multi-storey, industrial, naval and aviation works. An ABC electrical-contractor licence followed on 29 September 2021.",
+    proof: "Highest capability phase",
+  },
+] as const;
+
 const leadershipTeam = [
   {
-    name: "Al-Haj Md. Ruhul Amin",
+    name: "Amia Afreen",
     designation: "Chairman, S.N Group",
     department: "Executive Leadership & Strategic Direction",
-    bio: "Guiding S.N Group's long-term vision, core values, and strategic national partnerships for over two decades.",
+    bio: "Leading the organization with a focus on responsible growth, client partnership, quality, safety, and long-term institutional trust.",
   },
   {
-    name: "Md. Shaheen Noman",
+    name: "Md. Sazzad Noor",
     designation: "Managing Director, S.N Group",
     department: "Group Operations & Executive Management",
-    bio: "Directing operational execution, commercial synergy, and international growth across all group entities.",
+    bio: "Directing business operations and the delivery of high-quality, cost-effective projects through motivated and focused teams.",
   },
   {
-    name: "Engr. K. M. Shamsuddin",
-    designation: "Director, Engineering & Operations",
+    name: "Ishrat Jahan Anannya",
+    designation: "Head of Business Development & Communication",
+    department: "Board of Directors",
+    bio: "Building strong client and business relationships while supporting quality, value, safety, integrity, and strategic growth.",
+  },
+  {
+    name: "Md. Mahedi Hasan",
+    designation: "Project Director",
     department: "S.N Eng Construction BD Ltd.",
-    bio: "Over 25 years overseeing civil engineering, defense works, structural quality controls, and site execution.",
+    bio: "Overseeing project delivery with close attention to quality, programme commitments, and client satisfaction.",
   },
   {
-    name: "Mohammad Faruk Hossain",
-    designation: "Director, International Trade & Supply",
-    department: "S.N Import & Export BD Ltd.",
-    bio: "Spearheading global manufacturer relations, commodity import logistics, and international export distribution.",
-  },
-  {
-    name: "Ar. Tanvir Ahmed",
-    designation: "Head of Real Estate & Planning",
-    department: "Mehrish Holdings Ltd.",
-    bio: "Leading architectural design, modern space planning, and property acquisitions in Dhaka's premier zones.",
-  },
-  {
-    name: "Mustafa Kamal, FCA",
-    designation: "Chief Financial Officer & Compliance",
-    department: "Group Corporate Affairs",
-    bio: "Overseeing group financial strategy, fiscal integrity, statutory compliance, and corporate governance.",
+    name: "Sazia Asrak Tasmin",
+    designation: "HR & Admin",
+    department: "Human Resources",
+    bio: "Supporting workforce coordination, workplace standards, and the people who deliver the group’s construction operations.",
   },
 ];
 
@@ -103,50 +127,58 @@ const clients = [
   {
     name: "Bangladesh Army",
     category: "Defense & Strategic Infrastructure",
-    icon: Shield,
+    logo: "/images/clients/bangladesh-army.png",
+    logoAlt: "Bangladesh Army official emblem",
     detail: "Defense accommodation, structural works, and institutional facilities.",
   },
   {
     name: "Bangladesh Navy",
     category: "Naval & Marine Infrastructure",
-    icon: Anchor,
+    logo: "/images/clients/bangladesh-navy.png",
+    logoAlt: "Bangladesh Navy official emblem",
     detail: "Naval facilities, administrative buildings, and structural engineering.",
   },
   {
-    name: "DGDP (Directorate General of Defence Purchase)",
-    category: "Government Procurement & Sourcing",
-    icon: Award,
-    detail: "Institutional supply and technical procurement partnerships.",
+    name: "Bangladesh Air Force",
+    category: "Aviation Infrastructure",
+    logo: "/images/clients/bangladesh-air-force.png",
+    logoAlt: "Bangladesh Air Force official emblem",
+    detail: "Hangar, operations wing, briefing, and air movement facilities.",
   },
   {
-    name: "Military Engineer Services (MES)",
-    category: "Defense Civil Works",
-    icon: HardHat,
-    detail: "Complex civil, structural, and infrastructure construction works.",
+    name: "Border Guard Bangladesh (BGB)",
+    category: "Public Sector Works",
+    logo: "/images/clients/bgb.svg",
+    logoAlt: "Border Guard Bangladesh official emblem",
+    detail: "Construction and related public-sector infrastructure services.",
   },
   {
-    name: "Ministry of Housing & Public Works",
+    name: "Public Works Department (PWD)",
     category: "Public Sector Infrastructure",
-    icon: Building2,
-    detail: "Public institutional facilities and urban civic infrastructure.",
+    logo: "/images/clients/pwd.jpg",
+    logoAlt: "Public Works Department official emblem",
+    detail: "Government building and institutional infrastructure works.",
   },
   {
     name: "Roads & Highways Department (RHD)",
     category: "Civil Connectivity Works",
-    icon: Building,
+    logo: "/images/clients/rhd.png",
+    logoAlt: "Government of Bangladesh official emblem used by RHD",
     detail: "Civil works, road corridors, and structural logistics projects.",
   },
   {
-    name: "Global Commodity & Chemical Partners",
-    category: "International Trade Associates",
-    icon: Globe2,
-    detail: "International manufacturers and agricultural suppliers across Asia, Europe, and Americas.",
+    name: "Local Government Engineering Department (LGED)",
+    category: "Local Infrastructure",
+    logo: "/images/clients/lged.png",
+    logoAlt: "Local Government Engineering Department official emblem",
+    detail: "Road, drainage, and local infrastructure development works.",
   },
   {
-    name: "Commercial & Institutional Stakeholders",
-    category: "Property Development Partners",
-    icon: UserCheck,
-    detail: "High-value commercial and residential project investors and stakeholders in Dhaka.",
+    name: "Department of Public Health Engineering (DPHE)",
+    category: "Water Infrastructure",
+    logo: "/images/clients/dphe.jpg",
+    logoAlt: "Department of Public Health Engineering official emblem",
+    detail: "Water supply and public utility infrastructure works.",
   },
 ];
 
@@ -156,7 +188,7 @@ export default function AboutPage() {
       {/* Breadcrumb Header: Half Height, standard breadcrumb, no description */}
       <PageHero
         breadcrumbs={[{ label: "About Us" }]}
-        image="/images/team.webp"
+        image="/images/hero-engineers-team.webp"
         imageAlt="S.N Group engineering team"
         title="About S.N Group"
       />
@@ -199,7 +231,7 @@ export default function AboutPage() {
                 className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                 fill
                 sizes="(min-width: 1024px) 50vw, 100vw"
-                src="/images/team.webp"
+                src="/images/hero-engineers-team.webp"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-white/85 via-transparent to-transparent" />
             </div>
@@ -229,71 +261,7 @@ export default function AboutPage() {
             </Reveal>
           </div>
 
-          <div className="mt-10 sm:mt-16 grid gap-6 sm:gap-8 lg:grid-cols-2">
-            {/* 2. Mission */}
-            <Reveal className="h-full" delay={0.05}>
-              <div className="group relative flex h-full flex-col justify-between overflow-hidden rounded-2xl sm:rounded-3xl border border-slate-200/90 bg-white p-6 sm:p-10 shadow-[0_14px_40px_rgba(15,23,42,0.06)] transition-all duration-400 ease-out hover:-translate-y-2 hover:border-cobalt/40 hover:shadow-[0_24px_60px_rgba(21,94,239,0.16)]">
-                {/* Ambient glowing backdrop on hover */}
-                <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-blue-50/70 via-transparent to-cobalt/[0.04] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-                {/* Animated expanding top accent line */}
-                <span className="pointer-events-none absolute inset-x-0 top-0 h-1.5 origin-left scale-x-0 bg-gradient-to-r from-cobalt via-blue-500 to-sky-400 transition-transform duration-500 ease-out group-hover:scale-x-100" />
-                {/* Decorative corner glow */}
-                <span className="pointer-events-none absolute -right-10 -bottom-10 size-36 rounded-full bg-cobalt/[0.06] blur-2xl transition-transform duration-700 group-hover:scale-150" />
-
-                <div className="relative z-10">
-                  <div className="flex items-center justify-between">
-                    <span className="grid size-12 sm:size-14 place-items-center rounded-xl sm:rounded-2xl border border-cobalt/20 bg-blue-50 text-cobalt transition-all duration-400 ease-out group-hover:scale-110 group-hover:bg-cobalt group-hover:text-white group-hover:shadow-[0_8px_24px_rgba(21,94,239,0.35)]">
-                      <Compass aria-hidden="true" className="size-6 sm:size-7" />
-                    </span>
-                    <span className="rounded-full border border-cobalt/20 bg-blue-50/80 px-3 py-1 text-[0.68rem] sm:text-xs font-bold uppercase tracking-wider text-cobalt transition-colors duration-300 group-hover:bg-cobalt group-hover:text-white">
-                      Core Purpose
-                    </span>
-                  </div>
-                  <p className="mt-6 text-xs font-bold uppercase tracking-widest text-cobalt">
-                    Our Purpose
-                  </p>
-                  <h3 className="display-type mt-1 text-2xl xs:text-3xl sm:text-4xl font-bold transition-colors duration-300 group-hover:text-cobalt">
-                    Our Mission
-                  </h3>
-                  <p className="mt-4 text-sm sm:text-base leading-7 sm:leading-8 text-ink/72">
-                    To build and operate businesses that create lasting value through quality construction, responsible international trade, and thoughtfully developed real estate, while maintaining the highest standards of integrity, professionalism, and customer satisfaction.
-                  </p>
-                </div>
-              </div>
-            </Reveal>
-
-            {/* 3. Vision */}
-            <Reveal className="h-full" delay={0.1}>
-              <div className="group relative flex h-full flex-col justify-between overflow-hidden rounded-2xl sm:rounded-3xl border border-slate-200/90 bg-white p-6 sm:p-10 shadow-[0_14px_40px_rgba(15,23,42,0.06)] transition-all duration-400 ease-out hover:-translate-y-2 hover:border-cobalt/40 hover:shadow-[0_24px_60px_rgba(21,94,239,0.16)]">
-                {/* Ambient glowing backdrop on hover */}
-                <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-blue-50/70 via-transparent to-cobalt/[0.04] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-                {/* Animated expanding top accent line */}
-                <span className="pointer-events-none absolute inset-x-0 top-0 h-1.5 origin-left scale-x-0 bg-gradient-to-r from-cobalt via-blue-500 to-sky-400 transition-transform duration-500 ease-out group-hover:scale-x-100" />
-                {/* Decorative corner glow */}
-                <span className="pointer-events-none absolute -right-10 -bottom-10 size-36 rounded-full bg-cobalt/[0.06] blur-2xl transition-transform duration-700 group-hover:scale-150" />
-
-                <div className="relative z-10">
-                  <div className="flex items-center justify-between">
-                    <span className="grid size-12 sm:size-14 place-items-center rounded-xl sm:rounded-2xl border border-cobalt/20 bg-blue-50 text-cobalt transition-all duration-400 ease-out group-hover:scale-110 group-hover:bg-cobalt group-hover:text-white group-hover:shadow-[0_8px_24px_rgba(21,94,239,0.35)]">
-                      <Eye aria-hidden="true" className="size-6 sm:size-7" />
-                    </span>
-                    <span className="rounded-full border border-cobalt/20 bg-blue-50/80 px-3 py-1 text-[0.68rem] sm:text-xs font-bold uppercase tracking-wider text-cobalt transition-colors duration-300 group-hover:bg-cobalt group-hover:text-white">
-                      Future Horizon
-                    </span>
-                  </div>
-                  <p className="mt-6 text-xs font-bold uppercase tracking-widest text-cobalt">
-                    Future Horizon
-                  </p>
-                  <h3 className="display-type mt-1 text-2xl xs:text-3xl sm:text-4xl font-bold transition-colors duration-300 group-hover:text-cobalt">
-                    Our Vision
-                  </h3>
-                  <p className="mt-4 text-sm sm:text-base leading-7 sm:leading-8 text-ink/72">
-                    To become a trusted and respected Bangladeshi business group with a strong national presence and growing international reach, recognized for excellence in construction, global trade, and real estate development.
-                  </p>
-                </div>
-              </div>
-            </Reveal>
-          </div>
+          <MissionVisionCards />
         </Container>
       </section>
 
@@ -361,6 +329,121 @@ export default function AboutPage() {
         </Container>
       </section>
 
+      <section
+        aria-label="Contractor Capability Progression"
+        className="blueprint-grid border-t border-slate-200 bg-white py-14 text-ink sm:py-20 lg:py-24"
+        id="contractor-progression"
+      >
+        <Container>
+          <Reveal className="grid gap-5 lg:grid-cols-[0.82fr_1.18fr] lg:items-end">
+            <div>
+              <p className="eyebrow mb-3 text-cobalt">Built Step by Step</p>
+              <h2 className="display-type text-4xl font-extrabold tracking-tight sm:text-6xl">
+                From Class C to Class A capability.
+              </h2>
+            </div>
+            <p className="max-w-2xl text-sm leading-7 text-ink/64 lg:justify-self-end sm:text-base">
+              The growth path below uses dated company and project-portfolio markers to show how early operating capability developed into the capacity to deliver major institutional and defense works.
+            </p>
+          </Reveal>
+
+          <div className="relative mt-11 grid gap-5 lg:mt-16 lg:grid-cols-3">
+            <span aria-hidden="true" className="absolute left-[16%] right-[16%] top-9 hidden h-px bg-gradient-to-r from-cobalt/15 via-cobalt/60 to-cobalt/15 lg:block" />
+            {contractorProgress.map((stage, index) => (
+              <Reveal className="relative h-full" delay={index * 0.09} key={stage.className}>
+                <article className="group relative isolate h-full overflow-hidden rounded-3xl border border-slate-200 bg-white p-6 shadow-[0_16px_48px_rgba(15,23,42,0.065)] transition-[transform,border-color,box-shadow] duration-700 hover:-translate-y-2 hover:border-cobalt/35 hover:shadow-[0_28px_68px_rgba(21,94,239,0.15)] sm:p-8">
+                  <span className="pointer-events-none absolute -right-14 -top-14 size-40 rounded-full border-[24px] border-cobalt/[0.035] transition-transform duration-1000 group-hover:rotate-45 group-hover:scale-125" />
+                  <span className="relative z-10 grid size-[4.5rem] place-items-center rounded-2xl border border-cobalt/20 bg-white text-xl font-black text-cobalt shadow-[0_12px_30px_rgba(21,94,239,0.13)] transition-all duration-700 group-hover:rotate-3 group-hover:scale-105 group-hover:shadow-[0_16px_38px_rgba(21,94,239,0.2)]">
+                    {stage.className.replace("Class ", "")}
+                  </span>
+                  <div className="relative z-10 mt-7">
+                    <div className="flex flex-wrap items-center gap-2">
+                      <span className="rounded-full bg-cobalt px-3 py-1 text-xs font-extrabold uppercase tracking-[0.12em] text-white">
+                        {stage.className}
+                      </span>
+                      <span className="text-xs font-bold uppercase tracking-[0.12em] text-ink/42">{stage.period}</span>
+                    </div>
+                    <h3 className="display-type mt-4 text-2xl font-bold tracking-tight">{stage.title}</h3>
+                    <p className="mt-3 text-sm leading-7 text-ink/64">{stage.description}</p>
+                    <div className="mt-6 flex items-center gap-2 border-t border-slate-100 pt-5 text-xs font-bold uppercase tracking-[0.12em] text-cobalt">
+                      <TrendingUp aria-hidden="true" className="size-4" />
+                      {stage.proof}
+                    </div>
+                  </div>
+                </article>
+              </Reveal>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      <section
+        aria-label="Project Orders and Status"
+        className="border-t border-slate-200 bg-white py-14 text-ink sm:py-20 lg:py-24"
+        id="project-orders"
+      >
+        <Container>
+          <Reveal className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+            <div className="max-w-3xl">
+              <p className="eyebrow mb-3 text-cobalt">Selected Work Orders</p>
+              <h2 className="display-type text-4xl font-extrabold tracking-tight sm:text-6xl">Projects, dates &amp; delivery status.</h2>
+              <p className="mt-4 max-w-2xl text-sm leading-7 text-ink/62 sm:text-base">
+                A concise view of documented orders across aviation, utilities, and institutional construction.
+              </p>
+            </div>
+            <ButtonLink href="/projects" variant="outline">
+              View Complete Portfolio
+              <ArrowUpRight aria-hidden="true" className="size-4" />
+            </ButtonLink>
+          </Reveal>
+
+          <div className="mt-10 grid gap-5 md:grid-cols-2 sm:mt-14">
+            {projects.slice(0, 4).map((project, index) => {
+              const completed = project.status === "Completed";
+
+              return (
+                <Reveal className="h-full" delay={index * 0.06} key={project.slug}>
+                  <article className="group grid h-full overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-[0_14px_44px_rgba(15,23,42,0.06)] transition-[transform,border-color,box-shadow] duration-700 hover:-translate-y-1.5 hover:border-cobalt/30 hover:shadow-[0_26px_64px_rgba(21,94,239,0.13)] sm:grid-cols-[0.4fr_0.6fr]">
+                    <div className="relative min-h-48 overflow-hidden bg-slate-100 sm:min-h-full">
+                      <Image
+                        alt={project.coverAlt}
+                        className="object-cover transition-transform duration-1000 ease-out group-hover:scale-[1.08]"
+                        fill
+                        sizes="(min-width: 768px) 22vw, 100vw"
+                        src={project.coverImage}
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-slate-950/38 to-transparent" />
+                    </div>
+                    <div className="flex flex-col p-6">
+                      <div className="flex flex-wrap items-center justify-between gap-2">
+                        <span className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-[0.68rem] font-extrabold uppercase tracking-[0.12em] ${completed ? "bg-emerald-50 text-emerald-700" : "bg-amber-50 text-amber-700"}`}>
+                          {completed ? <CheckCircle2 aria-hidden="true" className="size-3.5" /> : <Clock3 aria-hidden="true" className="size-3.5" />}
+                          {project.status}
+                        </span>
+                        <span className="text-xs font-bold text-ink/42">{project.year}</span>
+                      </div>
+                      <h3 className="display-type mt-4 text-xl font-bold leading-tight transition-colors duration-300 group-hover:text-cobalt sm:text-2xl">{project.title}</h3>
+                      <p className="mt-2 text-xs font-bold uppercase tracking-[0.11em] text-cobalt">{project.client}</p>
+                      <p className="mt-3 text-sm leading-6 text-ink/60">{project.location}</p>
+                      <div className="mt-auto grid grid-cols-2 gap-3 border-t border-slate-100 pt-5 text-xs">
+                        <div>
+                          <p className="font-bold uppercase tracking-wider text-ink/38">Started</p>
+                          <p className="mt-1 font-semibold text-ink/72">{project.commencement}</p>
+                        </div>
+                        <div>
+                          <p className="font-bold uppercase tracking-wider text-ink/38">Completion</p>
+                          <p className="mt-1 font-semibold text-ink/72">{project.completion}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                </Reveal>
+              );
+            })}
+          </div>
+        </Container>
+      </section>
+
       {/* 5. MD Message */}
       <section
         aria-label="Managing Director Message"
@@ -413,7 +496,7 @@ export default function AboutPage() {
 
                 <div className="relative z-10 mt-8 border-t border-slate-200 pt-6 flex items-center justify-between">
                   <div>
-                    <p className="display-type text-lg sm:text-xl font-bold text-ink">Managing Director</p>
+                    <p className="display-type text-lg sm:text-xl font-bold text-ink">Md. Sazzad Noor</p>
                     <p className="text-xs font-bold uppercase tracking-widest text-blue-400">
                       S.N Group
                     </p>
@@ -514,29 +597,34 @@ export default function AboutPage() {
 
           <div className="mt-10 sm:mt-16 grid gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {clients.map((client, index) => {
-              const Icon = client.icon;
               return (
                 <Reveal
                   className="h-full"
                   delay={index * 0.05}
                   key={client.name}
                 >
-                  <div className="group relative flex h-full flex-col justify-between overflow-hidden rounded-2xl border border-slate-200 bg-white p-5 sm:p-6 shadow-[0_10px_30px_rgba(15,23,42,0.05)] transition-all duration-400 ease-out hover:-translate-y-2 hover:border-cobalt/40 hover:shadow-[0_22px_50px_rgba(21,94,239,0.15)]">
-                    {/* Ambient corner glow */}
-                    <span
-                      aria-hidden="true"
-                      className="pointer-events-none absolute -right-8 -bottom-8 size-24 rounded-full bg-cobalt/[0.04] transition-transform duration-500 group-hover:scale-150"
-                    />
-                    <span
-                      aria-hidden="true"
-                      className="pointer-events-none absolute inset-x-0 top-0 h-1 origin-left scale-x-0 bg-gradient-to-r from-cobalt to-sky-400 transition-transform duration-500 group-hover:scale-x-100"
-                    />
+                  <article className="group relative isolate flex h-full flex-col overflow-hidden rounded-3xl border border-slate-200 bg-white p-5 shadow-[0_14px_40px_rgba(15,23,42,0.055)] transition-[transform,border-color,box-shadow] duration-700 ease-out hover:-translate-y-2 hover:border-cobalt/35 hover:shadow-[0_28px_64px_rgba(21,94,239,0.14)] sm:p-6">
+                    <span aria-hidden="true" className="pointer-events-none absolute -right-12 -top-12 size-36 rounded-full border-[18px] border-cobalt/[0.035] transition-all duration-1000 group-hover:rotate-45 group-hover:scale-125" />
+                    <span aria-hidden="true" className="pointer-events-none absolute inset-y-0 -left-2/3 z-20 w-1/2 skew-x-[-18deg] bg-gradient-to-r from-transparent via-white/75 to-transparent opacity-0 transition-[left,opacity] duration-1000 group-hover:left-[125%] group-hover:opacity-100" />
+                    <span aria-hidden="true" className="pointer-events-none absolute inset-x-5 bottom-0 h-1 origin-center scale-x-0 rounded-full bg-gradient-to-r from-transparent via-cobalt to-transparent transition-transform duration-700 group-hover:scale-x-100" />
 
-                    <div className="relative z-10">
-                      <span className="grid size-11 place-items-center rounded-xl border border-cobalt/15 bg-blue-50 text-cobalt transition-all duration-400 group-hover:scale-110 group-hover:bg-cobalt group-hover:text-white group-hover:shadow-[0_6px_18px_rgba(21,94,239,0.3)]">
-                        <Icon aria-hidden="true" className="size-5" strokeWidth={1.8} />
+                    <div className="relative z-10 flex items-start justify-between gap-4">
+                      <div className="relative grid size-24 place-items-center overflow-hidden rounded-2xl border border-slate-200 bg-white p-3 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.8),0_10px_28px_rgba(15,23,42,0.08)] transition-all duration-700 group-hover:-rotate-2 group-hover:scale-105 group-hover:border-cobalt/25 group-hover:shadow-[0_16px_34px_rgba(21,94,239,0.14)]">
+                        <Image
+                          alt={client.logoAlt}
+                          className="object-contain p-3 transition-[transform,filter] duration-700 group-hover:scale-105 group-hover:saturate-[1.08]"
+                          fill
+                          sizes="96px"
+                          src={client.logo}
+                        />
+                      </div>
+                      <span className="text-xs font-black tracking-[0.16em] text-cobalt/22 transition-colors duration-500 group-hover:text-cobalt/55">
+                        {String(index + 1).padStart(2, "0")}
                       </span>
-                      <h3 className="display-type mt-4 text-base sm:text-lg font-bold text-ink transition-colors duration-300 group-hover:text-cobalt">
+                    </div>
+
+                    <div className="relative z-10 mt-5 flex flex-1 flex-col">
+                      <h3 className="display-type text-base font-bold text-ink transition-colors duration-300 group-hover:text-cobalt sm:text-lg">
                         {client.name}
                       </h3>
                       <p className="mt-1 text-[0.72rem] font-bold uppercase tracking-wider text-cobalt">
@@ -546,7 +634,7 @@ export default function AboutPage() {
                         {client.detail}
                       </p>
                     </div>
-                  </div>
+                  </article>
                 </Reveal>
               );
             })}

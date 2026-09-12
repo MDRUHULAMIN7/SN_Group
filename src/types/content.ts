@@ -31,7 +31,7 @@ export interface Project {
   category: string;
   location: string;
   year: string;
-  status: "Completed" | "In progress" | "Pre-construction";
+  status: "Completed" | "Completion not listed";
   summary: string;
   description: readonly string[];
   coverImage: string;
@@ -42,6 +42,10 @@ export interface Project {
   }[];
   services: readonly string[];
   client: string;
+  agreementNo?: string;
+  contractValue?: string;
+  commencement?: string;
+  completion?: string;
   seo: SeoFields;
 }
 

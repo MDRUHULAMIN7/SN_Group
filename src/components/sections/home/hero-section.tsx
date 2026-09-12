@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
 import { ArrowUpRight, Building2, Globe, ShieldCheck, Sparkles } from "lucide-react";
 import { m } from "motion/react";
@@ -28,8 +29,8 @@ export const heroSlides: HeroSlide[] = [
     headline: "Building Trust. Delivering Excellence.",
     description:
       "A diversified Bangladeshi business group with more than 20 years of experience in construction and business operations, built on a foundation of integrity, quality, reliability, and long-term relationships.",
-    image: "/images/team.webp",
-    href: "#about-group",
+    image: "/images/hero-engineers-team.webp",
+    href: "/about",
     linkLabel: "Discover S.N Group",
   },
   {
@@ -40,8 +41,8 @@ export const heroSlides: HeroSlide[] = [
     headline: "Building with Experience. Delivering with Responsibility.",
     description:
       "Specializing in government, defense, institutional, and infrastructure projects with extensive experience working with Bangladesh Army, Bangladesh Navy, and premier institutions.",
-    image: "/images/hero-construction.webp",
-    href: "#group-companies",
+    image: "/images/hero-construction-cranes.webp",
+    href: "/sister-concerns/sn-engineering-construction",
     linkLabel: "Explore Construction",
   },
   {
@@ -52,8 +53,8 @@ export const heroSlides: HeroSlide[] = [
     headline: "Connecting Bangladesh with Global Markets.",
     description:
       "International trading arm sourcing agricultural commodities, food products, industrial chemicals, machinery, and equipment, while advancing export of Bangladeshi resources worldwide.",
-    image: "/images/sn-import-export.webp",
-    href: "#group-companies",
+    image: "/images/hero-cargo-ship.webp",
+    href: "/sister-concerns/sn-import-export",
     linkLabel: "Explore Global Trade",
   },
   {
@@ -65,7 +66,7 @@ export const heroSlides: HeroSlide[] = [
     description:
       "Developing high-quality residential and commercial properties in prime and strategically selected locations across Dhaka including Dhanmondi, Gulshan, Banani, and Uttara.",
     image: "/images/project-commercial.webp",
-    href: "#group-companies",
+    href: "/sister-concerns/mehrish-holdings",
     linkLabel: "Explore Real Estate",
   },
 ];
@@ -250,7 +251,15 @@ export function HeroSection() {
                     ease: [0.22, 1, 0.36, 1] as const,
                   }}
                 >
-                  {slide.description}
+                  {slide.description}{" "}
+                  <Link
+                    aria-label={`Learn more about ${slide.title}`}
+                    className="inline-flex items-center gap-0.5 font-bold text-cobalt hover:text-blue-700 underline underline-offset-4 decoration-cobalt/40 hover:decoration-cobalt transition-colors ml-1.5"
+                    href={slide.href}
+                  >
+                    More
+                    <ArrowUpRight aria-hidden="true" className="size-3 sm:size-3.5 lg:size-4" />
+                  </Link>
                 </m.p>
 
                 {/* CTA Buttons with Staggered Rise */}
@@ -267,20 +276,20 @@ export function HeroSection() {
                     ease: [0.22, 1, 0.36, 1] as const,
                   }}
                 >
-                  <a
+                  <Link
                     className="inline-flex min-h-9 sm:min-h-12 lg:min-h-14 items-center justify-center gap-2 rounded-full bg-cobalt px-5 py-2 sm:px-7 sm:py-3.5 lg:px-9 lg:py-4 text-xs sm:text-sm lg:text-base font-bold text-white shadow-[0_4px_24px_rgba(21,94,239,0.45)] transition-all duration-300 hover:bg-blue-600 hover:shadow-[0_6px_32px_rgba(21,94,239,0.65)] active:scale-[0.98]"
                     href="/contact#quotation-form"
                   >
                     Request a Quotation
                     <ArrowUpRight aria-hidden="true" className="size-4 lg:size-5" />
-                  </a>
+                  </Link>
 
-                  <a
+                  <Link
                     className="inline-flex min-h-9 sm:min-h-12 lg:min-h-14 items-center justify-center gap-2 rounded-full border border-cobalt/25 bg-white/90 px-4 py-2 sm:px-7 sm:py-3.5 lg:px-9 lg:py-4 text-xs sm:text-sm lg:text-base font-bold text-ink shadow-xs backdrop-blur-md transition-all duration-300 hover:border-cobalt hover:text-cobalt active:scale-[0.98]"
                     href={slide.href}
                   >
                     {slide.linkLabel}
-                  </a>
+                  </Link>
                 </m.div>
               </div>
             );

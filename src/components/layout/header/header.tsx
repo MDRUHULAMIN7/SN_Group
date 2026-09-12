@@ -52,8 +52,8 @@ export function Header() {
             )}
             href="/"
           >
-            {/* MOBILE LOGO: Official Crest Logo (mark + group name + 3 concerns), does NOT change on scroll */}
-            <div className="flex md:hidden items-center select-none py-1.5">
+            {/* MOBILE LOGO: Mark + Group Name */}
+            <div className="flex md:hidden items-center select-none py-1">
               <div className="flex flex-col items-center justify-center text-center">
                 <div className="relative size-8 sm:size-8.5 shrink-0">
                   <Image
@@ -66,20 +66,15 @@ export function Header() {
                     width={64}
                   />
                 </div>
-                <span className="font-serif font-bold text-[0.76rem] sm:text-[0.82rem] leading-none text-[#002699] mt-1 tracking-tight">
+                <span className="font-serif font-bold text-[0.8rem] sm:text-[0.86rem] leading-none text-[#002699] mt-1 tracking-tight">
                   S.N Group
                 </span>
-                <div className="mt-0.5 flex flex-col items-center text-[5.4px] sm:text-[6px] font-bold leading-[1.2] text-[#002699] tracking-[0.02em] uppercase">
-                  <span className="whitespace-nowrap">S.N ENG CONSTRUCTION BD LTD.</span>
-                  <span className="whitespace-nowrap">S.N IMPORT &amp; EXPORT BD LTD.</span>
-                  <span className="whitespace-nowrap">MEHRISH HOLDINGS LTD.</span>
-                </div>
               </div>
             </div>
 
             {/* DESKTOP / LARGE SCREEN LOGO: Dynamic based on scroll */}
             <div className="hidden md:flex items-center relative">
-              {/* 1. Official Crest Logo with ENLARGED, Highly Legible Typography (Shown BEFORE scroll starts on large screens) */}
+              {/* 1. Stacked Brand Logo (Shown BEFORE scroll starts on large screens) */}
               <div
                 className={cn(
                   "flex items-center transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]",
@@ -88,10 +83,10 @@ export function Header() {
                     : "pointer-events-auto relative opacity-100 scale-100 translate-y-0",
                 )}
               >
-                <div className="flex flex-col items-center justify-center text-center select-none py-1.5">
-                  <div className="relative size-9 sm:size-9.5 md:size-10 shrink-0">
+                <div className="flex flex-col items-center justify-center text-center select-none py-1">
+                  <div className="relative size-11 md:size-12 lg:size-12.5 shrink-0">
                     <Image
-                      alt=""
+                      alt="S.N Group"
                       aria-hidden="true"
                       className="size-full object-contain"
                       height={64}
@@ -100,14 +95,9 @@ export function Header() {
                       width={64}
                     />
                   </div>
-                  <span className="font-serif font-bold text-[0.84rem] sm:text-[0.88rem] md:text-[0.94rem] leading-none text-[#002699] mt-1 tracking-tight">
+                  <span className="font-serif font-bold text-[0.95rem] md:text-[1.02rem] lg:text-[1.08rem] leading-none text-[#002699] mt-1 tracking-tight">
                     S.N Group
                   </span>
-                  <div className="mt-0.5 flex flex-col items-center text-[6px] sm:text-[6.6px] md:text-[7.2px] font-bold leading-[1.2] text-[#002699] tracking-[0.025em] uppercase">
-                    <span className="whitespace-nowrap">S.N ENG CONSTRUCTION BD LTD.</span>
-                    <span className="whitespace-nowrap">S.N IMPORT &amp; EXPORT BD LTD.</span>
-                    <span className="whitespace-nowrap">MEHRISH HOLDINGS LTD.</span>
-                  </div>
                 </div>
               </div>
 

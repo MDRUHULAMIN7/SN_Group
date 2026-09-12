@@ -20,11 +20,10 @@ export const siteConfig = {
   ],
   mobiles: [
     { label: "+88 01305-771144", href: "tel:+8801305771144" },
-    { label: "+88 01783-216428", href: "tel:+8801783216428" },
+    { label: "+880 1335-229070", href: "tel:+8801335229070" },
   ],
   emails: [
     { label: "info@sngroupbd.com", href: "mailto:info@sngroupbd.com" },
-    { label: "trade@sngroupbd.com", href: "mailto:trade@sngroupbd.com" },
     { label: "query@sngroupbd.com", href: "mailto:query@sngroupbd.com" },
   ],
   whatsapp: "https://wa.me/8801305771144",

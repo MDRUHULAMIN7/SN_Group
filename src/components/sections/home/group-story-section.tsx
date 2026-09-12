@@ -51,7 +51,7 @@ export function GroupStorySection() {
                 className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                 fill
                 sizes="(min-width: 1024px) 47vw, 100vw"
-                src="/images/team.webp"
+                src="/images/hero-engineers-team.webp"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-white/98 via-white/28 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-r from-white/96 to-white/86 p-4 sm:p-8 text-ink backdrop-blur-md transition-colors duration-300 group-hover:from-white group-hover:to-blue-50/90">

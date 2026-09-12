@@ -21,7 +21,7 @@ export function PageHero({
   title,
   breadcrumbs,
   eyebrow,
-  image = "/images/team.webp",
+  image = "/images/hero-engineers-team.webp",
   imageAlt = "",
 }: PageHeroProps) {
   const trail: BreadcrumbItem[] =

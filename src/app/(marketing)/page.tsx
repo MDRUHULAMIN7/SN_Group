@@ -14,7 +14,7 @@ export const metadata: Metadata = createMetadata({
   description:
     "A diversified Bangladeshi business group with more than 20 years of experience in government and institutional construction, international import & export, and premium real estate development.",
   path: "/",
-  image: "/images/team.webp",
+  image: "/images/hero-engineers-team.webp",
 });
 
 export default function HomePage() {

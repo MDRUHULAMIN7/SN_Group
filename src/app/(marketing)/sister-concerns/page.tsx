@@ -17,7 +17,7 @@ export const metadata: Metadata = createMetadata({
 export default function SisterConcernsPage() {
   return (
     <>
-      <PageHero breadcrumbs={[{ label: "Sister Concerns" }]} image="/images/hero-construction.webp" imageAlt="High-rise construction and operations across Bangladesh" title="Our Group Companies" />
+      <PageHero breadcrumbs={[{ label: "Sister Concerns" }]} image="/images/hero-construction-cranes.webp" imageAlt="Modern construction site with tower cranes across Bangladesh" title="Our Group Companies" />
       <section className="border-t border-slate-200 bg-white text-ink section-space">
         <Container className="space-y-8">
           {sisterConcerns.map((concern, index) => (

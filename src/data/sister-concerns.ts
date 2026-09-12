@@ -9,7 +9,7 @@ export const sisterConcerns = [
     headline: "Building with Experience. Delivering with Responsibility.",
     description:
       "With more than two decades of experience in the construction industry, S.N Eng Construction BD Ltd. has established itself as a trusted construction and engineering company in Bangladesh, specializing in government, defense, institutional, and civil infrastructure projects.",
-    image: "/images/hero-construction.webp",
+    image: "/images/hero-construction-cranes.webp",
     imageAlt: "S.N Eng Construction BD Ltd. infrastructure and building site in Bangladesh",
     services: [
       "Government construction projects",
@@ -39,7 +39,7 @@ export const sisterConcerns = [
     headline: "Connecting Bangladesh with Global Markets.",
     description:
       "The international trading arm of S.N Group engaged in the sourcing, import, export, and distribution of agricultural commodities, food products, industrial chemicals, machinery, and equipment, as well as export of Bangladeshi products.",
-    image: "/images/sn-import-export.webp",
+    image: "/images/hero-cargo-ship.webp",
     imageAlt: "S.N Import & Export BD Ltd. international trade and container shipping operations",
     services: [
       "Agricultural commodities & pulses import",
@@ -50,8 +50,8 @@ export const sisterConcerns = [
       "Agro-based export & international distribution",
     ],
     contact: {
-      email: "trade@sngroupbd.com",
-      phone: "+88 01783-216428",
+      email: "query@sngroupbd.com",
+      phone: "+880 1335-229070",
     },
     seo: {
       title: "S.N Import & Export BD Ltd. | S.N Group",

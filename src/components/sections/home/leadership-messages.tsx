@@ -65,7 +65,7 @@ export function LeadershipMessages() {
               </div>
 
               <div className="relative z-10 mt-6 sm:mt-8 border-t border-slate-200 pt-5 sm:pt-6 transition-colors duration-700 group-hover:border-cobalt/25">
-                <p className="display-type text-lg sm:text-xl font-bold text-ink">Chairman</p>
+                <p className="display-type text-lg sm:text-xl font-bold text-ink">Amia Afreen</p>
                 <p className="text-[0.68rem] sm:text-xs font-bold uppercase tracking-widest text-blue-400">
                   S.N Group
                 </p>
@@ -109,7 +109,7 @@ export function LeadershipMessages() {
               </div>
 
               <div className="relative z-10 mt-6 sm:mt-8 border-t border-slate-200 pt-5 sm:pt-6 transition-colors duration-700 group-hover:border-cobalt/25">
-                <p className="display-type text-lg sm:text-xl font-bold text-ink">Managing Director</p>
+                <p className="display-type text-lg sm:text-xl font-bold text-ink">Md. Sazzad Noor</p>
                 <p className="text-[0.68rem] sm:text-xs font-bold uppercase tracking-widest text-blue-400">
                   S.N Group
                 </p>

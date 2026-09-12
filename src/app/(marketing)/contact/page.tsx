@@ -14,7 +14,7 @@ export const metadata: Metadata = createMetadata({
   description:
     "Contact S.N Group in Gulshan, Dhaka or send a structured request for a construction, engineering, procurement or property development quotation.",
   path: "/contact",
-  image: "/images/team.webp",
+  image: "/images/hero-engineers-team.webp",
 });
 
 const proposalGuarantees = [
@@ -41,7 +41,7 @@ export default function ContactPage() {
       {/* 1. Page Hero */}
       <PageHero
         breadcrumbs={[{ label: "Contact Us" }]}
-        image="/images/team.webp"
+        image="/images/hero-engineers-team.webp"
         imageAlt="S.N Group engineers and headquarters"
         title="Contact S.N Group"
       />
