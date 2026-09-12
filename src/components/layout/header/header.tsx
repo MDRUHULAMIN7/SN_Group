@@ -40,21 +40,41 @@ export function Header() {
           className={cn(
             "relative isolate mx-auto flex w-full items-center justify-between transition-[height,max-width,border-radius,border-color,box-shadow,background-color,backdrop-filter,padding] duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]",
             compact
-              ? "h-16 md:h-17 lg:h-17 md:max-w-[86rem] md:rounded-full md:border md:border-slate-200/85 md:bg-white md:shadow-[0_8px_24px_rgba(15,23,42,0.08)] md:backdrop-blur-2xl px-3.5 sm:px-6 md:px-6"
-              : "h-16 sm:h-18 md:h-24 lg:h-26 max-w-[100vw] border-b md:border border-slate-200/80 md:border-transparent bg-white md:bg-white/10 px-3.5 sm:px-6 lg:px-8 shadow-xs md:shadow-none md:backdrop-blur-sm",
+              ? "h-19 sm:h-20 md:h-17 lg:h-17 md:max-w-[86rem] md:rounded-full border-b md:border border-slate-200/80 md:border-slate-200/85 bg-white md:shadow-[0_8px_24px_rgba(15,23,42,0.08)] md:backdrop-blur-2xl px-5 sm:px-6 md:px-6"
+              : "h-19 sm:h-20 md:h-24 lg:h-26 max-w-[100vw] border-b md:border border-slate-200/80 md:border-transparent bg-white md:bg-white/10 px-5 sm:px-6 lg:px-8 shadow-xs md:shadow-none md:backdrop-blur-sm",
           )}
         >
           <Link
             aria-label="S.N Group home"
             className={cn(
               "relative z-10 flex items-center rounded-full px-1.5 py-1 transition-transform duration-800 ease-[cubic-bezier(0.16,1,0.3,1)]",
-              compact && "scale-[0.9]",
+              compact && "md:scale-[0.9]",
             )}
             href="/"
           >
-            {/* MOBILE LOGO: Always the horizontal logo (mark + group name), does NOT change on scroll */}
-            <div className="flex md:hidden items-center">
-              <BrandLockup size="sm" />
+            {/* MOBILE LOGO: Official Crest Logo (mark + group name + 3 concerns), does NOT change on scroll */}
+            <div className="flex md:hidden items-center select-none py-1.5">
+              <div className="flex flex-col items-center justify-center text-center">
+                <div className="relative size-8 sm:size-8.5 shrink-0">
+                  <Image
+                    alt="S.N Group"
+                    aria-hidden="true"
+                    className="size-full object-contain"
+                    height={64}
+                    priority
+                    src="/images/sn-group-mark.webp"
+                    width={64}
+                  />
+                </div>
+                <span className="font-serif font-bold text-[0.76rem] sm:text-[0.82rem] leading-none text-[#002699] mt-1 tracking-tight">
+                  S.N Group
+                </span>
+                <div className="mt-0.5 flex flex-col items-center text-[5.4px] sm:text-[6px] font-bold leading-[1.2] text-[#002699] tracking-[0.02em] uppercase">
+                  <span className="whitespace-nowrap">S.N ENG CONSTRUCTION BD LTD.</span>
+                  <span className="whitespace-nowrap">S.N IMPORT &amp; EXPORT BD LTD.</span>
+                  <span className="whitespace-nowrap">MEHRISH HOLDINGS LTD.</span>
+                </div>
+              </div>
             </div>
 
             {/* DESKTOP / LARGE SCREEN LOGO: Dynamic based on scroll */}
