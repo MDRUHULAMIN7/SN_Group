@@ -1,7 +1,7 @@
 "use client";
 
-import { useEffect, useRef, useState, type TransitionEvent } from "react";
-import { Quote, Star } from "lucide-react";
+import { useCallback, useEffect, useRef, useState, type TransitionEvent } from "react";
+import { ChevronLeft, ChevronRight, Quote, Star } from "lucide-react";
 import { useReducedMotion } from "motion/react";
 import { Container } from "@/components/ui/container";
 import { Reveal } from "@/components/motion/reveal";
@@ -51,21 +51,37 @@ export function TestimonialsSection() {
   const [position, setPosition] = useState(0);
   const [step, setStep] = useState(0);
   const [paused, setPaused] = useState(false);
+  const [isInView, setIsInView] = useState(true);
   const [transitionEnabled, setTransitionEnabled] = useState(true);
+  const sectionRef = useRef<HTMLElement>(null);
   const viewportRef = useRef<HTMLDivElement>(null);
   const slideRefs = useRef<Array<HTMLElement | null>>([]);
   const reduceMotion = useReducedMotion();
   const activeIndex = position % testimonials.length;
 
-  useEffect(() => {
-    const measure = () => {
-      const firstSlide = slideRefs.current[0];
-      const secondSlide = slideRefs.current[1];
-      if (firstSlide && secondSlide) {
-        setStep(secondSlide.offsetLeft - firstSlide.offsetLeft);
+  const measure = useCallback(() => {
+    const firstSlide = slideRefs.current[0];
+    const secondSlide = slideRefs.current[1];
+    if (firstSlide && secondSlide) {
+      const diff = secondSlide.offsetLeft - firstSlide.offsetLeft;
+      if (diff > 0) {
+        setStep(diff);
+        return;
       }
-    };
+    }
+    if (viewportRef.current) {
+      const width = viewportRef.current.clientWidth;
+      if (width >= 1024) {
+        setStep((width + 24) / 3);
+      } else if (width >= 640) {
+        setStep((width + 24) / 2);
+      } else {
+        setStep(width + 24);
+      }
+    }
+  }, []);
 
+  useEffect(() => {
     measure();
     window.addEventListener("resize", measure);
 
@@ -76,27 +92,60 @@ export function TestimonialsSection() {
       window.removeEventListener("resize", measure);
       observer?.disconnect();
     };
+  }, [measure]);
+
+  // Track if section is in viewport so autoplay pauses when offscreen
+  // This prevents the carousel from getting out of sync while the user is elsewhere on the page
+  useEffect(() => {
+    const section = sectionRef.current;
+    if (!section || typeof IntersectionObserver === "undefined") return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsInView(entry.isIntersecting);
+      },
+      { rootMargin: "120px 0px" }
+    );
+    observer.observe(section);
+
+    return () => observer.disconnect();
   }, []);
 
+  // Autoplay with fail-safe loop recovery
   useEffect(() => {
-    if (paused || reduceMotion) return;
+    if (paused || reduceMotion || !isInView) return;
 
     const timer = window.setInterval(() => {
-      setTransitionEnabled(true);
-      setPosition((current) => current + 1);
-    }, 2400);
+      setPosition((current) => {
+        if (current >= testimonials.length) {
+          // Wrap instantly to start and step to 1
+          setTransitionEnabled(false);
+          window.requestAnimationFrame(() => {
+            window.requestAnimationFrame(() => {
+              setTransitionEnabled(true);
+              setPosition(1);
+            });
+          });
+          return 0;
+        }
+        setTransitionEnabled(true);
+        return current + 1;
+      });
+    }, 3600);
 
     return () => window.clearInterval(timer);
-  }, [paused, reduceMotion]);
+  }, [paused, reduceMotion, isInView]);
 
   const handleTransitionEnd = (event: TransitionEvent<HTMLDivElement>) => {
-    if (event.target !== event.currentTarget || position !== testimonials.length) return;
+    if (event.target !== event.currentTarget) return;
 
-    setTransitionEnabled(false);
-    setPosition(0);
-    window.requestAnimationFrame(() => {
-      window.requestAnimationFrame(() => setTransitionEnabled(true));
-    });
+    if (position >= testimonials.length) {
+      setTransitionEnabled(false);
+      setPosition(0);
+      window.requestAnimationFrame(() => {
+        window.requestAnimationFrame(() => setTransitionEnabled(true));
+      });
+    }
   };
 
   const selectSlide = (index: number) => {
@@ -104,12 +153,36 @@ export function TestimonialsSection() {
     setPosition(index);
   };
 
+  const prevSlide = () => {
+    setTransitionEnabled(true);
+    setPosition((current) => {
+      if (current <= 0) {
+        return testimonials.length - 1;
+      }
+      return current - 1;
+    });
+  };
+
+  const nextSlide = () => {
+    setTransitionEnabled(true);
+    setPosition((current) => {
+      if (current >= testimonials.length) {
+        return 1;
+      }
+      return current + 1;
+    });
+  };
+
+  // Safe position prevents sliding into blank space beyond clones
+  const safePosition = Math.min(position, testimonials.length);
+
   return (
     <section
       aria-label="Partner Testimonials"
       aria-roledescription="carousel"
       className="relative overflow-hidden border-t border-slate-200 bg-white py-14 sm:py-20 lg:py-24 text-ink"
       id="testimonials"
+      ref={sectionRef}
     >
       <div aria-hidden="true" className="pointer-events-none absolute -left-40 top-1/3 size-96 rounded-full bg-cobalt/5 blur-[130px]" />
 
@@ -131,8 +204,8 @@ export function TestimonialsSection() {
             className="flex gap-6 transition-transform ease-[cubic-bezier(0.22,1,0.36,1)] will-change-transform"
             onTransitionEnd={handleTransitionEnd}
             style={{
-              transform: `translate3d(-${position * step}px, 0, 0)`,
-              transitionDuration: reduceMotion || !transitionEnabled ? "0ms" : "450ms",
+              transform: `translate3d(-${safePosition * step}px, 0, 0)`,
+              transitionDuration: reduceMotion || !transitionEnabled ? "0ms" : "550ms",
             }}
           >
             {carouselItems.map((item, itemIndex) => {
@@ -143,7 +216,7 @@ export function TestimonialsSection() {
                 <article
                   aria-hidden={isClone || undefined}
                   aria-label={isClone ? undefined : `Testimonial ${testimonialIndex + 1} of ${testimonials.length}`}
-                  className="group relative flex min-h-80 w-full shrink-0 flex-col justify-between overflow-hidden rounded-2xl border border-slate-200 bg-linear-to-br from-white via-white to-blue-50/50 p-7 shadow-[0_14px_42px_rgba(15,23,42,0.06)] transition-[border-color,box-shadow,background-color] duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:border-cobalt/40 hover:shadow-[0_24px_56px_rgba(21,94,239,0.13)] sm:w-[calc(50%-0.75rem)] sm:p-8 lg:w-[calc(33.333333%-1rem)]"
+                  className="group relative flex min-h-80 w-full shrink-0 flex-col justify-between overflow-hidden rounded-2xl border border-slate-200 bg-linear-to-br from-white via-white to-blue-50/50 p-7 shadow-[0_12px_36px_rgba(15,23,42,0.07)] transition-[border-color,box-shadow,background-color,transform] duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-1 hover:border-cobalt/40 hover:shadow-[0_24px_56px_rgba(21,94,239,0.15)] sm:w-[calc(50%-0.75rem)] sm:p-8 lg:w-[calc(33.333333%-1rem)]"
                   key={`${item.author}-${itemIndex}`}
                   onMouseEnter={() => setPaused(true)}
                   onMouseLeave={() => setPaused(false)}
@@ -184,17 +257,38 @@ export function TestimonialsSection() {
           </div>
         </div>
 
-        <div aria-label="Choose testimonial" className="mt-7 flex items-center justify-center gap-2" role="group">
-          {testimonials.map((item, index) => (
-            <button
-              aria-label={`Show testimonial ${index + 1}`}
-              aria-pressed={activeIndex === index}
-              className={`h-2.5 rounded-full transition-[width,background-color] duration-300 ${activeIndex === index ? "w-8 bg-cobalt" : "w-2.5 bg-slate-300 hover:bg-slate-400"}`}
-              key={item.author}
-              onClick={() => selectSlide(index)}
-              type="button"
-            />
-          ))}
+        {/* Carousel Navigation: Prev/Next Arrows & Dots Indicator */}
+        <div aria-label="Choose testimonial" className="mt-8 flex items-center justify-center gap-3" role="group">
+          <button
+            aria-label="Previous testimonial"
+            className="grid size-9 place-items-center rounded-full border border-slate-200 bg-white text-ink/80 shadow-xs transition-all duration-300 hover:border-cobalt hover:bg-cobalt hover:text-white active:scale-95"
+            onClick={prevSlide}
+            type="button"
+          >
+            <ChevronLeft aria-hidden="true" className="size-4.5" />
+          </button>
+
+          <div className="flex items-center gap-2 px-1">
+            {testimonials.map((item, index) => (
+              <button
+                aria-label={`Show testimonial ${index + 1}`}
+                aria-pressed={activeIndex === index}
+                className={`h-2.5 rounded-full transition-[width,background-color] duration-300 ${activeIndex === index ? "w-8 bg-cobalt shadow-xs" : "w-2.5 bg-slate-300 hover:bg-slate-400"}`}
+                key={item.author}
+                onClick={() => selectSlide(index)}
+                type="button"
+              />
+            ))}
+          </div>
+
+          <button
+            aria-label="Next testimonial"
+            className="grid size-9 place-items-center rounded-full border border-slate-200 bg-white text-ink/80 shadow-xs transition-all duration-300 hover:border-cobalt hover:bg-cobalt hover:text-white active:scale-95"
+            onClick={nextSlide}
+            type="button"
+          >
+            <ChevronRight aria-hidden="true" className="size-4.5" />
+          </button>
         </div>
       </Container>
     </section>

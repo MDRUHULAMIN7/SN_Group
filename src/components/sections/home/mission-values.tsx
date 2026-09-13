@@ -52,7 +52,7 @@ function CoreValuesGrid({ className }: { className: string }) {
             delay={index * 0.05}
             key={value.title}
           >
-            <article className="core-value-card group relative flex h-full min-h-56 flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white p-7 shadow-[0_8px_24px_rgba(15,23,42,0.045)]">
+            <article className="core-value-card group relative flex h-full min-h-56 flex-col overflow-hidden rounded-2xl border border-slate-200/90 bg-white p-7 shadow-[0_12px_32px_-4px_rgba(15,23,42,0.09),0_4px_12px_-2px_rgba(15,23,42,0.05)] hover:shadow-[0_22px_48px_-10px_rgba(21,94,239,0.22),0_12px_28px_-6px_rgba(15,23,42,0.12)]">
               <span aria-hidden="true" className="absolute bottom-7 left-0 top-7 w-1 origin-center scale-y-0 rounded-r-full bg-cobalt transition-transform duration-600 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-y-100" />
               <Icon aria-hidden="true" className="pointer-events-none absolute -bottom-6 -right-5 size-28 scale-75 text-cobalt opacity-0 transition-[transform,opacity] duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-100 group-hover:opacity-[0.055]" strokeWidth={1.1} />
 
