@@ -246,6 +246,15 @@ button:disabled {
     box-shadow 600ms var(--ease-out-expo);
 }
 
+.concern-accordion-card {
+  min-width: 0;
+  transition:
+    flex-grow 750ms var(--ease-out-expo),
+    opacity 500ms ease,
+    filter 500ms ease;
+  will-change: flex-grow;
+}
+
 @media (hover: hover) and (pointer: fine) {
   .premium-service-card:hover,
   .premium-service-card:focus-within {
@@ -289,10 +298,10 @@ button:disabled {
   }
 
   .why-card:hover {
-    border-color: rgba(21, 94, 239, 0.18);
+    border-color: rgba(21, 94, 239, 0.28);
     box-shadow:
-      0 20px 42px -26px rgba(21, 94, 239, 0.24),
-      0 10px 24px -20px rgba(15, 23, 42, 0.2);
+      0 26px 52px -14px rgba(21, 94, 239, 0.28),
+      0 12px 28px -10px rgba(15, 23, 42, 0.12);
   }
 }
 

@@ -175,7 +175,7 @@ export default function ContactPage() {
 
           {/* Right Column: Interactive Quotation Form */}
           <Reveal
-            className="group relative overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 shadow-[0_22px_60px_rgba(15,23,42,0.08)] sm:p-10 lg:col-span-7 transition-all duration-500 hover:border-cobalt/40 hover:shadow-[0_26px_68px_rgba(21,94,239,0.12)]"
+            className="group relative overflow-hidden rounded-2xl border border-slate-200/90 bg-white p-6 shadow-[0_28px_64px_-14px_rgba(15,23,42,0.15),0_10px_24px_-6px_rgba(15,23,42,0.07)] sm:p-10 lg:col-span-7 transition-all duration-500 hover:border-cobalt/40 hover:shadow-[0_34px_76px_-12px_rgba(21,94,239,0.22),0_12px_28px_-8px_rgba(15,23,42,0.08)]"
             delay={0.1}
           >
             {/* Top decorative gradient border */}

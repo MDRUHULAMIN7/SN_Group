@@ -69,7 +69,7 @@ export function WhyChooseUs() {
             const Icon = pillar.icon;
             return (
               <Reveal className="h-full" delay={index * 0.08} key={pillar.title}>
-                <article className="why-card group relative flex h-full min-h-68 flex-col overflow-hidden rounded-xl border border-slate-200 bg-white p-7 shadow-[0_8px_26px_rgba(15,23,42,0.045)] sm:p-8">
+                <article className="why-card group relative flex h-full min-h-68 flex-col overflow-hidden rounded-xl border border-slate-200/90 bg-white p-7 shadow-[0_16px_38px_-12px_rgba(15,23,42,0.12),0_6px_16px_-4px_rgba(15,23,42,0.06)] sm:p-8">
                   <span aria-hidden="true" className="absolute left-0 top-0 z-20 h-0.5 w-full origin-left scale-x-0 bg-cobalt transition-transform duration-450 ease-out group-hover:scale-x-100" />
                   <span aria-hidden="true" className="absolute right-0 top-0 z-20 h-full w-0.5 origin-top scale-y-0 bg-cobalt transition-transform delay-100 duration-450 ease-out group-hover:scale-y-100" />
                   <span aria-hidden="true" className="absolute bottom-0 right-0 z-20 h-0.5 w-full origin-right scale-x-0 bg-cobalt transition-transform delay-200 duration-450 ease-out group-hover:scale-x-100" />

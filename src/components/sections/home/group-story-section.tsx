@@ -72,7 +72,7 @@ export function GroupStorySection() {
               delay={index * 0.08}
               key={fact.label}
             >
-              <div className="group relative h-full min-h-36 sm:min-h-40 overflow-hidden rounded-2xl border border-slate-200 bg-white p-5 sm:p-7 shadow-[0_12px_34px_rgba(15,23,42,0.06)] transition-all duration-400 ease-out hover:-translate-y-2 hover:border-cobalt/40 hover:shadow-[0_22px_50px_rgba(21,94,239,0.16)]">
+              <div className="group relative h-full min-h-36 sm:min-h-40 overflow-hidden rounded-2xl border border-slate-200/90 bg-white p-5 sm:p-7 shadow-[0_18px_40px_-12px_rgba(15,23,42,0.12),0_6px_18px_-4px_rgba(15,23,42,0.06)] transition-all duration-400 ease-out hover:-translate-y-2 hover:border-cobalt/40 hover:shadow-[0_26px_56px_-10px_rgba(21,94,239,0.24),0_10px_24px_-6px_rgba(15,23,42,0.08)]">
                 <span
                   aria-hidden="true"
                   className="pointer-events-none absolute inset-x-0 top-0 h-1.5 origin-left scale-x-0 bg-gradient-to-r from-cobalt via-blue-500 to-sky-400 transition-transform duration-500 ease-out group-hover:scale-x-100"

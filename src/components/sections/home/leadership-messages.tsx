@@ -28,7 +28,7 @@ export function LeadershipMessages() {
         <div className="mt-10 sm:mt-16 grid gap-6 sm:gap-10 lg:grid-cols-2">
           {/* Chairman's Message */}
           <Reveal delay={0.08}>
-            <div className="group relative flex h-full flex-col justify-between overflow-hidden rounded-2xl sm:rounded-3xl border border-slate-200 bg-gradient-to-br from-white via-white to-blue-50/45 p-6 sm:p-10 shadow-[0_18px_50px_rgba(15,23,42,0.07)] transition-[border-color,box-shadow] duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] hover:border-cobalt/35 hover:shadow-[0_28px_68px_rgba(21,94,239,0.13)]">
+            <div className="group relative flex h-full flex-col justify-between overflow-hidden rounded-2xl sm:rounded-3xl border border-slate-200/90 bg-gradient-to-br from-white via-white to-blue-50/45 p-6 sm:p-10 shadow-[0_24px_54px_-14px_rgba(15,23,42,0.14),0_8px_20px_-6px_rgba(15,23,42,0.06)] transition-[border-color,box-shadow] duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] hover:border-cobalt/35 hover:shadow-[0_32px_72px_-12px_rgba(21,94,239,0.24),0_12px_28px_-8px_rgba(15,23,42,0.08)]">
               <Quote aria-hidden="true" className="pointer-events-none absolute -bottom-10 -right-8 size-40 text-cobalt/[0.045] transition-transform duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:-rotate-6 group-hover:scale-110" strokeWidth={1.1} />
               <div>
                 <div className="flex items-center justify-between border-b border-slate-200 pb-5 sm:pb-6">
@@ -75,7 +75,7 @@ export function LeadershipMessages() {
 
           {/* Managing Director's Message */}
           <Reveal delay={0.16}>
-            <div className="group relative flex h-full flex-col justify-between overflow-hidden rounded-2xl sm:rounded-3xl border border-slate-200 bg-gradient-to-br from-white via-white to-blue-50/45 p-6 sm:p-10 shadow-[0_18px_50px_rgba(15,23,42,0.07)] transition-[border-color,box-shadow] duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] hover:border-cobalt/35 hover:shadow-[0_28px_68px_rgba(21,94,239,0.13)]">
+            <div className="group relative flex h-full flex-col justify-between overflow-hidden rounded-2xl sm:rounded-3xl border border-slate-200/90 bg-gradient-to-br from-white via-white to-blue-50/45 p-6 sm:p-10 shadow-[0_24px_54px_-14px_rgba(15,23,42,0.14),0_8px_20px_-6px_rgba(15,23,42,0.06)] transition-[border-color,box-shadow] duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] hover:border-cobalt/35 hover:shadow-[0_32px_72px_-12px_rgba(21,94,239,0.24),0_12px_28px_-8px_rgba(15,23,42,0.08)]">
               <Quote aria-hidden="true" className="pointer-events-none absolute -bottom-10 -right-8 size-40 text-cobalt/[0.045] transition-transform duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:-rotate-6 group-hover:scale-110" strokeWidth={1.1} />
               <div>
                 <div className="flex items-center justify-between border-b border-slate-200 pb-5 sm:pb-6">
