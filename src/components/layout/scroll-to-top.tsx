@@ -33,7 +33,7 @@ export function ScrollToTop() {
         <m.button
           animate={{ opacity: 1, scale: 1, y: 0 }}
           aria-label="Scroll to top of page"
-          className="group fixed bottom-22 right-5 z-40 isolate grid size-12 sm:size-13 place-items-center rounded-full border border-white/40 bg-cobalt text-white shadow-[0_8px_24px_rgba(21,94,239,0.42)] transition-all duration-300 hover:bg-blue-600 hover:shadow-[0_12px_30px_rgba(21,94,239,0.6)] hover:-translate-y-1 active:scale-95 sm:bottom-25 sm:right-7 focus:outline-none focus-visible:ring-2 focus-visible:ring-cobalt"
+          className="group fixed bottom-18 right-3.5 z-40 isolate grid size-11 place-items-center rounded-full border border-white/40 bg-cobalt text-white shadow-[0_8px_24px_rgba(21,94,239,0.42)] transition-all duration-300 hover:bg-blue-600 hover:shadow-[0_12px_30px_rgba(21,94,239,0.6)] hover:-translate-y-1 active:scale-95 sm:bottom-25 sm:right-7 sm:size-13 focus:outline-none focus-visible:ring-2 focus-visible:ring-cobalt"
           exit={{ opacity: 0, scale: 0.8, y: 12 }}
           initial={{ opacity: 0, scale: 0.8, y: 12 }}
           onClick={scrollToTop}

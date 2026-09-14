@@ -49,7 +49,7 @@ export function ContactFaq() {
             <h2 className="display-type text-3xl font-extrabold tracking-tight text-ink sm:text-5xl">
               Commercial & Project Inquiries
             </h2>
-            <p className="mt-4 text-sm sm:text-base leading-relaxed text-ink/65">
+            <p className="mt-4 text-base sm:text-lg leading-relaxed text-ink/75">
               Clear answers to common questions about quotations, site visits, tenders, and operational coordination.
             </p>
           </Reveal>
@@ -75,7 +75,7 @@ export function ContactFaq() {
                     <span className={`grid size-7 shrink-0 place-items-center rounded-lg text-xs font-bold transition-colors ${isOpen ? "bg-cobalt text-white" : "bg-blue-50 text-cobalt"}`}>
                       <HelpCircle aria-hidden="true" className="size-4" />
                     </span>
-                    <span className="font-bold text-sm sm:text-base text-ink">
+                    <span className="font-bold text-base sm:text-lg text-ink">
                       {faq.question}
                     </span>
                   </span>
@@ -94,7 +94,7 @@ export function ContactFaq() {
                   id={`faq-answer-${idx}`}
                 >
                   <div className="overflow-hidden">
-                    <p className="border-t border-slate-100 px-6 pb-6 pt-4 text-xs sm:text-sm leading-relaxed text-ink/70">
+                    <p className="border-t border-slate-100 px-6 pb-6 pt-4 text-sm sm:text-base leading-relaxed text-ink/75">
                       {faq.answer}
                     </p>
                   </div>

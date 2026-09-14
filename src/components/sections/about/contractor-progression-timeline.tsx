@@ -246,7 +246,7 @@ function ProgressionRow({ item, hovered, onHover }: ProgressionRowProps) {
               <h4 className="display-type text-xl sm:text-2xl font-bold tracking-tight text-ink transition-colors duration-300 group-hover:text-cobalt">
                 {item.title}
               </h4>
-              <p className="mt-2.5 text-xs sm:text-sm leading-6 text-ink/70 font-sans">
+              <p className="mt-2.5 text-sm sm:text-base leading-relaxed text-ink/75 font-sans">
                 {item.description}
               </p>
             </div>
@@ -254,10 +254,10 @@ function ProgressionRow({ item, hovered, onHover }: ProgressionRowProps) {
             {/* Deliverables / Milestones */}
             <div className="relative z-10 mt-4 space-y-2 border-t border-slate-100 pt-4">
               {item.highlights.map((highlight) => (
-                <div className="flex items-center gap-2 text-xs sm:text-sm text-ink/75" key={highlight}>
+                <div className="flex items-center gap-2 text-sm sm:text-base text-ink/80" key={highlight}>
                   <CheckCircle2
                     aria-hidden="true"
-                    className="size-3.5 shrink-0 text-cobalt transition-transform duration-300 group-hover:scale-110"
+                    className="size-4 shrink-0 text-cobalt transition-transform duration-300 group-hover:scale-110"
                   />
                   <span>{highlight}</span>
                 </div>

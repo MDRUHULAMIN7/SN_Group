@@ -48,7 +48,7 @@ export function PageHero({
       <Container className="relative z-10 w-full">
         <nav
           aria-label="Breadcrumb"
-          className="mb-3 sm:mb-4 inline-flex flex-wrap items-center gap-2 rounded-full border border-cobalt/20 bg-white/88 px-3.5 py-1.5 text-xs font-semibold text-ink/70 shadow-sm backdrop-blur-md"
+          className="mb-3 sm:mb-4 inline-flex flex-wrap items-center gap-2 rounded-full border border-cobalt/20 bg-white/88 px-3.5 py-1.5 text-xs sm:text-sm font-semibold text-ink/75 shadow-sm backdrop-blur-md"
         >
           <Link className="transition-colors hover:text-cobalt" href="/">
             Home
@@ -69,7 +69,7 @@ export function PageHero({
           ))}
         </nav>
 
-        <h1 className="display-type max-w-4xl text-3xl xs:text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-ink leading-[1.12]">
+        <h1 className="display-type max-w-4xl text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-ink leading-[1.12]">
           {title}
         </h1>
       </Container>

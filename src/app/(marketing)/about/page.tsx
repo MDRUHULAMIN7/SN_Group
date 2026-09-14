@@ -164,10 +164,10 @@ export default function AboutPage() {
         <Container className="grid gap-10 lg:grid-cols-12 lg:items-center">
           <Reveal className="lg:col-span-6">
             <p className="eyebrow mb-3 sm:mb-4 text-cobalt">Company Introduction</p>
-            <h2 className="display-type text-2.5xl xs:text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight">
+            <h2 className="display-type text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
               20+ Years of Dedication &amp; Excellence
             </h2>
-            <div className="mt-5 sm:mt-6 space-y-3.5 sm:space-y-4 text-sm sm:text-base leading-7 sm:leading-8 text-ink/72">
+            <div className="mt-5 sm:mt-6 space-y-4 text-base sm:text-lg leading-relaxed text-ink/80">
               <p>
                 S.N Group is a diversified Bangladeshi business group with more than 20 years of experience in construction and business operations, built on a foundation of integrity, quality, reliability, and long-term relationships.
               </p>
@@ -177,10 +177,10 @@ export default function AboutPage() {
                 <strong className="text-ink font-bold">S.N Import &amp; Export BD Ltd.</strong>, and{" "}
                 <strong className="text-ink font-bold">Mehrish Holdings Ltd.</strong>.
               </p>
-              <p className="text-xs sm:text-base leading-6 sm:leading-7 text-ink/64">
+              <p className="text-base sm:text-lg leading-relaxed text-ink/75">
                 Our businesses operate across government and institutional construction, infrastructure development, international import and export, agricultural and food commodities, industrial chemicals and equipment, and premium real estate development.
               </p>
-              <p className="text-xs sm:text-base leading-6 sm:leading-7 text-ink/64">
+              <p className="text-base sm:text-lg leading-relaxed text-ink/75">
                 With deep technical know-how and growing international trading networks, S.N Group continues to expand capabilities while delivering enduring value for clients, partners, investors, and communities across Bangladesh.
               </p>
             </div>
@@ -214,10 +214,10 @@ export default function AboutPage() {
           <div className="mx-auto max-w-3xl text-center">
             <Reveal>
               <p className="eyebrow mb-3 sm:mb-4 justify-center text-blue-400">Guiding Principles</p>
-              <h2 className="display-type text-2.5xl xs:text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight">
+              <h2 className="display-type text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
                 Our Mission &amp; Vision
               </h2>
-              <p className="mt-3 sm:mt-4 text-sm sm:text-lg leading-6 sm:leading-7 text-ink/65">
+              <p className="mt-3 sm:mt-4 text-base sm:text-xl leading-relaxed text-ink/75">
                 The purpose that directs our daily operations and the long-term horizon guiding our group&apos;s growth.
               </p>
             </Reveal>
@@ -237,10 +237,10 @@ export default function AboutPage() {
           <div className="mx-auto max-w-3xl text-center mb-10 sm:mb-16">
             <Reveal>
               <p className="eyebrow mb-3 sm:mb-4 justify-center text-cobalt">Two Decades of Progress</p>
-              <h2 className="display-type text-2.5xl xs:text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-ink">
+              <h2 className="display-type text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight text-ink">
                 Company History
               </h2>
-              <p className="mt-3 sm:mt-4 text-sm sm:text-lg leading-6 sm:leading-7 text-ink/65">
+              <p className="mt-3 sm:mt-4 text-base sm:text-xl leading-relaxed text-ink/75">
                 Key milestones in our evolution from a specialized civil engineering contractor to a diversified multi-disciplinary corporate group.
               </p>
             </Reveal>
@@ -369,7 +369,7 @@ export default function AboutPage() {
                     <span className="text-xs font-bold uppercase tracking-widest text-blue-400">
                       Executive Perspective
                     </span>
-                    <h2 className="display-type mt-1 text-2xl xs:text-3xl sm:text-4xl font-bold transition-colors duration-300 group-hover:text-cobalt">
+                    <h2 className="display-type mt-1 text-2xl sm:text-4xl font-bold transition-colors duration-300 group-hover:text-cobalt">
                       Message from the Managing Director
                     </h2>
                   </div>
@@ -378,7 +378,7 @@ export default function AboutPage() {
                   </span>
                 </div>
 
-                <div className="mt-6 sm:mt-8 space-y-4 text-xs sm:text-base leading-6 sm:leading-8 text-ink/72">
+                <div className="mt-6 sm:mt-8 space-y-4 text-base sm:text-lg leading-relaxed sm:leading-8 text-ink/80">
                   <p>
                     Welcome to S.N Group. For more than two decades, our journey has been guided by a simple principle: build with integrity, deliver with excellence, and grow through trust.
                   </p>
@@ -417,10 +417,10 @@ export default function AboutPage() {
           <div className="mx-auto max-w-3xl text-center">
             <Reveal>
               <p className="eyebrow mb-3 sm:mb-4 justify-center text-blue-400">Leadership &amp; Execution</p>
-              <h2 className="display-type text-2.5xl xs:text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight">
+              <h2 className="display-type text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
                 Management &amp; Team Introduction
               </h2>
-              <p className="mt-3 sm:mt-4 text-sm sm:text-lg leading-6 sm:leading-7 text-ink/65">
+              <p className="mt-3 sm:mt-4 text-base sm:text-xl leading-relaxed text-ink/75">
                 Experienced professionals steering our engineering execution, international procurement, and real estate development.
               </p>
             </Reveal>
@@ -485,10 +485,10 @@ export default function AboutPage() {
           <div className="mx-auto max-w-3xl text-center">
             <Reveal>
               <p className="eyebrow mb-3 sm:mb-4 justify-center text-blue-400">Institutional Trust</p>
-              <h2 className="display-type text-2.5xl xs:text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight">
+              <h2 className="display-type text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
                 Our Clients &amp; Institutional Partners
               </h2>
-              <p className="mt-3 sm:mt-4 text-sm sm:text-lg leading-6 sm:leading-7 text-ink/65">
+              <p className="mt-3 sm:mt-4 text-base sm:text-xl leading-relaxed text-ink/75">
                 Proud to have delivered projects and commercial solutions associated with premier defense, government, and corporate organizations in Bangladesh.
               </p>
             </Reveal>

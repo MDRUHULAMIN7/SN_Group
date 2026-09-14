@@ -156,37 +156,40 @@ export function ImportExportDetail({ concern }: { concern: SisterConcern }) {
           SECTION 1: HERO & INTRO WITH BRAND SLIDER AND PRODUCTS GRID CARDS
           ========================================================================= */}
       <section
-        className="relative border-t border-slate-200 bg-gradient-to-b from-slate-50 via-white to-slate-50/70 py-12 sm:py-16 lg:py-20 text-ink"
+        className="relative border-t border-slate-200 bg-gradient-to-b from-slate-50 via-white to-slate-50/70 py-8 sm:py-14 lg:py-20 text-ink"
         id="product-import-inquiry"
       >
         <Container>
           {/* Main Hero Split: Left Text + Right Brand Slider */}
-          <div className="grid gap-10 lg:grid-cols-12 lg:items-center">
+          <div className="grid gap-8 sm:gap-10 lg:grid-cols-12 lg:items-center">
             {/* Left Section: Intro Text & Value Proposition */}
-            <div className="lg:col-span-6 space-y-6">
+            <div className="lg:col-span-6 space-y-4 sm:space-y-6">
               <Reveal>
+                <div className="inline-flex items-center gap-2 rounded-full border border-cobalt/20 bg-blue-50/80 px-3 py-1 text-xs font-bold uppercase tracking-wider text-cobalt">
+                  <Globe2 className="size-3.5 text-cobalt" />
+                  International Trading Division
+                </div>
 
-                <h1 className="display-type text-3xl font-extrabold tracking-tight sm:text-5xl lg:text-5xl leading-[1.1]">
+                <h2 className="display-type mt-2.5 sm:mt-3 text-2xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl leading-[1.15]">
                   S.N Import &amp; Export BD Ltd.
-                </h1>
+                </h2>
 
-                <p className="mt-3 text-xl sm:text-2xl lg:text-3xl font-bold text-cobalt leading-snug">
+                <p className="mt-2 sm:mt-3 text-base sm:text-xl lg:text-2xl font-bold text-cobalt leading-snug">
                   Connecting Bangladesh with Global Commodity &amp; Chemical Markets.
                 </p>
 
-                <p className="mt-5 text-lg sm:text-xl leading-relaxed text-ink/85">
+                <p className="mt-3.5 sm:mt-4 text-sm sm:text-base lg:text-lg leading-relaxed text-ink/80">
                   As the international trading arm of S.N Group, S.N Import &amp; Export BD Ltd. connects commercial enterprises with verified global producers. We specialize in the bulk sourcing, import, and distribution of agricultural commodities, food ingredients, and industrial chemicals.
                 </p>
 
-                <p className="mt-4 text-lg sm:text-xl leading-relaxed text-ink/80">
+                <p className="mt-2.5 sm:mt-3 text-sm sm:text-base lg:text-lg leading-relaxed text-ink/75">
                   From competitive pricing and Letter of Credit (L/C) documentation to port clearance and nationwide delivery, we manage the complete commercial import lifecycle with guaranteed origin quality.
                 </p>
 
-
                 {/* Action Buttons */}
-                <div className="mt-7 flex flex-wrap items-center gap-3.5">
+                <div className="mt-5 sm:mt-7 flex flex-col sm:flex-row sm:flex-wrap items-stretch sm:items-center gap-2.5 sm:gap-3">
                   <button
-                    className="inline-flex items-center justify-center gap-2 rounded-xl bg-cobalt px-6 py-3.5 text-base font-bold text-white shadow-lg shadow-cobalt/25 transition-all duration-300 hover:scale-[1.02] hover:bg-cobalt-dark active:scale-[0.98]"
+                    className="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-xl bg-cobalt px-5 py-3 text-sm font-bold text-white shadow-md shadow-cobalt/25 transition-all duration-300 hover:scale-[1.02] hover:bg-cobalt-dark active:scale-[0.98]"
                     onClick={() => scrollToInquiry()}
                     type="button"
                   >
@@ -195,7 +198,7 @@ export function ImportExportDetail({ concern }: { concern: SisterConcern }) {
                   </button>
 
                   <a
-                    className="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-300 bg-white px-6 py-3.5 text-base font-bold text-ink shadow-sm transition-all duration-300 hover:border-cobalt hover:bg-blue-50/50 hover:text-cobalt"
+                    className="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-xl border border-slate-300 bg-white px-5 py-3 text-sm font-bold text-ink shadow-sm transition-all duration-300 hover:border-cobalt hover:bg-blue-50/50 hover:text-cobalt"
                     href="#available-products"
                   >
                     View Products
@@ -203,7 +206,7 @@ export function ImportExportDetail({ concern }: { concern: SisterConcern }) {
                   </a>
 
                   <a
-                    className="inline-flex items-center gap-2 rounded-xl border border-emerald-500/30 bg-emerald-50 px-5 py-3.5 text-sm font-bold text-emerald-800 transition hover:bg-emerald-100"
+                    className="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-xl border border-emerald-500/30 bg-emerald-50 px-4 py-3 text-xs sm:text-sm font-bold text-emerald-800 transition hover:bg-emerald-100"
                     href="https://wa.me/8801608864687?text=Hello%20S.N%20Group,%20I%20want%20to%20inquire%20about%20Product%20Import"
                     rel="noreferrer"
                     target="_blank"
@@ -226,15 +229,15 @@ export function ImportExportDetail({ concern }: { concern: SisterConcern }) {
           {/* =========================================================================
               PRODUCTS LIST IN GRID VIEW CARDS (niche prodcuts list thakbe grid view card akare)
               ========================================================================= */}
-          <div className="mt-14 sm:mt-20" id="available-products">
+          <div className="mt-10 sm:mt-16 lg:mt-20" id="available-products">
             <Reveal>
-              <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-slate-200 pb-5">
+              <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3 sm:gap-4 border-b border-slate-200 pb-4 sm:pb-5">
                 <div>
                   <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-cobalt">
                     <Globe2 className="size-3.5 text-cobalt" />
                     Commodity &amp; Chemical Portfolio
                   </div>
-                  <h2 className="display-type mt-1 text-2xl sm:text-3xl font-extrabold text-ink">
+                  <h2 className="display-type mt-1 text-xl sm:text-2xl lg:text-3xl font-extrabold text-ink">
                     Available Import Products
                   </h2>
                 </div>
@@ -244,32 +247,32 @@ export function ImportExportDetail({ concern }: { concern: SisterConcern }) {
               </div>
             </Reveal>
 
-            <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5">
+            <div className="mt-6 sm:mt-8 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-5">
               {PRODUCTS_GRID_DATA.map((prod, idx) => (
                 <Reveal delay={idx * 0.04} key={prod.id}>
                   <div
-                    className="group relative flex flex-col overflow-hidden rounded-2xl border border-slate-200/90 bg-white p-3 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-cobalt/50 hover:shadow-xl hover:shadow-cobalt/10 cursor-pointer"
+                    className="group relative flex flex-col overflow-hidden rounded-xl sm:rounded-2xl border border-slate-200/90 bg-white p-2.5 sm:p-3.5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-cobalt/50 hover:shadow-lg hover:shadow-cobalt/10 cursor-pointer"
                     onClick={() => scrollToInquiry(prod.inquiryName)}
                     role="button"
                     tabIndex={0}
                   >
                     {/* Product Image */}
-                    <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl bg-slate-100">
+                    <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg sm:rounded-xl bg-slate-100">
                       <Image
                         alt={prod.name}
                         className="object-cover transition-transform duration-500 group-hover:scale-105"
                         fill
-                        sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+                        sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 50vw"
                         src={prod.image}
                       />
                     </div>
 
                     {/* Clean Minimal Title without extra info */}
-                    <div className="pt-3 pb-1 text-center">
-                      <h3 className="text-base font-bold text-ink group-hover:text-cobalt transition-colors leading-snug">
+                    <div className="pt-2 sm:pt-3 pb-1 text-center">
+                      <h3 className="text-xs sm:text-sm md:text-base font-bold text-ink group-hover:text-cobalt transition-colors leading-snug line-clamp-2">
                         {prod.name}
                       </h3>
-                      <p className="mt-0.5 text-xs font-semibold text-cobalt">
+                      <p className="mt-0.5 text-[10px] sm:text-xs font-semibold text-cobalt">
                         [{prod.bangla}]
                       </p>
                     </div>
@@ -279,23 +282,23 @@ export function ImportExportDetail({ concern }: { concern: SisterConcern }) {
             </div>
 
             {/* Banner Reminder */}
-            <Reveal className="mt-8" delay={0.1}>
-              <div className="rounded-2xl border border-blue-200/80 bg-gradient-to-r from-blue-50/80 via-white to-blue-50/50 p-4 sm:p-5 flex flex-col sm:flex-row items-center justify-between gap-4">
-                <div className="flex items-center gap-3">
-                  <span className="grid size-10 place-items-center rounded-xl bg-cobalt text-white shadow-md shrink-0">
-                    <Truck className="size-5" />
+            <Reveal className="mt-6 sm:mt-8" delay={0.1}>
+              <div className="rounded-xl sm:rounded-2xl border border-blue-200/80 bg-gradient-to-r from-blue-50/80 via-white to-blue-50/50 p-3.5 sm:p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-4">
+                <div className="flex items-start sm:items-center gap-3">
+                  <span className="grid size-9 sm:size-10 place-items-center rounded-xl bg-cobalt text-white shadow-md shrink-0">
+                    <Truck className="size-4 sm:size-5" />
                   </span>
                   <div>
-                    <p className="text-sm font-bold text-ink">
+                    <p className="text-xs sm:text-sm font-bold text-ink">
                       Looking for custom spices, pulses, or industrial chemicals not listed above?
                     </p>
-                    <p className="text-xs text-ink/70">
+                    <p className="text-[11px] sm:text-xs text-ink/70 mt-0.5">
                       <strong>If you give us an order, we can import on behalf of you</strong> through our direct manufacturer network in Vietnam, India, Indonesia, and China.
                     </p>
                   </div>
                 </div>
                 <button
-                  className="shrink-0 rounded-xl bg-cobalt px-4 py-2.5 text-xs font-bold text-white transition hover:bg-cobalt-dark shadow-sm"
+                  className="w-full sm:w-auto shrink-0 rounded-xl bg-cobalt px-4 py-2.5 text-xs font-bold text-white transition hover:bg-cobalt-dark shadow-sm text-center justify-center"
                   onClick={() => scrollToInquiry("Custom Bulk Import [অন্যান্য পণ্য]")}
                   type="button"
                 >
@@ -312,39 +315,39 @@ export function ImportExportDetail({ concern }: { concern: SisterConcern }) {
       {/* =========================================================================
           SECTION 3: HOW WE WORK (THE IMPORT PROCESS)
           ========================================================================= */}
-      <section className="border-t border-slate-200 bg-slate-50/70 py-14 sm:py-20 lg:py-24 text-ink" id="import-process">
+      <section className="border-t border-slate-200 bg-slate-50/70 py-10 sm:py-16 lg:py-24 text-ink" id="import-process">
         <Container>
           <Reveal className="text-center max-w-3xl mx-auto">
-            <p className="eyebrow mb-2 text-cobalt">Streamlined Global Trade</p>
-            <h2 className="display-type text-3xl sm:text-5xl font-extrabold tracking-tight">
+            <p className="eyebrow mb-1.5 sm:mb-2 text-cobalt">Streamlined Global Trade</p>
+            <h2 className="display-type text-2xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight">
               How We Work (The Import Process)
             </h2>
-            <p className="mt-3 text-sm sm:text-base text-ink/70">
+            <p className="mt-2 sm:mt-3 text-xs sm:text-sm md:text-base text-ink/70">
               A transparent, 4-step international commercial trade process managed by S.N Group from global origin to landed delivery in Bangladesh.
             </p>
           </Reveal>
 
           {/* 4-Step Infographic Grid */}
-          <div className="mt-12 sm:mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-8 sm:mt-14 grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
             {PROCESS_STEPS.map((step, idx) => {
               const Icon = step.icon;
               return (
                 <Reveal className="h-full" delay={idx * 0.08} key={step.number}>
-                  <div className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-all duration-400 hover:-translate-y-2 hover:border-cobalt hover:shadow-xl hover:shadow-cobalt/10">
+                  <div className="group relative flex h-full flex-col overflow-hidden rounded-xl sm:rounded-2xl border border-slate-200 bg-white p-4 sm:p-6 shadow-sm transition-all duration-400 hover:-translate-y-1 sm:hover:-translate-y-2 hover:border-cobalt hover:shadow-xl hover:shadow-cobalt/10">
                     {/* Top Step Number Badge */}
-                    <div className="flex items-center justify-between mb-5">
-                      <span className="grid size-12 place-items-center rounded-xl border border-cobalt/20 bg-blue-50 text-cobalt transition-colors duration-300 group-hover:bg-cobalt group-hover:text-white">
-                        <Icon className="size-6" />
+                    <div className="flex items-center justify-between mb-3.5 sm:mb-5">
+                      <span className="grid size-10 sm:size-12 place-items-center rounded-xl border border-cobalt/20 bg-blue-50 text-cobalt transition-colors duration-300 group-hover:bg-cobalt group-hover:text-white">
+                        <Icon className="size-5 sm:size-6" />
                       </span>
-                      <span className="font-mono text-3xl font-black text-slate-200 group-hover:text-cobalt/30 transition-colors">
+                      <span className="font-mono text-2xl sm:text-3xl font-black text-slate-200 group-hover:text-cobalt/30 transition-colors">
                         {step.number}
                       </span>
                     </div>
 
-                    <h3 className="display-type text-lg font-bold text-ink">
+                    <h3 className="display-type text-base sm:text-lg font-bold text-ink">
                       {step.title}
                     </h3>
-                    <p className="text-xs font-semibold text-cobalt mb-3">
+                    <p className="text-xs font-semibold text-cobalt mb-2 sm:mb-3">
                       [{step.bangla}]
                     </p>
 
@@ -353,7 +356,7 @@ export function ImportExportDetail({ concern }: { concern: SisterConcern }) {
                     </p>
 
                     {/* Connecting indicator bar */}
-                    <div className="mt-auto pt-5">
+                    <div className="mt-auto pt-4 sm:pt-5">
                       <div className="h-1 w-full rounded-full bg-slate-100 overflow-hidden">
                         <div
                           className="h-full bg-gradient-to-r from-cobalt to-sky-400 transition-all duration-500 group-hover:w-full"
@@ -373,58 +376,58 @@ export function ImportExportDetail({ concern }: { concern: SisterConcern }) {
           SECTION 4: DEDICATED CONTACT & INQUIRY PAGE (CRUCIAL INTEGRATION)
           ========================================================================= */}
       <section
-        className="blueprint-grid border-t border-slate-200 bg-white py-14 sm:py-20 lg:py-24 text-ink"
+        className="blueprint-grid border-t border-slate-200 bg-white py-10 sm:py-16 lg:py-24 text-ink"
         id="contact-inquiry-section"
       >
         <Container>
-          <Reveal className="mb-8 text-center max-w-2xl mx-auto">
-            <h2 className="display-type text-2xl sm:text-4xl font-extrabold tracking-tight">
+          <Reveal className="mb-6 sm:mb-8 text-center max-w-2xl mx-auto">
+            <h2 className="display-type text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight">
               Product Import Inquiry &amp; Contacts
             </h2>
-            <p className="mt-2 text-xs sm:text-sm text-ink/65">
+            <p className="mt-1.5 sm:mt-2 text-xs sm:text-sm text-ink/65">
               Connect directly with our designated trade managers or submit your specifications below.
             </p>
           </Reveal>
 
           {/* Split Screen: Left Clean Contacts + Right Inquiry Form */}
-          <div className="grid gap-8 lg:grid-cols-12 lg:items-start">
+          <div className="grid gap-6 sm:gap-8 lg:grid-cols-12 lg:items-start">
             {/* Left Column: Official Corporate Contacts */}
             <div className="lg:col-span-5">
               <Reveal>
-                <div className="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8 shadow-sm">
-                  <div className="border-b border-slate-100 pb-4">
-                    <h3 className="display-type text-2xl sm:text-3xl font-bold text-ink">
+                <div className="rounded-2xl border border-slate-200 bg-white p-4 sm:p-6 lg:p-8 shadow-sm">
+                  <div className="border-b border-slate-100 pb-3.5 sm:pb-4">
+                    <h3 className="display-type text-xl sm:text-2xl lg:text-3xl font-bold text-ink">
                       Direct Trade Contacts
                     </h3>
-                    <p className="mt-1.5 text-sm sm:text-base text-ink/70">
+                    <p className="mt-1 text-xs sm:text-sm text-ink/70">
                       Direct lines for product inquiries, pricing, and L/C terms.
                     </p>
                   </div>
 
-                  <div className="mt-6 space-y-4">
+                  <div className="mt-4 sm:mt-6 space-y-3 sm:space-y-4">
                     {/* Contact 1: Ishrat Jahan Anannya */}
-                    <div className="rounded-xl border border-slate-100 bg-slate-50/70 p-5 transition-colors hover:border-cobalt/30 hover:bg-blue-50/30">
-                      <div className="flex items-start justify-between gap-3">
+                    <div className="rounded-xl border border-slate-100 bg-slate-50/70 p-3.5 sm:p-5 transition-colors hover:border-cobalt/30 hover:bg-blue-50/30">
+                      <div className="flex items-start justify-between gap-2.5 sm:gap-3">
                         <div>
-                          <h4 className="text-lg sm:text-xl font-bold text-ink">Ishrat Jahan Anannya</h4>
-                          <p className="text-base text-cobalt font-semibold mt-1">Head of Business &amp; Communication</p>
-                          <p className="text-sm text-ink/65 mt-0.5 font-medium">Agriculture &amp; Food Products</p>
+                          <h4 className="text-base sm:text-lg lg:text-xl font-bold text-ink">Ishrat Jahan Anannya</h4>
+                          <p className="text-xs sm:text-sm text-cobalt font-semibold mt-0.5">Head of Business &amp; Communication</p>
+                          <p className="text-[11px] sm:text-xs text-ink/65 mt-0.5 font-medium">Agriculture &amp; Food Products</p>
                         </div>
                         <a
-                          className="inline-flex items-center gap-1.5 rounded-lg bg-emerald-50 px-3.5 py-2 text-xs sm:text-sm font-bold text-emerald-700 transition hover:bg-emerald-100 shrink-0"
+                          className="inline-flex items-center gap-1.5 rounded-lg bg-emerald-50 px-2.5 py-1.5 sm:px-3.5 sm:py-2 text-xs font-bold text-emerald-700 transition hover:bg-emerald-100 shrink-0"
                           href="https://wa.me/8801608864687?text=Hello%20Ishrat%20Jahan,%20I%20have%20an%20import%20inquiry%20for%20S.N%20Group."
                           rel="noreferrer"
                           target="_blank"
                         >
-                          <MessageSquare className="size-4 text-emerald-600" />
+                          <MessageSquare className="size-3.5 sm:size-4 text-emerald-600" />
                           WhatsApp
                         </a>
                       </div>
-                      <div className="mt-3.5 flex flex-wrap items-center gap-x-4 gap-y-2 text-base text-ink/80">
+                      <div className="mt-3 flex flex-col sm:flex-row sm:flex-wrap items-start sm:items-center gap-1 sm:gap-x-4 sm:gap-y-2 text-xs sm:text-sm text-ink/80">
                         <a className="font-bold text-ink hover:text-cobalt transition-colors" href="tel:+8801608864687">
                           +8801608864687
                         </a>
-                        <span className="text-slate-300">•</span>
+                        <span className="hidden sm:inline text-slate-300">•</span>
                         <a className="font-medium hover:text-cobalt transition-colors" href="mailto:info@sngroupbd.com">
                           info@sngroupbd.com
                         </a>
@@ -432,32 +435,32 @@ export function ImportExportDetail({ concern }: { concern: SisterConcern }) {
                     </div>
 
                     {/* Contact 2: Biplab Kumar Saha */}
-                    <div className="rounded-xl border border-slate-100 bg-slate-50/70 p-5 transition-colors hover:border-cobalt/30 hover:bg-blue-50/30">
-                      <div className="flex items-start justify-between gap-3">
+                    <div className="rounded-xl border border-slate-100 bg-slate-50/70 p-3.5 sm:p-5 transition-colors hover:border-cobalt/30 hover:bg-blue-50/30">
+                      <div className="flex items-start justify-between gap-2.5 sm:gap-3">
                         <div>
-                          <h4 className="text-lg sm:text-xl font-bold text-ink">Biplab Kumar Saha</h4>
-                          <p className="text-base text-cobalt font-semibold mt-1">International Trade Manager</p>
-                          <p className="text-sm text-ink/65 mt-0.5 font-medium">Agriculture &amp; Food Products</p>
+                          <h4 className="text-base sm:text-lg lg:text-xl font-bold text-ink">Biplab Kumar Saha</h4>
+                          <p className="text-xs sm:text-sm text-cobalt font-semibold mt-0.5">International Trade Manager</p>
+                          <p className="text-[11px] sm:text-xs text-ink/65 mt-0.5 font-medium">Agriculture &amp; Food Products</p>
                         </div>
                         <a
-                          className="inline-flex items-center gap-1.5 rounded-lg bg-emerald-50 px-3.5 py-2 text-xs sm:text-sm font-bold text-emerald-700 transition hover:bg-emerald-100 shrink-0"
+                          className="inline-flex items-center gap-1.5 rounded-lg bg-emerald-50 px-2.5 py-1.5 sm:px-3.5 sm:py-2 text-xs font-bold text-emerald-700 transition hover:bg-emerald-100 shrink-0"
                           href="https://wa.me/8801335229070?text=Hello%20Biplab%20Kumar,%20I%20have%20an%20import%20inquiry%20for%20S.N%20Group."
                           rel="noreferrer"
                           target="_blank"
                         >
-                          <MessageSquare className="size-4 text-emerald-600" />
+                          <MessageSquare className="size-3.5 sm:size-4 text-emerald-600" />
                           WhatsApp
                         </a>
                       </div>
-                      <div className="mt-3.5 flex flex-wrap items-center gap-x-4 gap-y-2 text-base text-ink/80">
+                      <div className="mt-3 flex flex-col sm:flex-row sm:flex-wrap items-start sm:items-center gap-1 sm:gap-x-3 sm:gap-y-1.5 text-xs sm:text-sm text-ink/80">
                         <a className="font-bold text-ink hover:text-cobalt transition-colors" href="tel:+8801335229070">
                           +8801335229070
                         </a>
-                        <span className="text-slate-300">•</span>
+                        <span className="hidden sm:inline text-slate-300">•</span>
                         <a className="font-bold text-ink hover:text-cobalt transition-colors" href="tel:+8801713048985">
                           +8801713048985
                         </a>
-                        <span className="text-slate-300">•</span>
+                        <span className="hidden sm:inline text-slate-300">•</span>
                         <a className="font-medium hover:text-cobalt transition-colors" href="mailto:query@sngroupbd.com">
                           query@sngroupbd.com
                         </a>
@@ -465,32 +468,32 @@ export function ImportExportDetail({ concern }: { concern: SisterConcern }) {
                     </div>
 
                     {/* Contact 3: Ashik Mahmud Haydari */}
-                    <div className="rounded-xl border border-slate-100 bg-slate-50/70 p-5 transition-colors hover:border-cobalt/30 hover:bg-blue-50/30">
-                      <div className="flex items-start justify-between gap-3">
+                    <div className="rounded-xl border border-slate-100 bg-slate-50/70 p-3.5 sm:p-5 transition-colors hover:border-cobalt/30 hover:bg-blue-50/30">
+                      <div className="flex items-start justify-between gap-2.5 sm:gap-3">
                         <div>
-                          <h4 className="text-lg sm:text-xl font-bold text-ink">Ashik Mahmud Haydari</h4>
-                          <p className="text-base text-cobalt font-semibold mt-1">Trade Manager</p>
-                          <p className="text-sm text-ink/65 mt-0.5 font-medium">Chemical Products</p>
+                          <h4 className="text-base sm:text-lg lg:text-xl font-bold text-ink">Ashik Mahmud Haydari</h4>
+                          <p className="text-xs sm:text-sm text-cobalt font-semibold mt-0.5">Trade Manager</p>
+                          <p className="text-[11px] sm:text-xs text-ink/65 mt-0.5 font-medium">Chemical Products</p>
                         </div>
                         <a
-                          className="inline-flex items-center gap-1.5 rounded-lg bg-emerald-50 px-3.5 py-2 text-xs sm:text-sm font-bold text-emerald-700 transition hover:bg-emerald-100 shrink-0"
+                          className="inline-flex items-center gap-1.5 rounded-lg bg-emerald-50 px-2.5 py-1.5 sm:px-3.5 sm:py-2 text-xs font-bold text-emerald-700 transition hover:bg-emerald-100 shrink-0"
                           href="https://wa.me/8801894824091?text=Hello%20Ashik%20Mahmud,%20I%20have%20an%20inquiry%20regarding%20Chemical%20Products."
                           rel="noreferrer"
                           target="_blank"
                         >
-                          <MessageSquare className="size-4 text-emerald-600" />
+                          <MessageSquare className="size-3.5 sm:size-4 text-emerald-600" />
                           WhatsApp
                         </a>
                       </div>
-                      <div className="mt-3.5 flex flex-wrap items-center gap-x-4 gap-y-2 text-base text-ink/80">
+                      <div className="mt-3 flex flex-col sm:flex-row sm:flex-wrap items-start sm:items-center gap-1 sm:gap-x-3 sm:gap-y-1.5 text-xs sm:text-sm text-ink/80">
                         <a className="font-bold text-ink hover:text-cobalt transition-colors" href="tel:+8801894824091">
                           +8801894824091
                         </a>
-                        <span className="text-slate-300">•</span>
+                        <span className="hidden sm:inline text-slate-300">•</span>
                         <a className="font-bold text-ink hover:text-cobalt transition-colors" href="tel:+8801335229071">
                           +8801335229071
                         </a>
-                        <span className="text-slate-300">•</span>
+                        <span className="hidden sm:inline text-slate-300">•</span>
                         <a className="font-medium hover:text-cobalt transition-colors" href="mailto:query@sngroupbd.com">
                           query@sngroupbd.com
                         </a>

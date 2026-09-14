@@ -110,11 +110,11 @@ export function ImportInquiryForm({
   return (
     <div
       aria-label="Product Import Inquiry Form"
-      className="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8 shadow-sm"
+      className="rounded-2xl border border-slate-200 bg-white p-4 sm:p-6 lg:p-8 shadow-sm"
       id="inquiry-form"
     >
-      <div className="mb-6 border-b border-slate-100 pb-4">
-        <h3 className="display-type text-xl sm:text-2xl font-bold text-ink">
+      <div className="mb-5 sm:mb-6 border-b border-slate-100 pb-3.5 sm:pb-4">
+        <h3 className="display-type text-lg sm:text-2xl font-bold text-ink">
           Send Import Inquiry
         </h3>
         <p className="mt-1 text-xs sm:text-sm text-ink/65">

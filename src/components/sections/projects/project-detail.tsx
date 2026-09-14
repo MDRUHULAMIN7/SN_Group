@@ -14,12 +14,12 @@ export function ProjectDetail({ project }: { project: Project }) {
         <Container className="grid gap-14 lg:grid-cols-12">
           <Reveal className="lg:col-span-4">
             <p className="eyebrow mb-6 text-cobalt">Project approach</p>
-            <h2 className="display-type text-5xl leading-[0.94] sm:text-7xl">Detail serving the bigger outcome.</h2>
+            <h2 className="display-type text-3xl sm:text-5xl lg:text-7xl font-extrabold tracking-tight leading-tight sm:leading-[0.94]">Detail serving the bigger outcome.</h2>
           </Reveal>
           <div className="lg:col-span-6 lg:col-start-7">
             {project.description.map((paragraph, index) => (
               <Reveal delay={index * 0.08} key={paragraph}>
-                <p className="mb-7 text-base leading-8 text-ink/65 sm:text-lg sm:leading-9">{paragraph}</p>
+                <p className="mb-7 text-base sm:text-lg leading-relaxed text-ink/75 sm:leading-9">{paragraph}</p>
               </Reveal>
             ))}
             <Reveal className="mt-10 border-t border-slate-200 pt-8" delay={0.16}>

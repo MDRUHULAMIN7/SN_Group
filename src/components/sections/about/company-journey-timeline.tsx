@@ -228,7 +228,7 @@ function TimelineRow({ item, hovered, onHover }: TimelineRowProps) {
               <h4 className="display-type text-xl sm:text-2xl font-bold tracking-tight text-ink transition-colors duration-300 group-hover:text-cobalt">
                 {item.title}
               </h4>
-              <p className="mt-2.5 text-xs sm:text-sm leading-6 text-ink/70 font-sans">
+              <p className="mt-2.5 text-sm sm:text-base leading-relaxed text-ink/75 font-sans">
                 {item.description}
               </p>
             </div>

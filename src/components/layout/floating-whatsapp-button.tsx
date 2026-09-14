@@ -5,7 +5,7 @@ export function FloatingWhatsappButton() {
   return (
     <a
       aria-label="Chat with S.N Group on WhatsApp"
-      className="group fixed bottom-5 right-5 z-30 isolate grid size-14 place-items-center rounded-full bg-[#25d366] text-white shadow-[0_12px_32px_rgba(0,0,0,0.22)] transition-[transform,box-shadow,background-color] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1 hover:scale-105 hover:bg-[#20bd5a] hover:shadow-[0_18px_38px_rgba(37,211,102,0.34)] active:scale-95 sm:bottom-7 sm:right-7"
+      className="group fixed bottom-3.5 right-3.5 z-30 isolate grid size-12 place-items-center rounded-full bg-[#25d366] text-white shadow-[0_12px_32px_rgba(0,0,0,0.22)] transition-[transform,box-shadow,background-color] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1 hover:scale-105 hover:bg-[#20bd5a] hover:shadow-[0_18px_38px_rgba(37,211,102,0.34)] active:scale-95 sm:bottom-7 sm:right-7 sm:size-14"
       href={siteConfig.whatsapp}
       rel="noreferrer"
       target="_blank"

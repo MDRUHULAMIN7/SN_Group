@@ -86,7 +86,7 @@ export function MissionVisionCards() {
               <div>
                 <p className="text-xs font-bold uppercase tracking-[0.18em] text-cobalt">{item.eyebrow}</p>
                 <h3 className="display-type mt-1 text-3xl font-bold tracking-tight text-ink sm:text-4xl">{item.title}</h3>
-              <p className="mt-4 text-sm leading-7 text-ink/75 sm:text-base sm:leading-8">
+              <p className="mt-4 text-base sm:text-lg leading-relaxed text-ink/75">
                 {item.summary}
                 {!isExpanded ? (
                   <button
@@ -113,7 +113,7 @@ export function MissionVisionCards() {
                 id={`${item.id}-details`}
               >
                 <div className="overflow-hidden">
-                  <p className="border-l-2 border-cobalt/25 pl-4 text-sm leading-7 text-ink/70 sm:text-base sm:leading-8">
+                  <p className="border-l-2 border-cobalt/25 pl-4 text-base sm:text-lg leading-relaxed text-ink/70">
                     {item.detail}
                     <button
                       aria-controls={`${item.id}-details`}

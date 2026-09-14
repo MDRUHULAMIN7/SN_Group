@@ -49,7 +49,7 @@ export function GalleryGrid({ items }: { items: readonly GalleryItem[] }) {
           return (
             <button
               className={cn(
-                "inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs font-bold transition-all duration-300 sm:text-sm",
+                "inline-flex items-center gap-2 rounded-full px-4 py-2.5 text-sm font-bold transition-all duration-300",
                 isSelected
                   ? "bg-cobalt text-white shadow-[0_4px_16px_rgba(21,94,239,0.35)] scale-[1.02]"
                   : "border border-slate-200 bg-white text-ink/75 hover:border-cobalt/40 hover:text-cobalt hover:bg-blue-50/50",
@@ -109,7 +109,7 @@ export function GalleryGrid({ items }: { items: readonly GalleryItem[] }) {
               <span className="inline-block rounded-md bg-cobalt/90 px-2.5 py-0.5 text-[0.62rem] font-bold uppercase tracking-wider text-white shadow-xs backdrop-blur-sm">
                 {item.category}
               </span>
-              <span className="display-type mt-2.5 block text-lg font-bold leading-snug sm:text-2xl text-white drop-shadow-sm line-clamp-2">
+              <span className="display-type mt-2.5 block text-xl font-bold leading-snug sm:text-2xl text-white drop-shadow-sm line-clamp-2">
                 {item.caption}
               </span>
             </span>

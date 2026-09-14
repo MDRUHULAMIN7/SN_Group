@@ -19,7 +19,7 @@ export function HeadquartersMap() {
             <h2 className="display-type text-3xl font-extrabold tracking-tight text-ink sm:text-5xl">
               Prime Gulshan Location
             </h2>
-            <p className="mt-4 text-sm sm:text-base leading-relaxed text-ink/65">
+            <p className="mt-4 text-base sm:text-lg leading-relaxed text-ink/75">
               Conveniently situated in the commercial heart of Dhaka. Visitors are welcome for scheduled boardroom consultations, tender reviews, and executive meetings.
             </p>
           </Reveal>

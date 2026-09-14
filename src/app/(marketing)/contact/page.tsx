@@ -59,20 +59,20 @@ export default function ContactPage() {
           <Reveal className="lg:col-span-5 flex flex-col justify-between">
             <div>
               <p className="eyebrow mb-4 sm:mb-6 text-cobalt">Request a Quotation</p>
-              <h2 className="display-type text-4xl leading-[0.94] sm:text-6xl lg:text-7xl font-extrabold tracking-tight">
+              <h2 className="display-type text-3xl sm:text-5xl lg:text-7xl font-extrabold tracking-tight leading-tight">
                 Give us the useful detail.
               </h2>
-              <p className="mt-6 text-sm sm:text-base leading-relaxed text-ink/65">
+              <p className="mt-6 text-base sm:text-lg leading-relaxed text-ink/75">
                 A specific brief helps us route your enquiry to the right technical directors and prepare a tailored feasibility, BOQ analysis, and quotation.
               </p>
 
               {/* Direct channels quick card */}
               <div className="mt-8 rounded-2xl border border-slate-200 bg-linear-to-br from-white via-white to-blue-50/40 p-5 sm:p-6 shadow-xs">
-                <p className="text-[0.68rem] font-bold uppercase tracking-widest text-cobalt">
+                <p className="text-xs font-bold uppercase tracking-widest text-cobalt">
                   Direct Inquiries & Headquarters
                 </p>
 
-                <div className="mt-4 space-y-3 text-xs font-semibold text-ink/80">
+                <div className="mt-4 space-y-3 text-sm font-semibold text-ink/80">
                   <div className="flex items-center gap-3">
                     <span className="grid size-8 shrink-0 place-items-center rounded-lg bg-blue-50 text-cobalt border border-cobalt/15">
                       <Phone aria-hidden="true" className="size-4" />

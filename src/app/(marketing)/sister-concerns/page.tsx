@@ -27,8 +27,17 @@ export default function SisterConcernsPage() {
                   <Image alt={concern.imageAlt} className="object-cover transition duration-700 group-hover:scale-105" fill sizes="(min-width: 1024px) 50vw, 100vw" src={concern.image} />
                 </div>
                 <div className="flex min-h-80 flex-col justify-between p-7 sm:p-10 lg:p-14">
-                  <div className="flex items-start justify-between"><span className="text-xs font-bold tabular-nums text-cobalt">0{index + 1}</span><span className="grid size-11 place-items-center rounded-full border border-cobalt/25 transition-colors group-hover:bg-cobalt group-hover:text-white"><ArrowUpRight aria-hidden="true" className="size-5" /></span></div>
-                  <div><p className="mb-3 text-xs font-bold uppercase tracking-[0.15em] text-cobalt">{concern.discipline}</p><h2 className="display-type text-5xl sm:text-6xl">{concern.name}</h2><p className="mt-5 max-w-lg text-sm leading-7 text-ink/60">{concern.description}</p></div>
+                  <div className="flex items-start justify-between">
+                    <span className="text-xs font-bold tabular-nums text-cobalt">0{index + 1}</span>
+                    <span className="grid size-11 place-items-center rounded-full border border-cobalt/25 transition-colors group-hover:bg-cobalt group-hover:text-white">
+                      <ArrowUpRight aria-hidden="true" className="size-5" />
+                    </span>
+                  </div>
+                  <div>
+                    <p className="mb-3 text-xs font-bold uppercase tracking-[0.15em] text-cobalt">{concern.discipline}</p>
+                    <h2 className="display-type text-2xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight">{concern.name}</h2>
+                    <p className="mt-4 max-w-lg text-base sm:text-lg leading-relaxed text-ink/75">{concern.description}</p>
+                  </div>
                 </div>
               </Link>
             </Reveal>
