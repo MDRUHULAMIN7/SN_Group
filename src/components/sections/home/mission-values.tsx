@@ -117,9 +117,9 @@ export function MissionValues() {
     >
       <Container className="relative z-10">
         {/* Mission & Vision Row */}
-        <div className="grid gap-8 lg:grid-cols-2">
+        <div className="grid items-stretch gap-8 lg:grid-cols-2">
           {/* Mission */}
-          <Reveal>
+          <Reveal className="h-full">
             <div className="relative flex h-full flex-col justify-between rounded-3xl border border-slate-200 bg-linear-to-br from-white to-blue-50/70 p-8 shadow-[0_18px_50px_rgba(15,23,42,0.07)] sm:p-10">
               <div>
                 <span className="grid size-12 place-items-center rounded-2xl bg-cobalt/20 text-blue-400">
@@ -137,7 +137,7 @@ export function MissionValues() {
           </Reveal>
 
           {/* Vision */}
-          <Reveal delay={0.1}>
+          <Reveal className="h-full" delay={0.1}>
             <div className="relative flex h-full flex-col justify-between rounded-3xl border border-slate-200 bg-linear-to-br from-white to-blue-50/70 p-8 shadow-[0_18px_50px_rgba(15,23,42,0.07)] sm:p-10">
               <div>
                 <span className="grid size-12 place-items-center rounded-2xl bg-cobalt/20 text-blue-400">

@@ -13,7 +13,7 @@ export function createMetadata({
   title,
   description,
   path,
-  image = "/images/hero-construction-cranes.webp",
+  image = "/images/hero-construction-cranes-hd.webp",
 }: MetadataInput): Metadata {
   const canonical = absoluteUrl(path);
   const resolvedTitle = title.includes(siteConfig.name) ? title : `${title} | ${siteConfig.name}`;

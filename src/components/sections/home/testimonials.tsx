@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState, type TransitionEvent } from "react";
-import { ChevronLeft, ChevronRight, Quote, Star } from "lucide-react";
+import { Quote, Star } from "lucide-react";
 import { useReducedMotion } from "motion/react";
 import { Container } from "@/components/ui/container";
 import { Reveal } from "@/components/motion/reveal";
@@ -153,26 +153,6 @@ export function TestimonialsSection() {
     setPosition(index);
   };
 
-  const prevSlide = () => {
-    setTransitionEnabled(true);
-    setPosition((current) => {
-      if (current <= 0) {
-        return testimonials.length - 1;
-      }
-      return current - 1;
-    });
-  };
-
-  const nextSlide = () => {
-    setTransitionEnabled(true);
-    setPosition((current) => {
-      if (current >= testimonials.length) {
-        return 1;
-      }
-      return current + 1;
-    });
-  };
-
   // Safe position prevents sliding into blank space beyond clones
   const safePosition = Math.min(position, testimonials.length);
 
@@ -257,38 +237,22 @@ export function TestimonialsSection() {
           </div>
         </div>
 
-        {/* Carousel Navigation: Prev/Next Arrows & Dots Indicator */}
-        <div aria-label="Choose testimonial" className="mt-8 flex items-center justify-center gap-3" role="group">
-          <button
-            aria-label="Previous testimonial"
-            className="grid size-9 place-items-center rounded-full border border-slate-200 bg-white text-ink/80 shadow-xs transition-all duration-300 hover:border-cobalt hover:bg-cobalt hover:text-white active:scale-95"
-            onClick={prevSlide}
-            type="button"
-          >
-            <ChevronLeft aria-hidden="true" className="size-4.5" />
-          </button>
-
-          <div className="flex items-center gap-2 px-1">
-            {testimonials.map((item, index) => (
-              <button
-                aria-label={`Show testimonial ${index + 1}`}
-                aria-pressed={activeIndex === index}
-                className={`h-2.5 rounded-full transition-[width,background-color] duration-300 ${activeIndex === index ? "w-8 bg-cobalt shadow-xs" : "w-2.5 bg-slate-300 hover:bg-slate-400"}`}
-                key={item.author}
-                onClick={() => selectSlide(index)}
-                type="button"
-              />
-            ))}
-          </div>
-
-          <button
-            aria-label="Next testimonial"
-            className="grid size-9 place-items-center rounded-full border border-slate-200 bg-white text-ink/80 shadow-xs transition-all duration-300 hover:border-cobalt hover:bg-cobalt hover:text-white active:scale-95"
-            onClick={nextSlide}
-            type="button"
-          >
-            <ChevronRight aria-hidden="true" className="size-4.5" />
-          </button>
+        {/* Carousel Dot Indicators */}
+        <div aria-label="Choose testimonial" className="mt-8 flex items-center justify-center gap-2" role="group">
+          {testimonials.map((item, index) => (
+            <button
+              aria-label={`Show testimonial ${index + 1}`}
+              aria-pressed={activeIndex === index}
+              className={`h-2 sm:h-2.5 rounded-full transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-cobalt ${
+                activeIndex === index
+                  ? "w-8 sm:w-10 bg-cobalt shadow-xs"
+                  : "w-2.5 bg-slate-300 hover:bg-slate-400"
+              }`}
+              key={item.author}
+              onClick={() => selectSlide(index)}
+              type="button"
+            />
+          ))}
         </div>
       </Container>
     </section>

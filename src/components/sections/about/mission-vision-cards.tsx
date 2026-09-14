@@ -34,7 +34,7 @@ export function MissionVisionCards() {
   const [expanded, setExpanded] = useState<Record<string, boolean>>({});
 
   return (
-    <div className="mt-10 grid items-start gap-6 sm:mt-16 sm:gap-8 lg:grid-cols-2">
+    <div className="mt-10 grid items-stretch gap-6 sm:mt-16 sm:gap-8 lg:grid-cols-2">
       {principles.map((item) => {
         const Icon = item.icon;
         const isExpanded = Boolean(expanded[item.id]);
@@ -42,7 +42,7 @@ export function MissionVisionCards() {
 
         return (
           <article
-            className={`group relative isolate transform-gpu overflow-hidden rounded-3xl border border-slate-200 bg-white p-6 shadow-[0_14px_45px_rgba(15,23,42,0.06)] transition-[transform,box-shadow,border-color] duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] will-change-transform hover:-translate-y-2 hover:scale-[1.02] sm:p-10 ${
+            className={`group relative isolate flex h-full flex-col justify-between transform-gpu overflow-hidden rounded-3xl border border-slate-200 bg-white p-6 shadow-[0_14px_45px_rgba(15,23,42,0.06)] transition-[transform,box-shadow,border-color] duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] will-change-transform hover:-translate-y-2 hover:scale-[1.02] sm:p-10 ${
               isMission
                 ? "hover:border-cobalt/40 hover:shadow-[0_26px_65px_rgba(21,94,239,0.16)]"
                 : "hover:border-sky-400/50 hover:shadow-[0_26px_65px_rgba(14,165,233,0.16)]"
@@ -82,9 +82,10 @@ export function MissionVisionCards() {
               </span>
             </div>
 
-            <div className="relative z-10 mt-7">
-              <p className="text-xs font-bold uppercase tracking-[0.18em] text-cobalt">{item.eyebrow}</p>
-              <h3 className="display-type mt-1 text-3xl font-bold tracking-tight text-ink sm:text-4xl">{item.title}</h3>
+            <div className="relative z-10 mt-7 flex flex-1 flex-col justify-between">
+              <div>
+                <p className="text-xs font-bold uppercase tracking-[0.18em] text-cobalt">{item.eyebrow}</p>
+                <h3 className="display-type mt-1 text-3xl font-bold tracking-tight text-ink sm:text-4xl">{item.title}</h3>
               <p className="mt-4 text-sm leading-7 text-ink/75 sm:text-base sm:leading-8">
                 {item.summary}
                 {!isExpanded ? (
@@ -131,7 +132,8 @@ export function MissionVisionCards() {
                 </div>
               </div>
             </div>
-          </article>
+          </div>
+        </article>
         );
       })}
     </div>

@@ -21,7 +21,7 @@ export function PageHero({
   title,
   breadcrumbs,
   eyebrow,
-  image = "/images/hero-engineers-team.webp",
+  image = "/images/hero-engineers-team-hd.webp",
   imageAlt = "",
 }: PageHeroProps) {
   const trail: BreadcrumbItem[] =
@@ -35,6 +35,7 @@ export function PageHero({
           className="size-full object-cover object-center saturate-[0.88]"
           fill
           priority
+          quality={90}
           sizes="100vw"
           src={image}
         />

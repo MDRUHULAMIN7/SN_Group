@@ -29,7 +29,7 @@ export const heroSlides: HeroSlide[] = [
     headline: "Building Trust. Delivering Excellence.",
     description:
       "A diversified Bangladeshi business group with more than 20 years of experience in construction and business operations, built on a foundation of integrity, quality, reliability, and long-term relationships.",
-    image: "/images/hero-engineers-team.webp",
+    image: "/images/hero-engineers-team-hd.webp",
     href: "/about",
     linkLabel: "Discover S.N Group",
   },
@@ -41,7 +41,7 @@ export const heroSlides: HeroSlide[] = [
     headline: "Building with Experience. Delivering with Responsibility.",
     description:
       "Specializing in government, defense, institutional, and infrastructure projects with extensive experience working with Bangladesh Army, Bangladesh Navy, and premier institutions.",
-    image: "/images/hero-construction-cranes.webp",
+    image: "/images/hero-construction-cranes-hd.webp",
     href: "/sister-concerns/sn-engineering-construction",
     linkLabel: "Explore Construction",
   },
@@ -53,7 +53,7 @@ export const heroSlides: HeroSlide[] = [
     headline: "Connecting Bangladesh with Global Markets.",
     description:
       "International trading arm sourcing agricultural commodities, food products, industrial chemicals, machinery, and equipment, while advancing export of Bangladeshi resources worldwide.",
-    image: "/images/hero-cargo-ship.webp",
+    image: "/images/hero-cargo-ship-hd.webp",
     href: "/sister-concerns/sn-import-export",
     linkLabel: "Explore Global Trade",
   },
@@ -65,7 +65,7 @@ export const heroSlides: HeroSlide[] = [
     headline: "Creating Value Through Real Estate.",
     description:
       "Developing high-quality residential and commercial properties in prime and strategically selected locations across Dhaka including Dhanmondi, Gulshan, Banani, and Uttara.",
-    image: "/images/project-commercial.webp",
+    image: "/images/hero-commercial-hd.webp",
     href: "/sister-concerns/mehrish-holdings",
     linkLabel: "Explore Real Estate",
   },
@@ -151,6 +151,7 @@ export function HeroSection() {
                 className="size-full object-cover object-center saturate-[0.92]"
                 fill
                 priority={index === 0}
+                quality={90}
                 sizes="100vw"
                 src={slide.image}
               />

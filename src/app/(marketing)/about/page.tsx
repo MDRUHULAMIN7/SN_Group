@@ -22,7 +22,7 @@ export const metadata: Metadata = createMetadata({
   description:
     "Learn about S.N Group's 20+ years of excellence across S.N Eng Construction BD Ltd., S.N Import & Export BD Ltd., and Mehrish Holdings Ltd. Read our mission, vision, history, leadership team, and institutional clients.",
   path: "/about",
-  image: "/images/hero-engineers-team.webp",
+  image: "/images/hero-engineers-team-hd.webp",
 });
 
 const contractorProgress = [
@@ -150,7 +150,7 @@ export default function AboutPage() {
       {/* Breadcrumb Header: Half Height, standard breadcrumb, no description */}
       <PageHero
         breadcrumbs={[{ label: "About Us" }]}
-        image="/images/hero-engineers-team.webp"
+        image="/images/hero-engineers-team-hd.webp"
         imageAlt="S.N Group engineering team"
         title="About S.N Group"
       />
@@ -193,7 +193,7 @@ export default function AboutPage() {
                 className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                 fill
                 sizes="(min-width: 1024px) 50vw, 100vw"
-                src="/images/hero-engineers-team.webp"
+                src="/images/hero-engineers-team-hd.webp"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-white/85 via-transparent to-transparent" />
             </div>
