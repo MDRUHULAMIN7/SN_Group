@@ -23,7 +23,7 @@ export default function ProjectsPage() {
             <p className="eyebrow mb-3 text-cobalt">Selected Project Stories</p>
             <h2 className="display-type text-3xl font-extrabold tracking-tight sm:text-5xl">Built for nationally important operations.</h2>
           </div>
-          <ProjectGrid projects={projects} />
+          <ProjectGrid projects={projects} showLocationFilter />
         </Container>
       </section>
       <ProjectPortfolioTable />

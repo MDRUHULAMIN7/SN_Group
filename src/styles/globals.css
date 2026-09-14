@@ -360,3 +360,20 @@ button:disabled {
   }
 
 }
+
+@keyframes travelDown {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.95;
+  }
+  80% {
+    opacity: 0.95;
+  }
+  100% {
+    transform: translateY(800%);
+    opacity: 0;
+  }
+}

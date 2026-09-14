@@ -179,31 +179,93 @@ export function ImportExportDetail({ concern }: { concern: SisterConcern }) {
         </Container>
       </section>
 
+      {/* Section 2: Tiger Brand Master Brand & Products Showcase */}
       <section className="blueprint-grid border-t border-slate-200 bg-white py-14 text-ink sm:py-20 lg:py-24" id="tiger-brand-products">
         <Container>
-          <Reveal className="mx-auto max-w-3xl text-center">
-            <p className="eyebrow mb-3 justify-center text-cobalt">Tiger Brand Showcase</p>
-            <h2 className="display-type text-4xl font-extrabold tracking-tight sm:text-6xl">Our Flagship Products</h2>
-            <p className="mt-4 text-sm leading-7 text-ink/62 sm:text-base">
-              Mehrish Premium food commodities sourced for dependable quality and commercial supply.
+          {/* Tiger Brand Master Identity Header */}
+          <Reveal className="mx-auto max-w-4xl text-center">
+            <div className="inline-flex items-center gap-2 rounded-full border border-cobalt/20 bg-blue-50/80 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.16em] text-cobalt shadow-[0_2px_10px_rgba(21,94,239,0.08)]">
+              <BadgeCheck aria-hidden="true" className="size-4" />
+              Flagship Brand by S.N Group
+            </div>
+            <h2 className="display-type mt-4 text-4xl font-extrabold tracking-tight sm:text-6xl">
+              Tiger Brand <span className="text-cobalt">[টাইগার ব্র্যান্ড]</span>
+            </h2>
+            <p className="mt-2 text-base font-bold uppercase tracking-[0.14em] text-cobalt sm:text-lg">
+              Mehris Premium Agricultural &amp; Food Commodities
             </p>
+            <p className="mt-4 text-sm leading-7 text-ink/70 sm:text-base sm:leading-8">
+              S.N Import &amp; Export BD Ltd is the official custodian and importer of <strong>Tiger Brand</strong>. Sourced directly from premier agricultural hubs in Vietnam and globally, Tiger Brand provides unadulterated purity, international 25 Kg export-grade packaging, and seamless commercial trade delivery across Bangladesh.
+            </p>
+
+            {/* Brand Assurance Badges */}
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+              <span className="inline-flex items-center gap-1.5 rounded-xl border border-slate-200 bg-slate-50/80 px-3.5 py-2 text-xs font-semibold text-ink">
+                <CheckCircle2 aria-hidden="true" className="size-4 text-emerald-600" />
+                Made in Vietnam
+              </span>
+              <span className="inline-flex items-center gap-1.5 rounded-xl border border-slate-200 bg-slate-50/80 px-3.5 py-2 text-xs font-semibold text-ink">
+                <CheckCircle2 aria-hidden="true" className="size-4 text-emerald-600" />
+                25 Kg Standard Export Packs
+              </span>
+              <span className="inline-flex items-center gap-1.5 rounded-xl border border-slate-200 bg-slate-50/80 px-3.5 py-2 text-xs font-semibold text-ink">
+                <CheckCircle2 aria-hidden="true" className="size-4 text-emerald-600" />
+                100% Pure &amp; Lab-Tested
+              </span>
+              <span className="inline-flex items-center gap-1.5 rounded-xl border border-slate-200 bg-slate-50/80 px-3.5 py-2 text-xs font-semibold text-ink">
+                <CheckCircle2 aria-hidden="true" className="size-4 text-emerald-600" />
+                Complete L/C &amp; Port Clearance
+              </span>
+            </div>
           </Reveal>
 
-          <div className="mt-10 grid gap-7 lg:grid-cols-2 sm:mt-14">
-            {products.map((product, productIndex) => (
-              <Reveal className="h-full" delay={productIndex * 0.08} key={product.title}>
+          {/* Sub-Products under Tiger Brand: Flagship Mehris Premium Products */}
+          <div className="mt-12 sm:mt-16">
+            <div className="mb-6 flex items-center justify-between border-b border-slate-200 pb-4">
+              <div>
+                <p className="text-xs font-bold uppercase tracking-[0.14em] text-cobalt">Products under Tiger Brand</p>
+                <h3 className="display-type text-2xl font-extrabold sm:text-3xl">Flagship Product Line</h3>
+              </div>
+              <span className="rounded-full bg-blue-50 px-3 py-1 text-xs font-bold text-cobalt">
+                2 Core Flagship Lines
+              </span>
+            </div>
+
+            <div className="grid gap-8 lg:grid-cols-2">
+              {/* Product 1: Mehris Premium Cassia / Cinnamon */}
+              <Reveal className="h-full" delay={0.06}>
                 <article className="group relative flex h-full flex-col overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-[0_18px_55px_rgba(15,23,42,0.08)] transition-[border-color,box-shadow,transform] duration-700 ease-out hover:-translate-y-2 hover:border-cobalt/35 hover:shadow-[0_30px_76px_rgba(21,94,239,0.17)]">
-                  <span className="pointer-events-none absolute -right-16 bottom-20 z-20 size-40 rounded-full border border-dashed border-cobalt/10 opacity-0 transition-all duration-1000 group-hover:rotate-90 group-hover:scale-125 group-hover:opacity-100" />
-                  <ProductImageSlider images={product.images} title={product.title} />
+                  <ProductImageSlider
+                    images={[
+                      "/images/import-export/tiger-cinnamon-brand.jpg",
+                      "/images/import-export/tiger-cinnamon-brand.png",
+                    ]}
+                    title="Tiger Brand — Mehris Premium Cassia / Cinnamon [ক্যাসিয়া / দারুচিনি]"
+                  />
                   <div className="flex flex-1 flex-col p-6 sm:p-8">
-                    <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-cobalt">
-                      <BadgeCheck aria-hidden="true" className="size-4" />
-                      Tiger Brand
+                    <div className="flex flex-wrap items-center justify-between gap-2">
+                      <span className="inline-flex items-center gap-1.5 rounded-full border border-cobalt/20 bg-blue-50 px-3 py-1 text-[0.7rem] font-bold uppercase tracking-[0.14em] text-cobalt">
+                        <BadgeCheck aria-hidden="true" className="size-3.5" />
+                        Brand: Tiger Brand
+                      </span>
+                      <span className="text-xs font-bold text-ink/60">Product Line: Mehris Premium</span>
                     </div>
-                    <h3 className="display-type mt-4 text-2xl font-bold leading-tight sm:text-3xl">
-                      {product.title} <span className="whitespace-nowrap text-cobalt">[{product.bangla}]</span>
-                    </h3>
-                    <p className="mt-3 text-sm font-semibold text-ink/58">{product.details}</p>
+
+                    <h4 className="display-type mt-4 text-2xl font-bold leading-tight sm:text-3xl">
+                      Tiger Brand — Mehris Premium Cassia / Cinnamon{" "}
+                      <span className="whitespace-nowrap text-cobalt">[ক্যাসিয়া / দারুচিনি]</span>
+                    </h4>
+
+                    <div className="mt-4 space-y-1.5 rounded-xl border border-slate-100 bg-slate-50/70 p-3.5 text-xs text-ink/75">
+                      <p><strong className="font-semibold text-ink">Net Weight:</strong> 25 Kg standard packaging</p>
+                      <p><strong className="font-semibold text-ink">Origin:</strong> Made in Vietnam</p>
+                      <p><strong className="font-semibold text-ink">Import Custodian:</strong> S.N Group (S.N Import &amp; Export BD Ltd)</p>
+                    </div>
+
+                    <p className="mt-4 text-sm leading-6 text-ink/65">
+                      Export-grade, high-aroma whole cassia/cinnamon sticks sorted for moisture control, thick bark consistency, and high essential cinnamaldehyde content.
+                    </p>
+
                     <ButtonLink className="mt-7 w-full justify-center sm:w-fit" href="/contact#quotation-form" variant="primary">
                       Send Inquiry for this Product
                       <ArrowUpRight aria-hidden="true" className="size-4" />
@@ -211,8 +273,97 @@ export function ImportExportDetail({ concern }: { concern: SisterConcern }) {
                   </div>
                 </article>
               </Reveal>
-            ))}
+
+              {/* Product 2: Mehris Premium Black Pepper */}
+              <Reveal className="h-full" delay={0.12}>
+                <article className="group relative flex h-full flex-col overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-[0_18px_55px_rgba(15,23,42,0.08)] transition-[border-color,box-shadow,transform] duration-700 ease-out hover:-translate-y-2 hover:border-cobalt/35 hover:shadow-[0_30px_76px_rgba(21,94,239,0.17)]">
+                  <ProductImageSlider
+                    images={[
+                      "/images/import-export/tiger-black-pepper-brand-secondary.jpg",
+                      "/images/import-export/tiger-black-pepper-brand.jpg",
+                      "/images/import-export/tiger-black-pepper-brand-alt.jpg",
+                    ]}
+                    title="Tiger Brand — Mehris Premium Black Pepper [গোলমরিচ]"
+                  />
+                  <div className="flex flex-1 flex-col p-6 sm:p-8">
+                    <div className="flex flex-wrap items-center justify-between gap-2">
+                      <span className="inline-flex items-center gap-1.5 rounded-full border border-cobalt/20 bg-blue-50 px-3 py-1 text-[0.7rem] font-bold uppercase tracking-[0.14em] text-cobalt">
+                        <BadgeCheck aria-hidden="true" className="size-3.5" />
+                        Brand: Tiger Brand
+                      </span>
+                      <span className="text-xs font-bold text-ink/60">Product Line: Mehris Premium</span>
+                    </div>
+
+                    <h4 className="display-type mt-4 text-2xl font-bold leading-tight sm:text-3xl">
+                      Tiger Brand — Mehris Premium Black Pepper{" "}
+                      <span className="whitespace-nowrap text-cobalt">[গোলমরিচ]</span>
+                    </h4>
+
+                    <div className="mt-4 space-y-1.5 rounded-xl border border-slate-100 bg-slate-50/70 p-3.5 text-xs text-ink/75">
+                      <p><strong className="font-semibold text-ink">Net Weight:</strong> 25 Kg standard packaging</p>
+                      <p><strong className="font-semibold text-ink">Origin:</strong> Made in Vietnam</p>
+                      <p><strong className="font-semibold text-ink">Import Custodian:</strong> S.N Group (S.N Import &amp; Export BD Ltd)</p>
+                    </div>
+
+                    <p className="mt-4 text-sm leading-6 text-ink/65">
+                      Heavy-density, bold-grained whole black pepper selected for high piperine percentage, pungent bite, and moisture-free commercial shelf life.
+                    </p>
+
+                    <ButtonLink className="mt-7 w-full justify-center sm:w-fit" href="/contact#quotation-form" variant="primary">
+                      Send Inquiry for this Product
+                      <ArrowUpRight aria-hidden="true" className="size-4" />
+                    </ButtonLink>
+                  </div>
+                </article>
+              </Reveal>
+            </div>
           </div>
+
+          {/* Extended Products & Custom Client Import Guarantee */}
+          <Reveal className="mt-12" delay={0.16}>
+            <div className="rounded-3xl border border-slate-200 bg-gradient-to-br from-blue-50/70 via-white to-slate-50/60 p-7 sm:p-10">
+              <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+                <div>
+                  <div className="inline-flex items-center gap-2 rounded-full border border-cobalt/20 bg-white px-3 py-1 text-xs font-bold uppercase tracking-[0.14em] text-cobalt">
+                    <span>Extended Portfolio &amp; Custom Sourcing</span>
+                  </div>
+                  <h3 className="display-type mt-3 text-2xl font-extrabold tracking-tight sm:text-3xl">
+                    More Products Available Under S.N Import &amp; Export
+                  </h3>
+                  <p className="mt-3 text-sm leading-7 text-ink/70">
+                    Apart from Cassia and Black Pepper, we supply and import the following agricultural food commodities. <strong>If you give us an order, we can import any item on your behalf</strong> with verified origin inspection, competitive bulk pricing, and port clearance.
+                  </p>
+                  <div className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-3">
+                    {[
+                      { name: "Cloves", bangla: "লবঙ্গ" },
+                      { name: "Red Lentils", bangla: "মসুর ডাল" },
+                      { name: "Cumin", bangla: "জিরা" },
+                      { name: "Milk Powder", bangla: "দুধের গুঁড়া" },
+                      { name: "Chemical Products", bangla: "রাসায়নিক পণ্য" },
+                      { name: "Custom Bulk Order", bangla: "কাস্টম আমদানি" },
+                    ].map((item) => (
+                      <div className="rounded-xl border border-slate-200/80 bg-white p-3 shadow-sm transition-all hover:border-cobalt/40" key={item.name}>
+                        <p className="text-xs font-bold text-ink">{item.name}</p>
+                        <p className="text-[0.72rem] font-medium text-cobalt">{item.bangla}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="flex flex-col items-start rounded-2xl border border-cobalt/20 bg-white p-6 shadow-sm sm:p-7">
+                  <p className="text-xs font-bold uppercase tracking-[0.16em] text-cobalt">Client Import Guarantee</p>
+                  <h4 className="display-type mt-1 text-xl font-bold">Have a custom commodity requirement?</h4>
+                  <p className="mt-2 text-xs leading-6 text-ink/65">
+                    Submit your target volume, required grade, and delivery schedule. Our international trade desk will establish supply lines, open Letters of Credit (L/C), and deliver landed cargo to your facility.
+                  </p>
+                  <ButtonLink className="mt-6 w-full justify-center" href="/contact#quotation-form" variant="primary">
+                    Order a Custom Import
+                    <ArrowUpRight aria-hidden="true" className="size-4" />
+                  </ButtonLink>
+                </div>
+              </div>
+            </div>
+          </Reveal>
         </Container>
       </section>
 

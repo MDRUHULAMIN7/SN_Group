@@ -30,6 +30,7 @@ export interface Project {
   slug: string;
   category: string;
   location: string;
+  locationGroup?: string;
   year: string;
   status: "Completed" | "Completion not listed";
   summary: string;

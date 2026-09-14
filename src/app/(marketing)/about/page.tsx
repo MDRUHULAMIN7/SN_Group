@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import {
   ArrowUpRight,
-  Calendar,
   CheckCircle2,
   Clock3,
   Quote,
@@ -12,6 +11,8 @@ import { PageHero } from "@/components/ui/page-hero";
 import { Container } from "@/components/ui/container";
 import { Reveal } from "@/components/motion/reveal";
 import { MissionVisionCards } from "@/components/sections/about/mission-vision-cards";
+import { CompanyJourneyTimeline } from "@/components/sections/about/company-journey-timeline";
+import { ContractorProgressionTimeline } from "@/components/sections/about/contractor-progression-timeline";
 import { ButtonLink } from "@/components/ui/button";
 import { projects } from "@/data/projects";
 import { createMetadata } from "@/lib/seo";
@@ -23,45 +24,6 @@ export const metadata: Metadata = createMetadata({
   path: "/about",
   image: "/images/hero-engineers-team.webp",
 });
-
-const milestones = [
-  {
-    year: "2006",
-    title: "Founding & Construction Roots",
-    description:
-      "S.N Eng Construction began operations as a proprietorship, establishing the construction and engineering foundation of today’s group.",
-  },
-  {
-    year: "2011",
-    title: "Defense Project Portfolio",
-    description:
-      "The documented project portfolio expanded through Bangladesh Army works at Qadirabad and Parbatipur Cantonments.",
-  },
-  {
-    year: "2015",
-    title: "Major Infrastructure Delivery",
-    description:
-      "Delivery capabilities grew into major bridge, culvert, RCC road, drain, hardstanding, and multi-storey institutional works.",
-  },
-  {
-    year: "2019",
-    title: "Private Limited Incorporation",
-    description:
-      "The construction business was incorporated as a private limited company under the Companies Act 1994 in Bangladesh.",
-  },
-  {
-    year: "2021–24",
-    title: "Tri-Service Project Expansion",
-    description:
-      "The portfolio expanded across Bangladesh Army, Navy, and Air Force projects, including aviation, operations, fuel, and drainage infrastructure.",
-  },
-  {
-    year: "Today",
-    title: "A Diversified Business Group",
-    description:
-      "S.N Group connects construction, international import and export, and real estate development through three specialist operating companies.",
-  },
-];
 
 const contractorProgress = [
   {
@@ -268,14 +230,14 @@ export default function AboutPage() {
       {/* 4. Company History */}
       <section
         aria-label="Company History"
-        className="border-t border-slate-200 bg-white py-14 sm:py-20 lg:py-24 text-ink"
+        className="blueprint-grid border-t border-slate-200 bg-white py-14 sm:py-20 lg:py-24 text-ink relative overflow-hidden"
         id="company-history"
       >
-        <Container>
-          <div className="mx-auto max-w-3xl text-center">
+        <Container className="relative z-10">
+          <div className="mx-auto max-w-3xl text-center mb-10 sm:mb-16">
             <Reveal>
-              <p className="eyebrow mb-3 sm:mb-4 justify-center text-blue-400">Two Decades of Progress</p>
-              <h2 className="display-type text-2.5xl xs:text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight">
+              <p className="eyebrow mb-3 sm:mb-4 justify-center text-cobalt">Two Decades of Progress</p>
+              <h2 className="display-type text-2.5xl xs:text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-ink">
                 Company History
               </h2>
               <p className="mt-3 sm:mt-4 text-sm sm:text-lg leading-6 sm:leading-7 text-ink/65">
@@ -284,48 +246,9 @@ export default function AboutPage() {
             </Reveal>
           </div>
 
-          <div className="mt-10 sm:mt-16 relative">
-            <div className="grid gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {milestones.map((item, index) => (
-                <Reveal
-                  className="h-full"
-                  delay={index * 0.07}
-                  key={item.year}
-                >
-                  <div className="group relative flex h-full flex-col justify-between overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 sm:p-8 shadow-[0_10px_32px_rgba(15,23,42,0.05)] transition-all duration-400 ease-out hover:-translate-y-2 hover:border-cobalt/40 hover:shadow-[0_22px_54px_rgba(21,94,239,0.15)]">
-                    {/* Active vertical left accent line */}
-                    <span
-                      aria-hidden="true"
-                      className="absolute left-0 top-0 bottom-0 w-1 bg-cobalt/25 transition-all duration-400 group-hover:w-1.5 group-hover:bg-cobalt"
-                    />
-                    {/* Corner ambient glow */}
-                    <span
-                      aria-hidden="true"
-                      className="pointer-events-none absolute -right-8 -top-8 size-24 rounded-full bg-cobalt/[0.04] transition-transform duration-500 group-hover:scale-150"
-                    />
-
-                    <div className="relative z-10">
-                      <div className="flex items-center justify-between gap-4">
-                        <span className="inline-flex items-center gap-1.5 rounded-full border border-cobalt/20 bg-blue-50 px-3 py-1 text-xs font-bold text-cobalt transition-all duration-300 group-hover:bg-cobalt group-hover:text-white group-hover:shadow-[0_4px_14px_rgba(21,94,239,0.3)]">
-                          <Calendar aria-hidden="true" className="size-3.5" />
-                          {item.year}
-                        </span>
-                        <span className="text-xs font-extrabold tracking-widest text-cobalt/35 transition-colors duration-300 group-hover:text-cobalt">
-                          0{index + 1}
-                        </span>
-                      </div>
-                      <h3 className="display-type mt-5 text-xl sm:text-2xl font-bold text-ink transition-colors duration-300 group-hover:text-cobalt">
-                        {item.title}
-                      </h3>
-                      <p className="mt-2.5 text-xs sm:text-sm leading-6 text-ink/65">
-                        {item.description}
-                      </p>
-                    </div>
-                  </div>
-                </Reveal>
-              ))}
-            </div>
-          </div>
+          <Reveal delay={0.1}>
+            <CompanyJourneyTimeline />
+          </Reveal>
         </Container>
       </section>
 
@@ -347,33 +270,9 @@ export default function AboutPage() {
             </p>
           </Reveal>
 
-          <div className="relative mt-11 grid gap-5 lg:mt-16 lg:grid-cols-3">
-            <span aria-hidden="true" className="absolute left-[16%] right-[16%] top-9 hidden h-px bg-gradient-to-r from-cobalt/15 via-cobalt/60 to-cobalt/15 lg:block" />
-            {contractorProgress.map((stage, index) => (
-              <Reveal className="relative h-full" delay={index * 0.09} key={stage.className}>
-                <article className="group relative isolate h-full overflow-hidden rounded-3xl border border-slate-200 bg-white p-6 shadow-[0_16px_48px_rgba(15,23,42,0.065)] transition-[transform,border-color,box-shadow] duration-700 hover:-translate-y-2 hover:border-cobalt/35 hover:shadow-[0_28px_68px_rgba(21,94,239,0.15)] sm:p-8">
-                  <span className="pointer-events-none absolute -right-14 -top-14 size-40 rounded-full border-[24px] border-cobalt/[0.035] transition-transform duration-1000 group-hover:rotate-45 group-hover:scale-125" />
-                  <span className="relative z-10 grid size-[4.5rem] place-items-center rounded-2xl border border-cobalt/20 bg-white text-xl font-black text-cobalt shadow-[0_12px_30px_rgba(21,94,239,0.13)] transition-all duration-700 group-hover:rotate-3 group-hover:scale-105 group-hover:shadow-[0_16px_38px_rgba(21,94,239,0.2)]">
-                    {stage.className.replace("Class ", "")}
-                  </span>
-                  <div className="relative z-10 mt-7">
-                    <div className="flex flex-wrap items-center gap-2">
-                      <span className="rounded-full bg-cobalt px-3 py-1 text-xs font-extrabold uppercase tracking-[0.12em] text-white">
-                        {stage.className}
-                      </span>
-                      <span className="text-xs font-bold uppercase tracking-[0.12em] text-ink/42">{stage.period}</span>
-                    </div>
-                    <h3 className="display-type mt-4 text-2xl font-bold tracking-tight">{stage.title}</h3>
-                    <p className="mt-3 text-sm leading-7 text-ink/64">{stage.description}</p>
-                    <div className="mt-6 flex items-center gap-2 border-t border-slate-100 pt-5 text-xs font-bold uppercase tracking-[0.12em] text-cobalt">
-                      <TrendingUp aria-hidden="true" className="size-4" />
-                      {stage.proof}
-                    </div>
-                  </div>
-                </article>
-              </Reveal>
-            ))}
-          </div>
+          <Reveal delay={0.1}>
+            <ContractorProgressionTimeline />
+          </Reveal>
         </Container>
       </section>
 

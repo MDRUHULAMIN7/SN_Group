@@ -6,6 +6,7 @@ export const projects = [
     slug: "air-movement-flight-ops-wing-hq",
     category: "Defense & Aviation",
     location: "BAF Base Bashar, Tejgaon",
+    locationGroup: "Dhaka & Tejgaon",
     year: "2024",
     status: "Completed",
     summary:
@@ -37,6 +38,7 @@ export const projects = [
     slug: "216-mro-overhauling-hangar",
     category: "Defense & Aviation",
     location: "BAF Base Bashar, Tejgaon",
+    locationGroup: "Dhaka & Tejgaon",
     year: "2023",
     status: "Completed",
     summary:
@@ -64,12 +66,75 @@ export const projects = [
     },
   },
   {
+    title: "Armoured Personnel Carrier (APC) Hangar",
+    slug: "apc-hangar-pgr-dhaka",
+    category: "Defense & Aviation",
+    location: "PGR Area, Dhaka Cantonment",
+    locationGroup: "Dhaka & Tejgaon",
+    year: "2017",
+    status: "Completed",
+    summary:
+      "Specialized heavy steel structural hangar and maintenance facility for Armoured Personnel Carriers (APC) at the President Guard Regiment (PGR) area.",
+    description: [
+      "Executed for the Bangladesh Army and CEA at the President Guard Regiment (PGR) area within Dhaka Cantonment.",
+      "Engineered with heavy-span structural steel framing, reinforced concrete hardstandings, and tactical vehicle ingress systems.",
+    ],
+    coverImage: "/images/gallery/apc-hangar-sylhet.webp",
+    coverAlt: "Armoured Personnel Carrier (APC) Hangar at PGR Area Dhaka Cantonment",
+    gallery: [
+      { src: "/images/gallery/apc-hangar-sylhet.webp", alt: "Specialized vehicle hangar steel structure" },
+      { src: "/images/gallery/overhauling-hangar-exterior.webp", alt: "Heavy military structural shelter" },
+    ],
+    services: ["Steel structural engineering", "Heavy vehicular hangar", "Hardstanding pavement", "Ancillary facilities"],
+    client: "Bangladesh Army / CEA",
+    agreementNo: "CEA/343/2015-16 & CEA/515/2016-17",
+    contractValue: "BDT 3,59,12,873.76",
+    commencement: "29-Jun-2016",
+    completion: "Completed",
+    seo: {
+      title: "APC Hangar Structure | S.N Group Projects",
+      description: "Armoured Personnel Carrier (APC) steel hangar and ancillary works delivered at PGR Area, Dhaka Cantonment.",
+    },
+  },
+  {
+    title: "68-Bay MT Garage & Multipurpose Complex",
+    slug: "bof-gazipur-mt-garage-multipurpose-hall",
+    category: "Defense & Industrial",
+    location: "BOF Gazipur Cantonment",
+    locationGroup: "Gazipur & Rajendrapur",
+    year: "2014",
+    status: "Completed",
+    summary:
+      "Construction of a 68-bay MT garage-cum-multipurpose hall including internal and external services at Bangladesh Ordnance Factories (BOF) Gazipur.",
+    description: [
+      "Delivered for the Bangladesh Army and CEA at BOF Gazipur Cantonment, this strategic vehicular facility features a 68-bay MT garage combined with a multipurpose hall.",
+      "The contract encompassed heavy foundation earthworks, structural steel framing, high-durability floor hardeners, and external service utilities.",
+    ],
+    coverImage: "/images/gallery/gazipur-bof-project.jpg",
+    coverAlt: "68-bay MT Garage and Multipurpose complex at BOF Gazipur Cantonment",
+    gallery: [
+      { src: "/images/gallery/gazipur-bof-project.jpg", alt: "BOF Gazipur MT Garage project site" },
+      { src: "/images/gallery/overhauling-hangar-exterior.webp", alt: "Heavy vehicular structural engineering" },
+    ],
+    services: ["Vehicular garage bays", "Multipurpose complex", "Structural engineering", "Internal & external services"],
+    client: "Bangladesh Army / CEA",
+    agreementNo: "CEA/178/2013-14",
+    contractValue: "BDT 3,62,47,282.65",
+    commencement: "23-Mar-2014",
+    completion: "22-Dec-2014",
+    seo: {
+      title: "68-Bay MT Garage Complex, BOF Gazipur | S.N Group Projects",
+      description: "68-bay MT garage and multipurpose hall built at Bangladesh Ordnance Factories (BOF) Gazipur Cantonment.",
+    },
+  },
+  {
     title: "Underground Fuel Tanks & Dispensing Unit",
     slug: "underground-fuel-tanks-dispensing-unit",
     category: "Defense Utilities",
     location: "Sheikh Hasina Cantonment, Barishal",
+    locationGroup: "Barishal",
     year: "2021",
-    status: "Completion not listed",
+    status: "Completed",
     summary:
       "Supply and installation of three 45,000-litre underground fuel tanks and a fuel dispensing unit with ancillary works.",
     description: [
@@ -87,10 +152,41 @@ export const projects = [
     agreementNo: "CEA/S16/2020-21",
     contractValue: "BDT 3,72,15,209.66",
     commencement: "27-May-2021",
-    completion: "Completion not listed",
+    completion: "Completed",
     seo: {
       title: "Underground Fuel Tanks & Dispensing Unit | S.N Group Projects",
       description: "Fuel storage and dispensing infrastructure undertaken at Sheikh Hasina Cantonment, Barishal.",
+    },
+  },
+  {
+    title: "Disposal Drainage & Flood Protection Infrastructure",
+    slug: "disposal-drain-infrastructure-barishal",
+    category: "Defense Utilities",
+    location: "Sheikh Hasina Cantonment, Barishal",
+    locationGroup: "Barishal",
+    year: "2021",
+    status: "Completed",
+    summary:
+      "Construction of disposal and outlet drainage networks with sandbag bank stabilization for Island No. 02 and 03.",
+    description: [
+      "Engineered for the Bangladesh Army and CEA at Sheikh Hasina Cantonment in Barishal to secure island formations against monsoon inundation.",
+      "Scope included deep drainage channels, sandbag embankment armoring, and outfall structures.",
+    ],
+    coverImage: "/images/gallery/water-pump-house-barishal.webp",
+    coverAlt: "Water management and pump station infrastructure in Barishal",
+    gallery: [
+      { src: "/images/gallery/water-pump-house-barishal.webp", alt: "Utility pump infrastructure in Barishal" },
+      { src: "/images/gallery/fuel-pump-house-barishal.webp", alt: "Barishal defense utility station" },
+    ],
+    services: ["Drainage civil works", "Island stabilization", "Outfall culverts", "Water infrastructure"],
+    client: "Bangladesh Army / CEA",
+    agreementNo: "CEA/750/2019-20",
+    contractValue: "BDT 5,58,97,396.36",
+    commencement: "30-Jun-2020",
+    completion: "28-Feb-2021",
+    seo: {
+      title: "Drainage Infrastructure, Barishal | S.N Group Projects",
+      description: "Disposal drainage and embankment protection delivered at Sheikh Hasina Cantonment, Barishal.",
     },
   },
   {
@@ -98,8 +194,9 @@ export const projects = [
     slug: "academic-administrative-building-sylhet",
     category: "Institutional",
     location: "Sylhet Cantonment",
+    locationGroup: "Sylhet Cantonment",
     year: "2018",
-    status: "Completion not listed",
+    status: "Completed",
     summary:
       "A four-storey academic-cum-administrative building with four-storey foundation and ancillary works.",
     description: [
@@ -118,19 +215,20 @@ export const projects = [
     agreementNo: "E in C/13/2018-19",
     contractValue: "BDT 8,03,55,927.00",
     commencement: "17-Sep-2018",
-    completion: "Completion not listed",
+    completion: "Completed",
     seo: {
       title: "Academic-cum-Administrative Building | S.N Group Projects",
       description: "Academic and administrative building project undertaken at Sylhet Cantonment.",
     },
   },
   {
-    title: "Female Hostel Complex",
+    title: "Female Hostel Complex (100-Bed)",
     slug: "female-hostel-sylhet",
     category: "Residential & Accommodation",
     location: "Sylhet Cantonment",
+    locationGroup: "Sylhet Cantonment",
     year: "2018",
-    status: "Completion not listed",
+    status: "Completed",
     summary:
       "A 100-bed, four-storey female hostel with kitchen, laundry, foundation, and ancillary works.",
     description: [
@@ -149,10 +247,41 @@ export const projects = [
     agreementNo: "E in C/17/2018-19",
     contractValue: "BDT 6,12,19,300.00",
     commencement: "16-Sep-2018",
-    completion: "Completion not listed",
+    completion: "Completed",
     seo: {
       title: "Female Hostel Complex, Sylhet | S.N Group Projects",
       description: "100-bed female hostel with kitchen and laundry facilities undertaken at Sylhet Cantonment.",
+    },
+  },
+  {
+    title: "100-Bed Boys Hostel Complex",
+    slug: "boys-hostel-sylhet",
+    category: "Residential & Accommodation",
+    location: "Sylhet Cantonment",
+    locationGroup: "Sylhet Cantonment",
+    year: "2018",
+    status: "Completed",
+    summary:
+      "A 100-bedded, four-storey residential accommodation building with four-storey foundation and ancillary utility works.",
+    description: [
+      "Constructed for institutional cadet and student accommodation at Sylhet Cantonment under the E-in-C branch.",
+      "Features four storeys of modern dormitory units, communal lounges, study halls, and complete sanitary infrastructure.",
+    ],
+    coverImage: "/images/gallery/boys-hostel-sylhet.webp",
+    coverAlt: "100-bed Boys Hostel at Sylhet Cantonment",
+    gallery: [
+      { src: "/images/gallery/boys-hostel-sylhet.webp", alt: "Boys hostel building exterior" },
+      { src: "/images/gallery/staff-dormitory-sylhet.webp", alt: "Residential quarters complex" },
+    ],
+    services: ["Multi-storey residential construction", "100-bed capacity", "Foundation works", "Sanitary & electrification"],
+    client: "Bangladesh Army / E-in-C",
+    agreementNo: "E in C/22/2018-19",
+    contractValue: "BDT 5,25,65,458.00",
+    commencement: "20-Sep-2018",
+    completion: "Completed",
+    seo: {
+      title: "Boys Hostel Complex, Sylhet | S.N Group Projects",
+      description: "100-bed four-storey boys hostel building delivered at Sylhet Cantonment.",
     },
   },
   {
@@ -160,8 +289,9 @@ export const projects = [
     slug: "spinning-shed-sylhet",
     category: "Industrial",
     location: "Sylhet Cantonment",
+    locationGroup: "Sylhet Cantonment",
     year: "2018",
-    status: "Completion not listed",
+    status: "Completed",
     summary:
       "A two-storey cotton and jute spinning shed with two-storey foundation and ancillary works.",
     description: [
@@ -180,13 +310,86 @@ export const projects = [
     agreementNo: "E in C/10/2018-19",
     contractValue: "BDT 10,25,51,894.28",
     commencement: "19-Sep-2018",
-    completion: "Completion not listed",
+    completion: "Completed",
     seo: {
       title: "Spinning Shed, Sylhet | S.N Group Projects",
       description: "Cotton and jute spinning shed construction project undertaken at Sylhet Cantonment.",
     },
   },
+  {
+    title: "Weaving Shed — Weaving & Knitting Facility",
+    slug: "weaving-shed-sylhet",
+    category: "Industrial",
+    location: "Sylhet Cantonment",
+    locationGroup: "Sylhet Cantonment",
+    year: "2018",
+    status: "Completed",
+    summary:
+      "A two-storey industrial weaving and knitting production shed with heavy reinforced foundation and mechanical ancillary works.",
+    description: [
+      "Delivered under the Engineer-in-Chief (E-in-C) branch at Sylhet Cantonment, this industrial complex accommodates dedicated weaving and knitting machinery.",
+      "Engineered with high vibration dampening foundations, industrial air handling, and high-load power distribution.",
+    ],
+    coverImage: "/images/gallery/weaving-shed-sylhet.webp",
+    coverAlt: "Industrial Weaving Shed facility at Sylhet Cantonment",
+    gallery: [
+      { src: "/images/gallery/weaving-shed-sylhet.webp", alt: "Weaving Shed facade at Sylhet Cantonment" },
+      { src: "/images/gallery/spinning-shed-sylhet.webp", alt: "Industrial manufacturing shed" },
+    ],
+    services: ["Industrial manufacturing civil works", "Two-storey shed", "Vibration-isolated foundations", "Ancillary utilities"],
+    client: "Bangladesh Army / E-in-C",
+    agreementNo: "E in C/24/2018-19",
+    contractValue: "BDT 7,92,11,002.00",
+    commencement: "20-Sep-2018",
+    completion: "Completed",
+    seo: {
+      title: "Weaving Shed Facility, Sylhet | S.N Group Projects",
+      description: "Two-storey industrial weaving and knitting shed delivered at Sylhet Cantonment.",
+    },
+  },
+  {
+    title: "Cantonment Central Mosque, Sub-Station & Boundary",
+    slug: "mosque-substation-sylhet",
+    category: "Institutional & Utilities",
+    location: "Sylhet Cantonment",
+    locationGroup: "Sylhet Cantonment",
+    year: "2020",
+    status: "Completed",
+    summary:
+      "Construction of a single-storey mosque, electrical sub-station building, and perimeter boundary wall with security fencing.",
+    description: [
+      "Delivered under the E-in-C branch at Sylhet Cantonment, comprising a dedicated community prayer hall, electrical sub-station, and perimeter security works.",
+      "Included transformer plinths, heavy boundary wall with barbed-wire security topping, and civil utility connections.",
+    ],
+    coverImage: "/images/gallery/mosque-sylhet.webp",
+    coverAlt: "Mosque facility at Sylhet Cantonment",
+    gallery: [
+      { src: "/images/gallery/mosque-sylhet.webp", alt: "Mosque exterior at Sylhet Cantonment" },
+      { src: "/images/gallery/sub-station-sylhet.webp", alt: "Single-storey electrical sub-station building" },
+      { src: "/images/gallery/boundary-wall-sylhet.webp", alt: "Perimeter boundary wall with security fencing" },
+    ],
+    services: ["Religious facility civil works", "Electrical sub-station", "Boundary wall & fencing", "Site electrification"],
+    client: "Bangladesh Army / E-in-C",
+    agreementNo: "E in C/308, 309 & 310/2019-20",
+    contractValue: "BDT 1,80,15,987.18",
+    commencement: "30-Jun-2020",
+    completion: "Completed",
+    seo: {
+      title: "Central Mosque & Sub-Station, Sylhet | S.N Group Projects",
+      description: "Mosque, electrical sub-station, and boundary wall infrastructure at Sylhet Cantonment.",
+    },
+  },
 ] as const satisfies readonly Project[];
+
+export const projectLocationGroups = [
+  "All Locations",
+  "Dhaka & Tejgaon",
+  "Sylhet Cantonment",
+  "Gazipur & Rajendrapur",
+  "Barishal",
+] as const;
+
+export type ProjectLocationGroup = (typeof projectLocationGroups)[number];
 
 export function getProject(slug: string) {
   return projects.find((project) => project.slug === slug);
