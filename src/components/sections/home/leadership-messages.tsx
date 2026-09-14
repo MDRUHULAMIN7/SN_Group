@@ -16,10 +16,10 @@ export function LeadershipMessages() {
         <div className="mx-auto max-w-3xl text-center">
           <Reveal>
             <p className="eyebrow mb-3 sm:mb-4 justify-center text-blue-400">Leadership Perspective</p>
-            <h2 className="display-type text-2.5xl xs:text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight">
+            <h2 className="display-type text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
               Messages from Our Leadership
             </h2>
-            <p className="mt-3 sm:mt-4 text-sm sm:text-lg leading-6 sm:leading-7 text-ink/65">
+            <p className="mt-3 sm:mt-4 text-base sm:text-xl leading-relaxed text-ink/75">
               Guided by a commitment to integrity, national development, and responsible long-term growth.
             </p>
           </Reveal>
@@ -33,10 +33,10 @@ export function LeadershipMessages() {
               <div>
                 <div className="flex items-center justify-between border-b border-slate-200 pb-5 sm:pb-6">
                   <div>
-                    <span className="text-[0.68rem] sm:text-xs font-bold uppercase tracking-widest text-blue-400">
+                    <span className="text-xs font-bold uppercase tracking-widest text-blue-400">
                       Chairman&apos;s Speech
                     </span>
-                    <h3 className="display-type mt-1 text-xl sm:text-2xl font-bold transition-colors duration-700 group-hover:text-cobalt sm:text-3xl">
+                    <h3 className="display-type mt-1 text-2xl font-bold transition-colors duration-700 group-hover:text-cobalt sm:text-3xl">
                       Message from the Chairman
                     </h3>
                   </div>
@@ -45,7 +45,7 @@ export function LeadershipMessages() {
                   </span>
                 </div>
 
-                <div className="mt-5 sm:mt-6 space-y-3.5 sm:space-y-4 text-xs sm:text-base leading-6 sm:leading-8 text-ink/70">
+                <div className="mt-5 sm:mt-6 space-y-3.5 sm:space-y-4 text-base sm:text-lg leading-relaxed sm:leading-8 text-ink/80">
                   <p>
                     For more than 20 years, our organization has grown through hard work, responsible business practices, and the trust of our clients and partners.
                   </p>
@@ -66,7 +66,7 @@ export function LeadershipMessages() {
 
               <div className="relative z-10 mt-6 sm:mt-8 border-t border-slate-200 pt-5 sm:pt-6 transition-colors duration-700 group-hover:border-cobalt/25">
                 <p className="display-type text-lg sm:text-xl font-bold text-ink">Amia Afreen</p>
-                <p className="text-[0.68rem] sm:text-xs font-bold uppercase tracking-widest text-blue-400">
+                <p className="text-xs font-bold uppercase tracking-widest text-blue-400">
                   S.N Group
                 </p>
               </div>
@@ -80,10 +80,10 @@ export function LeadershipMessages() {
               <div>
                 <div className="flex items-center justify-between border-b border-slate-200 pb-5 sm:pb-6">
                   <div>
-                    <span className="text-[0.68rem] sm:text-xs font-bold uppercase tracking-widest text-blue-400">
+                    <span className="text-xs font-bold uppercase tracking-widest text-blue-400">
                       MD&apos;s Speech
                     </span>
-                    <h3 className="display-type mt-1 text-xl sm:text-2xl font-bold transition-colors duration-700 group-hover:text-cobalt sm:text-3xl">
+                    <h3 className="display-type mt-1 text-2xl font-bold transition-colors duration-700 group-hover:text-cobalt sm:text-3xl">
                       Message from the Managing Director
                     </h3>
                   </div>
@@ -92,7 +92,7 @@ export function LeadershipMessages() {
                   </span>
                 </div>
 
-                <div className="mt-5 sm:mt-6 space-y-3.5 sm:space-y-4 text-xs sm:text-base leading-6 sm:leading-8 text-ink/70">
+                <div className="mt-5 sm:mt-6 space-y-3.5 sm:space-y-4 text-base sm:text-lg leading-relaxed sm:leading-8 text-ink/80">
                   <p>
                     Welcome to S.N Group. For more than two decades, our journey has been guided by a simple principle: build with integrity, deliver with excellence, and grow through trust.
                   </p>
@@ -110,7 +110,7 @@ export function LeadershipMessages() {
 
               <div className="relative z-10 mt-6 sm:mt-8 border-t border-slate-200 pt-5 sm:pt-6 transition-colors duration-700 group-hover:border-cobalt/25">
                 <p className="display-type text-lg sm:text-xl font-bold text-ink">Md. Sazzad Noor</p>
-                <p className="text-[0.68rem] sm:text-xs font-bold uppercase tracking-widest text-blue-400">
+                <p className="text-xs font-bold uppercase tracking-widest text-blue-400">
                   S.N Group
                 </p>
               </div>

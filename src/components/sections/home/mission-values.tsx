@@ -70,7 +70,7 @@ function CoreValuesGrid({ className }: { className: string }) {
                   {value.title}
                 </h3>
                 <span aria-hidden="true" className="mt-3 block h-0.5 w-8 bg-cobalt/25 transition-[width,background-color] duration-600 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:w-16 group-hover:bg-cobalt" />
-                <p className="mt-4 text-sm leading-6 text-ink/64 transition-colors duration-500 group-hover:text-ink/76">
+                <p className="mt-4 text-base leading-relaxed text-ink/75 transition-colors duration-500 group-hover:text-ink/90">
                   {value.description}
                 </p>
               </div>
@@ -93,10 +93,10 @@ export function CoreValuesSection() {
         <div className="mx-auto max-w-3xl text-center">
           <Reveal>
             <p className="eyebrow mb-3 sm:mb-4 justify-center text-blue-400">Principles in Action</p>
-            <h2 className="display-type text-2.5xl xs:text-3xl sm:text-5xl font-extrabold tracking-tight">
+            <h2 className="display-type text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight">
               Our Core Values
             </h2>
-            <p className="mt-2.5 sm:mt-3 text-sm sm:text-base text-ink/62">
+            <p className="mt-2.5 sm:mt-3 text-base sm:text-lg text-ink/75">
               The principles that guide how we operate, build partnerships, and deliver on our promises.
             </p>
           </Reveal>

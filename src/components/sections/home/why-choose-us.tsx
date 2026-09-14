@@ -55,10 +55,10 @@ export function WhyChooseUs() {
         <div className="mx-auto max-w-3xl text-center">
           <Reveal>
             <p className="eyebrow mb-3 sm:mb-4 justify-center text-blue-400">Why Choose S.N Group?</p>
-            <h2 className="display-type text-2.5xl xs:text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight">
+            <h2 className="display-type text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
               Experience That Builds Trust
             </h2>
-            <p className="mt-3 sm:mt-4 text-sm sm:text-lg leading-6 sm:leading-7 text-ink/65">
+            <p className="mt-3 sm:mt-4 text-base sm:text-xl leading-relaxed text-ink/75">
               With more than two decades of experience, S.N Group brings together engineering excellence, global trade partnerships, and premium real estate development.
             </p>
           </Reveal>
@@ -85,7 +85,7 @@ export function WhyChooseUs() {
                       </span>
                     </div>
                     <h3 className="display-type mt-8 text-2xl font-bold transition-colors duration-500 group-hover:text-cobalt">{pillar.title}</h3>
-                    <p className="mt-3 text-[0.95rem] leading-7 text-ink/64 transition-colors duration-500 group-hover:text-ink/78">{pillar.description}</p>
+                    <p className="mt-3 text-base leading-relaxed text-ink/75 transition-colors duration-500 group-hover:text-ink/90">{pillar.description}</p>
 
                     <span aria-hidden="true" className="mt-auto flex items-center gap-3 pt-8">
                       <span className="h-px w-10 bg-cobalt/35 transition-[width,background-color] duration-600 group-hover:w-18 group-hover:bg-cobalt" />

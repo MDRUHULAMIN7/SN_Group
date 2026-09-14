@@ -170,10 +170,10 @@ export function TestimonialsSection() {
         <div className="mx-auto max-w-3xl text-center">
           <Reveal>
             <p className="eyebrow mb-3 sm:mb-4 justify-center text-blue-400">Testimonials</p>
-            <h2 className="display-type text-2.5xl xs:text-3xl sm:text-5xl font-extrabold tracking-tight">
+            <h2 className="display-type text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight">
               What Our Partners Say
             </h2>
-            <p className="mt-2.5 sm:mt-3 text-sm sm:text-base text-ink/62">
+            <p className="mt-2.5 sm:mt-3 text-base sm:text-lg text-ink/75">
               Reflections of trust, execution excellence, and enduring relationships built over two decades.
             </p>
           </Reveal>

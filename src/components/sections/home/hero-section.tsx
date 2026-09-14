@@ -199,7 +199,7 @@ export function HeroSection() {
                   }}
                 >
                   <Icon aria-hidden="true" className="size-3.5 sm:size-4 lg:size-4.5 text-cobalt shrink-0" />
-                  <span className="text-[0.68rem] sm:text-xs lg:text-sm font-bold uppercase tracking-wider text-cobalt">
+                  <span className="text-xs lg:text-sm font-bold uppercase tracking-wider text-cobalt">
                     {slide.badge}
                   </span>
                 </m.div>
@@ -210,7 +210,7 @@ export function HeroSection() {
                     opacity: isActive ? 1 : 0,
                     y: isActive ? 0 : 22,
                   }}
-                  className="display-type text-2xl xs:text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5rem] 2xl:text-[5.5rem] font-extrabold tracking-tight text-ink leading-[1.08] sm:leading-[1] lg:leading-[0.96] will-change-[transform,opacity]"
+                  className="display-type text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5rem] 2xl:text-[5.5rem] font-extrabold tracking-tight text-ink leading-[1.08] sm:leading-[1] lg:leading-[0.96] will-change-[transform,opacity]"
                   initial={false}
                   transition={{
                     duration: 0.7,
@@ -227,7 +227,7 @@ export function HeroSection() {
                     opacity: isActive ? 1 : 0,
                     y: isActive ? 0 : 18,
                   }}
-                  className="mt-1.5 xs:mt-2 sm:mt-3 lg:mt-4 text-sm xs:text-base sm:text-xl md:text-2xl lg:text-3xl xl:text-[2.25rem] font-bold text-cobalt leading-tight will-change-[transform,opacity]"
+                  className="mt-2 sm:mt-3 lg:mt-4 text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-[2.25rem] font-bold text-cobalt leading-tight will-change-[transform,opacity]"
                   initial={false}
                   transition={{
                     duration: 0.7,
@@ -244,7 +244,7 @@ export function HeroSection() {
                     opacity: isActive ? 1 : 0,
                     y: isActive ? 0 : 16,
                   }}
-                  className="mt-2 xs:mt-2.5 sm:mt-4 lg:mt-5 max-w-2xl sm:max-w-3xl lg:max-w-4xl text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl xl:text-[1.35rem] leading-relaxed lg:leading-8 xl:leading-9 text-ink/75 line-clamp-3 sm:line-clamp-none will-change-[transform,opacity]"
+                  className="mt-2.5 sm:mt-4 lg:mt-5 max-w-2xl sm:max-w-3xl lg:max-w-4xl text-sm sm:text-base md:text-lg lg:text-xl xl:text-[1.35rem] leading-relaxed lg:leading-8 xl:leading-9 text-ink/80 line-clamp-3 sm:line-clamp-none will-change-[transform,opacity]"
                   initial={false}
                   transition={{
                     duration: 0.7,

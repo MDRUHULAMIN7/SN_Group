@@ -151,7 +151,7 @@ button:disabled {
   display: inline-flex;
   align-items: center;
   gap: 0.65rem;
-  font-size: clamp(0.82rem, 0.78rem + 0.2vw, 0.95rem);
+  font-size: clamp(0.75rem, 0.72rem + 0.15vw, 0.88rem);
   font-weight: 700;
   letter-spacing: 0.14em;
   line-height: 1.25;

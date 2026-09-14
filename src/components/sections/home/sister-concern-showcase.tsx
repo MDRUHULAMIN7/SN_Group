@@ -30,12 +30,12 @@ export function SisterConcernShowcase() {
         <div className="grid gap-6 sm:gap-10 lg:grid-cols-[0.7fr_1fr] lg:items-end">
           <Reveal>
             <p className="eyebrow mb-2.5 sm:mb-3 text-blue-400">Our Group Companies</p>
-            <h2 className="display-type text-2.5xl xs:text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight">
+            <h2 className="display-type text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
               Three Disciplines. One Shared Standard.
             </h2>
           </Reveal>
           <Reveal className="lg:justify-self-end" delay={0.1}>
-            <p className="max-w-xl text-sm sm:text-base leading-7 sm:leading-8 text-ink/62">
+            <p className="max-w-xl text-base sm:text-lg leading-relaxed sm:leading-8 text-ink/75">
               Each company brings specialized capability, industry leadership, and experienced execution. Together they provide comprehensive synergy across construction, international trade, and property development.
             </p>
           </Reveal>
@@ -183,8 +183,8 @@ export function SisterConcernShowcase() {
                             isHovered
                               ? "text-2xl sm:text-3xl lg:text-4xl text-ink"
                               : isDimmed
-                                ? "text-xl sm:text-2xl lg:text-2.5xl text-ink/90"
-                                : "text-2xl sm:text-3xl lg:text-3.5xl text-ink"
+                                ? "text-xl sm:text-2xl lg:text-3xl text-ink/90"
+                                : "text-2xl sm:text-3xl lg:text-4xl text-ink"
                           )}
                         >
                           <Link
@@ -197,7 +197,7 @@ export function SisterConcernShowcase() {
 
                         <p
                           className={cn(
-                            "mt-1.5 sm:mt-2 text-xs sm:text-sm font-semibold text-cobalt/85 transition-all duration-300",
+                            "mt-1.5 sm:mt-2 text-sm sm:text-base font-semibold text-cobalt transition-all duration-300",
                             isDimmed ? "line-clamp-1" : "line-clamp-2"
                           )}
                         >
@@ -206,7 +206,7 @@ export function SisterConcernShowcase() {
 
                         <p
                           className={cn(
-                            "mt-2.5 sm:mt-3 text-xs sm:text-sm leading-relaxed text-ink/75 transition-all duration-500",
+                            "mt-2.5 sm:mt-3 text-sm sm:text-base leading-relaxed text-ink/80 transition-all duration-500",
                             isHovered
                               ? "line-clamp-4 lg:line-clamp-3"
                               : "line-clamp-2"

@@ -98,10 +98,10 @@ export function ServicesOverview() {
         <div className="mx-auto max-w-3xl text-center">
           <Reveal>
             <p className="eyebrow mb-3 sm:mb-4 justify-center text-blue-400">Service Overview</p>
-            <h2 className="display-type text-2.5xl xs:text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight">
+            <h2 className="display-type text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
               What We Do
             </h2>
-            <p className="mt-3 sm:mt-4 text-sm sm:text-lg leading-6 sm:leading-7 text-ink/65">
+            <p className="mt-3 sm:mt-4 text-base sm:text-xl leading-relaxed text-ink/75">
               Three specialized disciplines working under one uncompromising standard of accountability, delivering integrated solutions from concept to execution.
             </p>
           </Reveal>
@@ -152,14 +152,14 @@ export function ServicesOverview() {
                       </span>
                     </div>
 
-                    <p className="mt-5 text-[0.68rem] font-bold uppercase tracking-widest text-blue-400 transition-colors duration-500 group-hover:text-cyan-300 group-focus-within:text-cyan-300 sm:mt-6 sm:text-xs">
+                    <p className="mt-5 text-xs font-bold uppercase tracking-widest text-blue-400 transition-colors duration-500 group-hover:text-cyan-300 group-focus-within:text-cyan-300 sm:mt-6 sm:text-xs">
                       {service.discipline}
                     </p>
-                    <h3 className="display-type mt-1 text-xl font-bold transition-colors duration-500 group-hover:text-white group-focus-within:text-white sm:text-3xl">
+                    <h3 className="display-type mt-1 text-2xl font-bold transition-colors duration-500 group-hover:text-white group-focus-within:text-white sm:text-3xl">
                       {service.company}
                     </h3>
 
-                    <p className="mt-3 text-sm leading-6 text-ink/66 transition-colors duration-500 group-hover:text-white/72 group-focus-within:text-white/72 sm:mt-4 sm:text-base sm:leading-7">
+                    <p className="mt-3 text-base leading-relaxed text-ink/75 transition-colors duration-500 group-hover:text-white/80 group-focus-within:text-white/80 sm:mt-4 sm:text-base sm:leading-7">
                       {service.description}
                     </p>
 
@@ -172,12 +172,12 @@ export function ServicesOverview() {
                     </Link>
 
                     <div className="mt-5 border-t border-slate-200/90 pt-5 transition-colors duration-500 group-hover:border-white/15 group-focus-within:border-white/15 sm:mt-6 sm:pt-6">
-                      <p className="mb-3 text-[0.68rem] font-bold uppercase tracking-wider text-ink/50 transition-colors duration-500 group-hover:text-white/55 group-focus-within:text-white/55 sm:text-xs">
+                      <p className="mb-3 text-xs font-bold uppercase tracking-wider text-ink/60 transition-colors duration-500 group-hover:text-white/60 group-focus-within:text-white/60 sm:text-xs">
                         Key Capabilities:
                       </p>
                       <ul className="space-y-2.5 sm:space-y-3">
                         {service.highlights.map((highlight) => (
-                          <li className="flex items-start gap-2.5 text-xs font-semibold leading-5 text-ink/78 transition-colors duration-500 group-hover:text-white/82 group-focus-within:text-white/82 sm:text-sm" key={highlight}>
+                          <li className="flex items-start gap-2.5 text-sm font-semibold leading-snug text-ink/80 transition-colors duration-500 group-hover:text-white/85 group-focus-within:text-white/85 sm:text-sm" key={highlight}>
                             <CheckCircle2 aria-hidden="true" className="mt-0.5 size-4 shrink-0 text-cobalt transition-[transform,color] duration-500 group-hover:text-cyan-300 motion-safe:group-hover:scale-110" />
                             <span>{highlight}</span>
                           </li>
@@ -188,7 +188,7 @@ export function ServicesOverview() {
 
                   <div className="premium-service-card__footer relative z-10 mt-6 border-t border-slate-200/90 pt-4 transition-[transform,border-color] duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:border-white/15 group-focus-within:border-white/15 sm:mt-8 sm:pt-5">
                     <Link
-                      className="group/link inline-flex w-full items-center justify-center gap-2 rounded-full border border-cobalt/20 bg-blue-50/90 px-4 py-2.5 text-xs font-bold text-cobalt shadow-[0_6px_18px_rgba(21,94,239,0.08)] backdrop-blur-sm transition-[transform,background-color,color,border-color,box-shadow] duration-500 group-hover:border-white/25 group-hover:bg-white/10 group-hover:text-white hover:border-white hover:bg-white hover:text-cobalt hover:shadow-[0_12px_28px_rgba(3,11,24,0.28)] active:scale-[0.98] sm:w-auto sm:text-sm"
+                      className="group/link inline-flex w-full items-center justify-center gap-2 rounded-full border border-cobalt/20 bg-blue-50/90 px-4 py-2.5 text-sm font-bold text-cobalt shadow-[0_6px_18px_rgba(21,94,239,0.08)] backdrop-blur-sm transition-[transform,background-color,color,border-color,box-shadow] duration-500 group-hover:border-white/25 group-hover:bg-white/10 group-hover:text-white hover:border-white hover:bg-white hover:text-cobalt hover:shadow-[0_12px_28px_rgba(3,11,24,0.28)] active:scale-[0.98] sm:w-auto sm:text-sm"
                       href="/contact#quotation-form"
                     >
                       Inquire about this company
