@@ -21,6 +21,7 @@ export function PageHero({
   title,
   breadcrumbs,
   eyebrow,
+  description,
   image = "/images/hero-engineers-team-hd.webp",
   imageAlt = "",
 }: PageHeroProps) {
@@ -72,6 +73,11 @@ export function PageHero({
         <h1 className="display-type max-w-4xl text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-ink leading-[1.12]">
           {title}
         </h1>
+        {description ? (
+          <p className="mt-2.5 sm:mt-3.5 max-w-3xl text-lg sm:text-xl md:text-2xl font-bold text-cobalt leading-snug">
+            {description}
+          </p>
+        ) : null}
       </Container>
     </section>
   );

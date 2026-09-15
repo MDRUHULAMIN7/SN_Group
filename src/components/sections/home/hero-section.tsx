@@ -38,7 +38,7 @@ export const heroSlides: HeroSlide[] = [
     badge: "Sister Concern · Construction",
     badgeIcon: Building2,
     title: "S.N Eng Construction BD Ltd.",
-    headline: "Building with Experience. Delivering with Responsibility.",
+    headline: "1st Class Construction Company in Bangladesh",
     description:
       "Specializing in government, defense, institutional, and infrastructure projects with extensive experience working with Bangladesh Army, Bangladesh Navy, and premier institutions.",
     image: "/images/hero-construction-cranes-hd.webp",

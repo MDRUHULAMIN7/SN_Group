@@ -36,7 +36,8 @@ export default function SisterConcernsPage() {
                   <div>
                     <p className="mb-3 text-xs font-bold uppercase tracking-[0.15em] text-cobalt">{concern.discipline}</p>
                     <h2 className="display-type text-2xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight">{concern.name}</h2>
-                    <p className="mt-4 max-w-lg text-base sm:text-lg leading-relaxed text-ink/75">{concern.description}</p>
+                    <p className="mt-2 text-sm sm:text-base font-bold text-cobalt">{concern.headline}</p>
+                    <p className="mt-3 max-w-lg text-base sm:text-lg leading-relaxed text-ink/75">{concern.description}</p>
                   </div>
                 </div>
               </Link>

@@ -7,7 +7,7 @@ import { Reveal } from "@/components/motion/reveal";
 const concernContacts = [
   {
     company: "S.N Eng Construction BD Ltd.",
-    discipline: "Civil, Defense & Infrastructure",
+    discipline: "1st Class Construction Company in Bangladesh",
     icon: DraftingCompass,
     serviceValue: "general-construction",
     phone: "+88 01305-771144",

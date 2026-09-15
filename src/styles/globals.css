@@ -377,3 +377,40 @@ button:disabled {
     opacity: 0;
   }
 }
+
+@keyframes clientLogoMarquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.client-logo-slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.client-logo-track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: clientLogoMarquee 35s linear infinite;
+}
+
+.client-logo-slider:hover .client-logo-track,
+.client-logo-track:hover {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .client-logo-track {
+    animation: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
+}
+

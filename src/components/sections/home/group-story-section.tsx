@@ -47,11 +47,12 @@ export function GroupStorySection() {
           <Reveal className="relative h-full" delay={0.12}>
             <div className="group relative aspect-4/3 h-full overflow-hidden rounded-2xl sm:rounded-3xl border border-slate-200 bg-white shadow-[0_20px_60px_rgba(15,23,42,0.11)] sm:aspect-16/11 lg:aspect-auto lg:min-h-128 transition-all duration-500 hover:border-cobalt/40 hover:shadow-[0_28px_70px_rgba(21,94,239,0.18)]">
               <Image
-                alt="S.N Group team and engineering operations"
-                className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                alt="S.N Group engineering site inspection and defense infrastructure development"
+                className="object-cover object-[center_30%] transition-transform duration-700 ease-out group-hover:scale-105"
                 fill
+                priority
                 sizes="(min-width: 1024px) 47vw, 100vw"
-                src="/images/hero-engineers-team-hd.webp"
+                src="/images/site-inspection-team.jpg"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-white/98 via-white/28 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-r from-white/96 to-white/86 p-4 sm:p-8 text-ink backdrop-blur-md transition-colors duration-300 group-hover:from-white group-hover:to-blue-50/90">

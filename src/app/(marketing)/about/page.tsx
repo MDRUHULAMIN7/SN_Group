@@ -13,6 +13,7 @@ import { Reveal } from "@/components/motion/reveal";
 import { MissionVisionCards } from "@/components/sections/about/mission-vision-cards";
 import { CompanyJourneyTimeline } from "@/components/sections/about/company-journey-timeline";
 import { ContractorProgressionTimeline } from "@/components/sections/about/contractor-progression-timeline";
+import { ClientLogoSlider } from "@/components/sections/about/client-logo-slider";
 import { ButtonLink } from "@/components/ui/button";
 import { projects } from "@/data/projects";
 import { createMetadata } from "@/lib/seo";
@@ -478,7 +479,7 @@ export default function AboutPage() {
       {/* 7. Client */}
       <section
         aria-label="Our Clients"
-        className="blueprint-grid border-t border-slate-200 bg-white py-14 sm:py-20 lg:py-24 text-ink"
+        className="blueprint-grid overflow-hidden border-t border-slate-200 bg-white py-14 sm:py-20 lg:py-24 text-ink"
         id="clients"
       >
         <Container>
@@ -493,52 +494,11 @@ export default function AboutPage() {
               </p>
             </Reveal>
           </div>
-
-          <div className="mt-10 sm:mt-16 grid gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {clients.map((client, index) => {
-              return (
-                <Reveal
-                  className="h-full"
-                  delay={index * 0.05}
-                  key={client.name}
-                >
-                  <article className="group relative isolate flex h-full flex-col overflow-hidden rounded-3xl border border-slate-200 bg-white p-5 shadow-[0_14px_40px_rgba(15,23,42,0.055)] transition-[transform,border-color,box-shadow] duration-700 ease-out hover:-translate-y-2 hover:border-cobalt/35 hover:shadow-[0_28px_64px_rgba(21,94,239,0.14)] sm:p-6">
-                    <span aria-hidden="true" className="pointer-events-none absolute -right-12 -top-12 size-36 rounded-full border-[18px] border-cobalt/[0.035] transition-all duration-1000 group-hover:rotate-45 group-hover:scale-125" />
-                    <span aria-hidden="true" className="pointer-events-none absolute inset-y-0 -left-2/3 z-20 w-1/2 skew-x-[-18deg] bg-gradient-to-r from-transparent via-white/75 to-transparent opacity-0 transition-[left,opacity] duration-1000 group-hover:left-[125%] group-hover:opacity-100" />
-                    <span aria-hidden="true" className="pointer-events-none absolute inset-x-5 bottom-0 h-1 origin-center scale-x-0 rounded-full bg-gradient-to-r from-transparent via-cobalt to-transparent transition-transform duration-700 group-hover:scale-x-100" />
-
-                    <div className="relative z-10 flex items-start justify-between gap-4">
-                      <div className="relative grid size-24 place-items-center overflow-hidden rounded-2xl border border-slate-200 bg-white p-3 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.8),0_10px_28px_rgba(15,23,42,0.08)] transition-all duration-700 group-hover:-rotate-2 group-hover:scale-105 group-hover:border-cobalt/25 group-hover:shadow-[0_16px_34px_rgba(21,94,239,0.14)]">
-                        <Image
-                          alt={client.logoAlt}
-                          className="object-contain p-3 transition-[transform,filter] duration-700 group-hover:scale-105 group-hover:saturate-[1.08]"
-                          fill
-                          sizes="96px"
-                          src={client.logo}
-                        />
-                      </div>
-                      <span className="text-xs font-black tracking-[0.16em] text-cobalt/22 transition-colors duration-500 group-hover:text-cobalt/55">
-                        {String(index + 1).padStart(2, "0")}
-                      </span>
-                    </div>
-
-                    <div className="relative z-10 mt-5 flex flex-1 flex-col">
-                      <h3 className="display-type text-base font-bold text-ink transition-colors duration-300 group-hover:text-cobalt sm:text-lg">
-                        {client.name}
-                      </h3>
-                      <p className="mt-1 text-[0.72rem] font-bold uppercase tracking-wider text-cobalt">
-                        {client.category}
-                      </p>
-                      <p className="mt-2 text-xs leading-5 text-ink/62">
-                        {client.detail}
-                      </p>
-                    </div>
-                  </article>
-                </Reveal>
-              );
-            })}
-          </div>
         </Container>
+
+        <Reveal delay={0.1}>
+          <ClientLogoSlider clients={clients} />
+        </Reveal>
       </section>
     </>
   );

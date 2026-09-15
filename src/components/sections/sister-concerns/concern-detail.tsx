@@ -13,6 +13,7 @@ export function ConcernDetail({ concern }: { concern: SisterConcern }) {
           { label: "Sister Concerns", href: "/sister-concerns" },
           { label: concern.name },
         ]}
+        description={concern.headline}
         image={concern.image}
         imageAlt={concern.imageAlt}
         title={concern.name}

@@ -9,7 +9,7 @@ import { Reveal } from "@/components/motion/reveal";
 const serviceCategories = [
   {
     company: "S.N Eng Construction BD Ltd.",
-    discipline: "Civil & Defense Infrastructure",
+    discipline: "1st Class Construction Company in Bangladesh",
     icon: DraftingCompass,
     tag: "20+ Years Experience",
     slug: "sn-engineering-construction",
