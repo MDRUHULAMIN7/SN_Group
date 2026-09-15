@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ConcernDetail } from "@/components/sections/sister-concerns/concern-detail";
 import { ImportExportDetail } from "@/components/sections/sister-concerns/import-export-detail";
+import { ConstructionDetail } from "@/components/sections/sister-concerns/construction-detail";
 import { JsonLd } from "@/components/ui/json-ld";
 import { getSisterConcern, sisterConcerns } from "@/data/sister-concerns";
 import { createMetadata } from "@/lib/seo";
@@ -37,6 +38,11 @@ export default async function ConcernPage({ params }: ConcernPageProps) {
       { "@type": "ListItem", position: 3, name: concern.name, item: absoluteUrl(`/sister-concerns/${concern.slug}`) },
     ],
   };
-  const Detail = concern.slug === "sn-import-export" ? ImportExportDetail : ConcernDetail;
+  const Detail =
+    concern.slug === "sn-import-export"
+      ? ImportExportDetail
+      : concern.slug === "sn-engineering-construction"
+      ? ConstructionDetail
+      : ConcernDetail;
   return <><Detail concern={concern} /><JsonLd data={breadcrumb} /></>;
 }

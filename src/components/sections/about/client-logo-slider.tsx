@@ -51,20 +51,23 @@ export function ClientLogoSlider({ clients }: ClientLogoSliderProps) {
       >
         {duplicatedClients.map((client, index) => (
           <div
-            className="group/item relative flex h-24 w-44 shrink-0 sm:h-28 sm:w-56 md:w-60 items-center justify-center rounded-2xl border border-slate-200/90 bg-white px-4 py-3 shadow-[0_4px_18px_rgba(15,23,42,0.04)] transition-all duration-300 hover:-translate-y-1 hover:border-cobalt/40 hover:shadow-[0_12px_28px_rgba(21,94,239,0.12)] select-none"
+            className="group/item relative flex flex-col h-32 w-52 shrink-0 sm:h-40 sm:w-64 md:h-44 md:w-72 items-center justify-center rounded-2xl border border-slate-200/90 bg-white p-4 sm:p-5 shadow-[0_4px_20px_rgba(15,23,42,0.05)] transition-all duration-300 hover:-translate-y-1.5 hover:border-cobalt/40 hover:shadow-[0_16px_36px_rgba(21,94,239,0.14)] select-none"
             key={`${client.name}-${index}`}
-            title={client.name}
+            title={`${client.name} - ${client.category}`}
           >
-            <div className="relative h-14 w-full max-w-[82%] flex items-center justify-center">
+            <div className="relative h-18 w-full sm:h-24 md:h-28 flex items-center justify-center">
               <Image
                 alt={client.logoAlt || client.name}
-                className="object-contain p-1 filter transition-transform duration-300 group-hover/item:scale-108 group-hover/item:brightness-105"
+                className="object-contain filter transition-transform duration-300 group-hover/item:scale-108"
                 fill
                 loading="lazy"
-                sizes="(max-width: 640px) 140px, 200px"
+                sizes="(max-width: 640px) 200px, 280px"
                 src={client.logo}
               />
             </div>
+            <p className="mt-2 sm:mt-3 text-center text-xs sm:text-sm font-bold text-slate-800 line-clamp-1 tracking-tight group-hover/item:text-cobalt transition-colors w-full px-1">
+              {client.name}
+            </p>
           </div>
         ))}
       </div>

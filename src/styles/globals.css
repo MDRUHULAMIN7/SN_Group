@@ -383,7 +383,7 @@ button:disabled {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(calc(-100% / 3));
   }
 }
 
@@ -397,7 +397,7 @@ button:disabled {
   display: flex;
   width: max-content;
   will-change: transform;
-  animation: clientLogoMarquee 35s linear infinite;
+  animation: clientLogoMarquee 40s linear infinite;
 }
 
 .client-logo-slider:hover .client-logo-track,

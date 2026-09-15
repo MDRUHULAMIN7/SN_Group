@@ -16,6 +16,7 @@ import { ContractorProgressionTimeline } from "@/components/sections/about/contr
 import { ClientLogoSlider } from "@/components/sections/about/client-logo-slider";
 import { ButtonLink } from "@/components/ui/button";
 import { projects } from "@/data/projects";
+import { clients } from "@/data/clients";
 import { createMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createMetadata({
@@ -61,7 +62,7 @@ const leadershipTeam = [
     bio: "Leading the organization with a focus on responsible growth, client partnership, quality, safety, and long-term institutional trust.",
   },
   {
-    name: "Md. Sazzad Noor",
+    name: "Sazzad Noor",
     designation: "Managing Director, S.N Group",
     department: "Group Operations & Executive Management",
     bio: "Directing business operations and the delivery of high-quality, cost-effective projects through motivated and focused teams.",
@@ -83,65 +84,6 @@ const leadershipTeam = [
     designation: "HR & Admin",
     department: "Human Resources",
     bio: "Supporting workforce coordination, workplace standards, and the people who deliver the group’s construction operations.",
-  },
-];
-
-const clients = [
-  {
-    name: "Bangladesh Army",
-    category: "Defense & Strategic Infrastructure",
-    logo: "/images/clients/bangladesh-army.png",
-    logoAlt: "Bangladesh Army official emblem",
-    detail: "Defense accommodation, structural works, and institutional facilities.",
-  },
-  {
-    name: "Bangladesh Navy",
-    category: "Naval & Marine Infrastructure",
-    logo: "/images/clients/bangladesh-navy.png",
-    logoAlt: "Bangladesh Navy official emblem",
-    detail: "Naval facilities, administrative buildings, and structural engineering.",
-  },
-  {
-    name: "Bangladesh Air Force",
-    category: "Aviation Infrastructure",
-    logo: "/images/clients/bangladesh-air-force.png",
-    logoAlt: "Bangladesh Air Force official emblem",
-    detail: "Hangar, operations wing, briefing, and air movement facilities.",
-  },
-  {
-    name: "Border Guard Bangladesh (BGB)",
-    category: "Public Sector Works",
-    logo: "/images/clients/bgb.svg",
-    logoAlt: "Border Guard Bangladesh official emblem",
-    detail: "Construction and related public-sector infrastructure services.",
-  },
-  {
-    name: "Public Works Department (PWD)",
-    category: "Public Sector Infrastructure",
-    logo: "/images/clients/pwd.jpg",
-    logoAlt: "Public Works Department official emblem",
-    detail: "Government building and institutional infrastructure works.",
-  },
-  {
-    name: "Roads & Highways Department (RHD)",
-    category: "Civil Connectivity Works",
-    logo: "/images/clients/rhd.png",
-    logoAlt: "Government of Bangladesh official emblem used by RHD",
-    detail: "Civil works, road corridors, and structural logistics projects.",
-  },
-  {
-    name: "Local Government Engineering Department (LGED)",
-    category: "Local Infrastructure",
-    logo: "/images/clients/lged.png",
-    logoAlt: "Local Government Engineering Department official emblem",
-    detail: "Road, drainage, and local infrastructure development works.",
-  },
-  {
-    name: "Department of Public Health Engineering (DPHE)",
-    category: "Water Infrastructure",
-    logo: "/images/clients/dphe.jpg",
-    logoAlt: "Department of Public Health Engineering official emblem",
-    detail: "Water supply and public utility infrastructure works.",
   },
 ];
 
@@ -190,13 +132,14 @@ export default function AboutPage() {
           <Reveal className="relative lg:col-span-6" delay={0.1}>
             <div className="group relative aspect-4/3 sm:aspect-5/4 overflow-hidden rounded-2xl sm:rounded-3xl border border-slate-200 bg-white shadow-[0_20px_60px_rgba(15,23,42,0.11)] transition-all duration-500 hover:border-cobalt/40 hover:shadow-[0_28px_70px_rgba(21,94,239,0.18)]">
               <Image
-                alt="S.N Group project and engineering team"
+                alt="S.N Group leadership and military site inspection team"
                 className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                 fill
+                priority
                 sizes="(min-width: 1024px) 50vw, 100vw"
-                src="/images/hero-engineers-team-hd.webp"
+                src="/images/about/military-site-inspection.jpg"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-white/85 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/30 via-transparent to-transparent" />
             </div>
             <span className="absolute -bottom-4 -left-4 hidden sm:block rounded-xl border border-cobalt/25 bg-white p-5 text-xs font-bold uppercase tracking-[0.14em] text-cobalt shadow-lg backdrop-blur-md transition-all duration-300 hover:bg-cobalt hover:text-white">
               Dhaka · Bangladesh
@@ -396,7 +339,7 @@ export default function AboutPage() {
 
                 <div className="relative z-10 mt-8 border-t border-slate-200 pt-6 flex items-center justify-between">
                   <div>
-                    <p className="display-type text-lg sm:text-xl font-bold text-ink">Md. Sazzad Noor</p>
+                    <p className="display-type text-lg sm:text-xl font-bold text-ink">Sazzad Noor</p>
                     <p className="text-xs font-bold uppercase tracking-widest text-blue-400">
                       S.N Group
                     </p>
