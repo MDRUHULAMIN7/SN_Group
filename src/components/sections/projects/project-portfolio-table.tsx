@@ -8,7 +8,6 @@ const headings = [
   "Client / authority",
   "Project location",
   "Agreement no.",
-  "Contract value (BDT)",
   "Commencement",
   "Completion",
 ] as const;
@@ -52,7 +51,6 @@ export function ProjectPortfolioTable() {
                       <td className="px-4 py-4 leading-5 text-ink/70">{project.client}</td>
                       <td className="px-4 py-4 leading-5 text-ink/70">{project.location}</td>
                       <td className="whitespace-nowrap px-4 py-4 font-mono text-[0.7rem] text-ink/65">{project.agreement}</td>
-                      <td className="whitespace-nowrap px-4 py-4 font-semibold tabular-nums text-ink/75">{project.value}</td>
                       <td className="whitespace-nowrap px-4 py-4 tabular-nums text-ink/65">{project.commencement}</td>
                       <td className="whitespace-nowrap px-4 py-4 tabular-nums text-ink/65">{project.completion}</td>
                     </tr>

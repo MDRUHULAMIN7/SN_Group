@@ -1,17 +1,15 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import {
   ArrowRight,
   ArrowUpRight,
   Award,
-  Building2,
   CheckCircle2,
   Clock3,
-  HardHat,
   MessageSquare,
   ShieldCheck,
-  Zap,
 } from "lucide-react";
 import type { SisterConcern } from "@/types/content";
 import { PageHero } from "@/components/ui/page-hero";
@@ -70,12 +68,7 @@ export function ConstructionDetail({ concern }: ConstructionDetailProps) {
             {/* Left Column: S.N Eng Construction BD Ltd. Content */}
             <div className="lg:col-span-6 space-y-4 sm:space-y-6">
               <Reveal>
-                <div className="inline-flex items-center gap-2 rounded-full border border-cobalt/20 bg-blue-50/80 px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-cobalt">
-                  <HardHat className="size-3.5 text-cobalt" />
-                  1st Class Construction &amp; Engineering Division
-                </div>
-
-                <h2 className="display-type mt-2.5 sm:mt-3 text-2xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl leading-[1.15]">
+                <h2 className="display-type text-2xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl leading-[1.15]">
                   S.N Eng Construction BD Ltd.
                 </h2>
 
@@ -84,11 +77,11 @@ export function ConstructionDetail({ concern }: ConstructionDetailProps) {
                 </p>
 
                 <p className="mt-3.5 sm:mt-4 text-sm sm:text-base lg:text-lg leading-relaxed text-ink/80">
-                  With more than two decades of dedicated execution, S.N Eng Construction BD Ltd. has established itself as a premier 1st Class construction and engineering contractor in Bangladesh. We specialize in government, defense, institutional, and strategic civil infrastructure projects.
+                  With more than two decades of dedicated execution, S.N Eng Construction BD Ltd. has established itself as a premier 1st Class construction contractor in Bangladesh, specializing in defense, institutional, and strategic civil infrastructure projects.
                 </p>
 
                 <p className="mt-2.5 sm:mt-3 text-sm sm:text-base lg:text-lg leading-relaxed text-ink/75">
-                  Our portfolio encompasses high-security installations for the Bangladesh Army, Bangladesh Air Force, and Bangladesh Navy, alongside multi-storey commercial complexes, specialized aviation hangars, industrial facilities, and civic engineering works delivered with disciplined safety and quality.
+                  Our portfolio encompasses high-security defense installations, multi-storey complexes, aviation hangars, and specialized civil engineering works delivered with uncompromised quality.
                 </p>
 
                 {/* Key Capability Highlights */}
@@ -100,14 +93,6 @@ export function ConstructionDetail({ concern }: ConstructionDetailProps) {
                   <div className="flex items-center gap-2.5 rounded-xl border border-slate-200/80 bg-white/90 p-3 shadow-xs">
                     <Award className="size-5 text-cobalt shrink-0" />
                     <span className="text-xs sm:text-sm font-semibold text-slate-800">20+ Years Proven Track Record</span>
-                  </div>
-                  <div className="flex items-center gap-2.5 rounded-xl border border-slate-200/80 bg-white/90 p-3 shadow-xs">
-                    <Building2 className="size-5 text-cobalt shrink-0" />
-                    <span className="text-xs sm:text-sm font-semibold text-slate-800">Major Defense Facilities</span>
-                  </div>
-                  <div className="flex items-center gap-2.5 rounded-xl border border-slate-200/80 bg-white/90 p-3 shadow-xs">
-                    <Zap className="size-5 text-cobalt shrink-0" />
-                    <span className="text-xs sm:text-sm font-semibold text-slate-800">ABC Electrical Contractor</span>
                   </div>
                 </div>
 
@@ -179,20 +164,14 @@ export function ConstructionDetail({ concern }: ConstructionDetailProps) {
         id="selected-work-orders"
       >
         <Container>
-          <Reveal className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
-            <div>
-              <p className="eyebrow mb-3 sm:mb-4 text-cobalt">— SELECTED WORK ORDERS</p>
-              <h2 className="display-type text-4xl font-extrabold tracking-tight sm:text-6xl">
-                Projects, dates &amp; delivery status.
-              </h2>
-              <p className="mt-4 max-w-2xl text-sm leading-7 text-ink/62 sm:text-base">
-                A concise view of documented orders across aviation, utilities, and institutional construction.
-              </p>
-            </div>
-            <ButtonLink href="/projects" variant="outline">
-              See All Projects
-              <ArrowUpRight aria-hidden="true" className="size-4" />
-            </ButtonLink>
+          <Reveal>
+            <p className="eyebrow mb-3 sm:mb-4 text-cobalt">— SELECTED WORK ORDERS</p>
+            <h2 className="display-type text-4xl font-extrabold tracking-tight sm:text-6xl">
+              Projects, dates &amp; delivery status.
+            </h2>
+            <p className="mt-3 sm:mt-4 max-w-3xl text-sm leading-relaxed text-ink/62 sm:text-base">
+              A concise view of documented orders across aviation, utilities, and institutional construction.
+            </p>
           </Reveal>
 
           <div className="mt-10 grid gap-5 md:grid-cols-2 sm:mt-14">
@@ -201,7 +180,10 @@ export function ConstructionDetail({ concern }: ConstructionDetailProps) {
 
               return (
                 <Reveal className="h-full" delay={index * 0.06} key={project.slug}>
-                  <article className="group grid h-full overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-[0_14px_44px_rgba(15,23,42,0.06)] transition-[transform,border-color,box-shadow] duration-700 hover:-translate-y-1.5 hover:border-cobalt/30 hover:shadow-[0_26px_64px_rgba(21,94,239,0.13)] sm:grid-cols-[0.4fr_0.6fr]">
+                  <Link
+                    className="group grid h-full overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-[0_14px_44px_rgba(15,23,42,0.06)] transition-[transform,border-color,box-shadow] duration-700 hover:-translate-y-1.5 hover:border-cobalt/30 hover:shadow-[0_26px_64px_rgba(21,94,239,0.13)] sm:grid-cols-[0.4fr_0.6fr]"
+                    href={`/projects/${project.slug}`}
+                  >
                     <div className="relative min-h-48 overflow-hidden bg-slate-100 sm:min-h-full">
                       <Image
                         alt={project.coverAlt}
@@ -246,7 +228,7 @@ export function ConstructionDetail({ concern }: ConstructionDetailProps) {
                         </div>
                       </div>
                     </div>
-                  </article>
+                  </Link>
                 </Reveal>
               );
             })}

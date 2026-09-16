@@ -30,8 +30,7 @@ export const heroSlides: HeroSlide[] = [
     headline: "Building Trust. Delivering Excellence.",
     description:
       "A diversified Bangladeshi business group with more than 20 years of experience in construction and business operations, built on a foundation of integrity, quality, reliability, and long-term relationships.",
-    image: "/images/hero-sazzad-academic-building-hd.jpg",
-    imagePosition: "object-[center_45%]",
+    image: "/images/hero-sn-group-brick-wall.jpg",
     href: "/about",
     linkLabel: "Discover S.N Group",
   },

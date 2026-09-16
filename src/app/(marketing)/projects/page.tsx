@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { PageHero } from "@/components/ui/page-hero";
 import { Container } from "@/components/ui/container";
 import { ProjectGrid } from "@/components/sections/projects/project-grid";
+import { MoreProjectsSlider } from "@/components/sections/projects/more-projects-slider";
 import { ProjectPortfolioTable } from "@/components/sections/projects/project-portfolio-table";
 import { projects } from "@/data/projects";
 import { createMetadata } from "@/lib/seo";
@@ -10,13 +11,18 @@ export const metadata: Metadata = createMetadata({
   title: "Projects",
   description: "Explore S.N Group's documented defense, aviation, institutional, industrial, utility, and infrastructure projects across Bangladesh.",
   path: "/projects",
-  image: "/images/gallery/overhauling-hangar-216-mro.webp",
+  image: "/images/gallery/cadet-college-complex.jpg",
 });
 
 export default function ProjectsPage() {
   return (
     <>
-      <PageHero breadcrumbs={[{ label: "Projects" }]} image="/images/gallery/overhauling-hangar-216-mro.webp" imageAlt="S.N Eng Construction overhauling hangar project for the 216 MRO Unit" title="Our Projects" />
+      <PageHero
+        breadcrumbs={[{ label: "Projects" }]}
+        image="/images/gallery/cadet-college-complex.jpg"
+        imageAlt="S.N Group defense, institutional and civil infrastructure projects across Bangladesh"
+        title="Our Projects"
+      />
       <section className="border-t border-slate-200 bg-white text-ink section-space">
         <Container>
           <div className="mb-10 max-w-3xl sm:mb-14">
@@ -26,6 +32,7 @@ export default function ProjectsPage() {
           <ProjectGrid projects={projects} showLocationFilter />
         </Container>
       </section>
+      <MoreProjectsSlider />
       <ProjectPortfolioTable />
     </>
   );

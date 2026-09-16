@@ -67,8 +67,8 @@ export const sisterConcerns = [
     headline: "Creating Value Through Real Estate.",
     description:
       "The real estate and property development arm of S.N Group, focused on developing high-quality residential and commercial properties in prime and strategically selected locations across Dhaka.",
-    image: "/images/project-commercial.webp",
-    imageAlt: "Mehrish Holdings Ltd. luxury contemporary architecture in Dhaka",
+    image: "/images/hero-commercial-hd.webp",
+    imageAlt: "Mehrish Holdings Ltd. luxury contemporary commercial architecture in Dhaka",
     services: [
       "Residential property development",
       "Premium apartment projects",

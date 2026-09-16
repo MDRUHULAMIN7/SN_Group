@@ -41,8 +41,8 @@ export default function ContactPage() {
       {/* 1. Page Hero */}
       <PageHero
         breadcrumbs={[{ label: "Contact Us" }]}
-        image="/images/hero-engineers-team-hd.webp"
-        imageAlt="S.N Group engineers and headquarters"
+        image="/images/hero-sn-group-brick-wall.jpg"
+        imageAlt="S.N Group office and corporate headquarters"
         title="Contact S.N Group"
       />
 

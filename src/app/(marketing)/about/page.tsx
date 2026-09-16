@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import {
   ArrowUpRight,
   CheckCircle2,
@@ -246,7 +247,10 @@ export default function AboutPage() {
 
               return (
                 <Reveal className="h-full" delay={index * 0.06} key={project.slug}>
-                  <article className="group grid h-full overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-[0_14px_44px_rgba(15,23,42,0.06)] transition-[transform,border-color,box-shadow] duration-700 hover:-translate-y-1.5 hover:border-cobalt/30 hover:shadow-[0_26px_64px_rgba(21,94,239,0.13)] sm:grid-cols-[0.4fr_0.6fr]">
+                  <Link
+                    className="group grid h-full overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-[0_14px_44px_rgba(15,23,42,0.06)] transition-[transform,border-color,box-shadow] duration-700 hover:-translate-y-1.5 hover:border-cobalt/30 hover:shadow-[0_26px_64px_rgba(21,94,239,0.13)] sm:grid-cols-[0.4fr_0.6fr]"
+                    href={`/projects/${project.slug}`}
+                  >
                     <div className="relative min-h-48 overflow-hidden bg-slate-100 sm:min-h-full">
                       <Image
                         alt={project.coverAlt}
@@ -279,7 +283,7 @@ export default function AboutPage() {
                         </div>
                       </div>
                     </div>
-                  </article>
+                  </Link>
                 </Reveal>
               );
             })}

@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { ConcernDetail } from "@/components/sections/sister-concerns/concern-detail";
 import { ImportExportDetail } from "@/components/sections/sister-concerns/import-export-detail";
 import { ConstructionDetail } from "@/components/sections/sister-concerns/construction-detail";
+import { MehrishHoldingDetail } from "@/components/sections/sister-concerns/mehrish-holding-detail";
 import { JsonLd } from "@/components/ui/json-ld";
 import { getSisterConcern, sisterConcerns } from "@/data/sister-concerns";
 import { createMetadata } from "@/lib/seo";
@@ -43,6 +44,8 @@ export default async function ConcernPage({ params }: ConcernPageProps) {
       ? ImportExportDetail
       : concern.slug === "sn-engineering-construction"
       ? ConstructionDetail
+      : concern.slug === "mehrish-holdings"
+      ? MehrishHoldingDetail
       : ConcernDetail;
   return <><Detail concern={concern} /><JsonLd data={breadcrumb} /></>;
 }

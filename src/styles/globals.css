@@ -416,3 +416,36 @@ button:disabled {
   }
 }
 
+/* =========================================================================
+   PROJECT CARDS AUTO-MARQUEE SLIDER
+   ========================================================================= */
+@keyframes projectCardsMarquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.project-cards-track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: projectCardsMarquee 75s linear infinite;
+}
+
+.project-cards-slider:hover .project-cards-track,
+.project-cards-track:hover {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-cards-track {
+    animation: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
+}
+

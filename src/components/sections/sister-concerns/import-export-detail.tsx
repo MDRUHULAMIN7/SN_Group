@@ -165,12 +165,7 @@ export function ImportExportDetail({ concern }: { concern: SisterConcern }) {
             {/* Left Section: Intro Text & Value Proposition */}
             <div className="lg:col-span-6 space-y-4 sm:space-y-6">
               <Reveal>
-                <div className="inline-flex items-center gap-2 rounded-full border border-cobalt/20 bg-blue-50/80 px-3 py-1 text-xs font-bold uppercase tracking-wider text-cobalt">
-                  <Globe2 className="size-3.5 text-cobalt" />
-                  International Trading Division
-                </div>
-
-                <h2 className="display-type mt-2.5 sm:mt-3 text-2xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl leading-[1.15]">
+                <h2 className="display-type text-2xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl leading-[1.15]">
                   S.N Import &amp; Export BD Ltd.
                 </h2>
 
@@ -179,11 +174,11 @@ export function ImportExportDetail({ concern }: { concern: SisterConcern }) {
                 </p>
 
                 <p className="mt-3.5 sm:mt-4 text-sm sm:text-base lg:text-lg leading-relaxed text-ink/80">
-                  As the international trading arm of S.N Group, S.N Import &amp; Export BD Ltd. connects commercial enterprises with verified global producers. We specialize in the bulk sourcing, import, and distribution of agricultural commodities, food ingredients, and industrial chemicals.
+                  As the international trading arm of S.N Group, we connect commercial enterprises with verified global producers for the bulk import of agricultural commodities, food ingredients, and industrial chemicals.
                 </p>
 
                 <p className="mt-2.5 sm:mt-3 text-sm sm:text-base lg:text-lg leading-relaxed text-ink/75">
-                  From competitive pricing and Letter of Credit (L/C) documentation to port clearance and nationwide delivery, we manage the complete commercial import lifecycle with guaranteed origin quality.
+                  From L/C documentation to customs clearance and nationwide transport, we manage the complete commercial import lifecycle with assured origin quality.
                 </p>
 
                 {/* Action Buttons */}
@@ -494,8 +489,8 @@ export function ImportExportDetail({ concern }: { concern: SisterConcern }) {
                           +8801335229071
                         </a>
                         <span className="hidden sm:inline text-slate-300">•</span>
-                        <a className="font-medium hover:text-cobalt transition-colors" href="mailto:query@sngroupbd.com">
-                          query@sngroupbd.com
+                        <a className="font-medium hover:text-cobalt transition-colors" href="mailto:trade@sngroupbd.com">
+                          trade@sngroupbd.com
                         </a>
                       </div>
                     </div>
