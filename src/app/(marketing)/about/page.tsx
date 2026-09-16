@@ -111,7 +111,7 @@ export default function AboutPage() {
             <h2 className="display-type text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
               20+ Years of Dedication &amp; Excellence
             </h2>
-            <div className="mt-5 sm:mt-6 space-y-4 text-base sm:text-lg leading-relaxed text-ink/80">
+            <div className="mt-5 sm:mt-6 space-y-4 text-base sm:text-lg leading-relaxed text-ink font-medium">
               <p>
                 S.N Group is a diversified Bangladeshi business group with more than 20 years of experience in construction and business operations, built on a foundation of integrity, quality, reliability, and long-term relationships.
               </p>
@@ -121,11 +121,8 @@ export default function AboutPage() {
                 <strong className="text-ink font-bold">S.N Import &amp; Export BD Ltd.</strong>, and{" "}
                 <strong className="text-ink font-bold">Mehrish Holdings Ltd.</strong>.
               </p>
-              <p className="text-base sm:text-lg leading-relaxed text-ink/75">
+              <p className="text-base sm:text-lg leading-relaxed text-ink/80 font-normal">
                 Our businesses operate across government and institutional construction, infrastructure development, international import and export, agricultural and food commodities, industrial chemicals and equipment, and premium real estate development.
-              </p>
-              <p className="text-base sm:text-lg leading-relaxed text-ink/75">
-                With deep technical know-how and growing international trading networks, S.N Group continues to expand capabilities while delivering enduring value for clients, partners, investors, and communities across Bangladesh.
               </p>
             </div>
           </Reveal>
@@ -133,14 +130,14 @@ export default function AboutPage() {
           <Reveal className="relative lg:col-span-6" delay={0.1}>
             <div className="group relative aspect-4/3 sm:aspect-5/4 overflow-hidden rounded-2xl sm:rounded-3xl border border-slate-200 bg-white shadow-[0_20px_60px_rgba(15,23,42,0.11)] transition-all duration-500 hover:border-cobalt/40 hover:shadow-[0_28px_70px_rgba(21,94,239,0.18)]">
               <Image
-                alt="S.N Group leadership and military site inspection team"
-                className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                alt="S.N Group leadership and military engineering delegation at site inspection"
+                className="object-cover object-[center_30%] transition-transform duration-700 ease-out group-hover:scale-105"
                 fill
                 priority
                 sizes="(min-width: 1024px) 50vw, 100vw"
-                src="/images/about/military-site-inspection.jpg"
+                src="/images/about/site-inspection-delegation.jpg"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/30 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/25 via-transparent to-transparent" />
             </div>
             <span className="absolute -bottom-4 -left-4 hidden sm:block rounded-xl border border-cobalt/25 bg-white p-5 text-xs font-bold uppercase tracking-[0.14em] text-cobalt shadow-lg backdrop-blur-md transition-all duration-300 hover:bg-cobalt hover:text-white">
               Dhaka · Bangladesh
