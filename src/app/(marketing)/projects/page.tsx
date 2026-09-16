@@ -11,7 +11,7 @@ export const metadata: Metadata = createMetadata({
   title: "Projects",
   description: "Explore S.N Group's documented defense, aviation, institutional, industrial, utility, and infrastructure projects across Bangladesh.",
   path: "/projects",
-  image: "/images/gallery/cadet-college-complex.jpg",
+  image: "/images/hero-sazzad-academic-building-hd.jpg",
 });
 
 export default function ProjectsPage() {
@@ -19,8 +19,8 @@ export default function ProjectsPage() {
     <>
       <PageHero
         breadcrumbs={[{ label: "Projects" }]}
-        image="/images/gallery/cadet-college-complex.jpg"
-        imageAlt="S.N Group defense, institutional and civil infrastructure projects across Bangladesh"
+        image="/images/hero-sazzad-academic-building-hd.jpg"
+        imageAlt="Shaheed Lt. Col. Sazzad Academic Building, completed landmark institutional project by S.N Group"
         title="Our Projects"
       />
       <section className="border-t border-slate-200 bg-white text-ink section-space">

@@ -176,7 +176,7 @@ export function HeroSection() {
       </div>
 
       {/* Fixed Gradient Overlays over Sliding Images to Ensure Rock-Solid Legibility & Zero White Flashing */}
-      <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-[5] bg-gradient-to-r from-white/96 via-white/88 via-55% to-white/35 sm:from-white/92 sm:via-white/70 sm:via-52% sm:to-white/15 lg:from-white/92 lg:via-white/55 lg:via-48% lg:to-transparent" />
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-[5] bg-gradient-to-r from-white/98 via-white/94 via-50% to-white/40 sm:from-white/97 sm:via-white/88 sm:via-55% sm:to-white/20 lg:from-white/96 lg:via-white/82 lg:via-55% lg:to-transparent" />
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-[5] bg-gradient-to-t from-white/60 via-transparent to-white/20 sm:from-white/40" />
 
       {/* Content Container */}
@@ -225,7 +225,7 @@ export function HeroSection() {
                     opacity: isActive ? 1 : 0,
                     y: isActive ? 0 : 22,
                   }}
-                  className="display-type text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5rem] 2xl:text-[5.5rem] font-extrabold tracking-tight text-ink leading-[1.08] sm:leading-[1] lg:leading-[0.96] will-change-[transform,opacity]"
+                  className="display-type text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5rem] 2xl:text-[5.5rem] font-extrabold tracking-tight text-ink leading-[1.08] sm:leading-[1] lg:leading-[0.96] [text-shadow:0_1px_3px_rgba(255,255,255,0.95),0_2px_12px_rgba(255,255,255,0.85)] will-change-[transform,opacity]"
                   initial={false}
                   transition={{
                     duration: 0.7,
@@ -242,7 +242,7 @@ export function HeroSection() {
                     opacity: isActive ? 1 : 0,
                     y: isActive ? 0 : 18,
                   }}
-                  className="mt-2 sm:mt-3 lg:mt-4 text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-[2.25rem] font-bold text-cobalt leading-tight will-change-[transform,opacity]"
+                  className="mt-2 sm:mt-3 lg:mt-4 text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-[2.25rem] font-bold text-cobalt leading-tight [text-shadow:0_1px_2px_rgba(255,255,255,0.95),0_2px_10px_rgba(255,255,255,0.8)] will-change-[transform,opacity]"
                   initial={false}
                   transition={{
                     duration: 0.7,
@@ -253,13 +253,13 @@ export function HeroSection() {
                   {slide.headline}
                 </m.p>
 
-                {/* Description with Staggered Rise */}
+                {/* Description with Staggered Rise - Bold with text shadow and texture */}
                 <m.p
                   animate={{
                     opacity: isActive ? 1 : 0,
                     y: isActive ? 0 : 16,
                   }}
-                  className="mt-2.5 sm:mt-4 lg:mt-5 max-w-2xl sm:max-w-3xl lg:max-w-4xl text-sm sm:text-base md:text-lg lg:text-xl xl:text-[1.35rem] leading-relaxed lg:leading-8 xl:leading-9 text-ink/80 line-clamp-3 sm:line-clamp-none will-change-[transform,opacity]"
+                  className="mt-2.5 sm:mt-4 lg:mt-5 max-w-2xl sm:max-w-3xl lg:max-w-4xl text-sm sm:text-base md:text-lg lg:text-xl xl:text-[1.35rem] font-bold leading-relaxed lg:leading-8 xl:leading-9 text-slate-950 sm:text-ink [text-shadow:0_1px_2px_rgba(255,255,255,1),0_2px_8px_rgba(255,255,255,0.95),0_0_18px_rgba(255,255,255,0.85)] drop-shadow-[0_1px_2px_rgba(255,255,255,0.95)] line-clamp-3 sm:line-clamp-none will-change-[transform,opacity]"
                   initial={false}
                   transition={{
                     duration: 0.7,
@@ -270,13 +270,13 @@ export function HeroSection() {
                   {slide.description}{" "}
                   <Link
                     aria-label={`Learn more about ${slide.title}`}
-                    className="inline-flex items-center gap-0.5 font-bold text-cobalt hover:text-blue-700 underline underline-offset-4 decoration-cobalt/40 hover:decoration-cobalt transition-colors ml-1.5"
+                    className="inline-flex items-center gap-0.5 font-extrabold text-cobalt hover:text-blue-700 underline underline-offset-4 decoration-cobalt/60 hover:decoration-cobalt transition-colors ml-1.5 [text-shadow:0_1px_2px_rgba(255,255,255,1)]"
                     href={slide.href}
                     rel={slide.href.startsWith("http") ? "noopener noreferrer" : undefined}
                     target={slide.href.startsWith("http") ? "_blank" : undefined}
                   >
                     More
-                    <ArrowUpRight aria-hidden="true" className="size-3 sm:size-3.5 lg:size-4" />
+                    <ArrowUpRight aria-hidden="true" className="size-3 sm:size-3.5 lg:size-4 stroke-[2.5]" />
                   </Link>
                 </m.p>
 

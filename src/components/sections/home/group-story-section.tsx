@@ -28,17 +28,17 @@ export function GroupStorySection() {
               About S.N Group
             </h2>
 
-            <div className="mt-4 sm:mt-6 space-y-4 text-base sm:text-lg leading-relaxed text-ink/80">
+            <div className="mt-4 sm:mt-6 space-y-4 text-base sm:text-lg leading-relaxed text-ink font-medium">
               <p>
                 S.N Group is a diversified Bangladeshi business group with more than 20 years of experience in construction and business operations, built on a foundation of integrity, quality, reliability, and long-term relationships.
               </p>
               <p>
                 Over the years, the Group has developed a diversified portfolio through three core businesses: <span className="font-bold text-ink">S.N Eng Construction BD Ltd.</span>, <span className="font-bold text-ink">S.N Import &amp; Export BD Ltd.</span>, and <span className="font-bold text-ink">Mehrish Holdings Ltd.</span>.
               </p>
-              <p className="text-base sm:text-lg leading-relaxed text-ink/75">
+              <p className="text-base sm:text-lg leading-relaxed text-ink/85 font-normal">
                 Our businesses operate across government and institutional construction, infrastructure development, international import and export, agricultural and food commodities, industrial chemicals and equipment, and premium real estate development.
               </p>
-              <p className="text-base sm:text-lg leading-relaxed text-ink/75">
+              <p className="text-base sm:text-lg leading-relaxed text-ink/85 font-normal">
                 With strong local expertise and growing international business relationships, S.N Group continues to expand its capabilities while creating sustainable value for customers, partners, investors, and the communities we serve.
               </p>
             </div>

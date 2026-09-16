@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import { MapPin, Building2, FileCheck } from "lucide-react";
+import { MapPin, Building2 } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { Reveal } from "@/components/motion/reveal";
 import {
@@ -93,12 +93,6 @@ export function MoreProjectsSlider() {
                   {project.title}
                 </h3>
 
-                {project.banglaTitle && (
-                  <p className="mt-0.5 text-xs font-medium text-ink/50 line-clamp-1">
-                    {project.banglaTitle}
-                  </p>
-                )}
-
                 {/* Client / Authority */}
                 <div className="mt-2 flex items-center gap-1.5 text-xs font-semibold text-ink/75">
                   <Building2 className="size-3 text-cobalt shrink-0" />
@@ -109,28 +103,6 @@ export function MoreProjectsSlider() {
                 <p className="mt-2 text-xs sm:text-sm leading-relaxed text-ink/65 line-clamp-2">
                   {project.summary}
                 </p>
-
-                {/* Footer with Agreement & Value */}
-                <div className="mt-auto pt-4 border-t border-slate-100 flex flex-col gap-1.5 text-xs">
-                  <div className="flex items-center justify-between gap-2">
-                    <span className="inline-flex items-center gap-1 text-[11px] font-medium text-ink/50">
-                      <FileCheck className="size-3 text-cobalt" />
-                      Agr. No.
-                    </span>
-                    <span className="font-mono text-[11px] font-semibold text-ink/70 truncate max-w-[190px]">
-                      {project.agreementNo}
-                    </span>
-                  </div>
-
-                  <div className="flex items-center justify-between gap-2 pt-1 border-t border-dashed border-slate-100">
-                    <span className="text-[11px] font-bold uppercase tracking-wider text-ink/40">
-                      Contract Value
-                    </span>
-                    <span className="font-bold tabular-nums text-cobalt text-xs">
-                      {project.contractValue}
-                    </span>
-                  </div>
-                </div>
               </div>
             </article>
           ))}
