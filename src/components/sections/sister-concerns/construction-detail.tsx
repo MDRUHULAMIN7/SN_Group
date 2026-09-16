@@ -144,24 +144,24 @@ export function ConstructionDetail({ concern }: ConstructionDetailProps) {
               </Reveal>
             </div>
 
-            {/* Right Column: Uploaded Construction Building Image */}
+            {/* Right Column: Uploaded Academic Building Image */}
             <div className="lg:col-span-6">
               <Reveal delay={0.1}>
                 <div className="group relative aspect-4/3 sm:aspect-5/4 lg:aspect-4/3 overflow-hidden rounded-2xl sm:rounded-3xl border border-slate-200 bg-white shadow-[0_20px_60px_rgba(15,23,42,0.12)] transition-all duration-500 hover:border-cobalt/40 hover:shadow-[0_28px_70px_rgba(21,94,239,0.18)]">
                   <Image
-                    alt="S.N Eng Construction BD Ltd. multi-storey structural building site under execution"
-                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                    alt="S.N Eng Construction BD Ltd. landmark institutional academic building project"
+                    className="object-cover object-[center_45%] transition-transform duration-700 ease-out group-hover:scale-105"
                     fill
                     priority
                     sizes="(min-width: 1024px) 50vw, 100vw"
-                    src="/images/construction/building-site-construction.jpg"
+                    src="/images/hero-sazzad-academic-building-hd.jpg"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent" />
 
                   {/* Floating Badge */}
                   <div className="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 rounded-xl border border-white/20 bg-slate-900/85 p-3 sm:p-4 text-white backdrop-blur-md shadow-lg">
-                    <p className="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-blue-400">Active Project Execution</p>
-                    <p className="text-xs sm:text-sm font-semibold">Multi-Storey Civil &amp; Structural Works</p>
+                    <p className="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-blue-400">Delivered Institutional Landmark</p>
+                    <p className="text-xs sm:text-sm font-semibold">Multi-Storey Academic Complex</p>
                   </div>
                 </div>
               </Reveal>

@@ -55,11 +55,13 @@ export function GroupStorySection() {
                 src="/images/site-inspection-team.jpg"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-white/98 via-white/28 to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-r from-white/96 to-white/86 p-4 sm:p-8 text-ink backdrop-blur-md transition-colors duration-300 group-hover:from-white group-hover:to-blue-50/90">
-                <ArrowDownRight aria-hidden="true" className="mb-2 sm:mb-3 size-5 sm:size-6 text-cobalt transition-transform duration-400 group-hover:translate-x-1 group-hover:translate-y-1" />
-                <p className="display-type text-xl sm:text-3xl font-bold leading-snug sm:leading-tight">
-                  Built on integrity, quality, reliability, and long-term relationships.
-                </p>
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-r from-white/96 to-white/86 p-4 sm:p-5 lg:p-6 xl:p-7 text-ink backdrop-blur-md transition-colors duration-300 group-hover:from-white group-hover:to-blue-50/90">
+                <div className="flex w-full items-center gap-3 sm:gap-4 lg:gap-5">
+                  <ArrowDownRight aria-hidden="true" className="size-6 sm:size-7 lg:size-8 text-cobalt shrink-0 transition-transform duration-400 group-hover:translate-x-1 group-hover:translate-y-0.5" />
+                  <p className="display-type w-full flex-1 text-sm sm:text-lg md:text-xl lg:text-2xl xl:text-[1.7rem] font-extrabold leading-snug tracking-tight text-ink">
+                    Built on integrity, quality, reliability, and long-term relationships.
+                  </p>
+                </div>
               </div>
             </div>
           </Reveal>

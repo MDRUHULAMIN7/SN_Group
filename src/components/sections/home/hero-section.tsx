@@ -16,6 +16,7 @@ export interface HeroSlide {
   headline: string;
   description: string;
   image: string;
+  imagePosition?: string;
   href: string;
   linkLabel: string;
 }
@@ -29,7 +30,8 @@ export const heroSlides: HeroSlide[] = [
     headline: "Building Trust. Delivering Excellence.",
     description:
       "A diversified Bangladeshi business group with more than 20 years of experience in construction and business operations, built on a foundation of integrity, quality, reliability, and long-term relationships.",
-    image: "/images/hero-engineers-team-hd.webp",
+    image: "/images/hero-sazzad-academic-building-hd.jpg",
+    imagePosition: "object-[center_45%]",
     href: "/about",
     linkLabel: "Discover S.N Group",
   },
@@ -41,7 +43,8 @@ export const heroSlides: HeroSlide[] = [
     headline: "1st Class Construction Company in Bangladesh",
     description:
       "Specializing in government, defense, institutional, and infrastructure projects with extensive experience working with Bangladesh Army, Bangladesh Navy, and premier institutions.",
-    image: "/images/hero-construction-cranes-hd.webp",
+    image: "/images/hero-modern-institutional-building-hd.jpg",
+    imagePosition: "object-[center_40%]",
     href: "/sister-concerns/sn-engineering-construction",
     linkLabel: "Explore Construction",
   },
@@ -68,6 +71,19 @@ export const heroSlides: HeroSlide[] = [
     image: "/images/hero-commercial-hd.webp",
     href: "/sister-concerns/mehrish-holdings",
     linkLabel: "Explore Real Estate",
+  },
+  {
+    id: "sn-headquarters",
+    badge: "Corporate Headquarters",
+    badgeIcon: Building2,
+    title: "Corporate Headquarters",
+    headline: "Welcome to S.N. Group Headquarters",
+    description:
+      "Strategically located at Silver Tower, our corporate headquarters serves as the nerve center for our international trade network, engineering projects, and commercial enterprises.",
+    image: "/images/hero-headquarters-silver-tower.jpg",
+    imagePosition: "object-[center_35%]",
+    href: "https://drive.google.com/file/d/1LPf6z4_mytrZQqKnS3fSlhURC-aDiIjf/view?usp=drive_link",
+    linkLabel: "Discover S.N. Group",
   },
 ];
 
@@ -148,7 +164,7 @@ export function HeroSection() {
             >
               <Image
                 alt=""
-                className="size-full object-cover object-center saturate-[0.92]"
+                className={cn("size-full object-cover saturate-[0.92]", slide.imagePosition || "object-center")}
                 fill
                 priority={index === 0}
                 quality={90}
@@ -257,6 +273,8 @@ export function HeroSection() {
                     aria-label={`Learn more about ${slide.title}`}
                     className="inline-flex items-center gap-0.5 font-bold text-cobalt hover:text-blue-700 underline underline-offset-4 decoration-cobalt/40 hover:decoration-cobalt transition-colors ml-1.5"
                     href={slide.href}
+                    rel={slide.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                    target={slide.href.startsWith("http") ? "_blank" : undefined}
                   >
                     More
                     <ArrowUpRight aria-hidden="true" className="size-3 sm:size-3.5 lg:size-4" />
@@ -288,8 +306,13 @@ export function HeroSection() {
                   <Link
                     className="inline-flex min-h-9 sm:min-h-12 lg:min-h-14 items-center justify-center gap-2 rounded-full border border-cobalt/25 bg-white/90 px-4 py-2 sm:px-7 sm:py-3.5 lg:px-9 lg:py-4 text-xs sm:text-sm lg:text-base font-bold text-ink shadow-xs backdrop-blur-md transition-all duration-300 hover:border-cobalt hover:text-cobalt active:scale-[0.98]"
                     href={slide.href}
+                    rel={slide.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                    target={slide.href.startsWith("http") ? "_blank" : undefined}
                   >
                     {slide.linkLabel}
+                    {slide.href.startsWith("http") && (
+                      <ArrowUpRight aria-hidden="true" className="size-3.5 sm:size-4 text-cobalt/80" />
+                    )}
                   </Link>
                 </m.div>
               </div>

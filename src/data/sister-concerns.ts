@@ -9,8 +9,8 @@ export const sisterConcerns = [
     headline: "1st Class Construction Company in Bangladesh",
     description:
       "With more than two decades of experience in the construction industry, S.N Eng Construction BD Ltd. has established itself as a trusted 1st Class construction and engineering company in Bangladesh, specializing in government, defense, institutional, and civil infrastructure projects.",
-    image: "/images/hero-construction-cranes-hd.webp",
-    imageAlt: "S.N Eng Construction BD Ltd. infrastructure and building site in Bangladesh",
+    image: "/images/hero-modern-institutional-building-hd.jpg",
+    imageAlt: "S.N Eng Construction BD Ltd. modern institutional building complex in Bangladesh",
     services: [
       "Government construction projects",
       "Bangladesh Army & defense-related construction",
